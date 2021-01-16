@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CM": {
+      "commandName": "Project",
+      "commandLineArgs": "Install"
+    }
+  }
+}

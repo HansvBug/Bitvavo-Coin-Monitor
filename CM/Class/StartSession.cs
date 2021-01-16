@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.Control;
+
+namespace CM
+{
+    public class StartSession
+    {
+        //reset all textboxes except the timer interval and the percentage
+        public void ClearTextBoxes(ControlCollection controls)
+        {
+            foreach (TextBox tb in controls.OfType<TextBox>())
+            {
+                if (tb.Name != "TextBoxTimeInterval" && tb.Name != "TextBoxWarnPercentage")
+                    tb.Text = "0";
+            }
+            foreach (Control c in controls)
+            {
+                ClearTextBoxes(c.Controls);
+            }
+        }
+
+        public static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                using (client.OpenRead("http://clients3.google.com/generate_204"))
+                {
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        /*
+        public void ClearChart(Chart aChart)
+        {
+            foreach (var series in aChart.Series)
+            {
+                series.Points.Clear();
+            }
+        }
+        */
+    }
+}
