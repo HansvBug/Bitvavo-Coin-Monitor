@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.Threading;
 using System.IO;
 using System.Linq;
 using System.Security.Permissions;
@@ -48,8 +49,9 @@ namespace CM
 
         public FormMain()
         {
-            InitializeComponent();
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB");
 
+            InitializeComponent();            
             FirstRun = true;
             CheckFolders();         // Create in appdata a new folder Settings and/or Database if needed
             CreateSettingsFile();   // Create the settings file if needed
@@ -140,8 +142,9 @@ namespace CM
 
                 if (AppDb.SelectMeta() < AppSettingsDefault.UpdateVersion)
                 {
-                    using ProcessArguments getArg = new();
                     string argument = string.Empty;
+
+                    using ProcessArguments getArg = new();                    
                     foreach (string arg in getArg.cmdLineArg)
                     {
                         argument = Convert.ToString(arg, CultureInfo.InvariantCulture);
@@ -169,8 +172,9 @@ namespace CM
         private void CreateAppDatabase()
         {
             Cursor.Current = Cursors.WaitCursor;
-            using ProcessArguments getArg = new();
             string argument = string.Empty;
+
+            using ProcessArguments getArg = new();            
             string DbLocation = JsonObjSettings.AppParam[0].DatabaseLocation;
             using ApplicationDatabase AppDb = new()
             {
@@ -782,7 +786,7 @@ namespace CM
         {
             TimerTime = Convert.ToDouble(TextBoxTimeInterval.Text);
 
-            Timer1 = new Timer();
+            Timer1 = new System.Windows.Forms.Timer();
             Timer1.Tick += new EventHandler(Timer1_Tick);
             Timer1.Interval = Convert.ToInt32(Math.Floor(TimerTime));
             Timer1.Start();
@@ -1043,6 +1047,11 @@ namespace CM
                 TabControlCharts.SelectTab(t); //go to tab
             }
             Cursor.Current = Cursors.Default;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

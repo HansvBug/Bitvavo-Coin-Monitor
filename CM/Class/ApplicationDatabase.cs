@@ -31,7 +31,8 @@ namespace CM
         private readonly string CreCoinNames = "CREATE TABLE IF NOT EXISTS " + TableName.COIN_NAMES + "(" +
                                 "ID                  INTEGER         NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
                                 "GUID                VARCHAR(50)  UNIQUE                                      ," +
-                                "NAME                VARCHAR(25)                                              ," +                                
+                                "NAME                VARCHAR(25)                                              ," +
+                                "DEFAULT_NAME        BOOL                                                     ," + 
                                 "DATE_CREATED        DATE                                                     ," +
                                 "DATE_ALTERED        DATE                                                     ," +
                                 "CREATED_BY          VARCHAR(100)                                             ," +

@@ -19,6 +19,9 @@ namespace CM
         public dynamic JsonObjSettings { get; set; }
         private int CopyAppDataBaseAfterEveryXStartups { get; set; }
         private string DecimalSeperator { get; set; }
+        private int CheckedTrvNodes { get; set; }  //The number of checked treeview nodes
+
+        private List<string> SelectedCoinNames = new();
         #endregion Properties
 
         public FormConfigure()
@@ -241,7 +244,7 @@ namespace CM
             foreach (TreeNode node in TreeViewCoinNames.Nodes)  //29-12-2017; hvb checklistbox replaced by  treeview
             {
                 node.Checked = true;
-            }
+            }            
         }
 
         private void ButtonDeselectAll_Click(object sender, EventArgs e)
@@ -273,18 +276,38 @@ namespace CM
 
         private void ButtonGetCoinNames_Click(object sender, EventArgs e)
         {
+            StoreSelectedItems(TreeViewCoinNames);   // First make a list of the checked coin names
+            GetCoinNames();                          // Load all coins
+            //re-check 
+
             GetCoinNames();
         }
+        private void StoreSelectedItems(TreeView Trv)
+        {
+            SelectedCoinNames.Clear();
+
+            foreach (TreeNode aNode in Trv.Nodes)
+            {
+                if (aNode.Checked == true)  // At least one node is checked to start the filter
+                {
+                    SelectedCoinNames.Add(aNode.Text);
+                }
+            }
+        }
+
         private void GetCoinNames()
         {
             if (StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
             {
 
                 MarketPrice AllCoinNames = new MarketPrice();    //create the coindata objectlist
-                AllCoinNames.GetAllCoinNames();
-                LoadCoinNames(AllCoinNames);
+                AllCoinNames.GetAllCoinNames();                 // Get the all the available coin names (read the API result)
+                LoadCoinNames(AllCoinNames);                    // Load all the available coin names intot the treeview
                 CheckCoinNames();
                 SetAutoComplete();
+                
+                TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
+                CountCheckedNodes(nodes);   // Count the checked nodes
             }
         }
         private void LoadCoinNames(MarketPrice mp)
@@ -326,7 +349,10 @@ namespace CM
                 }
             }
             TreeViewCoinNames.EndUpdate();
+            
         }
+        
+
 
 
         private void ButtonCompressAppDatabase_Click(object sender, EventArgs e)
@@ -432,6 +458,15 @@ namespace CM
         private int FoundTrvCoinsTextSearch;
         private void TextBoxSearchCoinName_TextChanged(object sender, EventArgs e)
         {
+            if (TextBoxSearchCoinName.Text.Count() > 0)
+            {
+                ButtonSearchCoinName.Enabled = true;
+            }
+            else
+            {
+                ButtonSearchCoinName.Enabled = false;
+            }
+
             FoundTrvCoinsTextSearch = 0;
             TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
             foreach (TreeNode n in nodes)
@@ -485,7 +520,84 @@ namespace CM
         readonly TreeViewSearch tvSearch = new TreeViewSearch();  //refence to TreeViewSearch, outside a function otherwise find next does not work
         private void ButtonSearchCoinName_Click(object sender, EventArgs e)
         {
-            tvSearch.SearchInTreeViewNodes(TreeViewCoinNames, TextBoxSearchCoinName.Text);
+            tvSearch.SearchInTreeViewNodes(TreeViewCoinNames, TextBoxSearchCoinName.Text);            
+        }
+
+        private void TreeViewCoinNames_Click(object sender, EventArgs e)
+        {
+            TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
+            CountCheckedNodes(nodes);
+        }
+        private void  CountCheckedNodes(TreeNodeCollection nodes)
+        {
+            CheckedTrvNodes = 0;
+
+            foreach (TreeNode n in nodes)
+            {
+                if (n.Checked)
+                {
+                    CheckedTrvNodes++;
+                }
+            }
+
+            if (CheckedTrvNodes > 0)
+            {
+                LabelCountCheckedTrvNodes.Text = "Aantal geselecteerd : " + this.CheckedTrvNodes.ToString();
+            }
+            else
+            {
+                LabelCountCheckedTrvNodes.Text = "Aantal geselecteerd : 0";
+            }
+            Refresh();
+        }
+
+        private void TreeViewCoinNames_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
+            CountCheckedNodes(nodes);
+        }
+
+        private void ButtonSelectedOnly_Click(object sender, EventArgs e)
+        {
+            //Show only the selected items in the treeview
+            for (int i = 0; i < TreeViewCoinNames.Nodes.Count; i++)
+            {
+                RemoveUncheckedNodes(TreeViewCoinNames);
+            }
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        private void RemoveUncheckedNodes(TreeView Trv)
+        {
+            var nodes = new Stack<TreeNode>(Trv.Nodes.Cast<TreeNode>());
+            while (nodes.Count > 0)
+            {
+                var n = nodes.Pop();
+                if (!n.Checked)
+                {
+                    if (n.Parent != null)
+                    {
+                        n.Parent.Nodes.Remove(n);
+                    }
+                    else
+                    {
+                        Trv.Nodes.Remove(n);
+                    }
+                }
+                else
+                {
+                    foreach (TreeNode tn in n.Nodes)
+                    {
+                        nodes.Push(tn);
+                    }
+                }
+            }
+        }
+
+        private void ButtonClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
