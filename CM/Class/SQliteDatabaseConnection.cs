@@ -21,7 +21,7 @@ namespace CM
 
         private void LoadSettings()
         {
-            using SettingsManager Set = new SettingsManager();
+            using SettingsManager Set = new();
             Set.LoadSettings();
             JsonObjSettings = Set.JsonObjSettings;
         }

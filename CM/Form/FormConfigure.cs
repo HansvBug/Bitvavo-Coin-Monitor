@@ -41,14 +41,12 @@ namespace CM
         }
         private void SetAutoComplete()
         {
-            using (AutoComplete aCompleteSource = new AutoComplete())
-            {
-                AutoCompleteStringCollection DataCollection;
-                DataCollection = aCompleteSource.CreAutoCompleteListFromTrv(TreeViewCoinNames);  //Create the autocomplete list for the search box
+            using AutoComplete aCompleteSource = new();
+            AutoCompleteStringCollection DataCollection;
+            DataCollection = aCompleteSource.CreAutoCompleteListFromTrv(TreeViewCoinNames);  //Create the autocomplete list for the search box
 
-                TextBoxSearchCoinName.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                TextBoxSearchCoinName.AutoCompleteCustomSource = DataCollection;
-            }
+            TextBoxSearchCoinName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            TextBoxSearchCoinName.AutoCompleteCustomSource = DataCollection;
         }
         private void LoadSettings()
         {
@@ -139,7 +137,7 @@ namespace CM
         }
         private void SaveCheckedCoins()
         {
-            List<string> CoinNames = new List<string>();
+            List<string> CoinNames = new();
             ApplicationDatabase addCoin = new();
             foreach (TreeNode aNode in TreeViewCoinNames.Nodes) //first create a list withe the coin names
             {
@@ -155,7 +153,7 @@ namespace CM
         }
         private void CreateTables()
         {
-            List<string> CoinNames = new List<string>();
+            List<string> CoinNames = new();
             ApplicationDatabase addCoin = new();
             
             foreach (TreeNode aNode in TreeViewCoinNames.Nodes) //first create a list withe the coin names
@@ -300,7 +298,7 @@ namespace CM
             if (StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
             {
 
-                MarketPrice AllCoinNames = new MarketPrice();    //create the coindata objectlist
+                MarketPrice AllCoinNames = new();    //create the coindata objectlist
                 AllCoinNames.GetAllCoinNames();                 // Get the all the available coin names (read the API result)
                 LoadCoinNames(AllCoinNames);                    // Load all the available coin names intot the treeview
                 CheckCoinNames();
@@ -316,7 +314,7 @@ namespace CM
             TreeViewCoinNames.BeginUpdate();           //Suppress repainting the TreeView until all the objects have been created.
             foreach (object item in mp.CoinNames)     //Fill it again with only the filtered items
             {
-                TreeNode aNode = new TreeNode(item.ToString()) { Name = item.ToString() };
+                TreeNode aNode = new(item.ToString()) { Name = item.ToString() };
                 TreeViewCoinNames.Nodes.Add(aNode);
             }
             TreeViewCoinNames.EndUpdate();
@@ -517,7 +515,7 @@ namespace CM
             }
         }
 
-        readonly TreeViewSearch tvSearch = new TreeViewSearch();  //refence to TreeViewSearch, outside a function otherwise find next does not work
+        readonly TreeViewSearch tvSearch = new();  //refence to TreeViewSearch, outside a function otherwise find next does not work
         private void ButtonSearchCoinName_Click(object sender, EventArgs e)
         {
             tvSearch.SearchInTreeViewNodes(TreeViewCoinNames, TextBoxSearchCoinName.Text);            

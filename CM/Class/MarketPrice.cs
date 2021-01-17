@@ -21,10 +21,10 @@ namespace CM
         private string UrlCurrentTickerPrice { get; set; }  //"https://api.bitvavo.com/v2/ticker/price"
         private string Url24hTickerPrice { get; set; }      //"https://api.bitvavo.com/v2/ticker/24h"
 
-        public Dictionary<string, string> CurrentTickerPrice = new Dictionary<string, string>();  //The CURRENT price of all the coins
-        public List<string> CoinNames = new List<string>(); //Used in configform
+        public Dictionary<string, string> CurrentTickerPrice = new();  // The CURRENT price of all the coins
+        public List<string> CoinNames = new(); //Used in configform
 
-        public List<string> CoinName = new List<string>();  //TEMP!!!!!!!!!!!!!!!!!
+        public List<string> CoinName = new();  // List with the coin names
         CoinData aCoin;
 
         private CoinDataAll AllCoinData;
@@ -95,7 +95,7 @@ namespace CM
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(UrlCurrentTickerPrice);
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-                StreamReader sr = new StreamReader(response.GetResponseStream());
+                StreamReader sr = new(response.GetResponseStream());
                 string MarketPriceData = sr.ReadToEnd();    //get the current price of all the coins
                 sr.Close();
 
@@ -129,7 +129,7 @@ namespace CM
 
                         if (!AllCoinData.IsUsed)  //First run
                         {
-                            CoinData aCoin = new CoinData();
+                            CoinData aCoin = new();
                             CurrentTickerPrice.Add(tickerMarket.Market, tickerMarket.Price);  //A dictionary with market(coin) name + curent price
                                                                                               //
                             aCoin.Name = tickerMarket.Market;
@@ -337,7 +337,7 @@ namespace CM
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(UrlCurrentTickerPrice);
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-                StreamReader sr = new StreamReader(response.GetResponseStream());
+                StreamReader sr = new(response.GetResponseStream());
                 string MarketPriceData = sr.ReadToEnd();    //get the current price of all the coins
                 sr.Close();
 

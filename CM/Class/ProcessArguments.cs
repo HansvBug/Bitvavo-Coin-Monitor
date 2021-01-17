@@ -7,7 +7,7 @@ namespace CM
     public class ProcessArguments : IDisposable
     {
         #region Properties
-        public List<String> cmdLineArg = new List<string>();
+        public List<String> cmdLineArg = new();
 
         public string ArgIntall { get; set; }
         public string ArgInstallUser { get; set; }

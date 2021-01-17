@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
-using System.Threading;
 using System.IO;
 using System.Linq;
-using System.Security.Permissions;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 //using HvBAppEnvironment;
 using HvBLogging;
@@ -49,8 +43,6 @@ namespace CM
 
         public FormMain()
         {
-            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB");
-
             InitializeComponent();            
             FirstRun = true;
             CheckFolders();         // Create in appdata a new folder Settings and/or Database if needed
@@ -98,8 +90,10 @@ namespace CM
         {
             WarnPercentage = Convert.ToDouble(TextBoxWarnPercentage.Text);
 
-            Prepare = new PrepareForm();
-            Prepare.WarnPercentage = WarnPercentage;
+            Prepare = new PrepareForm
+            {
+                WarnPercentage = WarnPercentage
+            };
 
             Prepare.CreateTheTabs(TabControlCharts);
 
@@ -172,7 +166,7 @@ namespace CM
         private void CreateAppDatabase()
         {
             Cursor.Current = Cursors.WaitCursor;
-            string argument = string.Empty;
+            string Argument;
 
             using ProcessArguments getArg = new();            
             string DbLocation = JsonObjSettings.AppParam[0].DatabaseLocation;
@@ -183,8 +177,8 @@ namespace CM
 
             foreach (string arg in getArg.cmdLineArg)
             {
-                argument = Convert.ToString(arg, CultureInfo.InvariantCulture);
-                if (argument == getArg.ArgIntall)
+                Argument = Convert.ToString(arg, CultureInfo.InvariantCulture);
+                if (Argument == getArg.ArgIntall)
                 {
                     if (!File.Exists(Path.Combine(DbLocation, AppSettingsDefault.SqlLiteDatabaseName)))
                     {
@@ -438,8 +432,10 @@ namespace CM
 
                 AllCoinData = new CoinDataAll();    //create the coindata objectlist
 
-                CoinMarketPrice = new MarketPrice(AllCoinData);
-                CoinMarketPrice.WarnPercentage = WarnPercentage;
+                CoinMarketPrice = new MarketPrice(AllCoinData)
+                {
+                    WarnPercentage = WarnPercentage
+                };
 
                 GetMarketPriceData();   // The current ticker data (price)
 
@@ -1021,8 +1017,10 @@ namespace CM
         System.Windows.Forms.Timer t = null;
         private void StartClock()
         {
-            t = new System.Windows.Forms.Timer();
-            t.Interval = 1000;
+            t = new System.Windows.Forms.Timer
+            {
+                Interval = 1000
+            };
             t.Tick += new EventHandler(t_Tick);
             t.Enabled = true;
         }
@@ -1047,11 +1045,6 @@ namespace CM
                 TabControlCharts.SelectTab(t); //go to tab
             }
             Cursor.Current = Cursors.Default;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
