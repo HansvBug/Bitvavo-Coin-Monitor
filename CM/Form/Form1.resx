@@ -57,240 +57,360 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>248, 110</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session_Pause</value>
-  </data>
-  <data name="ToolStripButton_SessionStart.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButton_SessionStart.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="ToolStripMenuItem_Session.Text" xml:space="preserve">
-    <value>Sessie</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TabControlCharts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelWarnPerc.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>227, 15</value>
-  </data>
-  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
-    <value>Column1</value>
-  </data>
-  <data name="ToolStripButton_SessionStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>23, 22</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionPause.Name" xml:space="preserve">
-    <value>ToolStripButton_SessionPause</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Name" xml:space="preserve">
-    <value>ButtonPause</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStart.Name" xml:space="preserve">
-    <value>ToolStripButton_SessionStart</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Start.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>105, 22</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <data name="ButtonStart.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;ToolStripStatusLabel1.Name" xml:space="preserve">
     <value>ToolStripStatusLabel1</value>
   </data>
-  <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 24</value>
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ToolStripMenuItem_Option_Export.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>123, 22</value>
   </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Name" xml:space="preserve">
-    <value>LabelWarnPercentage</value>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>248, 110</value>
   </data>
-  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
-    <value>MenuStrip1</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>11, 29</value>
-  </data>
-  <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="PanelBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripMenuItem_Program.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>82, 20</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
-    <value>Opties</value>
-  </data>
-  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
-  <data name="TextBoxTimeInterval.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TabControlMain.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Name" xml:space="preserve">
-    <value>ButtonStop</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxTimeInterval.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TabPageCharts.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>768, 423</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="TabPageCharts.TabIndex" type="System.Int32, System.Private.CoreLib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;TabPageConfigure.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>754, 389</value>
+  <data name="&gt;&gt;Timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>299, 383</value>
-  </data>
-  <data name="TabControlMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Parent" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelWarnPerc.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 6</value>
-  </data>
-  <data name="ToolStripMenuItem_Session.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>50, 20</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Program_Close</value>
-  </data>
-  <data name="PanelBottom.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 40</value>
-  </data>
-  <data name="ButtonPause.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>16</value>
-  </data>
-  <data name="ToolStripButton_SessionStop.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
-  </data>
-  <data name="ToolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>52, 17</value>
-  </data>
-  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TabPageCharts.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="TabPageConfigure.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="ToolStripMenuItem_Program_Close.Text" xml:space="preserve">
-    <value>Afsluiten</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
   </data>
   <data name="&gt;&gt;PanelBottom.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
+    <value>Timer1</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>TabPageConfigure</value>
+  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="LabelWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>227, 15</value>
   </data>
-  <data name="labelWarnPerc.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
+  <data name="ToolStripMenuItem_Session_Start.Text" xml:space="preserve">
+    <value>Start</value>
   </data>
-  <data name="&gt;&gt;ButtonStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ButtonStart.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 25</value>
+  <data name="TabPageConfigure.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 4</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="TabPageCharts.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="ToolStripButton_SessionStop.Text" xml:space="preserve">
-    <value>Stop</value>
+  <data name="&gt;&gt;ButtonStart.Name" xml:space="preserve">
+    <value>ButtonStart</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>401, 91</value>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>6, 25</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Options</value>
+  <data name="ToolStripMenuItem_Session_Stop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>105, 22</value>
   </data>
-  <data name="ToolStripMenuItem_Options_Configure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>108, 22</value>
+  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Program_Close</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPageCharts.Text" xml:space="preserve">
+    <value>Grafieken</value>
   </data>
   <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="ToolStripButton_SessionStart.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllCoinTables.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBoxWarnPercentage.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="ToolStripComboBoxCoinNames.Enabled" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.Name" xml:space="preserve">
+    <value>TabControlMain</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TabControlCharts.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="ToolStripStatusLabel1.Text" xml:space="preserve">
+    <value>                                </value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 22</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MenuStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Stop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="&gt;&gt;TabPageCharts.Name" xml:space="preserve">
+    <value>TabPageCharts</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer2.SplitterDistance" type="System.Int32, System.Private.CoreLib">
+    <value>182</value>
+  </data>
+  <data name="TabPageConfigure.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, System.Private.CoreLib">
+    <value>299</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Name" xml:space="preserve">
+    <value>TextBoxWarnPercentage</value>
+  </data>
   <data name="ToolStripButton_SessionPause.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAADqSSURBVHhe7Z0LrK1VdbY3IipQwVpRqNZgrWIxtWqsVQyK
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAADqSSURBVHhe7Z0LrK1VdbY3IipQwVpRqNZgrWIxtWqsVQyK
         ltLGmnqLVGPa1FqrRFKvibH1FhGMTdX8ocTQGqyXhoj3SgyGhkg0xoI1v21Rkkox3qIGKopcVOT/38dT
         jhvO2Pf1zfldnid5ErJZe+215hxzjHHW+r4510RkEhwWfyU+PP5OPDWeFl8T3x7fEz8WL4qXxM/Ey+IX
         45fjVfHr8bvxunhjvOV/5b/5Gf+Px/BYfoff5Tl4Lp6T5+Zv8Lf4m/xtXgOvhdfEa+M18lpFRERkEw6J
@@ -543,868 +663,316 @@
         k7/Na+C18Jp4bbxGXquIjJq1tf8PY8oJOJsoXA4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="ButtonStart.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>15</value>
-  </data>
-  <data name="ToolStripButton_SessionStart.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Pause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>105, 22</value>
-  </data>
-  <data name="TabControlCharts.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>3, 3</value>
-  </data>
-  <data name="TabControlMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 431</value>
-  </data>
-  <data name="MenuStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PanelBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripButton_SessionStop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>23, 22</value>
-  </data>
-  <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>130, 15</value>
-  </data>
-  <data name="ToolStripButton_SessionPause.Text" xml:space="preserve">
-    <value>Pause</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>TabControlCharts</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session_Stop</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>40, 23</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>6, 25</value>
-  </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="ToolStripStatusLabel1.Text" xml:space="preserve">
-    <value>                                </value>
-  </data>
-  <data name="TabPageConfigure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>768, 423</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="GroupBoxSessionSettings.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>310, 159</value>
-  </data>
-  <data name="TextBoxWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>244, 55</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;labelWarnPerc.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Start.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="TextBoxWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>42, 23</value>
-  </data>
-  <data name="TabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="ButtonPause.Text" xml:space="preserve">
-    <value>Pauze</value>
-  </data>
-  <data name="ButtonPause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Stop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>105, 22</value>
-  </data>
-  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripMenuItem_Program_Close.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>121, 22</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel2.Name" xml:space="preserve">
-    <value>ToolStripStatusLabel2</value>
-  </data>
-  <data name="ToolStripMenuItem_Program.Text" xml:space="preserve">
-    <value>Programma</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.Name" xml:space="preserve">
-    <value>TabControlCharts</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 431</value>
-  </data>
-  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GroupBoxSessionSettings.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>8</value>
-  </data>
-  <data name="TextBoxWarnPercentage.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 520</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 22</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxTimeInterval.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>244, 26</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 49</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonStop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;Timer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStop.Name" xml:space="preserve">
-    <value>ToolStripButton_SessionStop</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelWarnPercentage.Text" xml:space="preserve">
-    <value>Waarschuwen bij een stijging/daling van :</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="ButtonStart.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="TabPageConfigure.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ButtonStop.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>17</value>
-  </data>
-  <data name="TabPageCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>27, 4</value>
-  </data>
-  <data name="TabPageConfigure.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>27, 4</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>227, 15</value>
-  </data>
-  <data name="ButtonPause.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>92, 105</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Name" xml:space="preserve">
-    <value>TabPageCharts</value>
-  </data>
-  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
-    <value>Column2</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session_Start</value>
-  </data>
-  <data name="ButtonStop.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>211, 105</value>
-  </data>
-  <data name="labelWarnPerc.Text" xml:space="preserve">
-    <value>Waarschuwen bij een stijging/daling van :</value>
-  </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
-    <value>ToolStrip1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Name" xml:space="preserve">
-    <value>TextBoxWarnPercentage</value>
-  </data>
-  <data name="ButtonStart.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>11, 105</value>
-  </data>
-  <data name="TextBoxTimeInterval.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>42, 23</value>
-  </data>
-  <data name="PanelBottom.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 480</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionPause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripStatusLabel2.Text" xml:space="preserve">
-    <value>               </value>
-  </data>
-  <data name="&gt;&gt;labelWarnPerc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelBottom.Name" xml:space="preserve">
-    <value>PanelBottom</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonStop.Text" xml:space="preserve">
-    <value>Stop</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Stop.Text" xml:space="preserve">
-    <value>Stop</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Name" xml:space="preserve">
-    <value>ToolStripComboBoxCoinNames</value>
-  </data>
-  <data name="LabelWarnPercentage.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="TabPageCharts.Text" xml:space="preserve">
-    <value>Grafieken</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Name" xml:space="preserve">
-    <value>ButtonStart</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelWarnPerc.Name" xml:space="preserve">
-    <value>labelWarnPerc</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.1.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="splitContainer2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
+  <data name="&gt;&gt;TabPageConfigure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TextBoxWarnPercentage.Text" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="MenuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Options_Configure</value>
-  </data>
-  <data name="textBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Name" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 542</value>
-  </data>
-  <data name="Column1.HeaderText" xml:space="preserve">
-    <value>Column1</value>
-  </data>
-  <data name="&gt;&gt;PanelBottom.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="ToolStripButton_SessionPause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>23, 22</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>103, 17</value>
-  </data>
-  <data name="TabControlMain.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Program</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Name" xml:space="preserve">
-    <value>TextBoxTimeInterval</value>
-  </data>
-  <data name="ButtonStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Intervaltijd in minuten :</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Pause.Text" xml:space="preserve">
-    <value>Pauze</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Name" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>748, 383</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripComboBoxCoinNames.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>121, 25</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripMenuItem_Options.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>53, 20</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelWarnPerc.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
-  </data>
-  <data name="GroupBoxSessionSettings.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>14, 14</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>4, 24</value>
-  </data>
-  <data name="splitContainer1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Name" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="TabPageConfigure.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="ButtonStop.Enabled" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
   </data>
   <data name="LabelWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>11, 58</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>299</value>
-  </data>
-  <data name="splitContainer2.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>182</value>
-  </data>
-  <data name="PanelBottom.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TabControlCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 3</value>
-  </data>
-  <data name="splitContainer1.SplitterWidth" type="System.Int32, System.Private.CoreLib">
-    <value>10</value>
-  </data>
-  <data name="ToolStripMenuItem_Options_Configure.Text" xml:space="preserve">
-    <value>Opties</value>
-  </data>
-  <data name="ToolStripComboBoxCoinNames.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>235, 3</value>
-  </data>
-  <data name="ToolStripButton_SessionPause.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 24</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
-    <value>Timer1</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="Column2.HeaderText" xml:space="preserve">
-    <value>Column2</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonPause.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.Parent" xml:space="preserve">
-    <value>TabPageCharts</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainer2.SplitterWidth" type="System.Int32, System.Private.CoreLib">
-    <value>10</value>
-  </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelWarnPerc.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="TextBoxWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>18</value>
+  <data name="ButtonStop.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>211, 105</value>
   </data>
   <data name="TabControlCharts.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>762, 417</value>
   </data>
-  <data name="&gt;&gt;ButtonStart.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;TabControlCharts.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;TabPageCharts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextBoxTimeInterval.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>244, 26</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStop.Name" xml:space="preserve">
+    <value>ToolStripButton_SessionStop</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;TabPageConfigure.Name" xml:space="preserve">
+    <value>TabPageConfigure</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Pause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>105, 22</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
+    <value>7, 15</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionPause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Parent" xml:space="preserve">
+    <value>TabPageCharts</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session_Stop</value>
+  </data>
+  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>299, 383</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>19</value>
+  </data>
+  <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>53, 20</value>
+  </data>
+  <data name="&gt;&gt;TabPageConfigure.Parent" xml:space="preserve">
+    <value>TabControlMain</value>
+  </data>
+  <data name="ToolStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Text" xml:space="preserve">
+    <value>Alle tabellen</value>
+  </data>
+  <data name="PanelBottom.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Text" xml:space="preserve">
+    <value>Alle in gebruik zijnde tabellen</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonPause.Text" xml:space="preserve">
+    <value>Pauze</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="TabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>52, 17</value>
+  </data>
+  <data name="ToolStripButton_SessionPause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>23, 22</value>
+  </data>
+  <data name="ButtonPause.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>92, 105</value>
+  </data>
+  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="ToolStripMenuItem_Session.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>50, 20</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 542</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripComboBoxCoinNames.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>121, 25</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="ButtonStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export.Text" xml:space="preserve">
+    <value>Exporteer</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextBoxTimeInterval.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>754, 389</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripButton_SessionPause.Text" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Name" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="PanelBottom.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 480</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 431</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Name" xml:space="preserve">
+    <value>TabControlCharts</value>
+  </data>
+  <data name="TabControlMain.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="ToolStripStatusLabel2.Text" xml:space="preserve">
+    <value>               </value>
+  </data>
+  <data name="PanelBottom.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 40</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>42, 23</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextBoxTimeInterval.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>42, 23</value>
+  </data>
+  <data name="ButtonPause.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>16</value>
+  </data>
+  <data name="ToolStripButton_SessionStart.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 24</value>
+  </data>
+  <data name="ToolStripButton_SessionStart.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Name" xml:space="preserve">
+    <value>ToolStripComboBoxCoinNames</value>
+  </data>
+  <data name="TabPageCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 4</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>TabControlCharts</value>
+  </data>
+  <data name="ToolStripMenuItem_Program.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>82, 20</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="GroupBoxSessionSettings.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>310, 159</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Intervaltijd in minuten :</value>
+  </data>
+  <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ToolStripButton_SessionStop.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAFUgSURBVHhe7b0HmCVVtf69q3ad0zPDzJBzFgExYFZUriAK
+        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAFUgSURBVHhe7b0HmCVVtf69q3ad0zPDzJBzFgExYFZUriAK
         khQVUCQoRoIiolcwkkTUvyJGUJQkAooYMQDXAIoJFQHJIGGGNDDECUz+vnedvUaG6jXTp7tr16nw/p7n
         vXinu89ae+2119rnnKrajhBSCyZCG3Rc57ne+R2gvVOXHQx9wif+Sz7Jzk6S7ELoIuiSNEkvg/4CXQVd
         h9+5Fb8zDbofegSaCy1SzdF/k5/dJb8rfwP9U1/jMnlNfe0L8Ttni02xLT6IL+ITfNsaPq4PTRCHCSGE
@@ -1770,22 +1338,424 @@
         a+lrymv/EL93Nn7nJPk0Q3yAL2+CT68U3+CjvHPPxGFCSJVx7v8HYOCqA++nP6gAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="ButtonStop.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
+  <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="TextBoxWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>18</value>
+  </data>
+  <data name="PanelBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.Name" xml:space="preserve">
+    <value>ButtonPause</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Program.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Program</value>
+  </data>
+  <data name="TabPageConfigure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>768, 423</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionPause.Name" xml:space="preserve">
+    <value>ToolStripButton_SessionPause</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;PanelBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TabPageCharts.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>768, 423</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripMenuItem_Program_Close.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>121, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Options_Configure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>123, 22</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>4, 24</value>
+  </data>
+  <data name="TabControlMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="ToolStripButton_SessionStop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>23, 22</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Start.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>105, 22</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="&gt;&gt;ButtonStart.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="TextBoxTimeInterval.Text" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Program.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Parent" xml:space="preserve">
+    <value>TabPageConfigure</value>
+  </data>
+  <data name="ButtonStop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStart.Name" xml:space="preserve">
+    <value>ToolStripButton_SessionStart</value>
+  </data>
+  <data name="TabControlMain.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ToolStripMenuItem_Program_Close.Text" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+  <data name="ToolStripMenuItem_Session.Text" xml:space="preserve">
+    <value>Sessie</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>11, 29</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;TabPageConfigure.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripButton_SessionStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>23, 22</value>
+  </data>
+  <data name="TabControlMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 431</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Pause.Text" xml:space="preserve">
+    <value>Pauze</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session_Start</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 520</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllUsedCoinTables.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>75, 23</value>
+  </data>
+  <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>103, 17</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="TabControlCharts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabControlCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>3, 3</value>
+  </data>
+  <data name="LabelWarnPercentage.Text" xml:space="preserve">
+    <value>Waarschuwen bij een stijging/daling van :</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripMenuItem_Options_Configure.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session_Pause</value>
+  </data>
+  <data name="ButtonPause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>75, 23</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Column2.HeaderText" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="TextBoxTimeInterval.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>229, 22</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Options</value>
+  </data>
+  <data name="ButtonStart.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>11, 105</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllCoinTables.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Option_Export_AllCoinTables</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 49</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllUsedCoinTables.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Option_Export_AllUsedCoinTables</value>
+  </data>
+  <data name="ButtonPause.Enabled" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PanelBottom.Name" xml:space="preserve">
+    <value>PanelBottom</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonStop.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;PanelBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>748, 383</value>
+  </data>
+  <data name="&gt;&gt;TabPageCharts.Parent" xml:space="preserve">
+    <value>TabControlMain</value>
+  </data>
+  <data name="&gt;&gt;ButtonStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStripButton_SessionStop.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+    <value>Magenta</value>
+  </data>
+  <data name="ToolStripButton_SessionPause.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+    <value>Magenta</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Name" xml:space="preserve">
+    <value>LabelWarnPercentage</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>244, 55</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel2.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel2</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainer2.SplitterWidth" type="System.Int32, System.Private.CoreLib">
+    <value>10</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>130, 15</value>
+  </data>
+  <data name="TabPageConfigure.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Option_Export</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.Name" xml:space="preserve">
+    <value>ButtonStop</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 24</value>
+  </data>
+  <data name="&gt;&gt;TabPageCharts.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>229, 22</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.Name" xml:space="preserve">
+    <value>TextBoxTimeInterval</value>
+  </data>
+  <data name="ButtonStop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>75, 23</value>
+  </data>
+  <data name="MenuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="ToolStripButton_SessionStop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="ToolStripMenuItem_Program.Text" xml:space="preserve">
+    <value>Programma</value>
+  </data>
+  <data name="GroupBoxSessionSettings.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>14, 14</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 25</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
   <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="GroupBoxSessionSettings.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>8</value>
+  </data>
+  <data name="splitContainer1.SplitterWidth" type="System.Int32, System.Private.CoreLib">
+    <value>10</value>
+  </data>
+  <data name="TabPageConfigure.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Options_Configure</value>
+  </data>
+  <data name="LabelWarnPercentage.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>32</value>
   </metadata>
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">

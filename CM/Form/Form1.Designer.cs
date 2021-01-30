@@ -61,6 +61,9 @@ namespace CM
             this.ToolStripMenuItem_Session_Stop = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Options = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStripMenuItem_Options_Configure = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Option_Export = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Option_Export_AllUsedCoinTables = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem_Option_Export_AllCoinTables = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelBottom = new System.Windows.Forms.Panel();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
             this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -310,7 +313,8 @@ namespace CM
             // 
             resources.ApplyResources(this.ToolStripMenuItem_Options, "ToolStripMenuItem_Options");
             this.ToolStripMenuItem_Options.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem_Options_Configure});
+            this.ToolStripMenuItem_Options_Configure,
+            this.ToolStripMenuItem_Option_Export});
             this.ToolStripMenuItem_Options.Name = "ToolStripMenuItem_Options";
             // 
             // ToolStripMenuItem_Options_Configure
@@ -318,6 +322,26 @@ namespace CM
             resources.ApplyResources(this.ToolStripMenuItem_Options_Configure, "ToolStripMenuItem_Options_Configure");
             this.ToolStripMenuItem_Options_Configure.Name = "ToolStripMenuItem_Options_Configure";
             this.ToolStripMenuItem_Options_Configure.Click += new System.EventHandler(this.ToolStripMenuItem_Options_Configure_Click);
+            // 
+            // ToolStripMenuItem_Option_Export
+            // 
+            resources.ApplyResources(this.ToolStripMenuItem_Option_Export, "ToolStripMenuItem_Option_Export");
+            this.ToolStripMenuItem_Option_Export.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem_Option_Export_AllUsedCoinTables,
+            this.ToolStripMenuItem_Option_Export_AllCoinTables});
+            this.ToolStripMenuItem_Option_Export.Name = "ToolStripMenuItem_Option_Export";
+            // 
+            // ToolStripMenuItem_Option_Export_AllUsedCoinTables
+            // 
+            resources.ApplyResources(this.ToolStripMenuItem_Option_Export_AllUsedCoinTables, "ToolStripMenuItem_Option_Export_AllUsedCoinTables");
+            this.ToolStripMenuItem_Option_Export_AllUsedCoinTables.Name = "ToolStripMenuItem_Option_Export_AllUsedCoinTables";
+            this.ToolStripMenuItem_Option_Export_AllUsedCoinTables.Click += new System.EventHandler(this.ToolStripMenuItem_Option_Export_AllUsedCoinTables_Click);
+            // 
+            // ToolStripMenuItem_Option_Export_AllCoinTables
+            // 
+            resources.ApplyResources(this.ToolStripMenuItem_Option_Export_AllCoinTables, "ToolStripMenuItem_Option_Export_AllCoinTables");
+            this.ToolStripMenuItem_Option_Export_AllCoinTables.Name = "ToolStripMenuItem_Option_Export_AllCoinTables";
+            this.ToolStripMenuItem_Option_Export_AllCoinTables.Click += new System.EventHandler(this.ToolStripMenuItem_Option_Export_AllCoinTables_Click);
             // 
             // PanelBottom
             // 
@@ -456,6 +480,9 @@ namespace CM
         private System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripComboBox ToolStripComboBoxCoinNames;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Option_Export;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Option_Export_AllUsedCoinTables;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem_Option_Export_AllCoinTables;
     }
 }
 

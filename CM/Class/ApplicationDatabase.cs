@@ -5,7 +5,6 @@ using System.Globalization;
 using System.Data.SQLite;
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices;
-using HvBLogging;
 using System.Collections.Generic;
 using System.Data;
 

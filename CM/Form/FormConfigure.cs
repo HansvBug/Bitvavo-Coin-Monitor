@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Globalization;
 using System.Windows.Forms;
-using HvBLogging;
 
 namespace CM
 {
@@ -21,7 +20,7 @@ namespace CM
         private string DecimalSeperator { get; set; }
         private int CheckedTrvNodes { get; set; }  //The number of checked treeview nodes
 
-        private List<string> SelectedCoinNames = new();
+        private readonly List<string> SelectedCoinNames = new();
         #endregion Properties
 
         public FormConfigure()
@@ -456,7 +455,7 @@ namespace CM
         private int FoundTrvCoinsTextSearch;
         private void TextBoxSearchCoinName_TextChanged(object sender, EventArgs e)
         {
-            if (TextBoxSearchCoinName.Text.Count() > 0)
+            if (TextBoxSearchCoinName.Text.Length > 0)
             {
                 ButtonSearchCoinName.Enabled = true;
             }
@@ -566,7 +565,7 @@ namespace CM
             Cursor.Current = Cursors.Default;
         }
 
-        private void RemoveUncheckedNodes(TreeView Trv)
+        private static void RemoveUncheckedNodes(TreeView Trv)
         {
             var nodes = new Stack<TreeNode>(Trv.Nodes.Cast<TreeNode>());
             while (nodes.Count > 0)

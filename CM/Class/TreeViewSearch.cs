@@ -12,7 +12,7 @@ namespace CM
         //TODO; Can not be idisposible otherwise find next does not work  --> Check if this still is true
 
         #region Properties
-        private readonly List<TreeNode> CurrentNodeMatches = new List<TreeNode>();
+        private readonly List<TreeNode> CurrentNodeMatches = new();
 
         private int LastNodeIndex = 0;
 

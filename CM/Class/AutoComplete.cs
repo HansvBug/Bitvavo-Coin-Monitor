@@ -10,8 +10,8 @@ namespace CM
         {
             if (Trv != null)
             {
-                AutoCompleteStringCollection DataCollection = new AutoCompleteStringCollection();
-                addItems(DataCollection, Trv);
+                AutoCompleteStringCollection DataCollection = new();
+                AddItems(DataCollection, Trv);
 
                 return DataCollection;
             }
@@ -20,7 +20,7 @@ namespace CM
                 return null;
             }
         }
-        private void addItems(AutoCompleteStringCollection col, TreeView Trv)
+        private void AddItems(AutoCompleteStringCollection col, TreeView Trv)
         {
             TreeNodeCollection nodes = Trv.Nodes;
             foreach (TreeNode n in nodes)

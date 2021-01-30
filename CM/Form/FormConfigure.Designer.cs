@@ -67,7 +67,6 @@ namespace CM
             this.LabelWarnPercentage = new System.Windows.Forms.Label();
             this.TextBoxRateLimit = new System.Windows.Forms.TextBox();
             this.LabelRateLimit = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.GroupBoxUrl = new System.Windows.Forms.GroupBox();
             this.CheckBoxEnableUrl = new System.Windows.Forms.CheckBox();
             this.TextBoxUrl1 = new System.Windows.Forms.TextBox();
@@ -87,13 +86,13 @@ namespace CM
             // 
             // GroupBoxLogFile
             // 
+            resources.ApplyResources(this.GroupBoxLogFile, "GroupBoxLogFile");
             this.GroupBoxLogFile.Controls.Add(this.CheckBoxActivateLogging);
             this.GroupBoxLogFile.Controls.Add(this.TextBoxLocationLogFile);
             this.GroupBoxLogFile.Controls.Add(this.LabelLocationLogFile);
             this.GroupBoxLogFile.Controls.Add(this.LabelLocationSettingsFile);
             this.GroupBoxLogFile.Controls.Add(this.TextBoxLocationSettingsFile);
             this.GroupBoxLogFile.Controls.Add(this.CheckBoxAppenLogFile);
-            resources.ApplyResources(this.GroupBoxLogFile, "GroupBoxLogFile");
             this.GroupBoxLogFile.Name = "GroupBoxLogFile";
             this.GroupBoxLogFile.TabStop = false;
             // 
@@ -133,12 +132,12 @@ namespace CM
             // 
             // GroupBoxDbmaintenance
             // 
+            resources.ApplyResources(this.GroupBoxDbmaintenance, "GroupBoxDbmaintenance");
             this.GroupBoxDbmaintenance.Controls.Add(this.LabelLocationAppDatabaseFile);
             this.GroupBoxDbmaintenance.Controls.Add(this.CopyDatabaseIntervalTextBox);
             this.GroupBoxDbmaintenance.Controls.Add(this.TextBoxLocationDatabaseFile);
             this.GroupBoxDbmaintenance.Controls.Add(this.LabelCopyAppDb);
             this.GroupBoxDbmaintenance.Controls.Add(this.ButtonCompressAppDatabase);
-            resources.ApplyResources(this.GroupBoxDbmaintenance, "GroupBoxDbmaintenance");
             this.GroupBoxDbmaintenance.Name = "GroupBoxDbmaintenance";
             this.GroupBoxDbmaintenance.TabStop = false;
             // 
@@ -189,8 +188,8 @@ namespace CM
             // 
             // TreeViewCoinNames
             // 
-            this.TreeViewCoinNames.CheckBoxes = true;
             resources.ApplyResources(this.TreeViewCoinNames, "TreeViewCoinNames");
+            this.TreeViewCoinNames.CheckBoxes = true;
             this.TreeViewCoinNames.Name = "TreeViewCoinNames";
             this.TreeViewCoinNames.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeViewCoinNames_AfterSelect);
             this.TreeViewCoinNames.Click += new System.EventHandler(this.TreeViewCoinNames_Click);
@@ -218,22 +217,23 @@ namespace CM
             // 
             // TabControl1
             // 
+            resources.ApplyResources(this.TabControl1, "TabControl1");
             this.TabControl1.Controls.Add(this.TabPageCoins);
             this.TabControl1.Controls.Add(this.TabPageAppSettings);
             this.TabControl1.Controls.Add(this.TabPageAPI);
-            resources.ApplyResources(this.TabControl1, "TabControl1");
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
             // 
             // TabPageCoins
             // 
-            this.TabPageCoins.Controls.Add(this.GroupBox1);
             resources.ApplyResources(this.TabPageCoins, "TabPageCoins");
+            this.TabPageCoins.Controls.Add(this.GroupBox1);
             this.TabPageCoins.Name = "TabPageCoins";
             this.TabPageCoins.UseVisualStyleBackColor = true;
             // 
             // GroupBox1
             // 
+            resources.ApplyResources(this.GroupBox1, "GroupBox1");
             this.GroupBox1.Controls.Add(this.ButtonClose);
             this.GroupBox1.Controls.Add(this.ButtonSelectedOnly);
             this.GroupBox1.Controls.Add(this.LabelCountCheckedTrvNodes);
@@ -245,7 +245,6 @@ namespace CM
             this.GroupBox1.Controls.Add(this.TreeViewCoinNames);
             this.GroupBox1.Controls.Add(this.ButtonDeselectAll);
             this.GroupBox1.Controls.Add(this.ButtonSelectAll);
-            resources.ApplyResources(this.GroupBox1, "GroupBox1");
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.TabStop = false;
             // 
@@ -288,12 +287,12 @@ namespace CM
             // 
             // TabPageAppSettings
             // 
+            resources.ApplyResources(this.TabPageAppSettings, "TabPageAppSettings");
             this.TabPageAppSettings.Controls.Add(this.button1);
             this.TabPageAppSettings.Controls.Add(this.GroupBoxLogFile);
             this.TabPageAppSettings.Controls.Add(this.GroupBoxDbmaintenance);
             this.TabPageAppSettings.Controls.Add(this.LabelBuildDate);
             this.TabPageAppSettings.Controls.Add(this.LabelVersion);
-            resources.ApplyResources(this.TabPageAppSettings, "TabPageAppSettings");
             this.TabPageAppSettings.Name = "TabPageAppSettings";
             this.TabPageAppSettings.UseVisualStyleBackColor = true;
             // 
@@ -306,14 +305,13 @@ namespace CM
             // 
             // TabPageAPI
             // 
+            resources.ApplyResources(this.TabPageAPI, "TabPageAPI");
             this.TabPageAPI.Controls.Add(this.button2);
             this.TabPageAPI.Controls.Add(this.TextBoxWarnPercentage);
             this.TabPageAPI.Controls.Add(this.LabelWarnPercentage);
             this.TabPageAPI.Controls.Add(this.TextBoxRateLimit);
             this.TabPageAPI.Controls.Add(this.LabelRateLimit);
-            this.TabPageAPI.Controls.Add(this.label3);
             this.TabPageAPI.Controls.Add(this.GroupBoxUrl);
-            resources.ApplyResources(this.TabPageAPI, "TabPageAPI");
             this.TabPageAPI.Name = "TabPageAPI";
             this.TabPageAPI.UseVisualStyleBackColor = true;
             // 
@@ -349,19 +347,14 @@ namespace CM
             resources.ApplyResources(this.LabelRateLimit, "LabelRateLimit");
             this.LabelRateLimit.Name = "LabelRateLimit";
             // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
             // GroupBoxUrl
             // 
+            resources.ApplyResources(this.GroupBoxUrl, "GroupBoxUrl");
             this.GroupBoxUrl.Controls.Add(this.CheckBoxEnableUrl);
             this.GroupBoxUrl.Controls.Add(this.TextBoxUrl1);
             this.GroupBoxUrl.Controls.Add(this.Label1);
             this.GroupBoxUrl.Controls.Add(this.Label2);
             this.GroupBoxUrl.Controls.Add(this.TextBoxUrl2);
-            resources.ApplyResources(this.GroupBoxUrl, "GroupBoxUrl");
             this.GroupBoxUrl.Name = "GroupBoxUrl";
             this.GroupBoxUrl.TabStop = false;
             // 
@@ -458,7 +451,6 @@ namespace CM
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox TextBoxRateLimit;
         private System.Windows.Forms.Label LabelRateLimit;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox TextBoxWarnPercentage;
         private System.Windows.Forms.Label LabelWarnPercentage;
         private System.Windows.Forms.Label LabelCoinFound;

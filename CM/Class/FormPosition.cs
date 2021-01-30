@@ -5,7 +5,6 @@ using System.IO;
 using System.Globalization;
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices;
-using HvBLogging;
 
 namespace CM
 {

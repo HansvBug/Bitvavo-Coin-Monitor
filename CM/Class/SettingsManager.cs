@@ -5,8 +5,6 @@ using System.Windows.Forms;
 using System.Text.Json;
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices;
-using HvBLogging;
-using System.Runtime.CompilerServices;
 
 namespace CM
 {

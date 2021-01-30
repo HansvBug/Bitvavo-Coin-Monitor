@@ -215,7 +215,7 @@ namespace CM
                 string result = "";
                 try
                 {
-                    ManagementObjectSearcher mbs = new ManagementObjectSearcher("Select ProcessorID From Win32_processor");  //Add reference assemblies: system.management
+                    ManagementObjectSearcher mbs = new("Select ProcessorID From Win32_processor");  //Add reference assemblies: system.management
                     ManagementObjectCollection mbsList = mbs.Get();
 
                     foreach (ManagementObject mo in mbsList)
@@ -240,7 +240,7 @@ namespace CM
             try
             {
                 string bios = "";
-                using (ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT SerialNumber FROM Win32_BIOS"))
+                using (ManagementObjectSearcher searcher = new("SELECT SerialNumber FROM Win32_BIOS"))
                 {
                     foreach (ManagementObject mObject in searcher.Get())
                     {
@@ -268,7 +268,7 @@ namespace CM
         {
             try
             {
-                using ManagementClass mc = new ManagementClass("Win32_ComputerSystem");
+                using ManagementClass mc = new("Win32_ComputerSystem");
                 ManagementObjectCollection moc = mc.GetInstances();
 
                 foreach (ManagementObject item in moc)
@@ -311,7 +311,7 @@ namespace CM
 
         public static List<string> GetAllDotNetVersions()
         {
-            GetDotNetVersion netVersion = new GetDotNetVersion();
+            GetDotNetVersion netVersion = new();
             return netVersion.DotNetVersions();
         }
 
@@ -364,7 +364,7 @@ namespace CM
     {
         //bron: https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
 
-        private readonly List<String> netVersions = new List<string>();
+        private readonly List<String> netVersions = new();
 
         public GetDotNetVersion()
         {

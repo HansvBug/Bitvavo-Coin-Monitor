@@ -261,15 +261,17 @@ namespace CM
             aChart.Titles.Add(CoinName);
             aChart.Location = new Point(3, 3);
 
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chrtArea = new System.Windows.Forms.DataVisualization.Charting.ChartArea("ChartArea_"+ CoinName);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chrtArea = new("ChartArea_"+ CoinName);
             chrtArea.Area3DStyle.Enable3D = false;
             aChart.ChartAreas.Add(chrtArea);
-            
+
             //TODO create a function for this
             //The current coin price
-            System.Windows.Forms.DataVisualization.Charting.Series series = new System.Windows.Forms.DataVisualization.Charting.Series("Series_" + CoinName);
-            series.Name = "Series_" + CoinName;
-            series.ChartArea = "ChartArea_" + CoinName;                       
+            System.Windows.Forms.DataVisualization.Charting.Series series = new("Series_" + CoinName)
+            {
+                Name = "Series_" + CoinName,
+                ChartArea = "ChartArea_" + CoinName
+            };
             aChart.Series.Add(CoinName);            
             aChart.Series[CoinName].Enabled = true;
 
@@ -278,25 +280,25 @@ namespace CM
             aChart.Series[CoinName].MarkerSize = 5;
 
             //Start_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesStartPrice = new System.Windows.Forms.DataVisualization.Charting.Series("Start_Prijs_" + CoinName);
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesStartPrice = new("Start_Prijs_" + CoinName);
             SeriesStartPrice.Name = "Start_Prijs_" + CoinName;
             aChart.Series.Add(SeriesStartPrice);
             aChart.Series["Start_Prijs_" + CoinName].Enabled = true;
 
             //Open_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesOpenPrice = new System.Windows.Forms.DataVisualization.Charting.Series("Open_Prijs_" + CoinName);
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesOpenPrice = new("Open_Prijs_" + CoinName);
             SeriesOpenPrice.Name = "Open_Prijs_" + CoinName;
             aChart.Series.Add(SeriesOpenPrice);
             aChart.Series["Open_Prijs_" + CoinName].Enabled = true;
 
             //Sessie_Hoogste_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionHighestPrice = new System.Windows.Forms.DataVisualization.Charting.Series("Sessie_Hoogste_Prijs_" + CoinName);
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionHighestPrice = new("Sessie_Hoogste_Prijs_" + CoinName);
             SeriesSessionHighestPrice.Name = "Sessie_Hoogste_Prijs_" + CoinName;
             aChart.Series.Add(SeriesSessionHighestPrice);
             aChart.Series["Sessie_Hoogste_Prijs_" + CoinName].Enabled = true;
 
             //Sessie_Laagste_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionLowestPrice = new System.Windows.Forms.DataVisualization.Charting.Series("Sessie_Laagste_Prijs_" + CoinName);
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionLowestPrice = new("Sessie_Laagste_Prijs_" + CoinName);
             SeriesSessionLowestPrice.Name = "Sessie_Laagste_Prijs_" + CoinName;
             aChart.Series.Add(SeriesSessionLowestPrice);
             aChart.Series["Sessie_Laagste_Prijs_" + CoinName].Enabled = true;

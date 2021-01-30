@@ -5,8 +5,6 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-//using HvBAppEnvironment;
-using HvBLogging;
 
 namespace CM
 {
@@ -742,7 +740,7 @@ namespace CM
                                 if (aCoin.SessionHighPrice != 0)
                                 {
                                     cntrl.Series["Sessie_Hoogste_Prijs_" + CoinName].Points.AddXY(DateTime.Now.ToString("HH: mm: ss"), aCoin.SessionHighPrice);
-                                   SetChartLine(cntrl, "Sessie_Hoogste_Prijs_", aCoin.SessionHighPrice, aCoin.Name);
+                                    SetChartLine(cntrl, "Sessie_Hoogste_Prijs_", aCoin.SessionHighPrice, aCoin.Name);
                                 }
                                 if (aCoin.SessionLowPrice != 0)
                                 {
@@ -758,14 +756,13 @@ namespace CM
             }
         }
 
-        private void SetChartLine(System.Windows.Forms.DataVisualization.Charting.Chart aChart, string SerieName, double aValue, string ACoin)
+        private static void SetChartLine(System.Windows.Forms.DataVisualization.Charting.Chart aChart, string SerieName, double aValue, string ACoin)
         {            
             if (SerieName == "Sessie_Laagste_Prijs_")
             {
                 var points = aChart.Series["Sessie_Laagste_Prijs_" + ACoin].Points;
                 for (var i = 0; i < points.Count; ++i)
-                { points[i].YValues[0] = aValue; }
-                aChart.Series.Invalidate();
+                { points[i].YValues[0] = aValue; }                
             }
             if (SerieName == "Sessie_Hoogste_Prijs_")
             {
@@ -1021,11 +1018,11 @@ namespace CM
             {
                 Interval = 1000
             };
-            t.Tick += new EventHandler(t_Tick);
+            t.Tick += new EventHandler(TimerClockTick);
             t.Enabled = true;
         }
 
-        void t_Tick(object sender, EventArgs e)
+        void TimerClockTick(object sender, EventArgs e)
         {
             ToolStripStatusLabel2.Text = DateTime.Now.Date.ToString("d/M/yyyy") + "   -   " + DateTime.Now.ToString("HH:mm:ss");
         }
@@ -1044,6 +1041,59 @@ namespace CM
                 TabPage t = TabControlCharts.TabPages[selected];
                 TabControlCharts.SelectTab(t); //go to tab
             }
+            Cursor.Current = Cursors.Default;
+        }
+
+        #region Export
+        private void ToolStripMenuItem_Option_Export_AllUsedCoinTables_Click(object sender, EventArgs e)
+        {
+            GetExportLocation();
+        }
+        
+
+        private void GetExportLocation()
+        {
+            string FileLocation = ChooseFolder();
+
+            ToolStripStatusLabel1.Text = "Bezig met exporteren...";
+            Cursor.Current = Cursors.WaitCursor;
+
+            SQliteExport ExportToCsv = new(FileLocation);
+            ExportToCsv.ExportToCsv(true);  // Export only the selected tables (in options)
+
+            ToolStripStatusLabel1.Text = "";
+            Cursor.Current = Cursors.Default;
+        }
+        private string ChooseFolder()
+        {
+            ToolStripStatusLabel1.Text = "Selecteer een map.";
+            string SelectedFolder = string.Empty;
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    SelectedFolder = fbd.SelectedPath;
+                }
+            }
+            ToolStripStatusLabel1.Text = "";
+            return SelectedFolder;
+        }
+
+        #endregion Export
+
+        private void ToolStripMenuItem_Option_Export_AllCoinTables_Click(object sender, EventArgs e)
+        {
+            string FileLocation = ChooseFolder();
+
+            ToolStripStatusLabel1.Text = "Bezig met exporteren...";
+            Cursor.Current = Cursors.WaitCursor;
+
+            SQliteExport ExportToCsv = new(FileLocation);
+            ExportToCsv.ExportToCsv(false);  // Export tables (in options)
+
+            ToolStripStatusLabel1.Text = "";
             Cursor.Current = Cursors.Default;
         }
     }
