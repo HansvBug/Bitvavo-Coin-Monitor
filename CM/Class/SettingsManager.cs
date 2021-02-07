@@ -49,8 +49,8 @@ namespace CM
             public string Url2 { get; set; }
             public double WarnPercentage { get; set; }
             public double RateLimit { get; set; }
-
             public int TrvFoundSearchColor { get; set; }
+            public bool HideFromTaskbar { get; set; }
         }
 
         public class FormMainParams
@@ -161,7 +161,8 @@ namespace CM
                             Url2 = "https://api.bitvavo.com/v2/ticker/24h",
                             WarnPercentage = 1,
                             RateLimit = 1 ,
-                            TrvFoundSearchColor = -10768897
+                            TrvFoundSearchColor = -10768897,
+                            HideFromTaskbar = false
                         }
                     },
                     FormMain = new List<FormMainParams>()

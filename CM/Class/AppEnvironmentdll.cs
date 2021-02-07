@@ -161,7 +161,6 @@ namespace CM
 
         private static string GetWindowsVersion(short type)
         {
-            //TODO; test de verschillen
             try
             {
                 string osVersion = "";
@@ -194,7 +193,7 @@ namespace CM
             {
                 throw new InvalidOperationException("");
             }
-        }  //Test de verschillen !!!!
+        }
 
         private static string GetProcessorCount()
         {

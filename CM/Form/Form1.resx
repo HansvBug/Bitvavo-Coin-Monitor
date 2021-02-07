@@ -57,83 +57,735 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
-  <data name="ButtonStart.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel1.Name" xml:space="preserve">
-    <value>ToolStripStatusLabel1</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ToolStripMenuItem_Option_Export.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>123, 22</value>
+  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>3, 3</value>
+  </data>
+  <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
+    <value>splitContainer2.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>True</value>
+  </metadata>
+  <data name="Column2.HeaderText" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>3, 3</value>
   </data>
   <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>248, 110</value>
   </data>
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <data name="dataGridView1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>299, 383</value>
+  </data>
+  <data name="splitContainer2.SplitterDistance" type="System.Int32, System.Private.CoreLib">
+    <value>182</value>
+  </data>
+  <data name="splitContainer2.SplitterWidth" type="System.Int32, System.Private.CoreLib">
+    <value>10</value>
+  </data>
+  <data name="splitContainer2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
+    <value>splitContainer2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
+    <value>splitContainer1.Panel1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="panel3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>437, 349</value>
+  </data>
+  <data name="panel3.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel3.Name" xml:space="preserve">
+    <value>panel3</value>
+  </data>
+  <data name="&gt;&gt;panel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel3.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>13, 10</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>82, 19</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 349</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>437, 32</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
+    <value>splitContainer1.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
   <data name="&gt;&gt;splitContainer1.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="TabPageCharts.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
+  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>748, 383</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
+  <data name="splitContainer1.SplitterDistance" type="System.Int32, System.Private.CoreLib">
+    <value>299</value>
+  </data>
+  <data name="splitContainer1.SplitterWidth" type="System.Int32, System.Private.CoreLib">
+    <value>10</value>
+  </data>
+  <data name="splitContainer1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
+    <value>splitContainer1</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;Timer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="TabControlMain.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
+    <value>Left</value>
   </data>
-  <data name="&gt;&gt;PanelBottom.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="LabelWarnPercentage.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
-    <value>Timer1</value>
-  </data>
-  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
+  <data name="LabelWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>11, 58</value>
   </data>
   <data name="LabelWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>227, 15</value>
   </data>
-  <data name="ToolStripMenuItem_Session_Start.Text" xml:space="preserve">
+  <data name="LabelWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>19</value>
+  </data>
+  <data name="LabelWarnPercentage.Text" xml:space="preserve">
+    <value>Waarschuwen bij een stijging/daling van :</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Name" xml:space="preserve">
+    <value>LabelWarnPercentage</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>244, 55</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>42, 23</value>
+  </data>
+  <data name="TextBoxWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>18</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextBoxWarnPercentage.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Name" xml:space="preserve">
+    <value>TextBoxWarnPercentage</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ButtonStop.Enabled" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
+  </data>
+  <data name="ButtonStop.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>211, 105</value>
+  </data>
+  <data name="ButtonStop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonStop.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>17</value>
+  </data>
+  <data name="ButtonStop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.Name" xml:space="preserve">
+    <value>ButtonStop</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;ButtonStop.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ButtonPause.Enabled" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
+  </data>
+  <data name="ButtonPause.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>92, 105</value>
+  </data>
+  <data name="ButtonPause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonPause.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>16</value>
+  </data>
+  <data name="ButtonPause.Text" xml:space="preserve">
+    <value>Pauze</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.Name" xml:space="preserve">
+    <value>ButtonPause</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;ButtonPause.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ButtonStart.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>11, 105</value>
+  </data>
+  <data name="ButtonStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonStart.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>15</value>
+  </data>
+  <data name="ButtonStart.Text" xml:space="preserve">
     <value>Start</value>
+  </data>
+  <data name="&gt;&gt;ButtonStart.Name" xml:space="preserve">
+    <value>ButtonStart</value>
+  </data>
+  <data name="&gt;&gt;ButtonStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonStart.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
   </data>
   <data name="&gt;&gt;ButtonStart.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="TextBoxTimeInterval.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>244, 26</value>
+  </data>
+  <data name="TextBoxTimeInterval.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>42, 23</value>
+  </data>
+  <data name="TextBoxTimeInterval.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="TextBoxTimeInterval.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TextBoxTimeInterval.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.Name" xml:space="preserve">
+    <value>TextBoxTimeInterval</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;TextBoxTimeInterval.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, System.Private.CoreLib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>11, 29</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>130, 15</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Intervaltijd in minuten :</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="GroupBoxSessionSettings.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>14, 14</value>
+  </data>
+  <data name="GroupBoxSessionSettings.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>310, 159</value>
+  </data>
+  <data name="GroupBoxSessionSettings.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Name" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Parent" xml:space="preserve">
+    <value>TabPageConfigure</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="TabPageConfigure.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>27, 4</value>
+  </data>
+  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TabPageConfigure.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPageConfigure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>768, 423</value>
+  </data>
+  <data name="TabPageConfigure.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="TabPageConfigure.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="&gt;&gt;TabPageConfigure.Name" xml:space="preserve">
+    <value>TabPageConfigure</value>
+  </data>
+  <data name="&gt;&gt;TabPageConfigure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPageConfigure.Parent" xml:space="preserve">
+    <value>TabControlMain</value>
+  </data>
+  <data name="&gt;&gt;TabPageConfigure.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>4, 24</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>754, 389</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>TabControlCharts</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TabControlCharts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControlCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>3, 3</value>
+  </data>
+  <data name="TabControlCharts.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>762, 417</value>
+  </data>
+  <data name="TabControlCharts.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Name" xml:space="preserve">
+    <value>TabControlCharts</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Parent" xml:space="preserve">
+    <value>TabPageCharts</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TabPageCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>27, 4</value>
   </data>
   <data name="TabPageCharts.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;ButtonStart.Name" xml:space="preserve">
-    <value>ButtonStart</value>
+  <data name="TabPageCharts.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>768, 423</value>
   </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>6, 25</value>
+  <data name="TabPageCharts.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="TabPageCharts.Text" xml:space="preserve">
+    <value>Grafieken</value>
+  </data>
+  <data name="&gt;&gt;TabPageCharts.Name" xml:space="preserve">
+    <value>TabPageCharts</value>
+  </data>
+  <data name="&gt;&gt;TabPageCharts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPageCharts.Parent" xml:space="preserve">
+    <value>TabControlMain</value>
+  </data>
+  <data name="&gt;&gt;TabPageCharts.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControlMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="TabControlMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 431</value>
+  </data>
+  <data name="TabControlMain.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.Name" xml:space="preserve">
+    <value>TabControlMain</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;TabControlMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>103, 17</value>
+  </data>
+  <data name="ToolStripStatusLabel1.Text" xml:space="preserve">
+    <value>                                </value>
+  </data>
+  <data name="ToolStripStatusLabel2.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="ToolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>681, 17</value>
+  </data>
+  <data name="ToolStripStatusLabel2.Text" xml:space="preserve">
+    <value>               </value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 520</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 22</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>1</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ToolStripMenuItem_Program_Close.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>121, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Program_Close.Text" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+  <data name="ToolStripMenuItem_Program.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>82, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Program.Text" xml:space="preserve">
+    <value>Programma</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Start.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>105, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Start.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Pause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>105, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Pause.Text" xml:space="preserve">
+    <value>Pauze</value>
   </data>
   <data name="ToolStripMenuItem_Session_Stop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>105, 22</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Program_Close</value>
+  <data name="ToolStripMenuItem_Session_Stop.Text" xml:space="preserve">
+    <value>Stop</value>
   </data>
-  <data name="&gt;&gt;splitContainer2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStripMenuItem_Session.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>50, 20</value>
   </data>
-  <data name="TabPageCharts.Text" xml:space="preserve">
-    <value>Grafieken</value>
+  <data name="ToolStripMenuItem_Session.Text" xml:space="preserve">
+    <value>Sessie</value>
+  </data>
+  <data name="ToolStripMenuItem_Options_Configure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>185, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Options_Configure.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="ToolStripMenuItemHideFromTaskbar.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>185, 22</value>
+  </data>
+  <data name="ToolStripMenuItemHideFromTaskbar.Text" xml:space="preserve">
+    <value>Toon niet in taakbalk</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>182, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>229, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Text" xml:space="preserve">
+    <value>Alle in gebruik zijnde tabellen</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>229, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Text" xml:space="preserve">
+    <value>Alle tabellen</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>185, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export.Text" xml:space="preserve">
+    <value>Exporteer</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>53, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 24</value>
+  </data>
+  <data name="MenuStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>2</value>
+  </data>
+  <data name="MenuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PanelBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="PanelBottom.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 480</value>
+  </data>
+  <data name="PanelBottom.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 40</value>
+  </data>
+  <data name="PanelBottom.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PanelBottom.Name" xml:space="preserve">
+    <value>PanelBottom</value>
+  </data>
+  <data name="&gt;&gt;PanelBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelBottom.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="ToolStripButton_SessionStart.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAADB7SURBVHhe7d0J+Kdj3fdxe4wmS+K2ZWuTVqXSvtwpRIqU
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAADB7SURBVHhe7d0J+Kdj3fdxe4wmS+K2ZWuTVqXSvtwpRIqU
         ntJmqbSgRevdok3SIpXSXpbqJimRViSiKCpE2SpabNnH8DyfzzMmM+M7M//lt3y/5/l+Hcf7ODrEzP+6
         rvM6r/P/W65rCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADTdX+1jzpc/Uydr667oz/e
         8c/8/71VbaIAAEBR66oPqfPU/51kF6oD1EYKAAAUsIraX92koov7ZJqlDlSrKQAAkNQr1dUquphPp2vV
@@ -343,74 +995,19 @@
         AAAAAAAAAAAAAACgb0ss8f8A3yRUA/yoKL4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStripButton_SessionStart.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+    <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllCoinTables.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStripButton_SessionStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>23, 22</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TextBoxWarnPercentage.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="ToolStripComboBoxCoinNames.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Name" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TabControlCharts.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="ToolStripStatusLabel1.Text" xml:space="preserve">
-    <value>                                </value>
-  </data>
-  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 22</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MenuStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Stop.Text" xml:space="preserve">
-    <value>Stop</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Name" xml:space="preserve">
-    <value>TabPageCharts</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="splitContainer2.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>182</value>
-  </data>
-  <data name="TabPageConfigure.Text" xml:space="preserve">
+  <data name="ToolStripButton_SessionStart.Text" xml:space="preserve">
     <value>Start</value>
-  </data>
-  <data name="splitContainer1.SplitterDistance" type="System.Int32, System.Private.CoreLib">
-    <value>299</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Name" xml:space="preserve">
-    <value>TextBoxWarnPercentage</value>
   </data>
   <data name="ToolStripButton_SessionPause.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAADqSSURBVHhe7Z0LrK1VdbY3IipQwVpRqNZgrWIxtWqsVQyK
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAADqSSURBVHhe7Z0LrK1VdbY3IipQwVpRqNZgrWIxtWqsVQyK
         ltLGmnqLVGPa1FqrRFKvibH1FhGMTdX8ocTQGqyXhoj3SgyGhkg0xoI1v21Rkkox3qIGKopcVOT/38dT
         jhvO2Pf1zfldnid5ErJZe+215hxzjHHW+r4510RkEhwWfyU+PP5OPDWeFl8T3x7fEz8WL4qXxM/Ey+IX
         45fjVfHr8bvxunhjvOV/5b/5Gf+Px/BYfoff5Tl4Lp6T5+Zv8Lf4m/xtXgOvhdfEa+M18lpFRERkEw6J
@@ -663,316 +1260,19 @@
         k7/Na+C18Jp4bbxGXquIjJq1tf8PY8oJOJsoXA4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonStop.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="LabelWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>11, 58</value>
-  </data>
-  <data name="ButtonStop.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>211, 105</value>
-  </data>
-  <data name="TabControlCharts.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>762, 417</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxTimeInterval.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>244, 26</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStop.Name" xml:space="preserve">
-    <value>ToolStripButton_SessionStop</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Name" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Pause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>105, 22</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
-    <value>7, 15</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionPause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.Parent" xml:space="preserve">
-    <value>TabPageCharts</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session_Stop</value>
-  </data>
-  <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>299, 383</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>19</value>
-  </data>
-  <data name="splitContainer2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ToolStripMenuItem_Options.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>53, 20</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="ToolStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Text" xml:space="preserve">
-    <value>Alle tabellen</value>
-  </data>
-  <data name="PanelBottom.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Text" xml:space="preserve">
-    <value>Alle in gebruik zijnde tabellen</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonPause.Text" xml:space="preserve">
-    <value>Pauze</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
-    <value>ToolStrip1</value>
-  </data>
-  <data name="TabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>52, 17</value>
+  <data name="ToolStripButton_SessionPause.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+    <value>Magenta</value>
   </data>
   <data name="ToolStripButton_SessionPause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>23, 22</value>
   </data>
-  <data name="ButtonPause.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>92, 105</value>
-  </data>
-  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
-    <value>Column2</value>
-  </data>
-  <data name="splitContainer1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="ToolStripMenuItem_Session.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>50, 20</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 542</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripComboBoxCoinNames.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>121, 25</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="ButtonStart.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export.Text" xml:space="preserve">
-    <value>Exporteer</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxTimeInterval.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>754, 389</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="ToolStripButton_SessionPause.Text" xml:space="preserve">
     <value>Pause</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Name" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="PanelBottom.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 480</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 431</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControlCharts.Name" xml:space="preserve">
-    <value>TabControlCharts</value>
-  </data>
-  <data name="TabControlMain.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="ToolStripStatusLabel2.Text" xml:space="preserve">
-    <value>               </value>
-  </data>
-  <data name="PanelBottom.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 40</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Name" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="TextBoxWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>42, 23</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxTimeInterval.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>42, 23</value>
-  </data>
-  <data name="ButtonPause.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>16</value>
-  </data>
-  <data name="ToolStripButton_SessionStart.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 24</value>
-  </data>
-  <data name="ToolStripButton_SessionStart.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="statusStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainer2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Name" xml:space="preserve">
-    <value>ToolStripComboBoxCoinNames</value>
-  </data>
-  <data name="TabPageCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>27, 4</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Parent" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>TabControlCharts</value>
-  </data>
-  <data name="ToolStripMenuItem_Program.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>82, 20</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Name" xml:space="preserve">
-    <value>splitContainer1.Panel2</value>
-  </data>
-  <data name="GroupBoxSessionSettings.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>310, 159</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Intervaltijd in minuten :</value>
-  </data>
-  <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ToolStripButton_SessionStop.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAFUgSURBVHhe7b0HmCVVtf69q3ad0zPDzJBzFgExYFZUriAK
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAFUgSURBVHhe7b0HmCVVtf69q3ad0zPDzJBzFgExYFZUriAK
         khQVUCQoRoIiolcwkkTUvyJGUJQkAooYMQDXAIoJFQHJIGGGNDDECUz+vnedvUaG6jXTp7tr16nw/p7n
         vXinu89ae+2119rnnKrajhBSCyZCG3Rc57ne+R2gvVOXHQx9wif+Sz7Jzk6S7ELoIuiSNEkvg/4CXQVd
         h9+5Fb8zDbofegSaCy1SzdF/k5/dJb8rfwP9U1/jMnlNfe0L8Ttni02xLT6IL+ITfNsaPq4PTRCHCSGE
@@ -1338,427 +1638,1370 @@
         a+lrymv/EL93Nn7nJPk0Q3yAL2+CT68U3+CjvHPPxGFCSJVx7v8HYOCqA++nP6gAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer2</value>
-  </data>
-  <data name="TextBoxWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>18</value>
-  </data>
-  <data name="PanelBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Name" xml:space="preserve">
-    <value>ButtonPause</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Program</value>
-  </data>
-  <data name="TabPageConfigure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>768, 423</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ToolStripButton_SessionPause.Name" xml:space="preserve">
-    <value>ToolStripButton_SessionPause</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;PanelBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="TabPageCharts.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>768, 423</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripMenuItem_Program_Close.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>121, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Options_Configure.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>123, 22</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>4, 24</value>
-  </data>
-  <data name="TabControlMain.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
+  <data name="ToolStripButton_SessionStop.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
+    <value>Magenta</value>
   </data>
   <data name="ToolStripButton_SessionStop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>23, 22</value>
   </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="Column1.HeaderText" xml:space="preserve">
-    <value>Column1</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Start.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>105, 22</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
-    <value>MenuStrip1</value>
-  </data>
-  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
-    <value>Opties</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="splitContainer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TextBoxTimeInterval.Text" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Program.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Parent" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="ButtonStop.Text" xml:space="preserve">
+  <data name="ToolStripButton_SessionStop.Text" xml:space="preserve">
     <value>Stop</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Option_Export.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>6, 25</value>
   </data>
-  <data name="&gt;&gt;ToolStripButton_SessionStart.Name" xml:space="preserve">
-    <value>ToolStripButton_SessionStart</value>
-  </data>
-  <data name="TabControlMain.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="ToolStripMenuItem_Program_Close.Text" xml:space="preserve">
-    <value>Afsluiten</value>
-  </data>
-  <data name="ToolStripMenuItem_Session.Text" xml:space="preserve">
-    <value>Sessie</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>11, 29</value>
-  </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripButton_SessionStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>23, 22</value>
-  </data>
-  <data name="TabControlMain.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 431</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Pause.Text" xml:space="preserve">
-    <value>Pauze</value>
-  </data>
-  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session_Start</value>
-  </data>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 520</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllUsedCoinTables.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonStart.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>103, 17</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="TabControlCharts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TabControlCharts.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 3</value>
-  </data>
-  <data name="LabelWarnPercentage.Text" xml:space="preserve">
-    <value>Waarschuwen bij een stijging/daling van :</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ToolStripMenuItem_Options_Configure.Text" xml:space="preserve">
-    <value>Opties</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Session_Pause</value>
-  </data>
-  <data name="ButtonPause.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="TextBoxWarnPercentage.Text" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="Column2.HeaderText" xml:space="preserve">
-    <value>Column2</value>
-  </data>
-  <data name="TextBoxTimeInterval.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>229, 22</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Options</value>
-  </data>
-  <data name="ButtonStart.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>11, 105</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllCoinTables.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Option_Export_AllCoinTables</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 49</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllUsedCoinTables.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Option_Export_AllUsedCoinTables</value>
-  </data>
-  <data name="ButtonPause.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <data name="ToolStripComboBoxCoinNames.Enabled" type="System.Boolean, System.Private.CoreLib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;PanelBottom.Name" xml:space="preserve">
-    <value>PanelBottom</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel1.Name" xml:space="preserve">
-    <value>splitContainer1.Panel1</value>
-  </data>
-  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
-    <value>Column1</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonStop.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormMain</value>
-  </data>
-  <data name="&gt;&gt;PanelBottom.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>748, 383</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ToolStripButton_SessionStop.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
-    <value>Magenta</value>
-  </data>
-  <data name="ToolStripButton_SessionPause.ImageTransparentColor" type="System.Drawing.Color, System.Drawing.Primitives">
-    <value>Magenta</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Name" xml:space="preserve">
-    <value>LabelWarnPercentage</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="TextBoxWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>244, 55</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripStatusLabel2.Name" xml:space="preserve">
-    <value>ToolStripStatusLabel2</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Panel2.Parent" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="splitContainer2.SplitterWidth" type="System.Int32, System.Private.CoreLib">
-    <value>10</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>130, 15</value>
-  </data>
-  <data name="TabPageConfigure.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
-    <value>splitContainer2.Panel2</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Option_Export.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Option_Export</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Name" xml:space="preserve">
-    <value>ButtonStop</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ToolStripComboBoxCoinNames.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>121, 25</value>
   </data>
   <data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 24</value>
   </data>
-  <data name="&gt;&gt;TabPageCharts.ZOrder" xml:space="preserve">
+  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 25</value>
+  </data>
+  <data name="ToolStrip1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>229, 22</value>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
+    <value>0, 49</value>
   </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Name" xml:space="preserve">
-    <value>TextBoxTimeInterval</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 431</value>
   </data>
-  <data name="ButtonStop.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="MenuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
+  <data name="panel1.TabIndex" type="System.Int32, System.Private.CoreLib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="ToolStripButton_SessionStop.Text" xml:space="preserve">
-    <value>Stop</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ToolStripMenuItem_Program.Text" xml:space="preserve">
-    <value>Programma</value>
-  </data>
-  <data name="GroupBoxSessionSettings.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>14, 14</value>
-  </data>
-  <data name="&gt;&gt;splitContainer2.Panel1.Name" xml:space="preserve">
-    <value>splitContainer2.Panel1</value>
-  </data>
-  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>799, 25</value>
-  </data>
-  <data name="&gt;&gt;splitContainer1.Name" xml:space="preserve">
-    <value>splitContainer1</value>
-  </data>
-  <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="GroupBoxSessionSettings.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>8</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="splitContainer1.SplitterWidth" type="System.Int32, System.Private.CoreLib">
-    <value>10</value>
+  <data name="NotifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AADZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAEAAAABAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAABAAAABAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAQAAAAB2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAAAAEAAAAAAAAAAAAAAAMAAAAOAAAADgAA
+        AAMAAAAAAAAAAAAAAAEAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAMAAAAAAAAACwAAAFoAAACrAAAA1wAAAOoAAADqAAAA1wAAAKsAAABcAAAACwAAAAAAAAADAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAADAAAAAAAAAFQAAADfAAAA/wAAAP4AAAD/AAAA/wAA
+        AP8AAAD/AAAA/gAAAP8AAADgAAAAVQAAAAAAAAADAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAA
+        AAAAAACPAAAA/wAAAP4AAAD7AAAA9wAAAPwAAAD/AAAA/wAAAPwAAAD3AAAA+wAAAP4AAAD/AAAAkAAA
+        AAAAAAAC2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAAjwAAAP8AAAD6AAAA+wAAAP0AAAD/AAAA/gAA
+        APIAAADyAAAA/gAAAP8AAAD9AAAA+wAAAPoAAAD/AAAAjwAAAAAAAAAD2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAADAAAAAAAA
+        AFkAAAD/AAAA+wAAAP0AAAD/AAAA9gAAAI8AAAA2AAAAFgAAABYAAAA2AAAAjwAAAPUAAAD/AAAA/QAA
+        APsAAAD/AAAAWAAAAAAAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAABAAAAAQAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAALAAAA2gAAAP8AAAD7AAAA/wAAAOIAAAAxAAAAAAAA
+        AAIAAAAAAAAAAAAAAAIAAAAAAAAAMQAAAOIAAAD/AAAA+wAAAP8AAADaAAAACwAAAAAAAAAB2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAABAAAAAQAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAQAAAADAAAAAAAAAAAAAAAAAAAAAAAA
+        AAMAAAAEAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAA
+        AFsAAAD/AAAA+wAAAP8AAAD3AAAANAAAAAAAAAAGAAAAAwAAAAEAAAABAAAAAwAAAAYAAAAAAAAANQAA
+        APcAAAD/AAAA+wAAAP8AAABbAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAAAQAAAAQAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAMAAAABAAAAAAAAAAAAAAADAAAADgAAAA4AAAADAAAAAAAAAAAAAAABAAAAA9mlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAAAAAAAqAAAAP8AAAD4AAAA/wAAAI4AAAAAAAAABv+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAYAAAAAAAAAjwAAAP8AAAD4AAAA/wAAAKcAAAAAAAAAA9ml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAABAAAAAAAAAAAAAAADAAAADgAA
+        AA4AAAADAAAAAAAAAAAAAAABAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAADAAAAAAAAAAsAAABaAAAAqwAAANcAAADqAAAA6gAA
+        ANcAAACrAAAAXAAAAAsAAAAAAAAAAwAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAA
+        AAIAAADVAAAA/wAAAPwAAAD/AAAAOgAAAAAAAAAC/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAwAA
+        AAAAAAA6AAAA/wAAAPwAAAD/AAAA1AAAAAIAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAEAAAADAAAAAAAAAAsAAABaAAAAqwAAANcAAADqAAAA6gAAANcAAACrAAAAXAAAAAsAAAAAAAAAAwAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAwAA
+        AAAAAABUAAAA4AAAAP8AAAD+AAAA/wAAAP8AAAD/AAAA/wAAAP4AAAD/AAAA4AAAAFQAAAAAAAAAAwAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAADgAAAOoAAAD/AAAA/wAAAPEAAAAWAAAAAAAA
+        AAH/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAAAAAAABYAAADxAAAA/wAAAP8AAADqAAAADgAA
+        AAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAwAAAAAAAABUAAAA4AAAAP8AAAD+AAAA/wAA
+        AP8AAAD/AAAA/wAAAP4AAAD/AAAA4AAAAFQAAAAAAAAAAwAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAAjwAAAP8AAAD+AAAA+wAAAPcAAAD8AAAA/wAA
+        AP8AAAD8AAAA9wAAAPsAAAD+AAAA/wAAAJAAAAAAAAAAAtmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAAAAAAPAAAA6wAAAP8AAAD/AAAA8QAAABYAAAAAAAAAAf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAA
+        AAEAAAAAAAAAFgAAAPEAAAD/AAAA/wAAAOoAAAAPAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAIAAAAAAAAAjwAAAP8AAAD+AAAA+wAAAPcAAAD8AAAA/wAAAP8AAAD8AAAA9wAAAPsAAAD+AAAA/wAA
+        AJAAAAAAAAAAAtmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAACAAAAAAAA
+        AI8AAAD/AAAA+gAAAPsAAAD9AAAA/wAAAP4AAADyAAAA8gAAAP4AAAD/AAAA/QAAAPsAAAD6AAAA/wAA
+        AI8AAAAAAAAAAtmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAAMAAADVAAAA/wAAAPwAAAD/AAAAOQAA
+        AAAAAAAC/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAwAAAAAAAAA6AAAA/wAAAPwAAAD/AAAA1QAA
+        AAIAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAACAAAAAAAAAI8AAAD/AAAA+gAAAPsAAAD9AAAA/wAA
+        AP4AAADyAAAA8gAAAP4AAAD/AAAA/QAAAPsAAAD6AAAA/wAAAI8AAAAAAAAAAtmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAAAAAAAABZAAAA/wAAAPsAAAD9AAAA/wAAAPUAAACPAAAANgAA
+        ABYAAAAWAAAANgAAAJAAAAD2AAAA/wAAAP0AAAD7AAAA/wAAAFgAAAAAAAAAA9mlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAADAAAAAAAAAKkAAAD/AAAA+AAAAP8AAACOAAAAAAAAAAb/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        SkkAAAAGAAAAAAAAAI8AAAD/AAAA+AAAAP8AAACoAAAAAAAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAA
+        AAAAAABZAAAA/wAAAPsAAAD9AAAA/wAAAPUAAACPAAAANgAAABYAAAAWAAAANgAAAJAAAAD2AAAA/wAA
+        AP0AAAD7AAAA/wAAAFgAAAAAAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAACwAA
+        ANoAAAD/AAAA+wAAAP8AAADiAAAAMQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAADEAAADiAAAA/wAA
+        APsAAAD/AAAA2gAAAAsAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAQAAAAAAAAAXAAAAP8AAAD7AAAA/wAA
+        APYAAAA0AAAAAAAAAAYAAAADAAAAAQAAAAEAAAADAAAABgAAAAAAAAA0AAAA9wAAAP8AAAD7AAAA/wAA
+        AFwAAAAAAAAABNmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAACwAAANoAAAD/AAAA+wAAAP8AAADiAAAAMQAA
+        AAAAAAACAAAAAAAAAAAAAAACAAAAAAAAADEAAADiAAAA/wAAAPsAAAD/AAAA2gAAAAsAAAAAAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAPsAAAD/AAAA9wAAADQAAAAAAAAABgAA
+        AAMAAAABAAAAAQAAAAMAAAAGAAAAAAAAADUAAAD3AAAA/wAAAPsAAAD/AAAAWwAAAAAAAAAE2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAAAQAAAAAAAAAMAAAA2wAAAP8AAAD7AAAA/wAAAOIAAAAxAAAAAAAAAAIAAAAAAAAAAAAA
+        AAIAAAAAAAAAMQAAAOIAAAD/AAAA+wAAAP8AAADaAAAACwAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAA
+        AAAAAABbAAAA/wAAAPsAAAD/AAAA9wAAADQAAAAAAAAABgAAAAMAAAABAAAAAQAAAAMAAAAGAAAAAAAA
+        ADUAAAD3AAAA/wAAAPsAAAD/AAAAWwAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAADAAAAAAAA
+        AKgAAAD/AAAA+AAAAP8AAACOAAAAAAAAAAb/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAAGAAAAAAAA
+        AI8AAAD/AAAA+AAAAP8AAACnAAAAAAAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAAAAAAAABaAAAA/wAA
+        APsAAAD9AAAA/wAAAPUAAACPAAAANQAAABYAAAAWAAAANgAAAI8AAAD1AAAA/wAAAP0AAAD7AAAA/wAA
+        AFkAAAAAAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAADAAAAAAAAAKgAAAD/AAAA+AAAAP8AAACOAAAAAAAA
+        AAb/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAAGAAAAAAAAAI8AAAD/AAAA+AAAAP8AAACnAAAAAAAA
+        AAPZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAACAAAA1QAAAP8AAAD8AAAA/wAAADoAAAAAAAAAAv+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAAAAAAAOgAAAP8AAAD8AAAA/wAAANQAAAACAAAAAAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAAAAAAAACPAAAA/wAAAPoAAAD7AAAA/gAAAP8AAAD+AAAA8gAA
+        APIAAAD+AAAA/wAAAP0AAAD7AAAA+gAAAP8AAACPAAAAAAAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAAAAAACAAAA1QAAAP8AAAD8AAAA/wAAADoAAAAAAAAAAv+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAA
+        AAMAAAAAAAAAOgAAAP8AAAD8AAAA/wAAANQAAAACAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAA
+        AA4AAADqAAAA/wAAAP8AAADxAAAAFgAAAAAAAAAB/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAQAA
+        AAAAAAAWAAAA8QAAAP8AAAD/AAAA6gAAAA4AAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAA
+        AAAAAACQAAAA/wAAAP4AAAD7AAAA+AAAAP4AAAD/AAAA/wAAAP4AAAD4AAAA+wAAAP4AAAD/AAAAkAAA
+        AAAAAAAC2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAA4AAADqAAAA/wAAAP8AAADxAAAAFgAA
+        AAAAAAAB/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAQAAAAAAAAAWAAAA8QAAAP8AAAD/AAAA6gAA
+        AA4AAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAADgAAAOoAAAD/AAAA/wAAAPEAAAAWAAAAAAAA
+        AAH/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAAAAAAABYAAADxAAAA/wAAAP8AAADrAAAADwAA
+        AAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAwAAAAAAAABWAAAA4QAAAP8AAAD+AAAA/wAA
+        AP4AAAD+AAAA/wAAAP4AAAD/AAAA4AAAAFYAAAAAAAAAAwAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAEAAAAAAAAADwAAAOsAAAD/AAAA/wAAAPEAAAAWAAAAAAAAAAH/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        SkkAAAABAAAAAAAAABYAAADxAAAA/wAAAP8AAADqAAAADgAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAAAAAACAAAA1QAAAP8AAAD8AAAA/wAAADoAAAAAAAAAAv+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAA
+        AAMAAAAAAAAAOgAAAP8AAAD8AAAA/wAAANUAAAACAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAABAAAAAwAAAAAAAAALAAAAWwAAALEAAAD9AAAA/wAAAP8AAAD9AAAAsQAAAFoAAAALAAAAAAAA
+        AAMAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAADAAAA1QAAAP8AAAD8AAAA/wAA
+        ADoAAAAAAAAAAv+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAAAAAAAOgAAAP8AAAD8AAAA/wAA
+        ANQAAAACAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAAAAAAAACoAAAA/wAAAPgAAAD/AAAAjgAA
+        AAAAAAAG/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAABgAAAAAAAACPAAAA/wAAAPgAAAD/AAAApwAA
+        AAAAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAAAAIAAAAAAAAAEQAA
+        AO4AAAD/AAAA/wAAAO4AAAARAAAAAAAAAAIAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAAAwAAAAAAAACoAAAA/wAAAPgAAAD/AAAAjgAAAAAAAAAG/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJAAAABgAAAAAAAACPAAAA/wAAAPgAAAD/AAAApwAAAAAAAAAD2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAAEAAAAAAAAAFsAAAD/AAAA+wAAAP8AAAD2AAAANAAAAAAAAAAGAAAAAwAAAAEAAAABAAAAAwAA
+        AAYAAAAAAAAANQAAAPcAAAD/AAAA+wAAAP8AAABaAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAAAAAAAAATAAAA7gAAAP8AAAD/AAAA7gAAABMAAAAAAAAAAtml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAAAFsAAAD/AAAA+wAA
+        AP8AAAD2AAAANAAAAAAAAAAGAAAAAwAAAAEAAAABAAAAAwAAAAYAAAAAAAAANQAAAPcAAAD/AAAA+wAA
+        AP8AAABbAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAACwAAANoAAAD/AAAA+wAA
+        AP8AAADiAAAAMQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAADEAAADiAAAA/wAAAPwAAAD/AAAA1QAA
+        AAsAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAA
+        ABEAAADvAAAA/wAAAP8AAADvAAAAEQAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAAAAAAACwAAANYAAAD/AAAA/AAAAP8AAADiAAAAMQAAAAAAAAACAAAAAAAA
+        AAAAAAACAAAAAAAAADEAAADiAAAA/wAAAPsAAAD/AAAA2gAAAAsAAAAAAAAAAdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAMAAAAAAAAAWgAAAP8AAAD7AAAA/QAAAP8AAAD1AAAAjwAAADUAAAAWAAAAFgAA
+        ADYAAACPAAAA9QAAAP8AAAD9AAAA/AAAAP8AAACLAAAAAAAAAAbZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAAEQAAAO4AAAD/AAAA/wAAAO4AAAARAAAAAAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAYAAAAAAAAAiwAA
+        AP8AAAD8AAAA/QAAAP8AAAD1AAAAjwAAADUAAAAWAAAAFgAAADYAAACPAAAA9QAAAP8AAAD9AAAA+wAA
+        AP8AAABZAAAAAAAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAAjwAA
+        AP8AAAD6AAAA+wAAAP0AAAD/AAAA/gAAAPIAAADyAAAA/gAAAP8AAAD9AAAA+wAAAPwAAAD+AAAA/wAA
+        AP8AAABdAAAAAAAAAAXZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAAAAAARAAAA7gAAAP8AAAD/AAAA7gAAABEAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAAFAAAAAAAAAFwAAAD/AAAA/wAAAP4AAAD8AAAA+wAAAP0AAAD/AAAA/gAA
+        APIAAADyAAAA/gAAAP8AAAD9AAAA+wAAAPoAAAD/AAAAjwAAAAAAAAAC2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAAkAAAAP8AAAD+AAAA+wAAAPcAAAD8AAAA/wAA
+        AP8AAAD8AAAA9wAAAPsAAAD/AAAA/wAAAP0AAAD+AAAA/wAAAP8AAABcAAAAAAAAAATZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAABEAAADuAAAA/wAAAP8AAADuAAAAEQAA
+        AAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABQAAAAAAAABbAAAA/wAA
+        AP8AAAD+AAAA/QAAAP8AAAD/AAAA+wAAAPcAAAD8AAAA/wAAAP8AAAD8AAAA9wAAAPsAAAD+AAAA/wAA
+        AJAAAAAAAAAAAtmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAMAAAAAAAAAVQAAAOEAAAD/AAAA/gAAAP8AAAD/AAAA/wAAAP8AAAD+AAAA/wAAANUAAACJAAAA9wAA
+        AP8AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAEAAAAAAAAAEQAAAO8AAAD/AAAA/wAAAO8AAAARAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAQAAAAAAAAAXAAAAP8AAAD9AAAA/AAAAP8AAAD3AAAAiQAAANYAAAD/AAAA/gAA
+        AP8AAAD/AAAA/wAAAP8AAAD+AAAA/wAAAOAAAABWAAAAAAAAAAMAAAAB2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAMAAAAAAAAACwAAAFwAAACsAAAA1wAA
+        AOoAAADrAAAA2AAAAKwAAABbAAAADQAAAAAAAABdAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAA
+        AATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAASAAAA7gAAAP8AAAD/AAAA7gAA
+        ABIAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAAAFwAAAD/AAAA/QAA
+        APwAAAD9AAAA/wAAAF0AAAAAAAAADQAAAFsAAACsAAAA2AAAAOsAAADqAAAA1wAAAKwAAABbAAAACwAA
+        AAAAAAADAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAMAAAABAAAAAAAAAAAAAAADAAAADgAAAA8AAAAEAAAAAAAAAAAAAAABAAAABgAA
+        AAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAMAAAAEAAAAAAAAABkAAADzAAAA/wAAAP8AAADzAAAAGgAAAAAAAAAEAAAAA9mlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAAYAAAABAAAAAAAA
+        AAAAAAAEAAAADwAAAA4AAAADAAAAAAAAAAAAAAABAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAEAAAAAwAA
+        AAAAAAAAAAAAAAAAAAAAAAADAAAABAAAAAHZpXB9AAAABQAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAA
+        AP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAADAAAAAAAAAAAAAABMAAAA1gAAAP8AAAD+AAAA/gAA
+        AP8AAADYAAAATwAAAAAAAAAAAAAAAwAAAALZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAQAAAAAAAAAWwAAAP8AAAD9AAAA/AAA
+        AP0AAAD/AAAAXAAAAAAAAAAF2aVwfQAAAAEAAAAEAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAADAAAABAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAEAAAABAAAAAdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAADAAAAAgAA
+        AAAAAAAuAAAAuAAAAP8AAAD+AAAA/gAAAPwAAAD7AAAA/gAAAP4AAAD/AAAAuwAAADAAAAAAAAAAAQAA
+        AAMAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAAEAAAAAAAAAFsAAAD/AAAA/QAAAPwAAAD9AAAA/wAAAFwAAAAAAAAABNmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAAAQAAAAEAAAABAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAA
+        AP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAADAAAAAgAAAAAAAAAWAAAAlQAAAPoAAAD/AAAA/AAAAPoAAAD+AAAA/wAA
+        AP8AAAD+AAAA+gAAAPwAAAD/AAAA+wAAAJgAAAAXAAAAAAAAAAIAAAAD2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAA
+        AP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAA
+        AATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAADAAAAAwAAAAAAAAAGAAAAcAAA
+        AOwAAAD/AAAA/QAAAPoAAAD8AAAA/wAAAPwAAACQAAAAjgAAAPsAAAD/AAAA/AAAAPkAAAD9AAAA/wAA
+        AO0AAAByAAAACAAAAAAAAAADAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAUAAAAAAAAAWwAAAP8AAAD9AAAA/AAAAP0AAAD/AAAAXAAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAA
+        AAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAACAAAAAwAAAAAAAAAAAAAATAAAANYAAAD/AAAA/QAAAPoAAAD7AAAA/gAAAP8AAAC7AAAAMAAA
+        AAAAAAAAAAAALQAAALgAAAD/AAAA/gAAAPsAAAD6AAAA/QAAAP8AAADYAAAATwAAAAAAAAAAAAAAAwAA
+        AALZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAAAFsAAAD/AAAA/QAAAPwAAAD9AAAA/wAA
+        AFwAAAAAAAAABNmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABQAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAA
+        AP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH0AAAABAAAAAwAAAAIAAAAAAAAALQAAALgAAAD/AAAA/gAA
+        APsAAAD6AAAA/QAAAP8AAADYAAAATwAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAAAAAAEwAAADWAAAA/wAA
+        AP0AAAD6AAAA+wAAAP4AAAD/AAAAuwAAADAAAAAAAAAAAgAAAAMAAAAB2aVwfdmlcH3ZpXB9AAAABAAA
+        AAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB9AAAAAwAA
+        AAIAAAAAAAAAFgAAAJUAAAD6AAAA/wAAAPwAAAD5AAAA/QAAAP8AAADtAAAAcwAAAAcAAAAAAAAAAwAA
+        AAP/pUpJ/6VKSQAAAAMAAAADAAAAAAAAAAcAAABwAAAA7AAAAP8AAAD9AAAA+gAAAPwAAAD/AAAA+wAA
+        AJgAAAAXAAAAAAAAAAIAAAAD2aVwfQAAAAQAAAAAAAAAWwAAAP8AAAD9AAAA/AAAAP0AAAD/AAAAXAAA
+        AAAAAAAE2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAA
+        AP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAAQAAAAAAAAABgAAAHAAAADsAAAA/wAAAP0AAAD6AAAA/AAA
+        AP8AAAD7AAAAmAAAABcAAAAAAAAAAgAAAAP/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAADAAAAAgAA
+        AAAAAAAWAAAAlQAAAPoAAAD/AAAA/AAAAPkAAAD9AAAA/wAAAO0AAABzAAAABwAAAAAAAAAEAAAAAAAA
+        AFsAAAD/AAAA/QAAAPwAAAD9AAAA/wAAAFwAAAAAAAAABNmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABdAAAAAAAA
+        AE4AAADWAAAA/wAAAP0AAAD6AAAA+wAAAP4AAAD/AAAAuwAAADAAAAAAAAAAAQAAAAMAAAAB/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAAAwAAAAIAAAAAAAAALgAAALgAAAD/AAAA/gAA
+        APsAAAD6AAAA/QAAAP8AAADYAAAAUQAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAA
+        AATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAA
+        AAAAAABbAAAA/gAAAP8AAAD9AAAA/wAAAPEAAADEAAAA/gAAAP8AAAD7AAAA+gAAAP0AAAD/AAAA2AAA
+        AE4AAAAAAAAAAAAAAAMAAAAC/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJAAAAAgAAAAMAAAAAAAAAAAAAAE0AAADWAAAA/wAAAP0AAAD6AAAA+wAAAP8AAAD/AAAAxQAA
+        APEAAAD/AAAA/QAAAP8AAAD/AAAAXAAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABQAAAAAAAABYAAAA+AAAAP8AAAD9AAAA/QAA
+        AP8AAAD8AAAA+QAAAP0AAAD/AAAA7QAAAHMAAAAIAAAAAAAAAAMAAAAD/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAADAAAAAAAA
+        AAcAAABwAAAA7AAAAP8AAAD9AAAA+gAAAPwAAAD/AAAA/QAAAP0AAAD/AAAA+AAAAFkAAAAAAAAABdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAMAAAADAAAAAAAAAAAAAACwAAAA/wAAAPwAAAD+AAAA+gAAAPwAAAD/AAAA+wAAAJcAAAAXAAAAAAAA
+        AAIAAAAD/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAADAAAAAgAAAAAAAAAWAAAAlQAAAPoAAAD/AAAA/AAA
+        APoAAAD+AAAA/AAAAP8AAACzAAAAAAAAAAAAAAADAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAADAAAAAAAAAAAAAABMAAAA2AAAAP8AAAD+AAAA/gAA
+        APwAAAD+AAAA/wAAALsAAAAwAAAAAAAAAAEAAAADAAAAAf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSQAAAAEAAAABAAAAAQAAAAH/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        SkkAAAABAAAAAwAAAAIAAAAAAAAALgAAALgAAAD/AAAA/gAAAPwAAAD9AAAA/gAAAP8AAADaAAAATwAA
+        AAAAAAAAAAAAAwAAAALZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAACAAAAAgAA
+        AAAAAAAuAAAAuAAAAP8AAAD+AAAA/gAAAPwAAAD9AAAA/wAAANgAAABPAAAAAAAAAAAAAAADAAAAAv+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAABAAAAAQAAAABAAAAAAAAAAAAAAAAAAAAAAAA
+        AAEAAAAEAAAABAAAAAH/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAgAAAAMAAAAAAAAAAAAA
+        AEwAAADWAAAA/wAAAP0AAAD8AAAA/gAAAP4AAAD/AAAAuwAAADAAAAAAAAAAAgAAAALZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAAWAAAAlQAAAPoAAAD/AAAA/AAAAPoAAAD9AAAA/wAA
+        AO0AAABzAAAACAAAAAAAAAADAAAAA/+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAACAAAAAwAA
+        AAAAAAAAAAAAAAAAAAAAAAAIAAAADwAAAA8AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAC/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAADAAAAAAAAAAcAAABwAAAA7AAAAP8AAAD9AAAA+gAA
+        APwAAAD/AAAA+wAAAJgAAAAYAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAATgAA
+        AO8AAAD/AAAA/QAAAPoAAAD8AAAA/wAAAPsAAACXAAAAGAAAAAAAAAACAAAAA/+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkkAAAABAAAAAwAAAAEAAAAAAAAAFQAAAFoAAACbAAAAyAAAAOAAAADsAAAA7AAA
+        AOAAAADHAAAAmwAAAFoAAAAVAAAAAAAAAAEAAAADAAAAAf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        SkkAAAADAAAAAgAAAAAAAAAWAAAAlgAAAPoAAAD/AAAA/AAAAPoAAAD9AAAA/wAAAPAAAABOAAAAAAAA
+        AALZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAAUAAADbAAAA/wAAAPoAAAD+AAAA/gAAAP8AAAC7AAAALwAA
+        AAAAAAABAAAAAwAAAAH/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAgAAAAMAAAAAAAAAKAAA
+        AJwAAADwAAAA/wAAAP4AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD+AAAA/wAAAPEAAACcAAAAKAAA
+        AAAAAAADAAAAAv+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAAAwAAAAIAAAAAAAAALgAA
+        ALkAAAD/AAAA/gAAAP4AAAD6AAAA/wAAANsAAAAFAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAAEQAA
+        AO0AAAD/AAAA/QAAAP8AAADYAAAATwAAAAAAAAAAAAAAAwAAAAL/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSQAAAAMAAAAAAAAACAAAAIkAAAD5AAAA/wAAAP4AAAD6AAAA9wAAAPoAAAD+AAAA/wAA
+        AP8AAAD+AAAA+gAAAPcAAAD6AAAA/gAAAP8AAAD6AAAAiQAAAAgAAAAAAAAAA/+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJAAAAAgAAAAMAAAAAAAAAAAAAAEwAAADWAAAA/wAAAP0AAAD/AAAA7QAA
+        ABEAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAABAAAAAQAAAAEAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAAQAAAA7gAAAP8AAAD/AAAA8wAAABoAAAAAAAAABAAA
+        AAP/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAADAAAAAAAAACIAAADMAAAA/wAA
+        AP0AAAD5AAAA+wAAAP8AAAD/AAAA/wAAAPoAAADxAAAA8QAAAPoAAAD/AAAA/wAAAP8AAAD7AAAA+QAA
+        AP0AAAD/AAAAzQAAACMAAAAAAAAAA/+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAA
+        AAMAAAAEAAAAAAAAABoAAADzAAAA/wAAAP8AAADuAAAAEAAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAEAAAABAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAEAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAADAAAABAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAA
+        ABAAAADuAAAA/wAAAP8AAADuAAAAEgAAAAAAAAAB/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        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
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAAAAAAAMQAAAOcAAAD/AAAA+gAAAPsAAAD+AAAA/wAA
+        ANoAAACHAAAASAAAACQAAAAVAAAAFQAAACUAAABFAAAAhgAAANoAAAD/AAAA/gAAAPsAAAD6AAAA/wAA
+        AOcAAAAxAAAAAAAAAAP/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAAAAAA
+        ABIAAADuAAAA/wAAAP8AAADuAAAAEAAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAQAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAABAAAAAQAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAABAAAADuAAAA/wAA
+        AP8AAADzAAAAGgAAAAAAAAAEAAAAA/+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAA
+        AAMAAAAAAAAAIwAAAM0AAAD/AAAA/AAAAPkAAAD7AAAA/wAAAP8AAAD/AAAA+gAAAPEAAADxAAAA+gAA
+        AP8AAAD/AAAA/wAAAPsAAAD5AAAA/AAAAP8AAADOAAAAIwAAAAAAAAAD/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJAAAAAwAAAAQAAAAAAAAAGQAAAPMAAAD/AAAA/wAAAO4AAAAQAAAAAAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAABAAAAAQAAAAEAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAAAAAAAEQAAAO0AAAD/AAAA/QAAAP8AAADYAAAATwAAAAAAAAAAAAAAAwAA
+        AAL/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAAAAAAACAAAAIcAAAD5AAAA/wAA
+        AP4AAAD6AAAA9wAAAPoAAAD+AAAA/wAAAP8AAAD+AAAA+gAAAPcAAAD6AAAA/gAAAP8AAAD5AAAAiAAA
+        AAkAAAAAAAAAA/+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAgAAAAMAAAAAAAAAAAAA
+        AEwAAADWAAAA/wAAAP0AAAD/AAAA7QAAABEAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAAFAAAA2wAA
+        AP8AAAD6AAAA/gAAAP4AAAD/AAAAugAAAC8AAAAAAAAAAQAAAAMAAAAB/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSQAAAAIAAAADAAAAAAAAACkAAACdAAAA8AAAAP8AAAD+AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/gAAAP8AAADxAAAAnQAAACgAAAAAAAAAAwAAAAL/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJAAAAAQAAAAMAAAACAAAAAAAAAC4AAAC4AAAA/wAAAP4AAAD+AAAA+gAAAP8AAADbAAAABQAA
+        AAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAAAAAAAABPAAAA7wAAAP8AAAD9AAAA+gAAAPwAAAD/AAAA+wAA
+        AJcAAAAYAAAAAAAAAAIAAAAD/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAEAAAADAAAAAQAA
+        AAAAAAAVAAAAWwAAAJwAAADIAAAA4AAAAOwAAADsAAAA4AAAAMgAAACcAAAAWwAAABYAAAAAAAAAAQAA
+        AAMAAAAB/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAACAAAAAAAAABYAAACWAAAA+gAA
+        AP8AAAD8AAAA+gAAAP0AAAD/AAAA8AAAAE8AAAAAAAAAAtmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAAAAAAWAAAAlQAAAPoAAAD/AAAA/AAAAPoAAAD9AAAA/wAAAO0AAABzAAAACAAAAAAAAAADAAAAA/+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAACAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAIAAAADwAA
+        ABAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAC/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAA
+        AAMAAAADAAAAAAAAAAcAAABwAAAA7AAAAP8AAAD9AAAA+gAAAPwAAAD/AAAA+wAAAJgAAAAYAAAAAAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAAAAIAAAAAAAAALgAAALgAAAD/AAAA/gAA
+        AP4AAAD8AAAA/QAAAP8AAADYAAAATwAAAAAAAAAAAAAAAwAAAAL/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJAAAAAQAAAAQAAAAEAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAABAAAAAQAAAAB/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAIAAAADAAAAAAAAAAAAAABMAAAA1gAAAP8AAAD9AAAA/AAA
+        AP4AAAD+AAAA/wAAALsAAAAwAAAAAAAAAAIAAAAC2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAAAgAAAAMAAAAAAAAAAAAAAEwAAADYAAAA/wAAAP4AAAD+AAAA/AAAAP4AAAD/AAAAuwAA
+        ADAAAAAAAAAAAQAAAAMAAAAB/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAQAA
+        AAEAAAABAAAAAf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAEAAAADAAAAAgAA
+        AAAAAAAtAAAAuAAAAP8AAAD+AAAA/AAAAP0AAAD+AAAA/wAAANoAAABPAAAAAAAAAAAAAAADAAAAAtml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAADAAAAAAAA
+        AAAAAACwAAAA/wAAAPwAAAD+AAAA+gAAAPwAAAD/AAAA+wAAAJcAAAAXAAAAAAAAAAIAAAAD/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkkAAAADAAAAAgAAAAAAAAAWAAAAlQAAAPoAAAD/AAAA/AAAAPoAAAD+AAAA/AAA
+        AP8AAACzAAAAAAAAAAAAAAADAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAUAAAAAAAAAWAAAAPgAAAD/AAAA/QAAAP0AAAD/AAAA/AAA
+        APkAAAD9AAAA/wAAAO0AAABzAAAABwAAAAAAAAADAAAAA/+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAADAAAAAwAAAAAAAAAHAAAAcAAA
+        AOwAAAD/AAAA/QAAAPoAAAD8AAAA/wAAAP0AAAD9AAAA/wAAAPgAAABZAAAAAAAAAAXZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAA
+        AFsAAAD+AAAA/wAAAP0AAAD/AAAA8QAAAMQAAAD+AAAA/wAAAPsAAAD6AAAA/QAAAP8AAADYAAAATgAA
+        AAAAAAAAAAAAAwAAAAL/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+l
+        SkkAAAACAAAAAwAAAAAAAAAAAAAATAAAANYAAAD/AAAA/QAAAPoAAAD7AAAA/wAAAP8AAADFAAAA8QAA
+        AP8AAAD9AAAA/wAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABdAAAAAAAA
+        AE4AAADWAAAA/wAAAP0AAAD6AAAA+wAAAP4AAAD/AAAAuwAAADAAAAAAAAAAAgAAAAMAAAAB/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAAAwAAAAIAAAAAAAAALQAAALgAAAD/AAAA/gAA
+        APsAAAD6AAAA/QAAAP8AAADYAAAAUQAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAA
+        AATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAQAAAAAAAAAWwAA
+        AP8AAAD9AAAA/AAAAP0AAAD/AAAAXAAAAAAAAAAEAAAAAAAAAAYAAABwAAAA7AAAAP8AAAD9AAAA+gAA
+        APwAAAD/AAAA+wAAAJgAAAAXAAAAAAAAAAIAAAAD/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAwAA
+        AAIAAAAAAAAAFgAAAJUAAAD6AAAA/wAAAPwAAAD5AAAA/QAAAP8AAADtAAAAcwAAAAcAAAAAAAAABAAA
+        AAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAAAFsAAAD/AAAA/QAAAPwAAAD9AAAA/wAAAFwAAAAAAAAABNml
+        cH0AAAADAAAAAgAAAAAAAAAWAAAAlQAAAPoAAAD/AAAA/AAAAPkAAAD9AAAA/wAAAO0AAABzAAAABwAA
+        AAAAAAADAAAAA/+lSkn/pUpJAAAAAwAAAAMAAAAAAAAABwAAAHAAAADsAAAA/wAAAP0AAAD6AAAA/AAA
+        AP8AAAD7AAAAmAAAABcAAAAAAAAAAgAAAAPZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAA
+        AP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABQAAAAAAAABbAAAA/wAA
+        AP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH0AAAABAAAAAwAAAAIAAAAAAAAALgAA
+        ALgAAAD/AAAA/gAAAPsAAAD6AAAA/QAAAP8AAADYAAAATwAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAAAAA
+        AEwAAADWAAAA/wAAAP0AAAD6AAAA+wAAAP4AAAD/AAAAuwAAADAAAAAAAAAAAQAAAAMAAAAB2aVwfdml
+        cH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAQAAAAAAAAAWwAAAP8AAAD9AAAA/AAAAP0AAAD/AAAAXAAAAAAAAAAE2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAAAAMAAAAAAAAAAAAAAEwAAADWAAAA/wAAAP0AAAD6AAAA+wAA
+        AP4AAAD/AAAAuwAAADAAAAAAAAAAAAAAAC0AAAC4AAAA/wAAAP4AAAD7AAAA+gAAAP0AAAD/AAAA2AAA
+        AE8AAAAAAAAAAAAAAAMAAAAC2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAA
+        AP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAAAFsAAAD/AAAA/QAA
+        APwAAAD9AAAA/wAAAFwAAAAAAAAABNmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAMAAAADAAAAAAAAAAcAAABwAAAA7AAAAP8AAAD9AAAA+gAAAPwAAAD/AAAA/AAAAJAAAACOAAAA+wAA
+        AP8AAAD8AAAA+QAAAP0AAAD/AAAA7QAAAHIAAAAIAAAAAAAAAAMAAAAD2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAABQAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAA
+        AATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAADAAAAAgAAAAAAAAAWAAAAlQAA
+        APoAAAD/AAAA/AAAAPoAAAD+AAAA/wAAAP8AAAD+AAAA+gAAAPwAAAD/AAAA+wAAAJgAAAAYAAAAAAAA
+        AAIAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAA
+        AAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAEAAAABAAAAAQAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAQAAAAAAAAAWwAAAP8AAAD9AAAA/AAA
+        AP0AAAD/AAAAXAAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAABAAAAAwAAAAIAAAAAAAAALgAAALgAAAD/AAAA/gAAAP4AAAD8AAAA+wAA
+        AP4AAAD+AAAA/wAAALsAAAAwAAAAAAAAAAEAAAADAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAA
+        AP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAABAAAAAQAAAAHZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAQAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAdml
+        cH0AAAAFAAAAAAAAAFsAAAD/AAAA/QAAAPwAAAD9AAAA/wAAAFwAAAAAAAAABNmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAA
+        AAMAAAAAAAAAAAAAAEwAAADWAAAA/wAAAP4AAAD+AAAA/wAAANgAAABPAAAAAAAAAAAAAAADAAAAAtml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAAXZpXB9AAAAAQAA
+        AAQAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAABAAAAAAAA
+        AAAAAAADAAAADgAAAA8AAAAEAAAAAAAAAAAAAAABAAAABgAAAAAAAABbAAAA/wAAAP0AAAD8AAAA/QAA
+        AP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAAEAAAAAAAAABoAAADzAAAA/wAA
+        AP8AAADzAAAAGgAAAAAAAAAEAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAA
+        AP0AAAD8AAAA/QAAAP8AAABcAAAAAAAAAAYAAAABAAAAAAAAAAAAAAAEAAAADwAAAA4AAAADAAAAAAAA
+        AAAAAAABAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAADAAAAAAAAAAsAAABbAAAAqwAAANcAAADqAAAA6wAAANcAAACrAAAAWgAA
+        AAwAAAAAAAAAXAAAAP8AAAD9AAAA/AAAAP0AAAD/AAAAXAAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAAAAAAAEgAAAO4AAAD/AAAA/wAAAO4AAAASAAAAAAAAAAHZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABcAAAA/wAAAP0AAAD8AAAA/QAAAP8AAABdAAAAAAAA
+        AA0AAABaAAAAqwAAANgAAADrAAAA6gAAANcAAACrAAAAWwAAAAsAAAAAAAAAAwAAAAHZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAwAAAAAAAABUAAAA4AAA
+        AP8AAAD+AAAA/wAAAP8AAAD/AAAA/wAAAP4AAAD/AAAA1QAAAIkAAAD3AAAA/wAAAPwAAAD9AAAA/wAA
+        AFwAAAAAAAAABNmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAARAAAA7wAA
+        AP8AAAD/AAAA7wAAABEAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAA
+        AAAAAABcAAAA/wAAAP0AAAD8AAAA/wAAAPcAAACJAAAA1QAAAP8AAAD+AAAA/wAAAP8AAAD/AAAA/wAA
+        AP4AAAD/AAAA4AAAAFQAAAAAAAAAAwAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAIAAAAAAAAAjwAAAP8AAAD+AAAA+wAAAPcAAAD8AAAA/wAAAP8AAAD8AAAA9wAA
+        APsAAAD/AAAA/wAAAP0AAAD+AAAA/wAAAP8AAABcAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAABEAAADuAAAA/wAAAP8AAADuAAAAEQAAAAAAAAAB2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABQAAAAAAAABbAAAA/wAAAP8AAAD+AAAA/QAA
+        AP8AAAD/AAAA+wAAAPcAAAD8AAAA/wAAAP8AAAD8AAAA9wAAAPsAAAD+AAAA/wAAAJAAAAAAAAAAAtml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAACAAAAAAAAAI8AAAD/AAAA+gAA
+        APsAAAD9AAAA/wAAAP4AAADyAAAA8gAAAP4AAAD/AAAA/QAAAPsAAAD8AAAA/gAAAP8AAAD/AAAAXQAA
+        AAAAAAAF2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAAEQAA
+        AO4AAAD/AAAA/wAAAO4AAAARAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAABQAAAAAAAABcAAAA/wAAAP8AAAD+AAAA/AAAAPsAAAD9AAAA/wAAAP4AAADyAAAA8gAA
+        AP4AAAD/AAAA/QAAAPsAAAD6AAAA/wAAAI8AAAAAAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAAAwAAAAAAAABZAAAA/wAAAPsAAAD9AAAA/wAAAPYAAACPAAAANgAAABYAAAAWAAAANgAA
+        AI8AAAD1AAAA/wAAAP0AAAD8AAAA/wAAAIsAAAAAAAAABtmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAARAAAA7gAAAP8AAAD/AAAA7gAAABEAAAAAAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABgAAAAAAAACLAAAA/wAA
+        APwAAAD9AAAA/wAAAPYAAACPAAAANgAAABYAAAAWAAAANgAAAI8AAAD1AAAA/wAAAP0AAAD7AAAA/wAA
+        AFgAAAAAAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAACwAAANoAAAD/AAAA+wAA
+        AP8AAADiAAAAMQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAADEAAADjAAAA/wAAAPwAAAD/AAAA1QAA
+        AAsAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAA
+        ABEAAADvAAAA/wAAAP8AAADvAAAAEQAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAAAAAAACwAAANYAAAD/AAAA/AAAAP8AAADiAAAAMQAAAAAAAAACAAAAAAAA
+        AAAAAAACAAAAAAAAADEAAADiAAAA/wAAAPsAAAD/AAAA2gAAAAsAAAAAAAAAAdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAABAAAAAAAAABbAAAA/wAAAPsAAAD/AAAA9wAAADQAAAAAAAAABgAAAAMAAAABAAAAAQAA
+        AAMAAAAGAAAAAAAAADUAAAD3AAAA/wAAAPsAAAD/AAAAWgAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAAEwAAAO4AAAD/AAAA/wAAAO4AAAATAAAAAAAA
+        AALZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAAAAAAAABbAAAA/wAA
+        APsAAAD/AAAA9wAAADQAAAAAAAAABgAAAAMAAAABAAAAAQAAAAMAAAAGAAAAAAAAADUAAAD3AAAA/wAA
+        APsAAAD/AAAAWwAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAADAAAAAAAAAKgAAAD/AAAA+AAA
+        AP8AAACOAAAAAAAAAAb/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAAGAAAAAAAAAI8AAAD/AAAA+AAA
+        AP8AAACnAAAAAAAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAADAAAAAgAA
+        AAAAAAARAAAA7gAAAP8AAAD/AAAA7gAAABEAAAAAAAAAAgAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAADAAAAAAAAAKgAAAD/AAAA+AAAAP8AAACOAAAAAAAAAAb/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkkAAAAGAAAAAAAAAI8AAAD/AAAA+AAAAP8AAACnAAAAAAAAAAPZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB9AAAAAQAAAAAAAAACAAAA1QAAAP8AAAD8AAAA/wAAADoAAAAAAAAAA/+lSkn/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSQAAAAMAAAAAAAAAOgAAAP8AAAD8AAAA/wAAANUAAAACAAAAAAAAAAHZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAABAAAAAwAAAAAAAAALAAAAWgAAALAAAAD9AAAA/wAAAP8AAAD9AAAAsAAA
+        AFoAAAALAAAAAAAAAAMAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAADAAAA1QAA
+        AP8AAAD8AAAA/wAAADoAAAAAAAAAA/+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAAAAAAAOgAA
+        AP8AAAD8AAAA/wAAANQAAAACAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAA4AAADqAAAA/wAA
+        AP8AAADxAAAAFgAAAAAAAAAB/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAAAQAAAAAAAAAWAAAA8QAA
+        AP8AAAD/AAAA6wAAAA8AAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAMAAAAAAAAAVQAA
+        AOAAAAD/AAAA/gAAAP8AAAD+AAAA/gAAAP8AAAD+AAAA/wAAAOAAAABWAAAAAAAAAAMAAAAB2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAA8AAADrAAAA/wAAAP8AAADxAAAAFgAAAAAAAAAB/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJAAAAAQAAAAAAAAAWAAAA8QAAAP8AAAD/AAAA6gAAAA4AAAAAAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAAAAAAADgAAAOoAAAD/AAAA/wAAAPEAAAAWAAAAAAAAAAH/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkkAAAABAAAAAAAAABYAAADxAAAA/wAAAP8AAADqAAAADgAAAAAAAAAB2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAACAAAAAAAAAJAAAAD/AAAA/gAAAPsAAAD4AAAA/gAAAP8AAAD/AAAA/gAA
+        APgAAAD7AAAA/gAAAP8AAACQAAAAAAAAAALZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAADgAA
+        AOoAAAD/AAAA/wAAAPEAAAAWAAAAAAAAAAH/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAABAAAAAAAA
+        ABYAAADxAAAA/wAAAP8AAADqAAAADgAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAACAAAA1QAA
+        AP8AAAD8AAAA/wAAADkAAAAAAAAAAv+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAAAAAAAOgAA
+        AP8AAAD8AAAA/wAAANQAAAACAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAgAAAAAAAACPAAAA/wAA
+        APoAAAD7AAAA/QAAAP8AAAD+AAAA8gAAAPIAAAD+AAAA/wAAAP0AAAD7AAAA+gAAAP8AAACPAAAAAAAA
+        AAPZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAACAAAA1QAAAP8AAAD8AAAA/wAAADkAAAAAAAAAAv+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAMAAAAAAAAAOgAAAP8AAAD8AAAA/wAAANQAAAACAAAAAAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAAAAAAAACoAAAA/wAAAPgAAAD/AAAAjgAAAAAAAAAG/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJAAAABgAAAAAAAACPAAAA/wAAAPgAAAD/AAAApwAAAAAAAAAD2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAMAAAAAAAAAWgAAAP8AAAD7AAAA/QAAAP8AAAD1AAAAjwAAADYAAAAWAAAAFgAA
+        ADYAAACQAAAA9gAAAP8AAAD9AAAA+wAAAP8AAABZAAAAAAAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAA
+        AAAAAACoAAAA/wAAAPgAAAD/AAAAjgAAAAAAAAAG/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAABgAA
+        AAAAAACPAAAA/wAAAPgAAAD/AAAApwAAAAAAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAA
+        AFwAAAD/AAAA+wAAAP8AAAD2AAAANAAAAAAAAAAGAAAAAwAAAAEAAAABAAAAAwAAAAYAAAAAAAAANAAA
+        APcAAAD/AAAA+wAAAP8AAABbAAAAAAAAAATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAAsAAADaAAAA/wAA
+        APsAAAD/AAAA4gAAADEAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAxAAAA4gAAAP8AAAD7AAAA/wAA
+        ANoAAAALAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAAEAAAAAAAAAFwAAAD/AAAA+wAAAP8AAAD2AAAANAAA
+        AAAAAAAGAAAAAwAAAAEAAAABAAAAAwAAAAYAAAAAAAAANAAAAPcAAAD/AAAA+wAAAP8AAABbAAAAAAAA
+        AATZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAACwAAANsAAAD/AAAA+wAAAP8AAADiAAAAMQAA
+        AAAAAAACAAAAAAAAAAAAAAACAAAAAAAAADEAAADiAAAA/wAAAPsAAAD/AAAA2gAAAAsAAAAAAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAQAAAAAAAAAXAAAAP8AAAD7AAAA/wAAAPcAAAA0AAAAAAAAAAYAAAADAAAAAQAA
+        AAEAAAADAAAABgAAAAAAAAA1AAAA9wAAAP8AAAD7AAAA/wAAAFsAAAAAAAAABNmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAEAAAAAAAAACwAAANsAAAD/AAAA+wAAAP8AAADiAAAAMQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAA
+        ADEAAADiAAAA/wAAAPsAAAD/AAAA2gAAAAsAAAAAAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAMAAAAAAAAAWgAAAP8AAAD7AAAA/QAAAP8AAAD1AAAAjwAAADUAAAAWAAAAFgAAADYAAACPAAAA9QAA
+        AP8AAAD9AAAA+wAAAP8AAABZAAAAAAAAAAPZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAwAAAAAAAACoAAAA/wAA
+        APgAAAD/AAAAjgAAAAAAAAAG/6VKSf+lSkn/pUpJ/6VKSf+lSkn/pUpJAAAABgAAAAAAAACPAAAA/wAA
+        APgAAAD/AAAAqAAAAAAAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAAAAAAAWgAAAP8AAAD7AAAA/QAA
+        AP8AAAD1AAAAjwAAADUAAAAWAAAAFgAAADYAAACPAAAA9QAAAP8AAAD9AAAA+wAAAP8AAABZAAAAAAAA
+        AAPZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAAjwAAAP8AAAD6AAAA+wAA
+        AP4AAAD/AAAA/gAAAPIAAADyAAAA/gAAAP8AAAD9AAAA+wAAAPoAAAD/AAAAjwAAAAAAAAAC2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAAAAAAAAgAAANUAAAD/AAAA/AAAAP8AAAA6AAAAAAAAAAL/pUpJ/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkkAAAADAAAAAAAAADoAAAD/AAAA/AAAAP8AAADUAAAAAgAAAAAAAAAB2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAIAAAAAAAAAjwAAAP8AAAD6AAAA+wAAAP4AAAD/AAAA/gAAAPIAAADyAAAA/gAA
+        AP8AAAD9AAAA+wAAAPoAAAD/AAAAjwAAAAAAAAAC2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAIAAAAAAAAAkAAAAP8AAAD+AAAA+wAAAPcAAAD8AAAA/wAAAP8AAAD8AAAA9wAA
+        APsAAAD+AAAA/wAAAJAAAAAAAAAAAtmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAAAAAAPAAAA6wAA
+        AP8AAAD/AAAA8QAAABYAAAAAAAAAAf+lSkn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAEAAAAAAAAAFgAA
+        APEAAAD/AAAA/wAAAOoAAAAOAAAAAAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAIAAAAAAAAAkAAA
+        AP8AAAD+AAAA+wAAAPcAAAD8AAAA/wAAAP8AAAD8AAAA9wAAAPsAAAD+AAAA/wAAAJAAAAAAAAAAAtml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAMAAAAAAAAAVQAA
+        AOEAAAD/AAAA/gAAAP8AAAD/AAAA/wAAAP8AAAD+AAAA/wAAAOAAAABWAAAAAAAAAAMAAAAB2aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAA4AAADqAAAA/wAAAP8AAADxAAAAFgAAAAAAAAAB/6VKSf+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJAAAAAQAAAAAAAAAWAAAA8QAAAP8AAAD/AAAA6gAAAA4AAAAAAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAMAAAAAAAAAVQAAAOEAAAD/AAAA/gAAAP8AAAD/AAAA/wAA
+        AP8AAAD+AAAA/wAAAOAAAABWAAAAAAAAAAMAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAMAAAAAAAAACwAAAFoAAACsAAAA2AAAAOoAAADqAAAA1wAA
+        AKwAAABcAAAACwAAAAAAAAADAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAAAAAAAgAA
+        ANUAAAD/AAAA/AAAAP8AAAA5AAAAAAAAAAL/pUpJ/6VKSf+lSkn/pUpJ/6VKSf+lSkkAAAADAAAAAAAA
+        ADoAAAD/AAAA/AAAAP8AAADUAAAAAgAAAAAAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAMAAAAAAAAACwAAAFoAAACsAAAA2AAAAOoAAADqAAAA1wAAAKwAAABcAAAACwAAAAAAAAADAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAA
+        AAMAAAABAAAAAAAAAAAAAAADAAAADgAAAA4AAAADAAAAAAAAAAAAAAABAAAAA9mlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAAAAAAAqAAAAP8AAAD4AAAA/wAAAI4AAAAAAAAABv+l
+        Skn/pUpJ/6VKSf+lSkn/pUpJ/6VKSQAAAAYAAAAAAAAAjwAAAP8AAAD4AAAA/wAAAKcAAAAAAAAAA9ml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAMAAAABAAAAAAAAAAAAAAADAAAADgAA
+        AA4AAAADAAAAAAAAAAAAAAABAAAAA9mlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAAEAAAAAwAAAAAAAAAAAAAAAAAA
+        AAAAAAADAAAABAAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAABAAA
+        AAAAAABcAAAA/wAAAPsAAAD/AAAA9gAAADQAAAAAAAAABgAAAAMAAAABAAAAAQAAAAMAAAAGAAAAAAAA
+        ADQAAAD3AAAA/wAAAPsAAAD/AAAAWwAAAAAAAAAE2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfQAAAAEAAAAEAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAADAAAABAAAAAHZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAAAAEAAAABAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAAAAAAAAsAAADaAAAA/wAAAPsAAAD/AAAA4gAA
+        ADEAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAxAAAA4gAAAP8AAAD7AAAA/wAAANoAAAALAAAAAAAA
+        AAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB9AAAAAQAA
+        AAEAAAABAAAAAdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAADAAAAAAAAAFoAAAD/AAAA+wAAAP0AAAD/AAAA9QAAAI8AAAA1AAAAFgAAABYAAAA2AAAAjwAA
+        APUAAAD/AAAA/QAAAPsAAAD/AAAAWQAAAAAAAAAD2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAACAAAAAAAAAI8AAAD/AAAA+gAA
+        APsAAAD+AAAA/wAAAP4AAADyAAAA8gAAAP4AAAD/AAAA/QAAAPsAAAD6AAAA/wAAAI8AAAAAAAAAAtml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH0AAAACAAAAAAAAAJAAAAD/AAAA/gAAAPsAAAD3AAAA/AAAAP8AAAD/AAAA/AAA
+        APcAAAD7AAAA/gAAAP8AAACQAAAAAAAAAALZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAADAAAAAAAA
+        AFUAAADhAAAA/wAAAP4AAAD/AAAA/wAAAP8AAAD/AAAA/gAAAP8AAADgAAAAVgAAAAAAAAADAAAAAdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAADAAAAAAAAAAsAAABaAAAArAAAANgAAADqAAAA6gAA
+        ANcAAACsAAAAXAAAAAsAAAAAAAAAAwAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH0AAAADAAAAAQAAAAAAAAAAAAAAAwAAAA4AAAAOAAAAAwAAAAAAAAAAAAAAAQAAAAPZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH0AAAABAAAABAAAAAMAAAAAAAAAAAAA
+        AAAAAAAAAAAAAwAAAAQAAAAB2aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfQAAAAEAAAABAAAAAQAAAAHZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdmlcH3ZpXB92aVwfdml
+        cH3ZpXB92aVwfdmlcH3ZpXB9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AA
+        AAAAAAAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAAAAgBAAAAAAAAAAAAAAAAAAAQAIAAAAAAAAAAAAAAAAA
+        AIABAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAAACAABAAAAAAAAAAAAAAAAABAWgIAAAAAAAAAAA
+        DwAAAAQIECAAAADwAAAAADDAAAAEEAggAAADDAAAAACAEAAACBAIEAAACAEAAAABAAgAAAgQCBAAABAA
+        gAAAAgAEAAAIEAgQAAAgAEAAAAQAAgAACBAIEAAAQAAgAAAIAAEAAAQQCCAAAIAAEAAAEBaAgAAECBAg
+        AAEBaAgAABAgQIAABAWgIAABAgQIAAAQQCCAAAIAAEAAAQQCCAAAIEAgQAABAACAAAIEAgQAACBAIEAA
+        AIABAAACBAIEAAAgQCBAAABAAgAAAgQCBAAAIEAgQAAAIAQAAAIEAgQAABBAIIAAAAgQAAABBAIIAAAQ
+        IECAAAAIEAAAAQIECAAAEBaAgAAACBAAAAEBaAgAAAgAAQAAAAgQAAAAgAAQAAAEAACAAAAIEAAAAQAA
+        IAAAAgAAQAAACBAAAAIAAEAAAAEAACAAAAgQAAAEAACAAAAAgBAQAAAIEAAACAgBAAAAADDICAAACBAA
+        ABATDAAAAAAPBAQAADAMAAAgIPAAAAAAAAICAABAAgAAQEAAAAAAAAABAQABAACAAICAAAAAAAAAAICA
+        BAAAIAEBAAAAAAAAAABAQBgBgBgCAgAAAAAAAAAAICAgBmAEBAQAAAAAAAAAABAQgAgQAQgIAAAAAAAA
+        AAAICgAgBABQEAAAAAAAAAAABAQAgAEAICAAAAAAAAAAAAIAAwAAwABAAAAAAAAAAAABAAQAACAAgAAA
+        AAAAAAAAAYAQAAAIAYAAAAAAAAAAAAYAQAAAAgBgAAAAAAAAAAAIAYADwAGAEAAAAAAAAAAAIAIAPDwA
+        QAQAAAAAAAAAAEAIAEACABACAAAAAAAAAACAIAEAAIAEAQAAAAAAAAAAgMAEAAAgAwEAAAAAAAAAAIEA
+        CAAAEACBAAAAAAAPAACBABAAAAgAgQAA8AAAMMAAgQAgD/AEAIEAAwwAAIAQAIEAQCAEAgCBAAgBAAEA
+        CACBAECAAQIAgQAQAIACAAQAgQCBAACBAIEAIABABAACAIEAgQAAgQCBAEAAIAgAAQCBAQIAAECAgQCA
+        ABAQFoCAgQECAABAgIEBAWgIECBAvoEBBAAAIICBfQIECBBAIAABAQQAACCAgAAEAgggQCAAAQIEAAAg
+        QIAABAIEIEAgAAECBAAAIECAAAQCBCBAIAABAgQAACBAgAAEAgQgQCAAAQIEAAAgQIAABAIEEEAgAAEB
+        BAAAIICAAAQCCBAgQL6BAQQAACCAgX0CBAgQFoCAgQECAABAgIEBAWgICAABAIEBAgAAQICBAIAAEAQA
+        AgCBAIEAAIEAgQBAACACAAQAgQCBAACBAIEAIABAAQAIAIEAQIABAgCBABAAgACAEACBAEAgBAIAgQAI
+        AQAAMMAAgQAgD/AEAIEAAwwAAA8AAIEAEAAACACBAADwAAAAAACBAAgAABAAgQAAAAAAAAAAgMAEAAAg
+        AwEAAAAAAAAAAIAgAQAAgAQBAAAAAAAAAABACABAAgAQAgAAAAAAAAAAIAIAPDwAQAQAAAAAAAAAAAgB
+        gAPAAYAQAAAAAAAAAAAGAEAAAAIAYAAAAAAAAAAAAYAQAAAIAYAAAAAAAAAAAAEABAAAIACAAAAAAAAA
+        AAACAAMAAMAAQAAAAAAAAAAABAQAgAEAICAAAAAAAAAAAAgKACAEAFAQAAAAAAAAAAAQEIAIEAEICAAA
+        AAAAAAAAICAgBmAEBAQAAAAAAAAAAEBAGAGAGAICAAAAAAAAAACAgAQAACABAQAAAAAAAAABAQABAACA
+        AICAAAAAAAAAAgIAAEACAABAQAAAAAAADwQEAAAwDAAAICDwAAAAADDICAAACBAAABATDAAAAACAEBAA
+        AAgQAAAICAEAAAABAAAgAAAIEAAABAAAgAAAAgAAQAAACBAAAAIAAEAAAAQAAIAAAAgQAAABAAAgAAAI
+        AAEAAAAIEAAAAIAAEAAAEBaAgAAACBAAAAEBaAgAABAgQIAAAAgQAAABAgQIAAAQQCCAAAAIEAAAAQQC
+        CAAAIEAgQAAAIAQAAAIEAgQAACBAIEAAAEACAAACBAIEAAAgQCBAAACAAQAAAgQCBAAAIEAgQAABAACA
+        AAIEAgQAABBAIIAAAgAAQAABBAIIAAAQIECAAAQFoCAAAQIECAAAEBaAgAAECBAgAAEBaAgAAAgAAQAA
+        BBAIIAAAgAAQAAAEAAIAAAgQCBAAAEAAIAAAAgAEAAAIEAgQAAAgAEAAAAEACAAACBAIEAAAEACAAAAA
+        gBAAAAgQCBAAAAgBAAAAADDAAAAEEAggAAADDAAAAAAPAAAABAgQIAAAAPAAAAAAAAAAAAQFoCAAAAAA
+        AAAAAAAAAAACAABAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAQAIA
+        AAAAAAAAAAAAAAAAACAEAAAAAAAAAAAAAAAAAAAMMAAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+</value>
   </data>
-  <data name="TabPageConfigure.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
+  <data name="NotifyIcon1.Text" xml:space="preserve">
+    <value>CM</value>
   </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Session.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Name" xml:space="preserve">
-    <value>ToolStripMenuItem_Options_Configure</value>
-  </data>
-  <data name="LabelWarnPercentage.AutoSize" type="System.Boolean, System.Private.CoreLib">
+  <data name="NotifyIcon1.Visible" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
   </data>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>32</value>
   </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>799, 542</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Form1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel1.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel2.Name" xml:space="preserve">
+    <value>ToolStripStatusLabel2</value>
+  </data>
+  <data name="&gt;&gt;ToolStripStatusLabel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Program.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Program</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Program.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Program_Close</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Program_Close.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session_Start</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Start.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session_Pause</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Pause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Session_Stop</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Session_Stop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Options</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Options_Configure</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Options_Configure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemHideFromTaskbar.Name" xml:space="preserve">
+    <value>ToolStripMenuItemHideFromTaskbar</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItemHideFromTaskbar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Option_Export</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllUsedCoinTables.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Option_Export_AllUsedCoinTables</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllUsedCoinTables.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllCoinTables.Name" xml:space="preserve">
+    <value>ToolStripMenuItem_Option_Export_AllCoinTables</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem_Option_Export_AllCoinTables.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
+    <value>Timer1</value>
+  </data>
+  <data name="&gt;&gt;Timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStart.Name" xml:space="preserve">
+    <value>ToolStripButton_SessionStart</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionPause.Name" xml:space="preserve">
+    <value>ToolStripButton_SessionPause</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionPause.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStop.Name" xml:space="preserve">
+    <value>ToolStripButton_SessionStop</value>
+  </data>
+  <data name="&gt;&gt;ToolStripButton_SessionStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Name" xml:space="preserve">
+    <value>ToolStripComboBoxCoinNames</value>
+  </data>
+  <data name="&gt;&gt;ToolStripComboBoxCoinNames.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NotifyIcon1.Name" xml:space="preserve">
+    <value>NotifyIcon1</value>
+  </data>
+  <data name="&gt;&gt;NotifyIcon1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

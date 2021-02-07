@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Hierarchy;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -10,6 +11,7 @@ namespace CM
 {
     public partial class FormMain : Form
     {
+        #region Prperties etc
         public dynamic JsonObjSettings { get; set; }        // Holds the user and application setttings
         StartSession Start;
         PrepareForm Prepare;
@@ -36,8 +38,11 @@ namespace CM
         private string DecimalSeperator { get; set; }
         private double WarnPercentage { get; set; }
 
+        private string ActiveCoinName { get; set; }
+        private int ActivetabpageIndex { get; set; }
+        private bool DebugMode { get; set; }
+        #endregion Properties etc
 
-    private bool DebugMode { get; set; }
 
         public FormMain()
         {
@@ -83,6 +88,12 @@ namespace CM
             {
                 CopyAppDatabase();      //Every xx times the application starts it makes a copy of the application database
             }
+
+            ToolStripComboBoxCoinNames.Text = TabControlCharts.SelectedTab.Name;
+            ActiveCoinName = TabControlCharts.SelectedTab.Name;
+
+            AddEventHandlerTotartPriceCheckBox();
+
         }
         private void CreateTheTabs()
         {
@@ -329,6 +340,10 @@ namespace CM
             //always 
             TextBoxTimeInterval.Text = JsonObjSettings.AppParam[0].RateLimit.ToString();
             TextBoxWarnPercentage.Text = JsonObjSettings.AppParam[0].WarnPercentage.ToString();
+            bool HidefromTask = JsonObjSettings.AppParam[0].HideFromTaskbar;
+            HideFromTaskbar(HidefromTask);
+            
+
         }
         private void LoadFormPosition()
         {
@@ -707,7 +722,6 @@ namespace CM
                     cntrl.Series["Sessie_Laagste_Prijs_" + SerieName].BorderWidth = 2;
                 }
             }
-
         }
         private void Charting()
         {
@@ -733,10 +747,10 @@ namespace CM
                                 {
                                     cntrl.Series["Start_Prijs_" + CoinName].Points.AddXY(DateTime.Now.ToString("HH: mm: ss"), aCoin.CurrentPrice);  //first time
                                 }
-                                /*if (aCoin.Open24 != 0)//
+                                if (aCoin.Open24 != 0)
                                 {
                                     cntrl.Series["Open_Prijs_" + CoinName].Points.AddXY(DateTime.Now.ToString("HH: mm: ss"), aCoin.Open24);
-                                }*/
+                                }
                                 if (aCoin.SessionHighPrice != 0)
                                 {
                                     cntrl.Series["Sessie_Hoogste_Prijs_" + CoinName].Points.AddXY(DateTime.Now.ToString("HH: mm: ss"), aCoin.SessionHighPrice);
@@ -747,8 +761,6 @@ namespace CM
                                     cntrl.Series["Sessie_Laagste_Prijs_" + CoinName].Points.AddXY(DateTime.Now.ToString("HH: mm: ss"), aCoin.SessionLowPrice);
                                     SetChartLine(cntrl, "Sessie_Laagste_Prijs_", aCoin.SessionLowPrice, aCoin.Name);
                                 }
-
-                                
                             }
                         }
                     }                    
@@ -787,6 +799,8 @@ namespace CM
         private void PutCoinNamesInComboBox()
         {
             int counter = 0;
+            ToolStripComboBoxCoinNames.Items.Clear();
+
             foreach (TabPage tbp in TabControlCharts.TabPages)
             {
                 ToolStripComboBoxCoinNames.Items.Add(tbp.Name);
@@ -807,11 +821,9 @@ namespace CM
         {
             GetCoinData();              // Get the current price and add a record in the DataGridViewPriceMonitor            
         }
-        private void GetCoinData()  //Current price to Datagridview
+        private void GetCoinData()  // Current price to Datagridview
         {
-            GetMarketPriceData();    //Fill a list with the Currentcoin data
-            //en nog meer...............................
-
+            GetMarketPriceData();   // Fill a list with the Currentcoin data
         }
 
         private void AddRowToDgvPriceMonitor(DataGridView dgv, double CurrPrice, String Trend)
@@ -845,21 +857,36 @@ namespace CM
         }
         private string FormatDoubleToString(double d)
         {
-            string FormattedPrice = d.ToString(DoubleFormatString);
-
-            if (FormattedPrice.Length > 0 && FormattedPrice != "0")
+            try
             {
+                string FormattedPrice = d.ToString(DoubleFormatString);
 
-                string s = FormattedPrice.Substring(0, 1);
-
-                if (s == "," || s == ".")
+                if (FormattedPrice.Length > 0 && FormattedPrice != "0")
                 {
-                    FormattedPrice = "0" + FormattedPrice;
+
+                    string s = FormattedPrice.Substring(0, 1);
+
+                    if (s == "," || s == ".")
+                    {
+                        FormattedPrice = "0" + FormattedPrice;
+                    }
+                    s = FormattedPrice.Substring(0, 2);
+                    if (s == "-," || s == "-.")
+                    {
+                        FormattedPrice = FormattedPrice.Replace("-", "-0");
+                    }
+
+                    return FormattedPrice;
                 }
-                return FormattedPrice;
+                else
+                {
+                    return "0";
+                }
             }
-            else
+            catch (ArgumentOutOfRangeException ex)
             {
+                Logging.WriteToLogError("Fout opgetreden in de functie: FormatDoubleToString");
+                Logging.WriteToLogError("Waarde die geformateerd moest worden: " + d.ToString()); ;
                 return "0";
             }
         }
@@ -984,6 +1011,7 @@ namespace CM
             GetSettings();
             ApplySettings();
             CreateTheTabs();
+            PrepareChart();
         }
 
         #region Form closing
@@ -1029,7 +1057,7 @@ namespace CM
         #endregion Show date and time in form
 
         private void ToolStripComboBoxCoinNames_SelectedIndexChanged(object sender, EventArgs e)
-        {   //active the selected tabpage
+        {   // Activate the selected tabpage
             Cursor.Current = Cursors.WaitCursor;
 
             string selected = ToolStripComboBoxCoinNames.SelectedItem.ToString();
@@ -1048,8 +1076,7 @@ namespace CM
         private void ToolStripMenuItem_Option_Export_AllUsedCoinTables_Click(object sender, EventArgs e)
         {
             GetExportLocation();
-        }
-        
+        }        
 
         private void GetExportLocation()
         {
@@ -1080,9 +1107,6 @@ namespace CM
             ToolStripStatusLabel1.Text = "";
             return SelectedFolder;
         }
-
-        #endregion Export
-
         private void ToolStripMenuItem_Option_Export_AllCoinTables_Click(object sender, EventArgs e)
         {
             string FileLocation = ChooseFolder();
@@ -1096,5 +1120,171 @@ namespace CM
             ToolStripStatusLabel1.Text = "";
             Cursor.Current = Cursors.Default;
         }
+        #endregion Export
+
+
+        #region add eventhandlers
+        public IEnumerable<Control> GetAll(Control control, Type type = null)
+        {
+            var controls = control.Controls.Cast<Control>();
+
+            //check the all value, if true then get all the controls
+            //otherwise get the controls of the specified type
+            if (type == null)
+                return controls.SelectMany(ctrl => GetAll(ctrl, type)).Concat(controls);
+            else
+                return controls.SelectMany(ctrl => GetAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
+        }
+
+        private void AddEventHandlerTotartPriceCheckBox()
+        {
+            /*  Get all controls
+            var c = GetAll(this);
+            MessageBox.Show("Total Controls: " + c.Count());
+            */
+
+            var c1 = GetAll(this, typeof(CheckBox));
+            foreach (CheckBox Cb in c1)
+            {
+                if (Cb.GetType() == typeof(CheckBox))
+                {
+                    switch (Cb.Text)
+                    {
+                        case "Start prijs aan/uit":
+                            Cb.Click += new EventHandler(CheckBoxStartPrice_Click);
+                            break;
+                        case "Open prijs aan/uit":
+                            Cb.Click += new EventHandler(CheckBoxOpenPrice_Click);
+                            break;
+                        case "Sessie hoogste aan/uit":
+                            Cb.Click += new EventHandler(CheckBoxSessionHighPrice_Click);
+                            break;
+                        case "Sessie laagste aan/uit":
+                            Cb.Click += new EventHandler(CheckBoxSessionLowPrice_Click);
+                            break;
+                        default:
+                            // code block
+                            break;
+                    }
+                }
+            }            
+        }
+
+        private void CheckBoxStartPrice_Click(object sender, EventArgs e)
+        {
+            AddCheckBoxClickEvent(sender, e);   // Start price On/Off
+        }
+
+        private void CheckBoxOpenPrice_Click(object sender, EventArgs e)
+        {
+            AddCheckBoxClickEvent(sender, e);   // Open price On/Off
+        }
+        private void CheckBoxSessionHighPrice_Click(object sender, EventArgs e)
+        {
+            AddCheckBoxClickEvent(sender, e);   // Session High price On/Off
+        }
+        private void CheckBoxSessionLowPrice_Click(object sender, EventArgs e)
+        { 
+            AddCheckBoxClickEvent(sender, e);   // Session low price On/Off
+        }
+        private void AddCheckBoxClickEvent(object sender, EventArgs e)
+        {
+            string SeriesStartPriceName = string.Empty;
+            CheckBox Cb = sender as CheckBox;
+            switch (Cb.Text)
+            {
+                case "Start prijs aan/uit":
+                    SeriesStartPriceName = "Start_Prijs_" + ActiveCoinName;
+                    break;
+                case "Open prijs aan/uit":
+                    SeriesStartPriceName = "Open_Prijs_" + ActiveCoinName;
+                    break;
+                case "Sessie hoogste aan/uit":
+                    SeriesStartPriceName = "Sessie_Hoogste_Prijs_" + ActiveCoinName;
+                    break;
+                case "Sessie laagste aan/uit":
+                    SeriesStartPriceName = "Sessie_Laagste_Prijs_" + ActiveCoinName;
+                    break;
+                default:
+                    // code block
+                    break;
+            }
+
+            var c1 = GetAll(this, typeof(System.Windows.Forms.DataVisualization.Charting.Chart));
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in c1)
+            {
+                if (aChart.Name == "Chart_" + ActiveCoinName)
+                {
+                    if (Cb.Checked)
+                    {
+                        aChart.Series[SeriesStartPriceName].Enabled = true;
+                    }
+                    else
+                    {
+                        aChart.Series[SeriesStartPriceName].Enabled = false;
+                    }
+                }
+            }
+        }
+        #endregion add eventhandlers
+
+        #region Show the coin name in the toobox combobox
+        private void TabControlCharts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (TabControlCharts.SelectedTab != null)  //TabControlCharts.SelectedTab = null when the coin tabs are open en the option forms is closed
+            {
+                ToolStripComboBoxCoinNames.Text = TabControlCharts.SelectedTab.Name;
+                ActiveCoinName = TabControlCharts.SelectedTab.Name;
+                ActivetabpageIndex = TabControlCharts.SelectedIndex;
+            }
+            else
+            {
+               foreach (TabPage tp in TabControlCharts.TabPages)
+                {
+                    if (tp.Name == ActiveCoinName)
+                    {
+                        ToolStripComboBoxCoinNames.Text = ActiveCoinName;
+                        TabControlCharts.SelectedIndex = ActivetabpageIndex;
+                    }
+                }                
+            }
+        }
+
+        private void FormMain_Shown(object sender, EventArgs e)
+        {
+            ToolStripComboBoxCoinNames.Text = TabControlCharts.SelectedTab.Name;
+        }
+
+        #endregion Show the coin name in the toobox combobox
+
+        #region Hide from taskbar
+        private void ToolStripMenuItemHideFromTaskbar_Click(object sender, EventArgs e)
+        {
+            if (ToolStripMenuItemHideFromTaskbar.Checked)
+            {
+                HideFromTaskbar(false);                
+            }
+            else
+            {
+                HideFromTaskbar(true);
+            }
+        }
+
+        private void HideFromTaskbar(bool Hide)
+        {
+            if (Hide)
+            {
+                ShowInTaskbar = false;
+                ToolStripMenuItemHideFromTaskbar.Checked = true;                
+                JsonObjSettings.AppParam[0].HideFromTaskbar = true;               
+            }
+            else
+            {
+                ShowInTaskbar = true;
+                ToolStripMenuItemHideFromTaskbar.Checked = false;
+                JsonObjSettings.AppParam[0].HideFromTaskbar = false;
+            }
+        }
+        #endregion Hide from taskbar
     }
 }
