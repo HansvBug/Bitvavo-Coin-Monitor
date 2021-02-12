@@ -6,3 +6,6 @@ This will be a tool with which you can retrieve the prices of the e-coins on bit
 It is created in Visual Studio 2019. It is a Winforms .net5 project.
 When you compile the program and start it up for the first time, you must first check the options in options that you want to track.
 Note, this is a first draft and certainly not ready yet, but the basics work.
+
+
+![afbeelding](https://user-images.githubusercontent.com/77499563/107783553-afd65980-6d4a-11eb-9f8a-ad3193bffdc4.png)
