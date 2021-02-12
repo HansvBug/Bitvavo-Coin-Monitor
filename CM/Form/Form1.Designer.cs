@@ -42,6 +42,12 @@ namespace CM
             this.TabControlMain = new System.Windows.Forms.TabControl();
             this.TabPageConfigure = new System.Windows.Forms.TabPage();
             this.GroupBoxSessionSettings = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ComboBoxSoundCoin = new System.Windows.Forms.ComboBox();
+            this.ButtonTestSoundNegative = new System.Windows.Forms.Button();
+            this.ButtonTestSoundPositive = new System.Windows.Forms.Button();
+            this.CheckBoxSoundNegative = new System.Windows.Forms.CheckBox();
+            this.CheckBoxSoundPositive = new System.Windows.Forms.CheckBox();
             this.LabelWarnPercentage = new System.Windows.Forms.Label();
             this.TextBoxWarnPercentage = new System.Windows.Forms.TextBox();
             this.ButtonStop = new System.Windows.Forms.Button();
@@ -187,6 +193,12 @@ namespace CM
             // 
             // GroupBoxSessionSettings
             // 
+            this.GroupBoxSessionSettings.Controls.Add(this.label1);
+            this.GroupBoxSessionSettings.Controls.Add(this.ComboBoxSoundCoin);
+            this.GroupBoxSessionSettings.Controls.Add(this.ButtonTestSoundNegative);
+            this.GroupBoxSessionSettings.Controls.Add(this.ButtonTestSoundPositive);
+            this.GroupBoxSessionSettings.Controls.Add(this.CheckBoxSoundNegative);
+            this.GroupBoxSessionSettings.Controls.Add(this.CheckBoxSoundPositive);
             this.GroupBoxSessionSettings.Controls.Add(this.LabelWarnPercentage);
             this.GroupBoxSessionSettings.Controls.Add(this.TextBoxWarnPercentage);
             this.GroupBoxSessionSettings.Controls.Add(this.ButtonStop);
@@ -197,6 +209,45 @@ namespace CM
             resources.ApplyResources(this.GroupBoxSessionSettings, "GroupBoxSessionSettings");
             this.GroupBoxSessionSettings.Name = "GroupBoxSessionSettings";
             this.GroupBoxSessionSettings.TabStop = false;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // ComboBoxSoundCoin
+            // 
+            resources.ApplyResources(this.ComboBoxSoundCoin, "ComboBoxSoundCoin");
+            this.ComboBoxSoundCoin.FormattingEnabled = true;
+            this.ComboBoxSoundCoin.Name = "ComboBoxSoundCoin";
+            // 
+            // ButtonTestSoundNegative
+            // 
+            resources.ApplyResources(this.ButtonTestSoundNegative, "ButtonTestSoundNegative");
+            this.ButtonTestSoundNegative.Name = "ButtonTestSoundNegative";
+            this.ButtonTestSoundNegative.UseVisualStyleBackColor = true;
+            this.ButtonTestSoundNegative.Click += new System.EventHandler(this.ButtonTestSoundNegative_Click);
+            // 
+            // ButtonTestSoundPositive
+            // 
+            resources.ApplyResources(this.ButtonTestSoundPositive, "ButtonTestSoundPositive");
+            this.ButtonTestSoundPositive.Name = "ButtonTestSoundPositive";
+            this.ButtonTestSoundPositive.UseVisualStyleBackColor = true;
+            this.ButtonTestSoundPositive.Click += new System.EventHandler(this.ButtonTestSoundPositive_Click);
+            // 
+            // CheckBoxSoundNegative
+            // 
+            resources.ApplyResources(this.CheckBoxSoundNegative, "CheckBoxSoundNegative");
+            this.CheckBoxSoundNegative.Name = "CheckBoxSoundNegative";
+            this.CheckBoxSoundNegative.UseVisualStyleBackColor = true;
+            this.CheckBoxSoundNegative.CheckedChanged += new System.EventHandler(this.CheckBoxSoundNegative_CheckedChanged);
+            // 
+            // CheckBoxSoundPositive
+            // 
+            resources.ApplyResources(this.CheckBoxSoundPositive, "CheckBoxSoundPositive");
+            this.CheckBoxSoundPositive.Name = "CheckBoxSoundPositive";
+            this.CheckBoxSoundPositive.UseVisualStyleBackColor = true;
+            this.CheckBoxSoundPositive.CheckedChanged += new System.EventHandler(this.CheckBoxSoundPositive_CheckedChanged);
             // 
             // LabelWarnPercentage
             // 
@@ -535,6 +586,12 @@ namespace CM
         private System.Windows.Forms.NotifyIcon NotifyIcon1;
         private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemHideFromTaskbar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.CheckBox CheckBoxSoundNegative;
+        private System.Windows.Forms.CheckBox CheckBoxSoundPositive;
+        private System.Windows.Forms.Button ButtonTestSoundNegative;
+        private System.Windows.Forms.Button ButtonTestSoundPositive;
+        private System.Windows.Forms.ComboBox ComboBoxSoundCoin;
+        private System.Windows.Forms.Label label1;
     }
 }
 

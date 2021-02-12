@@ -74,7 +74,7 @@ namespace CM
         {
             if (File.Exists(SettingsFile))
             {
-                Logging.WriteToLogInformation("Ophalen settings.");
+                if (DebugMode) { Logging.WriteToLogInformation("Ophalen settings."); }
                 string Json = File.ReadAllText(SettingsFile);
                 JsonObjSettings = JsonSerializer.Deserialize<AppSettingsMeta>(Json);
             }

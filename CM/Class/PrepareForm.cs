@@ -11,6 +11,7 @@ namespace CM
 {
     public class PrepareForm
     {
+        #region Properties etc.
         private List<string> CoinName = new();
         public List<string> DgvNames = new();
         public List<string> ChartNames = new();
@@ -24,12 +25,16 @@ namespace CM
 
         private readonly int CbPointY = 10;
         private int CheckTabCount { get; set; }
+        #endregion Properties etc.
 
+        #region constructor
         public PrepareForm()
         {
             GetCoins(); 
             this.DecimalSeperator = CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator;  //move to a static class double code
         }
+        #endregion constructor
+
         private void GetCoins()
         {
             if (StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
@@ -59,12 +64,18 @@ namespace CM
         {
             TabCtrl.TabPages.Clear();  //First remove all tabs
 
+            // Create a Tab for the 24hour difference percentage
+            string title = "24 uurs percentage";
+            TabPage aTabPageFirst = new(title);
+            aTabPageFirst.Name = title;          
+            TabCtrl.TabPages.Add(aTabPageFirst);
+
             //create a tab per coin
             foreach (string value in CoinName)
             {
-                string title = value;
+                title = value;
                 TabPage aTabPage = new(title);
-                aTabPage.Name = title;                     // The name of the tabpage is the coin/market name. "BTC-EUR"
+                aTabPage.Name = title;              // The name of the tabpage is the coin/market name. "BTC-EUR"
                 TabCtrl.TabPages.Add(aTabPage);
             }
         }
@@ -76,23 +87,29 @@ namespace CM
         {
             for (int Tabcount = 0; Tabcount <= TabCtrl.TabCount - 1; Tabcount++)
             {
-                CreateSplitContainer(Tabcount);                                                 // Create the splitcontaineers
-                CreateDatagridViewPriceData(Tabcount);                                          // Create DataGrid view
-                CreateChartPanel(Tabcount);                                                     // Create the panel on which the chart will be placed. The control with dockstyle = filled must FIRST be placed on the paren control
-                CreateBottomPanel(Tabcount);                                                    // Create the panel where checkboxes will be placed
-                CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Start prijs aan/uit");      // Create a check box
+                if (Tabcount == 0)
+                {
+                    CreateDgv24hourPercDiffSelectedCoins(Tabcount);
+                }
+                else
+                {
+                    CreateSplitContainer(Tabcount);                                                 // Create the splitcontaineers
+                    CreateDatagridViewPriceData(Tabcount);                                          // Create DataGrid view
+                    CreateChartPanel(Tabcount);                                                     // Create the panel on which the chart will be placed. The control with dockstyle = filled must FIRST be placed on the paren control
+                    CreateBottomPanel(Tabcount);                                                    // Create the panel where checkboxes will be placed
+                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Start prijs aan/uit");      // Create a check box
 
-                CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Open prijs aan/uit");       // Create a check box
-                CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie hoogste aan/uit");   // Create a check box
-                CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie laagste aan/uit");   // Create a check box
+                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Open prijs aan/uit");       // Create a check box
+                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie hoogste aan/uit");   // Create a check box
+                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie laagste aan/uit");   // Create a check box
 
-                CreateDatagridViewPriceMonitorPrice(Tabcount);                                  // Create DataGrid view
-                CreateChart(Tabcount);                                                          // Create the charts
+                    CreateDatagridViewPriceMonitorPrice(Tabcount);                                  // Create DataGrid view
+                    CreateChart(Tabcount);                                                          // Create the charts
 
-                //add the new components
-                //CreateLabels(Tabcount);  //Perhaps in the future option per tabpage
-                //CreateTextBox(Tabcount);  //Perhaps in the future option per tabpage   
-                
+                    //add the new components
+                    //CreateLabels(Tabcount);  //Perhaps in the future option per tabpage
+                    //CreateTextBox(Tabcount);  //Perhaps in the future option per tabpage   
+                }
             }
         }
 
@@ -261,6 +278,38 @@ namespace CM
                 }
             }
         }
+        private void CreateDgv24hourPercDiffSelectedCoins(int Tabcount)
+        {
+            DataGridView dgv = new();
+            TabPage tp = TabCtrl.TabPages[Tabcount];
+            dgv.Name = "Dgv_DifPerc24hour";
+            dgv.Columns.Add("Coin", "Coin");
+            dgv.Columns.Add("Percentage", "Percentage");
+
+            dgv.Columns[0].Width = 70;
+            dgv.Columns[1].Width = 80;            
+
+            dgv.Location = new Point(3, 3);
+            dgv.Height = tp.Height;
+            dgv.Width = 193;
+            dgv.TabIndex = 0;
+
+            dgv.AllowUserToDeleteRows = false;
+            dgv.AllowUserToAddRows = false;
+            dgv.AllowUserToOrderColumns = true;
+            dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgv.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgv.RowHeadersVisible = false;
+
+            dgv.Anchor = (AnchorStyles.Left |  AnchorStyles.Top | AnchorStyles.Bottom);
+
+            DgvNames.Add(dgv.Name);  //Create a list with newly created datagridview names. 
+
+            tp.Controls.Add(dgv);
+        }
+        
+
+
 
         private void CreateChart(int Tabcount)
         {
@@ -276,6 +325,7 @@ namespace CM
             aChart.Name = "Chart_" + tp.Name;
             aChart.Titles.Add(CoinName);
             aChart.Location = new Point(3, 3);
+            aChart.Cursor = Cursors.Cross;
 
 
             System.Windows.Forms.DataVisualization.Charting.ChartArea ChrtArea = new("ChartArea_"+ CoinName);
@@ -367,8 +417,8 @@ namespace CM
                     //splt1.Panel2.Controls.Add(aChart);
                 }
             }
-            
         }
+        
 
         /*
         private void CreateLabels(int Tabcount)
@@ -385,7 +435,7 @@ namespace CM
         */
 
         #region Textbox warning precentage
-        
+
         /*private void CreateTextBox(int Tabcount)
         {
             TextBox tb = new();
@@ -421,7 +471,7 @@ namespace CM
                 e.Handled = true;
             }
         }*/
-        
+
         #endregion Textbox warning precentage
         /*
         private void PlaceControleOnSpltcontainerTwo(Control NewCntrl, int Tabcount)

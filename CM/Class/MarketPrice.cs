@@ -123,9 +123,8 @@ namespace CM
             {
                 foreach (string MarketName in CoinName)
                 {
-                    if (tickerMarket.Market == MarketName)  //Keep only the markets whicht are stored in the options/sqlite/json
+                    if (tickerMarket.Market == MarketName)  //Keep only the markets which are stored in the options/sqlite/json
                     {
-
                         if (!AllCoinData.IsUsed)  //First run
                         {
                             CoinData aCoin = new();
@@ -144,6 +143,7 @@ namespace CM
                             aCoin.SessionHighPrice = aCoin.CurrentPrice;
                             aCoin.SessionLowPrice = aCoin.CurrentPrice;
                             aCoin.PreviousPrice = aCoin.CurrentPrice;
+                            aCoin.DiffPercentOpen24 = 0;
 
                             AllCoinData.Items.Add(aCoin);
                         }
@@ -196,6 +196,7 @@ namespace CM
                                     {
                                         aCoin.SessionHighPrice = aCoin.SessionHighPrice;
                                     }
+                                    aCoin.DiffPercentOpen24 = DiffInPerc(aCoin.Open24, aCoin.CurrentPrice);
                                 }
                             }
                         }
@@ -318,7 +319,6 @@ namespace CM
                                 //dayTickerPrice.Timestamp = tickerMarket.Timestamp;    // Fault with deserialize
                             }
                         }
-
                     }
                 }
             }
@@ -356,13 +356,13 @@ namespace CM
 
         private void DeserializeGetAllCoinNames(string CurrentMarketPriceData)
         {
-            CurrentTickerPrice.Clear();  //Clear the previous market-price data
+            CurrentTickerPrice.Clear();  // Clear the previous market-price data
 
             List<CurrentTickerMarketPrice> results = JsonSerializer.Deserialize<List<CurrentTickerMarketPrice>>(CurrentMarketPriceData);
 
             foreach (var tickerMarket in results)
             {
-                CoinNames.Add(tickerMarket.Market); //Creat a list with just the coin names
+                CoinNames.Add(tickerMarket.Market); // Create a list with just the coin names
             }
         }
         #endregion used in the configure form

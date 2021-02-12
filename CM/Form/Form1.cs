@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity.Hierarchy;
 using System.Drawing;
 using System.Globalization;
@@ -15,7 +16,7 @@ namespace CM
         public dynamic JsonObjSettings { get; set; }        // Holds the user and application setttings
         StartSession Start;
         PrepareForm Prepare;
-        public CoinDataAll AllCoinData;
+        public CoinDataAll AllCoinDataSelectedCoins;
 
         private MarketPrice CoinMarketPrice;
 
@@ -41,6 +42,12 @@ namespace CM
         private string ActiveCoinName { get; set; }
         private int ActivetabpageIndex { get; set; }
         private bool DebugMode { get; set; }
+
+        private bool SoundUp { get; set; }
+        private bool SoundDown { get; set; }
+        private bool SoundUpIsPlayed { get; set; }
+        private bool SoundDownIsPlayed { get; set; }
+
         #endregion Properties etc
 
 
@@ -58,6 +65,7 @@ namespace CM
             Text = AppSettingsDefault.ApplicationName;
             DoubleBuffered = true;
             StartClock();           // Show the date and time in the statusstrip            
+            PanelBottom.Visible = false;    // Not used
         }
 
         #region Form load
@@ -92,8 +100,11 @@ namespace CM
             ToolStripComboBoxCoinNames.Text = TabControlCharts.SelectedTab.Name;
             ActiveCoinName = TabControlCharts.SelectedTab.Name;
 
-            AddEventHandlerTotartPriceCheckBox();
+            AddEventHandlerToPriceCheckBox();
+            AddEventHandlerToChart();
 
+            CheckBoxSoundPositive.Text = string.Format("Geluid bij een stijging van {0} %", WarnPercentage.ToString());
+            CheckBoxSoundNegative.Text = string.Format("Geluid bij een daling van {0} %", WarnPercentage.ToString());
         }
         private void CreateTheTabs()
         {
@@ -333,17 +344,16 @@ namespace CM
         }
         private void ApplySettings()
         {
-            //when returning from options form
+            // When returning from options form
             string DbLocation = JsonObjSettings.AppParam[0].DatabaseLocation;
             string AppDb = Path.Combine(DbLocation, AppSettingsDefault.SqlLiteDatabaseName);
 
-            //always 
             TextBoxTimeInterval.Text = JsonObjSettings.AppParam[0].RateLimit.ToString();
             TextBoxWarnPercentage.Text = JsonObjSettings.AppParam[0].WarnPercentage.ToString();
+            WarnPercentage = JsonObjSettings.AppParam[0].WarnPercentage;
+
             bool HidefromTask = JsonObjSettings.AppParam[0].HideFromTaskbar;
             HideFromTaskbar(HidefromTask);
-            
-
         }
         private void LoadFormPosition()
         {
@@ -429,7 +439,7 @@ namespace CM
         {
             Cursor.Current = Cursors.AppStarting;
             this.Text += "   -->  Bezig...";
-            ToolStripStatusLabel1.Text = "Bezig...";
+            ToolStripStatusLabel1.Text = "Bezig..." + "   interval = " + TextBoxTimeInterval.Text + " minuten.";
 
             TextBoxTimeInterval.Enabled = false;
 
@@ -443,9 +453,9 @@ namespace CM
                 Start.ClearTextBoxes(this.Controls);    //Set all textbox.text to 0 (except the timer and the percentage).       
                 ClearAllDataGridViews();                // clear the datagridviews                                                            
 
-                AllCoinData = new CoinDataAll();    //create the coindata objectlist
+                AllCoinDataSelectedCoins = new CoinDataAll();    //create the coindata objectlist
 
-                CoinMarketPrice = new MarketPrice(AllCoinData)
+                CoinMarketPrice = new MarketPrice(AllCoinDataSelectedCoins)
                 {
                     WarnPercentage = WarnPercentage
                 };
@@ -455,7 +465,7 @@ namespace CM
                 InitTimer();            // 
                 //...
 
-                ToolStripStatusLabel1.Text = "Bezig...";
+                ToolStripStatusLabel1.Text = "Bezig..." + "   interval = " + TextBoxTimeInterval.Text + " minuten.";
                 Refresh();
                 Cursor.Current = Cursors.Default;
             }
@@ -478,6 +488,7 @@ namespace CM
             CoinMarketPrice.GetCurrentPriceData();    // Get the current ticker data and fill a dictionary with "Market - Price"
                                                       // 
             FilldatagridViews();
+            PlaySound();
             SaveAllCoinData();
             Charting();
         }
@@ -486,6 +497,7 @@ namespace CM
         {
             SetMarketPriceInDataGridView();             // Clear the datagridview "DataGridViewMarketPrice" and add the first record
             SetCoinDataInDataGridView();
+            Set24HourPercentageDifSelectedCoins();
         }
         private void ClearAllDataGridViews()
         {
@@ -509,9 +521,9 @@ namespace CM
             }
             Refresh();
             //create the blanc rows in the first datagridview
-            if (AllCoinData != null)  //is null with the first start after opening the app.
+            if (AllCoinDataSelectedCoins != null)  //is null with the first start after opening the app.
             {
-                foreach (CoinData aCoin in AllCoinData.Items)
+                foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)
                 {
                     string CoinName = aCoin.Name;
                     foreach (string DgvName in Prepare.DgvNames)    //loop through the datagridvieuws
@@ -573,9 +585,9 @@ namespace CM
 
         private void SetCoinDataInDataGridView()
         {
-            if (AllCoinData != null)
+            if (AllCoinDataSelectedCoins != null)
             {
-                foreach (CoinData aCoin in AllCoinData.Items)
+                foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)
                 {
                     string CoinName = aCoin.Name;
                     foreach (string DgvName in Prepare.DgvNames)    //loop through the datagridvieuws
@@ -631,7 +643,7 @@ namespace CM
 
                             }
                         }
-                    }
+                    }                   
                 }
             }
             else  //used when the precentage is changed before start is pressed
@@ -649,17 +661,17 @@ namespace CM
                     }
                 }
             }
-        }        
+        }
 
         private void SetMarketPriceInDataGridView()
         {
-            if (AllCoinData != null)
+            if (AllCoinDataSelectedCoins != null)
             {
-                foreach (CoinData aCoin in AllCoinData.Items)  //CoinDataAll
+                foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)       // CoinDataAll
                 {
                     string CoinName = aCoin.Name;
 
-                    foreach (string DgvName in Prepare.DgvNames)    //loop through the datagridvieuws
+                    foreach (string DgvName in Prepare.DgvNames)    // Loop through the datagridvieuws
                     {
                         if (DgvName.Contains(CoinName) && DgvName.Contains("Dgv_2_"))  //see PrepareForm, create datagridview. this is the second dgv
                         {
@@ -671,12 +683,53 @@ namespace CM
                     }
                 }
             }
-        }       
+        }
+        private void Set24HourPercentageDifSelectedCoins()
+        {
+            if (AllCoinDataSelectedCoins != null)
+            {
+                if (Controls.Find("Dgv_DifPerc24hour", true).FirstOrDefault() is DataGridView Dgv)
+                {   //First clear the datagridview
+                    Dgv.Rows.Clear();                 
+                }
+
+                foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)  //CoinDataAll
+                {
+                    if (Controls.Find("Dgv_DifPerc24hour", true).FirstOrDefault() is DataGridView cntrl)
+                    {
+                        AddRowToDgv24PercDiff(cntrl, aCoin.Name, aCoin.DiffPercentOpen24);
+
+                        double  Percentage;
+                        foreach(DataGridViewRow row in cntrl.Rows)
+                        {
+                            if (row.Cells["Percentage"].Value != null)
+                            {
+                                Percentage = Convert.ToDouble(row.Cells["Percentage"].Value.ToString());
+
+                                if (Percentage == 0)
+                                {
+                                    cntrl.Rows[row.Index].Cells[1].Style.BackColor = Color.LightGray;
+                                }
+                                else if (Percentage > 0)
+                                {
+                                    cntrl.Rows[row.Index].Cells[1].Style.BackColor = Color.LightGreen;
+                                }
+                                else if (Percentage < 0)
+                                {
+                                    cntrl.Rows[row.Index].Cells[1].Style.BackColor = Color.MistyRose;
+                                }                                
+                            }                            
+                        }
+                        cntrl.Sort(cntrl.Columns["Coin"], ListSortDirection.Ascending);  // Order on coin name
+                    }
+                }
+            }
+        }
 
         private void SaveAllCoinData()
         {
             ApplicationDatabase SaveCoindata = new();
-            SaveCoindata.SaveCoinData(AllCoinData);
+            SaveCoindata.SaveCoinData(AllCoinDataSelectedCoins);
             SaveCoindata.Dispose();
         }
 
@@ -730,9 +783,9 @@ namespace CM
                 string CoinName = ChartName.Replace("Chart_", "");
                 if (Controls.Find(ChartName, true).FirstOrDefault() is System.Windows.Forms.DataVisualization.Charting.Chart cntrl)
                 {
-                    if (AllCoinData != null)
+                    if (AllCoinDataSelectedCoins != null)
                     {
-                        foreach (CoinData aCoin in AllCoinData.Items)  //Then loop through the coindata to findt the right coin and data
+                        foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)  //Then loop through the coindata to findt the right coin and data
                         {
                             if (aCoin.Name == CoinName)
                             {
@@ -798,12 +851,19 @@ namespace CM
         }
         private void PutCoinNamesInComboBox()
         {
+            // Toolstrip combobox and  sound combobox
             int counter = 0;
             ToolStripComboBoxCoinNames.Items.Clear();
+            ComboBoxSoundCoin.Items.Clear();
+
 
             foreach (TabPage tbp in TabControlCharts.TabPages)
             {
                 ToolStripComboBoxCoinNames.Items.Add(tbp.Name);
+                if (tbp.Name != "24 uurs percentage")
+                {
+                    ComboBoxSoundCoin.Items.Add(tbp.Name);
+                }
                 counter++;
             }
 
@@ -815,6 +875,11 @@ namespace CM
             {
                 ToolStripComboBoxCoinNames.Enabled = false;
             }
+
+            
+            
+
+
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -863,17 +928,20 @@ namespace CM
 
                 if (FormattedPrice.Length > 0 && FormattedPrice != "0")
                 {
-
                     string s = FormattedPrice.Substring(0, 1);
 
                     if (s == "," || s == ".")
                     {
                         FormattedPrice = "0" + FormattedPrice;
                     }
-                    s = FormattedPrice.Substring(0, 2);
-                    if (s == "-," || s == "-.")
+
+                    if (FormattedPrice.Length >= 2)
                     {
-                        FormattedPrice = FormattedPrice.Replace("-", "-0");
+                        s = FormattedPrice.Substring(0, 2);
+                        if (s == "-," || s == "-.")
+                        {
+                            FormattedPrice = FormattedPrice.Replace("-", "-0");
+                        }
                     }
 
                     return FormattedPrice;
@@ -886,11 +954,22 @@ namespace CM
             catch (ArgumentOutOfRangeException ex)
             {
                 Logging.WriteToLogError("Fout opgetreden in de functie: FormatDoubleToString");
-                Logging.WriteToLogError("Waarde die geformateerd moest worden: " + d.ToString()); ;
+                Logging.WriteToLogError("Waarde die geformateerd moest worden: " + d.ToString());
+                Logging.WriteToLogError("Melding:");
+                Logging.WriteToLogError(ex.Message);
+                if (DebugMode) { Logging.WriteToLogError(ex.ToString()); }
                 return "0";
             }
         }
-        
+
+        private void AddRowToDgv24PercDiff(DataGridView dgv, string Name, double Percentage)
+        {            
+            if (!string.IsNullOrEmpty(Name))
+            {
+                dgv.Rows.Insert(0, new string[] {Name, FormatDoubleToString(Percentage) });                
+            }
+        }
+
         #region Keypress only numbers
         private void TextBoxTimeInterval_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -941,7 +1020,15 @@ namespace CM
             if (!string.IsNullOrEmpty(TextBoxWarnPercentage.Text) || !String.IsNullOrWhiteSpace(TextBoxWarnPercentage.Text))
             {
                 WarnPercentage = Convert.ToDouble(TextBoxWarnPercentage.Text);
+                CheckBoxSoundPositive.Text = string.Format("Geluid bij een stijging van {0} %", WarnPercentage.ToString());
+                CheckBoxSoundNegative.Text = string.Format("Geluid bij een daling van {0} %", WarnPercentage.ToString());
             }
+            else
+            {
+                CheckBoxSoundPositive.Text = "Geluid bij een stijging van ... %";
+                CheckBoxSoundNegative.Text = "Geluid bij een daling van ... %";
+            }
+
             if (Prepare != null)
             {
                 Prepare.WarnPercentage= WarnPercentage;
@@ -975,7 +1062,7 @@ namespace CM
             if (ButtonPause.Text == "Pauze")
             {
                 this.Text = this.Text.Replace("Bezig", "Pauze");
-                ToolStripStatusLabel1.Text = ToolStripStatusLabel1.Text.Replace("Bezig", "Pauze");
+                ToolStripStatusLabel1.Text = "Pauze";
                 Timer1.Stop();
                 ButtonPause.Text = "Verder";
                 ToolStripMenuItem_Session_Pause.Text = "Verder";
@@ -984,13 +1071,12 @@ namespace CM
             else if (ButtonPause.Text == "Verder")
             {
                 this.Text = this.Text.Replace("Pauze", "Bezig");
-                ToolStripStatusLabel1.Text = ToolStripStatusLabel1.Text.Replace("Pauze", "Bezig");
+                ToolStripStatusLabel1.Text = "Bezig..." + "   interval = " + TextBoxTimeInterval.Text + " minuten.";
                 ButtonPause.Text = "Pauze";
                 ToolStripMenuItem_Session_Pause.Text = "Pauze";
                 ToolStripButton_SessionPause.Text = "Pauze";
                 InitTimer();
             }
-
             Cursor.Current = Cursors.Default;
         }
         #endregion Pause a session
@@ -1136,7 +1222,7 @@ namespace CM
                 return controls.SelectMany(ctrl => GetAll(ctrl, type)).Concat(controls).Where(c => c.GetType() == type);
         }
 
-        private void AddEventHandlerTotartPriceCheckBox()
+        private void AddEventHandlerToPriceCheckBox()
         {
             /*  Get all controls
             var c = GetAll(this);
@@ -1228,7 +1314,7 @@ namespace CM
         }
         #endregion add eventhandlers
 
-        #region Show the coin name in the toobox combobox
+        #region Show the coin name in the toolbox combobox
         private void TabControlCharts_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TabControlCharts.SelectedTab != null)  //TabControlCharts.SelectedTab = null when the coin tabs are open en the option forms is closed
@@ -1286,5 +1372,174 @@ namespace CM
             }
         }
         #endregion Hide from taskbar
+
+
+        #region show tooltip when mouse hoovers over a chart point
+        Point? prevPosition = null;
+        ToolTip tooltip = new ToolTip();
+        private void ChartShowHints(object sender, MouseEventArgs e)
+        {
+            System.Windows.Forms.DataVisualization.Charting.Chart aChart = sender as System.Windows.Forms.DataVisualization.Charting.Chart;
+
+            var pos = e.Location;
+            if (prevPosition.HasValue && pos == prevPosition.Value)
+                return;
+            tooltip.RemoveAll();
+            prevPosition = pos;
+            var results = aChart.HitTest(pos.X, pos.Y, false, System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint); // Set ChartElementType.PlottingArea for full area, not only DataPoints
+            foreach (var result in results)
+            {
+                if (result.ChartElementType == System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint) // Set ChartElementType.PlottingArea for full area, not only DataPoints
+                {
+                    var yVal = result.ChartArea.AxisY.PixelPositionToValue(pos.Y);
+                    double Value = Math.Round(yVal, 2);
+                    tooltip.Show("€ " + Value.ToString(), aChart, pos.X, pos.Y - 15);
+                }
+            }
+        }
+
+
+        private void AddEventHandlerToChart()
+        {
+            var c1 = GetAll(this, typeof(System.Windows.Forms.DataVisualization.Charting.Chart));
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in c1)
+            {
+                if (aChart.GetType() == typeof(System.Windows.Forms.DataVisualization.Charting.Chart))
+                {
+                    aChart.MouseMove += new MouseEventHandler(Chart_MouseMove);
+                }
+            }
+        }
+
+        private void Chart_MouseMove(object sender, MouseEventArgs e)
+        {
+            ChartShowHints(sender, e);
+        }
+
+
+        #endregion show tooltip when mouse hoovers over a chart point
+
+        #region play sound
+        private void ButtonTestSoundPositive_Click(object sender, EventArgs e)
+        {
+            PlayWav(true);
+        }        
+        private void ButtonTestSoundNegative_Click(object sender, EventArgs e)
+        {
+            PlayWav(false);            
+        }
+
+        private void PlayWav(bool PlayPositiveSound)
+        {
+            try
+            {
+                if (PlayPositiveSound)
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Path.GetDirectoryName(Application.ExecutablePath) + @"\Sound" + "\\CASHREG.WAV");
+                    player.Play();
+                }
+                else
+                {
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Path.GetDirectoryName(Application.ExecutablePath) + @"\Sound" + "\\Ambulance.WAV");
+                    player.Play();
+                }
+            }
+            catch (FileNotFoundException ex)
+            {
+                Logging.WriteToLogError("Het 'WAV' bestand is niet gevonden.");
+                Logging.WriteToLogError("Melding");
+                Logging.WriteToLogError(ex.Message);
+            }
+        }
+        private void PlaySound()
+        {
+            if (!string.IsNullOrEmpty(ComboBoxSoundCoin.Text))
+            {                
+                if (WarnPercentage > 0)
+                {
+                    if (AllCoinDataSelectedCoins != null)
+                    {
+                        string SoundCoin = ComboBoxSoundCoin.Text;
+
+                        foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)
+                        {
+                            double PercentageDif = aCoin.DiffPercent;
+
+                            if (PercentageDif >= WarnPercentage && aCoin.Name == SoundCoin)
+                            {
+                                if (SoundUp)
+                                {
+                                    if (!SoundUpIsPlayed)
+                                    {
+                                        PlayWav(true);
+
+                                        SoundUpIsPlayed = true;
+                                        SoundDownIsPlayed = false;
+
+                                        Logging.WriteToLogInformation("positief: " + aCoin.Name);
+
+                                    }
+                                }
+                            }
+                            if (PercentageDif <= 0 - WarnPercentage && aCoin.Name == SoundCoin)
+                            {
+                                if (SoundDown)
+                                {
+                                    if (!SoundDownIsPlayed)
+                                    {
+                                        PlayWav(false);
+
+                                        SoundUpIsPlayed = false;
+                                        SoundDownIsPlayed = true;
+
+                                        Logging.WriteToLogInformation("Negatief: " + aCoin.Name);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void CheckBoxSoundPositive_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBoxSoundPositive.Checked)
+            {
+                SoundUp = true;
+                ComboBoxSoundCoin.Enabled = true;
+            }
+            else
+            {
+                SoundUp = false;
+                if (!CheckBoxSoundNegative.Checked)
+                {
+                    ComboBoxSoundCoin.Enabled = false;
+                    ComboBoxSoundCoin.Text = string.Empty;
+                }
+            }
+            SoundDownIsPlayed = false;
+            SoundUpIsPlayed = false;
+        }
+        private void CheckBoxSoundNegative_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CheckBoxSoundNegative.Checked)
+            {
+                SoundDown = true;
+                ComboBoxSoundCoin.Enabled = true;
+            }
+            else
+            {
+                SoundDown = false;
+                if (!CheckBoxSoundPositive.Checked)
+                {
+                    ComboBoxSoundCoin.Enabled = false;
+                    ComboBoxSoundCoin.Text = string.Empty;
+                }
+            }
+            SoundDownIsPlayed = false;
+            SoundUpIsPlayed = false;
+        }
+        #endregion Play sound
     }
 }
