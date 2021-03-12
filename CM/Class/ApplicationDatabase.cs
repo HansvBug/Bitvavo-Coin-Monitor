@@ -365,15 +365,16 @@ namespace CM
                 catch (SQLiteException ex)
                 {
                     tr.Rollback();
-                    dbConnection.Close();
-
                     Logging.WriteToLogError("Het invoeren van de Coin namen is mislukt.");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
                     if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
-                }                           
+                }
+                finally
+                {
+                    dbConnection.Close();
+                }
             }
-            dbConnection.Close();
         }
         private void DeleteCoinNames()
         {
@@ -398,10 +399,12 @@ namespace CM
                     Logging.WriteToLogError(ex.Message);
                     if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
                     tr.Rollback();
+                }
+                finally
+                {
                     dbConnection.Close();
-                }                
+                }
             }
-            dbConnection.Close();
         }
 
         public void SaveCoinData(CoinDataAll AllCoinData)
@@ -447,22 +450,23 @@ namespace CM
                 catch (SQLiteException ex)
                 {
                     tr.Rollback();
-                    dbConnection.Close();
 
                     Logging.WriteToLogError("Het invoeren van de Coin data is mislukt.");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
                     if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
                 }
-                
-            }
-            dbConnection.Close();
+                finally
+                {
+                    dbConnection.Close();
+                }
+            } 
         }
 
         #endregion Insert
 
         #region Get
-        public List<string> GetCoinNames()
+        public List<string> GetSelectedCoinNames()
         {
             List<string> CoinNames = new();
 
@@ -504,11 +508,13 @@ namespace CM
                     Logging.WriteToLogError(ex.Message);
                     if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
                     tr.Rollback();
-                    dbConnection.Close();
                     return null;
-                }                
+                }
+                finally
+                {
+                    dbConnection.Close();
+                }
             }
-            dbConnection.Close();
             if (CoinNames.Count > 0)
             {
                 return CoinNames;
@@ -517,7 +523,7 @@ namespace CM
             {
                 return null;
             }
-        }
+        }        
 
         public string GetSQliteVersion()
         {

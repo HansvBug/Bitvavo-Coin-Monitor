@@ -46,7 +46,7 @@ namespace CM
         #region FormMain        
         public void LoadMainFormPosition()
         {
-            Logging.WriteToLogInformation("Ophalen scherm positie hoofdscherm.");
+            if (DebugMode) { Logging.WriteToLogInformation("Ophalen scherm positie hoofdscherm."); }
             // default
             MainForm.WindowState = FormWindowState.Normal;
             MainForm.StartPosition = FormStartPosition.WindowsDefaultBounds;
@@ -85,7 +85,7 @@ namespace CM
         }
         public void SaveMainFormPosition()
         {
-            Logging.WriteToLogInformation("Opslaan scherm positie hoofdscherm.");
+            if (DebugMode) { Logging.WriteToLogInformation("Opslaan scherm positie hoofdscherm."); }
             string SettingsFile = JsonObjSettings.AppParam[0].SettingsFileLocation;
 
             if (File.Exists(SettingsFile))
@@ -121,14 +121,12 @@ namespace CM
             }
         }
 
-
-
         #endregion FormMain
 
         #region Form Configure
         public void LoadConfigureFormPosition()
         {
-            Logging.WriteToLogInformation("Ophalen scherm positie configuratie scherm.");
+            if (DebugMode) { Logging.WriteToLogInformation("Ophalen scherm positie configuratie scherm."); }
             // this is the default
             ConfigureForm.WindowState = FormWindowState.Normal;
             ConfigureForm.StartPosition = FormStartPosition.WindowsDefaultBounds;
@@ -164,7 +162,7 @@ namespace CM
         }
         public void SaveConfigureFormPosition()
         {
-            Logging.WriteToLogInformation("Opslaan scherm positie configuratie scherm.");
+            if (DebugMode) { Logging.WriteToLogInformation("Opslaan scherm positie configuratie scherm."); }
             string SettingsFile = JsonObjSettings.AppParam[0].SettingsFileLocation;
 
             if (File.Exists(SettingsFile))

@@ -47,7 +47,7 @@ namespace CM
         public double BidSize { get; set; }
         public double Ask { get; set; }
         public double AskSize { get; set; }
-
         public double DiffPercentOpen24 { get; set; }
+        public bool IsSelected { get; set; }
     }
 }

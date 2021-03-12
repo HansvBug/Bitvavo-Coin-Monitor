@@ -324,7 +324,7 @@ namespace CM
 
             //Get the coin names from the app database
             ApplicationDatabase CoinNames = new();
-            List<string> AllCoinNames = CoinNames.GetCoinNames();
+            List<string> AllCoinNames = CoinNames.GetSelectedCoinNames();
 
             if (AllCoinNames != null)
             {

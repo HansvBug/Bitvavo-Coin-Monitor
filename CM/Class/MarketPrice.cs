@@ -6,16 +6,11 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Windows.Forms;
 using System.Globalization;
-using Microsoft.Win32;
 
 namespace CM
 {
     class MarketPrice
     {
-
-        //private const string UrlCurrentTickerPrice = "https://api.bitvavo.com/v2/ticker/price";
-        //private const string Url24hTickerPrice = "https://api.bitvavo.com/v2/ticker/24h";
-
         private dynamic JsonObjSettings { get; set; }
         private string UrlCurrentTickerPrice { get; set; }  //"https://api.bitvavo.com/v2/ticker/price"
         private string Url24hTickerPrice { get; set; }      //"https://api.bitvavo.com/v2/ticker/24h"
@@ -23,8 +18,8 @@ namespace CM
         public Dictionary<string, string> CurrentTickerPrice = new();  // The CURRENT price of all the coins
         public List<string> CoinNames = new(); //Used in configform
 
-        public List<string> CoinName = new();  // List with the coin names
-        CoinData aCoin;
+        public List<string> SelectedCoinName = new();  // List with the selected coin names
+        CoinData aSelectedCoin;
 
         private CoinDataAll AllCoinData;
         public double WarnPercentage { get; set; }
@@ -34,7 +29,6 @@ namespace CM
 
         public double SessionHighPrice { get; set; }
         public double SessionLowPrice { get; set; }
-
 
         public MarketPrice()
         {
@@ -49,8 +43,8 @@ namespace CM
             UrlCurrentTickerPrice = JsonObjSettings.AppParam[0].Url1;
             Url24hTickerPrice = JsonObjSettings.AppParam[0].Url2;
 
-            GetCoins();
-            aCoin = new CoinData();
+            CreateSelectedCoinList();
+            aSelectedCoin = new CoinData();
             this.AllCoinData = AllCoinData;
             DecimalSeperator = CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator;  //move to a static class double code
         }
@@ -61,29 +55,28 @@ namespace CM
             JsonObjSettings = Set.JsonObjSettings;
         }
 
-        private void GetCoins()
+        private void CreateSelectedCoinList()
         {
             if (StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
             {
                 ApplicationDatabase CoinNames = new();
-                List<string> AllCoinNames = CoinNames.GetCoinNames();
+                List<string> AllSelectedCoinNames = CoinNames.GetSelectedCoinNames();
 
-                if (AllCoinNames != null)
+                if (AllSelectedCoinNames != null)
                 {
-                    foreach (string aCoin in AllCoinNames)
+                    foreach (string aCoin in AllSelectedCoinNames)
                     {
-                        CoinName.Add(aCoin);
+                        SelectedCoinName.Add(aCoin);
                     }
                 }
             }
         }
-
+        
         public void GetCurrentPriceData()
         {
             GetCurrentTickerPrice();
             Get24hTickerPrice();
         }
-
         private void GetCurrentTickerPrice()
         {
             try
@@ -111,7 +104,7 @@ namespace CM
                                 ex.Message, "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
 
         private void DeserializeCurrentTickerData(string CurrentMarketPriceData)
         {   // Deserialize json            
@@ -121,92 +114,93 @@ namespace CM
 
             foreach (var tickerMarket in results)
             {
-                foreach (string MarketName in CoinName)
+                if (!AllCoinData.IsUsed)  //First run
                 {
-                    if (tickerMarket.Market == MarketName)  //Keep only the markets which are stored in the options/sqlite/json
-                    {
-                        if (!AllCoinData.IsUsed)  //First run
-                        {
-                            CoinData aCoin = new();
-                            CurrentTickerPrice.Add(tickerMarket.Market, tickerMarket.Price);  //A dictionary with market(coin) name + curent price
-                                                                                              //
-                            aCoin.Name = tickerMarket.Market;
-                            aCoin.CurrentPrice = Convert.ToDouble(tickerMarket.Price.Replace(".", DecimalSeperator));
+                    CoinData aCoin = new();
+                    CurrentTickerPrice.Add(tickerMarket.Market, tickerMarket.Price);  //A dictionary with market(coin) name + curent price
+                                                                                      //
+                    aCoin.Name = tickerMarket.Market;
+                    aCoin.CurrentPrice = Convert.ToDouble(tickerMarket.Price.Replace(".", DecimalSeperator));
 
-                            aCoin.SessionStartPrice = aCoin.CurrentPrice;
-                            aCoin.Trend = CoinTrend.Equal.ToString();
-                            aCoin.WarnPercentage = WarnPercentage;
+                    aCoin.SessionStartPrice = aCoin.CurrentPrice;
+                    aCoin.Trend = CoinTrend.Equal.ToString();
+                    aCoin.WarnPercentage = WarnPercentage;
+                    aCoin.DiffValuta = DiffInValuta(aCoin.SessionStartPrice, aCoin.CurrentPrice);
+                    aCoin.DiffPercent = DiffInPerc(aCoin.SessionStartPrice, aCoin.CurrentPrice);
+                    aCoin.RateWhenProfit = RateWhenProfit(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
+                    aCoin.RateWhenLost = RateWhenLost(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
+                    aCoin.SessionHighPrice = aCoin.CurrentPrice;
+                    aCoin.SessionLowPrice = aCoin.CurrentPrice;
+                    aCoin.PreviousPrice = aCoin.CurrentPrice;
+                    aCoin.DiffPercentOpen24 = 0;
+
+                    aCoin.IsSelected = false;
+                    foreach (string MarketName in SelectedCoinName)  // Is it a selected coin or not?
+                    {
+                        if (tickerMarket.Market == MarketName)
+                        {
+                            aCoin.IsSelected = true;
+                        }                        
+                    }
+
+                    AllCoinData.Items.Add(aCoin);
+                }
+                else  //AllCoinData excist, the data will only be replaced
+                {
+                    CurrentTickerPrice.Add(tickerMarket.Market, tickerMarket.Price);  //A dictionary with market(coin) name + curent price                
+
+                    foreach (CoinData aCoin in AllCoinData.Items)  //CoinDataAll
+                    {
+                        if (aCoin.Name == tickerMarket.Market)
+                        {
+                            aCoin.PreviousPrice = aCoin.CurrentPrice;
+                            aCoin.CurrentPrice = double.Parse(tickerMarket.Price, System.Globalization.CultureInfo.InvariantCulture);
+                            if (aCoin.CurrentPrice == aCoin.PreviousPrice)
+                            {
+                                aCoin.Trend = CoinTrend.Equal.ToString();
+                            }
+                            else if (aCoin.CurrentPrice > aCoin.PreviousPrice)
+                            {
+                                aCoin.Trend = CoinTrend.Up.ToString();
+                            }
+                            else if (aCoin.CurrentPrice < aCoin.PreviousPrice)
+                            {
+                                aCoin.Trend = CoinTrend.Down.ToString();
+                            }
+                            else
+                            {
+                                aCoin.Trend = "?";
+                            }
+                            aCoin.WarnPercentage = WarnPercentage;  //Can change during the session. So refresh it everytime.
                             aCoin.DiffValuta = DiffInValuta(aCoin.SessionStartPrice, aCoin.CurrentPrice);
                             aCoin.DiffPercent = DiffInPerc(aCoin.SessionStartPrice, aCoin.CurrentPrice);
                             aCoin.RateWhenProfit = RateWhenProfit(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
                             aCoin.RateWhenLost = RateWhenLost(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
-                            aCoin.SessionHighPrice = aCoin.CurrentPrice;
-                            aCoin.SessionLowPrice = aCoin.CurrentPrice;
-                            aCoin.PreviousPrice = aCoin.CurrentPrice;
-                            aCoin.DiffPercentOpen24 = 0;
 
-                            AllCoinData.Items.Add(aCoin);
-                        }
-                        else  //AllCoinData excist, the data will only be replaced
-                        {
-                            CurrentTickerPrice.Add(tickerMarket.Market, tickerMarket.Price);  //A dictionary with market(coin) name + curent price                
-
-                            foreach (CoinData aCoin in AllCoinData.Items)  //CoinDataAll
+                            if (aCoin.CurrentPrice < aCoin.SessionLowPrice)
                             {
-                                if (aCoin.Name == tickerMarket.Market)
-                                {                                    
-                                    aCoin.PreviousPrice = aCoin.CurrentPrice;
-                                    aCoin.CurrentPrice = double.Parse(tickerMarket.Price, System.Globalization.CultureInfo.InvariantCulture);
-                                    if (aCoin.CurrentPrice == aCoin.PreviousPrice)
-                                    {
-                                        aCoin.Trend = CoinTrend.Equal.ToString();
-                                    }
-                                    else if (aCoin.CurrentPrice > aCoin.PreviousPrice)
-                                    {
-                                        aCoin.Trend = CoinTrend.Up.ToString();
-                                    }
-                                    else if (aCoin.CurrentPrice < aCoin.PreviousPrice)
-                                    {
-                                        aCoin.Trend = CoinTrend.Down.ToString();
-                                    }
-                                    else
-                                    {
-                                        aCoin.Trend = "?";
-                                    }
-                                    aCoin.WarnPercentage = WarnPercentage;  //Can change during the session. So refresh it everytime.
-                                    aCoin.DiffValuta = DiffInValuta(aCoin.SessionStartPrice, aCoin.CurrentPrice);
-                                    aCoin.DiffPercent = DiffInPerc(aCoin.SessionStartPrice, aCoin.CurrentPrice);
-                                    aCoin.RateWhenProfit = RateWhenProfit(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);  
-                                    aCoin.RateWhenLost = RateWhenLost(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
-
-                                    if (aCoin.CurrentPrice < aCoin.SessionLowPrice)
-                                    {
-                                        aCoin.SessionLowPrice = aCoin.CurrentPrice;
-                                    }
-                                    else 
-                                    {
-                                        aCoin.SessionLowPrice = aCoin.SessionLowPrice;
-                                    }
-
-                                    if (aCoin.CurrentPrice > aCoin.SessionHighPrice)
-                                    {
-                                        aCoin.SessionHighPrice = aCoin.CurrentPrice;
-                                    }
-                                    else
-                                    {
-                                        aCoin.SessionHighPrice = aCoin.SessionHighPrice;
-                                    }
-                                    aCoin.DiffPercentOpen24 = DiffInPerc(aCoin.Open24, aCoin.CurrentPrice);
-                                }
+                                aCoin.SessionLowPrice = aCoin.CurrentPrice;
                             }
+                            else
+                            {
+                                aCoin.SessionLowPrice = aCoin.SessionLowPrice;
+                            }
+
+                            if (aCoin.CurrentPrice > aCoin.SessionHighPrice)
+                            {
+                                aCoin.SessionHighPrice = aCoin.CurrentPrice;
+                            }
+                            else
+                            {
+                                aCoin.SessionHighPrice = aCoin.SessionHighPrice;
+                            }
+                            aCoin.DiffPercentOpen24 = DiffInPerc(aCoin.Open24, aCoin.CurrentPrice);
                         }
                     }
-                }                
+                }
             }
             AllCoinData.IsUsed = true;
         }
-
-        
 
         private static double DiffInValuta(double StartPrice, double CurrentPrice)
         {
@@ -296,29 +290,23 @@ namespace CM
 
             foreach (var tickerMarket in results)
             {
-                foreach (string MarketName in CoinName)
+                foreach (CoinData aCoin in AllCoinData.Items)   //aCoin allready exist here. Loop through and fill
                 {
-                    if (tickerMarket.Market == MarketName)  //Keep only the markets whicht are stored in the options/sqlite/json
+                    if (aCoin.Name == tickerMarket.Market) //MarketName)
                     {
-                        foreach (CoinData aCoin in AllCoinData.Items)   //aCoin allready exist here. Loop through and fill
-                        {
-                            if (aCoin.Name == MarketName)
-                            {
 
-                                if (tickerMarket.Open != null) { aCoin.Open24 = Convert.ToDouble(tickerMarket.Open.Replace(".", DecimalSeperator)); } else { aCoin.Open24 = 0; }
-                                if (tickerMarket.High != null) { aCoin.High = Convert.ToDouble(tickerMarket.High.Replace(".", DecimalSeperator)); } else { aCoin.High = 0; }
-                                if (tickerMarket.Low != null) { aCoin.Low = Convert.ToDouble(tickerMarket.Low.Replace(".", DecimalSeperator)); } else { aCoin.Low = 0; }
-                                if (tickerMarket.Last != null) { aCoin.Last = Convert.ToDouble(tickerMarket.Last.Replace(".", DecimalSeperator)); } else { aCoin.Last = 0; }
-                                if (tickerMarket.Volume != null) { aCoin.Volume = Convert.ToDouble(tickerMarket.Volume.Replace(".", DecimalSeperator)); } else { aCoin.Volume = 0; }
-                                if (tickerMarket.VolumeQuote != null) { aCoin.VolumeQuote = Convert.ToDouble(tickerMarket.VolumeQuote.Replace(".", DecimalSeperator)); } else { aCoin.VolumeQuote = 0; }
-                                if (tickerMarket.Bid != null) { aCoin.Bid = Convert.ToDouble(tickerMarket.Bid.Replace(".", DecimalSeperator)); } else { aCoin.Bid = 0; }
-                                if (tickerMarket.BidSize != null) { aCoin.BidSize = Convert.ToDouble(tickerMarket.BidSize.Replace(".", DecimalSeperator)); } else { aCoin.BidSize = 0; }
-                                if (tickerMarket.Ask != null) { aCoin.Ask = Convert.ToDouble(tickerMarket.Ask.Replace(".", DecimalSeperator)); } else { aCoin.Ask = 0; }
-                                if (tickerMarket.AskSize != null) { aCoin.AskSize = Convert.ToDouble(tickerMarket.AskSize.Replace(".", DecimalSeperator)); } else { aCoin.AskSize = 0; }
+                        if (tickerMarket.Open != null) { aCoin.Open24 = Convert.ToDouble(tickerMarket.Open.Replace(".", DecimalSeperator)); } else { aCoin.Open24 = 0; }
+                        if (tickerMarket.High != null) { aCoin.High = Convert.ToDouble(tickerMarket.High.Replace(".", DecimalSeperator)); } else { aCoin.High = 0; }
+                        if (tickerMarket.Low != null) { aCoin.Low = Convert.ToDouble(tickerMarket.Low.Replace(".", DecimalSeperator)); } else { aCoin.Low = 0; }
+                        if (tickerMarket.Last != null) { aCoin.Last = Convert.ToDouble(tickerMarket.Last.Replace(".", DecimalSeperator)); } else { aCoin.Last = 0; }
+                        if (tickerMarket.Volume != null) { aCoin.Volume = Convert.ToDouble(tickerMarket.Volume.Replace(".", DecimalSeperator)); } else { aCoin.Volume = 0; }
+                        if (tickerMarket.VolumeQuote != null) { aCoin.VolumeQuote = Convert.ToDouble(tickerMarket.VolumeQuote.Replace(".", DecimalSeperator)); } else { aCoin.VolumeQuote = 0; }
+                        if (tickerMarket.Bid != null) { aCoin.Bid = Convert.ToDouble(tickerMarket.Bid.Replace(".", DecimalSeperator)); } else { aCoin.Bid = 0; }
+                        if (tickerMarket.BidSize != null) { aCoin.BidSize = Convert.ToDouble(tickerMarket.BidSize.Replace(".", DecimalSeperator)); } else { aCoin.BidSize = 0; }
+                        if (tickerMarket.Ask != null) { aCoin.Ask = Convert.ToDouble(tickerMarket.Ask.Replace(".", DecimalSeperator)); } else { aCoin.Ask = 0; }
+                        if (tickerMarket.AskSize != null) { aCoin.AskSize = Convert.ToDouble(tickerMarket.AskSize.Replace(".", DecimalSeperator)); } else { aCoin.AskSize = 0; }
 
-                                //dayTickerPrice.Timestamp = tickerMarket.Timestamp;    // Fault with deserialize
-                            }
-                        }
+                        //dayTickerPrice.Timestamp = tickerMarket.Timestamp;    // Fault with deserialize
                     }
                 }
             }

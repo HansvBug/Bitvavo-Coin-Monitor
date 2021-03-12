@@ -15,7 +15,7 @@ namespace CM
         public AppSettingsMeta JsonObjSettings { get; set; }
 
         private string SettingsFile { get; set; }
-        public bool DebugMode { get; set; }
+        public static bool DebugMode { get; set; }
 
         public SettingsManager()
         {
@@ -104,7 +104,7 @@ namespace CM
 
                 try
                 {
-                    Logging.WriteToLogInformation("Opslaan settings.");
+                    if (DebugMode) { Logging.WriteToLogInformation("Opslaan settings."); }
                     var options = new JsonSerializerOptions
                     {
                         WriteIndented = true

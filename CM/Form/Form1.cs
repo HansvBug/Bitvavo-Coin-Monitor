@@ -230,6 +230,7 @@ namespace CM
                 DebugMode = DebugMode
             };
             Logging.WriteToLogInformation("SQLite versie: " + AppDb.GetSQliteVersion());
+            Logging.WriteToLogInformation("");
         }
 
         private void CopyAppDatabase()
@@ -379,9 +380,9 @@ namespace CM
 
         public enum SessionAction
         {
-            Start,     // 0
-            Pause,    // 1
-            Stop  // 2            
+            Start,  // 0
+            Pause,  // 1
+            Stop    // 2            
         }
 
         private void HandleControlsState(string SessionType)
@@ -447,23 +448,24 @@ namespace CM
 
             Refresh();
 
-            if (CM.StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
+            if (CM.StartSession.CheckForInternetConnection())   // First check if there is an active internet connection
             {
                 Logging.WriteToLogInformation("Start nieuwe Sessie.");
-                Start.ClearTextBoxes(this.Controls);    //Set all textbox.text to 0 (except the timer and the percentage).       
-                ClearAllDataGridViews();                // clear the datagridviews                                                            
+                Start.ClearTextBoxes(this.Controls);            // Set all textbox.text to 0. (Except the timer and the percentage).                      
+                ClearAllDataGridViews();                        // Clear the datagridviews
 
-                AllCoinDataSelectedCoins = new CoinDataAll();    //create the coindata objectlist
+                AllCoinDataSelectedCoins = new CoinDataAll();    // Create the selected coindata objectlist. 
 
                 CoinMarketPrice = new MarketPrice(AllCoinDataSelectedCoins)
                 {
                     WarnPercentage = WarnPercentage
                 };
+                               
+                ClearAllCharts();                       // Clear the charts
 
                 GetMarketPriceData();   // The current ticker data (price)
 
                 InitTimer();            // 
-                //...
 
                 ToolStripStatusLabel1.Text = "Bezig..." + "   interval = " + TextBoxTimeInterval.Text + " minuten.";
                 Refresh();
@@ -498,6 +500,7 @@ namespace CM
             SetMarketPriceInDataGridView();             // Clear the datagridview "DataGridViewMarketPrice" and add the first record
             SetCoinDataInDataGridView();
             Set24HourPercentageDifSelectedCoins();
+            Set24HourPercentageDifNotSelectedCoins();
         }
         private void ClearAllDataGridViews()
         {
@@ -507,30 +510,28 @@ namespace CM
                 {
                     string MarketNames = keyValue.Key;
 
-                    foreach (string DgvName in Prepare.DgvNames)    //loop through the datagridvieuws
+                    foreach (DataGridView DgvName in Prepare.DgvNames)
                     {
-                        if (DgvName.Contains(MarketNames))
+                        if (Controls.Find(DgvName.Name, true).FirstOrDefault() is DataGridView cntrl)
                         {
-                            if (Controls.Find(DgvName, true).FirstOrDefault() is DataGridView cntrl)
-                            {
-                                cntrl.Rows.Clear();
-                            }
+                            cntrl.Rows.Clear();
                         }
                     }
                 }
             }
+            
             Refresh();
-            //create the blanc rows in the first datagridview
-            if (AllCoinDataSelectedCoins != null)  //is null with the first start after opening the app.
+            // Create the blanc rows in the first datagridview
+            if (AllCoinDataSelectedCoins != null)  // Is null with the first start after opening the app.
             {
                 foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)
                 {
                     string CoinName = aCoin.Name;
-                    foreach (string DgvName in Prepare.DgvNames)    //loop through the datagridvieuws
+                    foreach (DataGridView DgvName in Prepare.DgvNames)
                     {
-                        if (DgvName.Contains(CoinName) && DgvName.Contains("Dgv_1_"))  //see PrepareForm, create datagridview. this is the second dgv
+                        if (DgvName.Name.Contains(CoinName) && DgvName.Name.Contains("Dgv_1_"))  // see PrepareForm, create datagridview. this is the second dgv
                         {
-                            if (Controls.Find(DgvName, true).FirstOrDefault() is DataGridView dgv)
+                            if (Controls.Find(DgvName.Name, true).FirstOrDefault() is DataGridView dgv)
                             {
                                 //Dubbele code, moet een functie worden. (dubbel met PrepareForm.CreateDatagridViewPriceData)
                                 dgv.Rows.Add("Start prijs", "0");               //0
@@ -575,14 +576,23 @@ namespace CM
                                 dgv.Rows[11].Cells[1].Style.BackColor = Color.LightGray;
 
                                 dgv.RowHeadersVisible = false;
-
                             }
                         }
                     }
                 }
             }
         }
-
+        private void ClearAllCharts()
+        {
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in Prepare.ChartNames)
+            {
+                foreach (var series in aChart.Series)
+                {
+                    series.Points.Clear();
+                }
+            }
+        }
+       
         private void SetCoinDataInDataGridView()
         {
             if (AllCoinDataSelectedCoins != null)
@@ -590,11 +600,12 @@ namespace CM
                 foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)
                 {
                     string CoinName = aCoin.Name;
-                    foreach (string DgvName in Prepare.DgvNames)    //loop through the datagridvieuws
+                    foreach (DataGridView DgvName in Prepare.DgvNames)
                     {
-                        if (DgvName.Contains(CoinName) && DgvName.Contains("Dgv_1_"))  //see PrepareForm, create datagridview. this is the second dgv
+
+                        if (DgvName.Name.Contains(CoinName) && DgvName.Name.Contains("Dgv_1_"))  // See PrepareForm, create datagridview. This is the second dgv
                         {
-                            if (Controls.Find(DgvName, true).FirstOrDefault() is DataGridView cntrl)
+                            if (Controls.Find(DgvName.Name, true).FirstOrDefault() is DataGridView cntrl) //Name = "Dgv_1_ADA-EUR"
                             {
                                 if (cntrl.Rows[0].Cells[1].Value.ToString() == "0")//Set Startprice once
                                 {
@@ -603,13 +614,13 @@ namespace CM
 
                                 cntrl.Rows[2].Cells[1].Value = FormatDoubleToString(aCoin.CurrentPrice);
                                 cntrl.Rows[3].Cells[1].Value = FormatDoubleToString(aCoin.DiffValuta);
-                                cntrl.Rows[4].Cells[1].Value = FormatDoubleToString(aCoin.DiffPercent);  
+                                cntrl.Rows[4].Cells[1].Value = FormatDoubleToString(aCoin.DiffPercent);
 
-                                //recalculate profit/lost 
+                                // Recalculate profit/lost 
                                 cntrl.Rows[6].Cells[1].Value = MarketPrice.RateWhenProfit(aCoin.SessionStartPrice, aCoin.CurrentPrice, WarnPercentage);
                                 cntrl.Rows[7].Cells[1].Value = MarketPrice.RateWhenLost(aCoin.SessionStartPrice, aCoin.CurrentPrice, WarnPercentage);
 
-                                //Change the text
+                                // Change the text
                                 cntrl.Rows[6].Cells[0].Value = string.Format("Koers bij {0}% winst", WarnPercentage.ToString()); //New value when profit
                                 cntrl.Rows[7].Cells[0].Value = string.Format("Koers bij {0}% verlies", WarnPercentage.ToString());   //New value when lost
 
@@ -627,7 +638,7 @@ namespace CM
                                 cntrl.Rows[20].Cells[1].Value = FormatDoubleToString(aCoin.AskSize);
                                 //next...
 
-                                //Change color
+                                // Change color
                                 if (aCoin.DiffPercent == 0)
                                 {
                                     cntrl.Rows[4].Cells[1].Style.BackColor = Color.Gray;
@@ -643,16 +654,16 @@ namespace CM
 
                             }
                         }
-                    }                   
+                    }                 
                 }
             }
-            else  //used when the precentage is changed before start is pressed
+            else  // Used when the precentage is changed before start is pressed
             {
-                foreach (string DgvName in Prepare.DgvNames)    //loop through the datagridvieuws
+                foreach (DataGridView DgvName in Prepare.DgvNames)
                 {
-                    if (DgvName.Contains("Dgv_1_"))
+                    if (DgvName.Name.Contains("Dgv_1_"))
                     {
-                        if (Controls.Find(DgvName, true).FirstOrDefault() is DataGridView cntrl)
+                        if (Controls.Find(DgvName.Name, true).FirstOrDefault() is DataGridView cntrl)
                         {
                             //Change the text
                             cntrl.Rows[5].Cells[0].Value = string.Format("Koers bij {0}% winst", WarnPercentage.ToString()); //New value when profit
@@ -671,11 +682,11 @@ namespace CM
                 {
                     string CoinName = aCoin.Name;
 
-                    foreach (string DgvName in Prepare.DgvNames)    // Loop through the datagridvieuws
+                    foreach (DataGridView DgvName in Prepare.DgvNames)
                     {
-                        if (DgvName.Contains(CoinName) && DgvName.Contains("Dgv_2_"))  //see PrepareForm, create datagridview. this is the second dgv
+                        if (DgvName.Name.Contains(CoinName) && DgvName.Name.Contains("Dgv_2_"))  // See PrepareForm, create datagridview. This is the second dgv
                         {
-                            if (Controls.Find(DgvName, true).FirstOrDefault() is DataGridView cntrl)
+                            if (Controls.Find(DgvName.Name, true).FirstOrDefault() is DataGridView cntrl)
                             {
                                 AddRowToDgvPriceMonitor(cntrl, aCoin.CurrentPrice, aCoin.Trend);
                             }
@@ -688,19 +699,20 @@ namespace CM
         {
             if (AllCoinDataSelectedCoins != null)
             {
-                if (Controls.Find("Dgv_DifPerc24hour", true).FirstOrDefault() is DataGridView Dgv)
+                if (Controls.Find("Dgv_DifPerc24hourSelected", true).FirstOrDefault() is DataGridView Dgv)
                 {   //First clear the datagridview
-                    Dgv.Rows.Clear();                 
+                    Dgv.Rows.Clear();
                 }
 
                 foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)  //CoinDataAll
                 {
-                    if (Controls.Find("Dgv_DifPerc24hour", true).FirstOrDefault() is DataGridView cntrl)
+                    if (Controls.Find("Dgv_DifPerc24hourSelected", true).FirstOrDefault() is DataGridView cntrl)
                     {
-                        AddRowToDgv24PercDiff(cntrl, aCoin.Name, aCoin.DiffPercentOpen24);
+                        cntrl.SuspendLayout();
+                        AddRowToDgv24PercDiffSelected(cntrl, aCoin, aCoin.DiffPercentOpen24);
 
-                        double  Percentage;
-                        foreach(DataGridViewRow row in cntrl.Rows)
+                        double Percentage;
+                        foreach (DataGridViewRow row in cntrl.Rows)
                         {
                             if (row.Cells["Percentage"].Value != null)
                             {
@@ -717,15 +729,58 @@ namespace CM
                                 else if (Percentage < 0)
                                 {
                                     cntrl.Rows[row.Index].Cells[1].Style.BackColor = Color.MistyRose;
-                                }                                
-                            }                            
+                                }
+                            }
                         }
                         cntrl.Sort(cntrl.Columns["Coin"], ListSortDirection.Ascending);  // Order on coin name
+                        cntrl.ResumeLayout();
                     }
                 }
             }
         }
+        private void Set24HourPercentageDifNotSelectedCoins()
+        {
+            if (AllCoinDataSelectedCoins != null)
+            {
+                if (Controls.Find("Dgv_DifPerc24hourNotSelected", true).FirstOrDefault() is DataGridView Dgv)
+                {   //First clear the datagridview
+                    Dgv.Rows.Clear();
+                }
 
+                foreach (CoinData aCoin in AllCoinDataSelectedCoins.Items)  //CoinDataAll
+                {
+                    if (Controls.Find("Dgv_DifPerc24hourNotSelected", true).FirstOrDefault() is DataGridView cntrl)
+                    {
+                        cntrl.SuspendLayout();
+                        AddRowToDgv24PercDiffNotSelected(cntrl, aCoin, aCoin.DiffPercentOpen24);
+
+                        double Percentage;
+                        foreach (DataGridViewRow row in cntrl.Rows)
+                        {
+                            if (row.Cells["Percentage"].Value != null)
+                            {
+                                Percentage = Convert.ToDouble(row.Cells["Percentage"].Value.ToString());
+
+                                if (Percentage == 0)
+                                {
+                                    cntrl.Rows[row.Index].Cells[1].Style.BackColor = Color.LightGray;
+                                }
+                                else if (Percentage > 0)
+                                {
+                                    cntrl.Rows[row.Index].Cells[1].Style.BackColor = Color.LightGreen;
+                                }
+                                else if (Percentage < 0)
+                                {
+                                    cntrl.Rows[row.Index].Cells[1].Style.BackColor = Color.MistyRose;
+                                }
+                            }
+                        }
+                        cntrl.Sort(cntrl.Columns["Coin"], ListSortDirection.Ascending);  // Order on coin name
+                        cntrl.ResumeLayout();
+                    }
+                }
+            }
+        }
         private void SaveAllCoinData()
         {
             ApplicationDatabase SaveCoindata = new();
@@ -736,10 +791,11 @@ namespace CM
         #region Charting
         private void PrepareChart()
         {
-            foreach (string ChartName in Prepare.ChartNames)
+            foreach(System.Windows.Forms.DataVisualization.Charting.Chart ChartName in Prepare.ChartNames)
             {
-                string CoinName = ChartName.Replace("Chart_", "");
-                if (Controls.Find(ChartName, true).FirstOrDefault() is System.Windows.Forms.DataVisualization.Charting.Chart cntrl)
+
+                string CoinName = ChartName.Name.Replace("Chart_", "");
+                if (Controls.Find(ChartName.Name, true).FirstOrDefault() is System.Windows.Forms.DataVisualization.Charting.Chart cntrl)
                 {
                     string SerieName = CoinName.Replace("_", "-"); //"BTC-EUR";
                     string ChartAreaName = "ChartArea_" + SerieName;
@@ -778,10 +834,10 @@ namespace CM
         }
         private void Charting()
         {
-            foreach (string ChartName in Prepare.ChartNames)  //First loop throug the cahrts and the right chart.  ChartName = "Chart_BTC-EUR"
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart ChartName in Prepare.ChartNames)
             {
-                string CoinName = ChartName.Replace("Chart_", "");
-                if (Controls.Find(ChartName, true).FirstOrDefault() is System.Windows.Forms.DataVisualization.Charting.Chart cntrl)
+                string CoinName = ChartName.Name.Replace("Chart_", "");
+                if (Controls.Find(ChartName.Name, true).FirstOrDefault() is System.Windows.Forms.DataVisualization.Charting.Chart cntrl)
                 {
                     if (AllCoinDataSelectedCoins != null)
                     {
@@ -962,11 +1018,24 @@ namespace CM
             }
         }
 
-        private void AddRowToDgv24PercDiff(DataGridView dgv, string Name, double Percentage)
-        {            
-            if (!string.IsNullOrEmpty(Name))
+        private void AddRowToDgv24PercDiffSelected(DataGridView dgv, CoinData aCoin, double Percentage)
+        {
+            if (aCoin.IsSelected)
             {
-                dgv.Rows.Insert(0, new string[] {Name, FormatDoubleToString(Percentage) });                
+                if (!string.IsNullOrEmpty(aCoin.Name))
+                {
+                    dgv.Rows.Insert(0, new string[] { aCoin.Name, FormatDoubleToString(Percentage) });
+                }
+            }          
+        }
+        private void AddRowToDgv24PercDiffNotSelected(DataGridView dgv, CoinData aCoin, double Percentage)
+        {
+            if (!aCoin.IsSelected)
+            {
+                if (!string.IsNullOrEmpty(aCoin.Name))
+                {
+                    dgv.Rows.Insert(0, new string[] { aCoin.Name, FormatDoubleToString(Percentage) });
+                }
             }
         }
 
@@ -1121,8 +1190,6 @@ namespace CM
         }
         #endregion Form closing
 
-        
-
 
         #region Show date and time in form
         System.Windows.Forms.Timer t = null;
@@ -1161,10 +1228,13 @@ namespace CM
         #region Export
         private void ToolStripMenuItem_Option_Export_AllUsedCoinTables_Click(object sender, EventArgs e)
         {
-            GetExportLocation();
-        }        
-
-        private void GetExportLocation()
+            StartExport(true);
+        }
+        private void ToolStripMenuItem_Option_Export_AllCoinTables_Click(object sender, EventArgs e)
+        {
+            StartExport(false);
+        }
+        private void StartExport(bool CurrentCoins)
         {
             string FileLocation = ChooseFolder();
 
@@ -1172,9 +1242,23 @@ namespace CM
             Cursor.Current = Cursors.WaitCursor;
 
             SQliteExport ExportToCsv = new(FileLocation);
-            ExportToCsv.ExportToCsv(true);  // Export only the selected tables (in options)
+            if (CurrentCoins)
+            {
+                ExportToCsv.ExportToCsv(true);  // Export only the selected coin tables (in options)
+            }
+            else
+            {
+                ExportToCsv.ExportToCsv(false);  // Export all coin tables 
+            }
 
-            ToolStripStatusLabel1.Text = "";
+            if (Timer1.Enabled) // If a session runs then restore the ToolStripStatusLabel1.Text
+            {
+                ToolStripStatusLabel1.Text = "Bezig..." + "   interval = " + TextBoxTimeInterval.Text + " minuten.";
+            }
+            else
+            {
+                ToolStripStatusLabel1.Text = "";
+            }
             Cursor.Current = Cursors.Default;
         }
         private string ChooseFolder()
@@ -1193,19 +1277,7 @@ namespace CM
             ToolStripStatusLabel1.Text = "";
             return SelectedFolder;
         }
-        private void ToolStripMenuItem_Option_Export_AllCoinTables_Click(object sender, EventArgs e)
-        {
-            string FileLocation = ChooseFolder();
-
-            ToolStripStatusLabel1.Text = "Bezig met exporteren...";
-            Cursor.Current = Cursors.WaitCursor;
-
-            SQliteExport ExportToCsv = new(FileLocation);
-            ExportToCsv.ExportToCsv(false);  // Export tables (in options)
-
-            ToolStripStatusLabel1.Text = "";
-            Cursor.Current = Cursors.Default;
-        }
+       
         #endregion Export
 
 
@@ -1224,36 +1296,27 @@ namespace CM
 
         private void AddEventHandlerToPriceCheckBox()
         {
-            /*  Get all controls
-            var c = GetAll(this);
-            MessageBox.Show("Total Controls: " + c.Count());
-            */
-
-            var c1 = GetAll(this, typeof(CheckBox));
-            foreach (CheckBox Cb in c1)
+            foreach (CheckBox Cb in Prepare.CheckBoxNames)
             {
-                if (Cb.GetType() == typeof(CheckBox))
+                switch (Cb.Text)
                 {
-                    switch (Cb.Text)
-                    {
-                        case "Start prijs aan/uit":
-                            Cb.Click += new EventHandler(CheckBoxStartPrice_Click);
-                            break;
-                        case "Open prijs aan/uit":
-                            Cb.Click += new EventHandler(CheckBoxOpenPrice_Click);
-                            break;
-                        case "Sessie hoogste aan/uit":
-                            Cb.Click += new EventHandler(CheckBoxSessionHighPrice_Click);
-                            break;
-                        case "Sessie laagste aan/uit":
-                            Cb.Click += new EventHandler(CheckBoxSessionLowPrice_Click);
-                            break;
-                        default:
-                            // code block
-                            break;
-                    }
+                    case "Start prijs aan/uit":
+                        Cb.Click += new EventHandler(CheckBoxStartPrice_Click);
+                        break;
+                    case "Open prijs aan/uit":
+                        Cb.Click += new EventHandler(CheckBoxOpenPrice_Click);
+                        break;
+                    case "Sessie hoogste aan/uit":
+                        Cb.Click += new EventHandler(CheckBoxSessionHighPrice_Click);
+                        break;
+                    case "Sessie laagste aan/uit":
+                        Cb.Click += new EventHandler(CheckBoxSessionLowPrice_Click);
+                        break;
+                    default:
+                        // code block
+                        break;
                 }
-            }            
+            }
         }
 
         private void CheckBoxStartPrice_Click(object sender, EventArgs e)
@@ -1317,7 +1380,7 @@ namespace CM
         #region Show the coin name in the toolbox combobox
         private void TabControlCharts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (TabControlCharts.SelectedTab != null)  //TabControlCharts.SelectedTab = null when the coin tabs are open en the option forms is closed
+            if (TabControlCharts.SelectedTab != null)  // TabControlCharts.SelectedTab = null when the coin tabs are open en the option forms is closed
             {
                 ToolStripComboBoxCoinNames.Text = TabControlCharts.SelectedTab.Name;
                 ActiveCoinName = TabControlCharts.SelectedTab.Name;
@@ -1325,17 +1388,16 @@ namespace CM
             }
             else
             {
-               foreach (TabPage tp in TabControlCharts.TabPages)
+                foreach (TabPage tp in TabControlCharts.TabPages)
                 {
                     if (tp.Name == ActiveCoinName)
                     {
                         ToolStripComboBoxCoinNames.Text = ActiveCoinName;
                         TabControlCharts.SelectedIndex = ActivetabpageIndex;
                     }
-                }                
+                }
             }
         }
-
         private void FormMain_Shown(object sender, EventArgs e)
         {
             ToolStripComboBoxCoinNames.Text = TabControlCharts.SelectedTab.Name;
@@ -1386,36 +1448,103 @@ namespace CM
                 return;
             tooltip.RemoveAll();
             prevPosition = pos;
-            var results = aChart.HitTest(pos.X, pos.Y, false, System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint); // Set ChartElementType.PlottingArea for full area, not only DataPoints
+            var results = aChart.HitTest(pos.X, pos.Y, false, System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint); 
             foreach (var result in results)
             {
-                if (result.ChartElementType == System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint) // Set ChartElementType.PlottingArea for full area, not only DataPoints
+                if (result.ChartElementType == System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint) 
                 {
                     var yVal = result.ChartArea.AxisY.PixelPositionToValue(pos.Y);
-                    double Value = Math.Round(yVal, 2);
-                    tooltip.Show("€ " + Value.ToString(), aChart, pos.X, pos.Y - 15);
+                    var Prop = result.Object as System.Windows.Forms.DataVisualization.Charting.DataPoint;
+
+                    double Value = Math.Round(yVal, 2); // Coin value
+                    var Yvalue = Prop.AxisLabel;        // Time
+
+                    tooltip.Show("€ " + Value.ToString() + " - " + Yvalue.ToString(), aChart, pos.X, pos.Y - 15);
                 }
-            }
+            }  
         }
 
 
         private void AddEventHandlerToChart()
         {
             var c1 = GetAll(this, typeof(System.Windows.Forms.DataVisualization.Charting.Chart));
-            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in c1)
+
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in Prepare.ChartNames)
             {
-                if (aChart.GetType() == typeof(System.Windows.Forms.DataVisualization.Charting.Chart))
-                {
-                    aChart.MouseMove += new MouseEventHandler(Chart_MouseMove);
-                }
-            }
+                aChart.MouseMove += new MouseEventHandler(Chart_MouseMove);     // Used for showing label with coin value
+                aChart.MouseWheel += new MouseEventHandler(Chart_MouseWheel);   // Used for zoomable chart
+            }            
         }
 
         private void Chart_MouseMove(object sender, MouseEventArgs e)
         {
             ChartShowHints(sender, e);
+            MousCrossHairs(sender, e);
+        }
+        private void MousCrossHairs(object sender, MouseEventArgs e)
+        {
+            System.Windows.Forms.DataVisualization.Charting.Chart aChart = (System.Windows.Forms.DataVisualization.Charting.Chart)sender;
+
+            int x = aChart.ClientSize.Width;
+            int y = aChart.ClientSize.Height;
+
+            Label LabelYaxisCur = new Label();
+
+            foreach (Label aLabel in Prepare.LabelNames)
+            {
+                if (aLabel.Name == aChart.Name.Replace("Chart_", "Lb_"))
+                {
+                    LabelYaxisCur = aLabel;
+                }
+            }           
+
+            // Make the label visible if the cursur is above the chart.
+            //  left                          || bottom        ||top        ||right
+            if (e.X <= aChart.Location.X + 75 || e.Y >= y - 85 || e.Y <= 35 || e.X >= aChart.Location.X + x - 50)
+            {
+                LabelYaxisCur.Visible = false;
+            }
+            else
+            {
+                string ChartAreaName = aChart.Name.Replace("Chart_", "ChartArea_");
+
+                double yValue = aChart.ChartAreas[ChartAreaName].AxisY.PixelPositionToValue(e.Y);  
+               
+
+                if (HasValue(yValue))
+                {
+                    LabelYaxisCur.Visible = true ;
+                    
+                    if (yValue > 0 && yValue < 50)
+                    {
+                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 4).ToString();
+                    }
+                    else if (yValue >= 50 && yValue < 100)
+                    {
+                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 2).ToString();
+                    }
+                    else if (yValue >= 100 && yValue < 1000)
+                    {
+                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 1).ToString();
+                    }
+                    else if (yValue >= 1000)
+                    {
+                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 0).ToString();
+                    }
+
+                    LabelYaxisCur.Location = new Point(aChart.Right - 80, e.Y - 5);
+                }
+                else
+                {
+                    LabelYaxisCur.Visible = false;
+                }
+            }
         }
 
+        public static bool HasValue(double value)
+        {
+            return !Double.IsNaN(value) && !Double.IsInfinity(value);
+        }
 
         #endregion show tooltip when mouse hoovers over a chart point
 
@@ -1428,8 +1557,7 @@ namespace CM
         {
             PlayWav(false);            
         }
-
-        private void PlayWav(bool PlayPositiveSound)
+        private static void PlayWav(bool PlayPositiveSound)
         {
             try
             {
@@ -1501,7 +1629,6 @@ namespace CM
                 }
             }
         }
-
         private void CheckBoxSoundPositive_CheckedChanged(object sender, EventArgs e)
         {
             if (CheckBoxSoundPositive.Checked)
@@ -1541,5 +1668,44 @@ namespace CM
             SoundUpIsPlayed = false;
         }
         #endregion Play sound
+
+        #region Zoomable chart
+
+       
+        private void Chart_MouseWheel(object sender, MouseEventArgs e)
+        {
+
+            var chart = (System.Windows.Forms.DataVisualization.Charting.Chart)sender;
+            var xAxis = chart.ChartAreas[0].AxisX;
+            var yAxis = chart.ChartAreas[0].AxisY;
+
+            try
+            {
+                if (e.Delta < 0) // Scrolled down.
+                {
+                    xAxis.ScaleView.ZoomReset();
+                    yAxis.ScaleView.ZoomReset();
+                }
+                else if (e.Delta > 0) // Scrolled up.
+                {
+                    var xMin = xAxis.ScaleView.ViewMinimum;
+                    var xMax = xAxis.ScaleView.ViewMaximum;
+                    var yMin = yAxis.ScaleView.ViewMinimum;
+                    var yMax = yAxis.ScaleView.ViewMaximum;
+
+                    var posXStart = xAxis.PixelPositionToValue(e.Location.X) - (xMax - xMin) / 4;
+                    var posXFinish = xAxis.PixelPositionToValue(e.Location.X) + (xMax - xMin) / 4;
+                    var posYStart = yAxis.PixelPositionToValue(e.Location.Y) - (yMax - yMin) / 4;
+                    var posYFinish = yAxis.PixelPositionToValue(e.Location.Y) + (yMax - yMin) / 4;
+
+                    xAxis.ScaleView.Zoom(posXStart, posXFinish);
+                    yAxis.ScaleView.Zoom(posYStart, posYFinish);
+                }
+            }
+            catch { }
+        }
+        #endregion Zoomable chart
+
+
     }
 }

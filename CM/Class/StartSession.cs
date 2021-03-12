@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.Control;
 
@@ -41,14 +37,6 @@ namespace CM
             }
         }
 
-        /*
-        public void ClearChart(Chart aChart)
-        {
-            foreach (var series in aChart.Series)
-            {
-                series.Points.Clear();
-            }
-        }
-        */
+        
     }
 }

@@ -58,6 +58,8 @@ namespace CM
             this.TabPageCharts = new System.Windows.Forms.TabPage();
             this.TabControlCharts = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -100,6 +102,7 @@ namespace CM
             this.TabPageCharts.SuspendLayout();
             this.TabControlCharts.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.ToolStrip1.SuspendLayout();
@@ -304,6 +307,7 @@ namespace CM
             // TabControlCharts
             // 
             this.TabControlCharts.Controls.Add(this.tabPage1);
+            this.TabControlCharts.Controls.Add(this.tabPage2);
             resources.ApplyResources(this.TabControlCharts, "TabControlCharts");
             this.TabControlCharts.Name = "TabControlCharts";
             this.TabControlCharts.SelectedIndex = 0;
@@ -315,6 +319,19 @@ namespace CM
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.GroupBox1);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // GroupBox1
+            // 
+            resources.ApplyResources(this.GroupBox1, "GroupBox1");
+            this.GroupBox1.Name = "GroupBox1";
+            this.GroupBox1.TabStop = false;
             // 
             // statusStrip1
             // 
@@ -524,6 +541,7 @@ namespace CM
             this.TabPageCharts.ResumeLayout(false);
             this.TabControlCharts.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.MenuStrip1.ResumeLayout(false);
@@ -592,6 +610,8 @@ namespace CM
         private System.Windows.Forms.Button ButtonTestSoundPositive;
         private System.Windows.Forms.ComboBox ComboBoxSoundCoin;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox GroupBox1;
     }
 }
 

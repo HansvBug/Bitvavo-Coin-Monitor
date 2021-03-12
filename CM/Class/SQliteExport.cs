@@ -8,12 +8,12 @@ using System.Data.SQLite;
 using System.Data;
 using System.IO;
 using System.Security.Permissions;
+using System.Windows.Forms;
 
 namespace CM
 {
     public class SQliteExport : SQliteDatabaseConnection
     {
-
         public bool DebugMode { get; set; }
         
         private string ExportFileLocation { get; set; }        
@@ -25,7 +25,7 @@ namespace CM
 
         public SQliteExport()
         {
-            
+            // Default constructor
         }
         public SQliteExport(string FileLocation)
         {
@@ -46,7 +46,7 @@ namespace CM
             }
             else
             {
-                SQL = "select NAME from sqlite_master where type = 'table' order by NAME";
+                SQL = "select NAME from sqlite_master where type = 'table' and NAME like 'EC%' order by NAME";
                 Logging.WriteToLogInformation("Selecteer alle 'Coin' tabellen.");
             }
 
@@ -79,19 +79,11 @@ namespace CM
 
                         AllTblInfo.Items.Add(TblInfo);
                         TblInfo = null;
-
                     }                    
                 }
                 dr.Close();
 
-                if (ActiveTablesOnly)
-                {
-                    ExportAllActiveTablesToCSV();
-                }
-                else
-                {
-                    ExportAllTablesToCSV();
-                }
+                ExportAllActiveTablesToCSV();                
             }
             catch (SQLiteException ex)
             {
@@ -106,7 +98,6 @@ namespace CM
                 dbConnection.Close();
             }
         }
-
 
         private void GetColumnNames(string TableName)
         {
@@ -132,69 +123,7 @@ namespace CM
             }            
         }
 
-
-
         private void ExportAllActiveTablesToCSV()
-        {
-            if (AllTblInfo != null)
-            {
-                foreach (TableInfo TblInfo in AllTblInfo.Items)
-                {                    
-                    if (TblInfo != null) 
-                    {
-                        try
-                        {
-                            string FileName = Path.Combine(ExportFileLocation, TblInfo.TableName.Replace("-", "_") + ".csv");
-
-                            using StreamWriter sw = new(new FileStream(FileName, FileMode.Create));
-                            string aLine = string.Empty;
-
-                            foreach (string columnName in TblInfo.ColumnNames)  // Headers
-                            {
-                                //header 
-                                int i = 0;
-                                aLine += @"""" + columnName + @"""";
-                                if (i < TblInfo.ColumnNames.Count - 1)
-                                {
-                                    aLine += this.CsvSeparator;
-                                    i++;
-                                }
-                            }
-                            sw.WriteLine(aLine);  //Write the header
-                            aLine = string.Empty;
-
-                            // Loop through the data...
-                            DataTable Dt = GetTheData(TblInfo.TableName);
-
-                            foreach (DataRow dr in Dt.Rows)
-                            {
-                                string FieldStartEnd = string.Empty;
-                                for (int j = 0; j < TblInfo.ColumnNames.Count; ++j)
-                                {
-                                    FieldStartEnd = @"""";
-
-                                    aLine += FieldStartEnd + dr[j].ToString() + FieldStartEnd;
-                                    if (j < Dt.Columns.Count - 1)
-                                        aLine += this.CsvSeparator;
-                                }
-                                sw.WriteLine(aLine);  //Write the data
-                                aLine = string.Empty;
-                            }
-                            sw.Flush();
-                        }
-                        catch (IOException ex)
-                        {
-                            Logging.WriteToLogError("Onverwachte fout bij het exporteren van de ingebruik zijnde 'coin' tabellen.");
-                            Logging.WriteToLogError("Melding:");
-                            Logging.WriteToLogError(ex.Message);
-                            if (DebugMode) { Logging.WriteToLogError(ex.ToString()); }
-                        }
-                    }
-                }
-            }
-        }
-
-        private void ExportAllTablesToCSV()
         {
             if (AllTblInfo != null)
             {
@@ -202,58 +131,81 @@ namespace CM
                 {
                     if (TblInfo != null)
                     {
-                        try
+
+                        string FileName = Path.Combine(ExportFileLocation, TblInfo.TableName.Replace("-", "_") + ".csv");
+
+                        if (File.Exists(FileName))
                         {
-                            string FileName = Path.Combine(ExportFileLocation, TblInfo.TableName.Replace("-", "_") + ".csv");
-
-                            using StreamWriter sw = new(new FileStream(FileName, FileMode.Create));
-                            string aLine = string.Empty;
-
-                            foreach (string columnName in TblInfo.ColumnNames)  // Headers  LET op, moet 1 bestand per tabel worden
+                            DialogResult dialogResult = MessageBox.Show("Het bestand bestaat al. " + Environment.NewLine +
+                                FileName + Environment.NewLine + Environment.NewLine +
+                                "Wilt u het over schrijven?", "Overschrijven", MessageBoxButtons.YesNo);
+                            if (dialogResult == DialogResult.Yes)
                             {
-                                //header 
-                                int i = 0;
-                                aLine += @"""" + columnName + @"""";
-                                if (i < TblInfo.ColumnNames.Count - 1)
-                                {
-                                    aLine += this.CsvSeparator;
-                                    i++;
-                                }
+                                WriteCsvFile(FileName, TblInfo);
                             }
-                            sw.WriteLine(aLine);  //Write the header
-                            aLine = string.Empty;
-
-                            // Loop through the data...
-                            DataTable Dt = GetTheData(TblInfo.TableName);
-
-                            if (Dt != null)
+                            else if (dialogResult == DialogResult.No)
                             {
-                                foreach (DataRow dr in Dt.Rows)
-                                {
-                                    string FieldStartEnd = string.Empty;
-                                    for (int j = 0; j < TblInfo.ColumnNames.Count; ++j)
-                                    {
-                                        FieldStartEnd = @"""";
-
-                                        aLine += FieldStartEnd + dr[j].ToString() + FieldStartEnd;
-                                        if (j < Dt.Columns.Count - 1)
-                                            aLine += this.CsvSeparator;
-                                    }
-                                    sw.WriteLine(aLine);  //Write the data
-                                    aLine = string.Empty;
-                                }
+                                // Do Nothing
                             }
-                            sw.Flush();
                         }
-                        catch (IOException ex)
+                        else
                         {
-                            Logging.WriteToLogError("Onverwachte fout bij het exporteren van alle 'coin' tabellen.");
-                            Logging.WriteToLogError("Melding:");
-                            Logging.WriteToLogError(ex.Message);
-                            if (DebugMode) { Logging.WriteToLogError(ex.ToString()); }
+                            WriteCsvFile(FileName, TblInfo);
                         }
                     }
                 }
+            }
+        }
+
+        private void WriteCsvFile(string FileName, TableInfo TblInfo)
+        {
+            try
+            {
+                using StreamWriter sw = new(new FileStream(FileName, FileMode.Create));
+                string aLine = string.Empty;
+
+                foreach (string columnName in TblInfo.ColumnNames)  // Headers
+                {
+                    //header 
+                    int i = 0;
+                    aLine += @"""" + columnName + @"""";
+                    if (i < TblInfo.ColumnNames.Count - 1)
+                    {
+                        aLine += this.CsvSeparator;
+                        i++;
+                    }
+                }
+                sw.WriteLine(aLine);  //Write the header
+                aLine = string.Empty;
+
+                // Loop through the data...
+                DataTable Dt = GetTheData(TblInfo.TableName);
+
+                if (Dt != null)
+                {
+                    foreach (DataRow dr in Dt.Rows)
+                    {
+                        string FieldStartEnd = string.Empty;
+                        for (int j = 0; j < TblInfo.ColumnNames.Count; ++j)
+                        {
+                            FieldStartEnd = @"""";
+
+                            aLine += FieldStartEnd + dr[j].ToString() + FieldStartEnd;
+                            if (j < Dt.Columns.Count - 1)
+                                aLine += this.CsvSeparator;
+                        }
+                        sw.WriteLine(aLine);  //Write the data
+                        aLine = string.Empty;
+                    }                  
+                }
+                sw.Flush();
+            }
+            catch (IOException ex)
+            {
+                Logging.WriteToLogError("Onverwachte fout bij het exporteren van de tabellen.");
+                Logging.WriteToLogError("Melding:");
+                Logging.WriteToLogError(ex.Message);
+                if (DebugMode) { Logging.WriteToLogError(ex.ToString()); }
             }
         }
 
@@ -298,10 +250,5 @@ namespace CM
             public string TableName { get; set; }
             public List<string> ColumnNames = new();         
         }
-
-
-
-        //TODO: export all selected tables
-
     }
 }

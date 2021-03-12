@@ -32,8 +32,8 @@
 
   <ItemGroup>
     <PackageReference Include="System.Data.SQLite" Version="1.0.113.7" />
-    <PackageReference Include="System.Management" Version="5.0.0" />
-    <PackageReference Include="System.Text.Json" Version="5.0.1" />
+    <PackageReference Include="System.Management" Version="6.0.0-preview.1.21102.12" />
+    <PackageReference Include="System.Text.Json" Version="6.0.0-preview.1.21102.12" />
     <PackageReference Include="System.Windows.Forms.DataVisualization" Version="1.0.0-prerelease.20110.1" />
   </ItemGroup>
 
