@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Globalization;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-
-namespace CM
+﻿namespace CM
 {
+    using System.Collections.Generic;
+    using System.Drawing;
+    using System.Globalization;
+    using System.Windows.Forms;
+
     public class PrepareForm
     {
         #region Properties etc.
@@ -33,93 +29,96 @@ namespace CM
         #region constructor
         public PrepareForm()
         {
-            GetCoins(); 
-            this.DecimalSeperator = CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator;  //move to a static class double code
+            this.GetCoins();
+            this.DecimalSeperator = CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator;  // Move to a static class double code
         }
         #endregion constructor
 
         private void GetCoins()
         {
-            if (StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
+            // First check if there is an active internet connection
+            if (StartSession.CheckForInternetConnection())
             {
-                ApplicationDatabase CoinNames = new();
-                List<string> AllCoinNames = CoinNames.GetSelectedCoinNames();
+                ApplicationDatabase coinNames = new();
+                List<string> allCoinNames = coinNames.GetSelectedCoinNames();
 
-                if (AllCoinNames != null)  // The first time the application runs and the database is created this is null
+                // The first time the application runs and the database is created this is null
+                if (allCoinNames != null)
                 {
-                    foreach (string aCoin in AllCoinNames)
+                    foreach (string aCoin in allCoinNames)
                     {
-                        CoinName.Add(aCoin);
+                        this.CoinName.Add(aCoin);
                     }
                 }
             }
         }
+
         public void CreateTheTabs(TabControl Tctrl)
         {
-            TabCtrl = Tctrl;
+            this.TabCtrl = Tctrl;
 
-            CreateTabPages();
-            PrepareTabPages();
+            this.CreateTabPages();
+            this.PrepareTabPages();
         }
 
         #region Create the tab pages
         private void CreateTabPages()
         {
-            TabCtrl.TabPages.Clear();  //First remove all tabs
+            this.TabCtrl.TabPages.Clear();  // First remove all tabs
 
             // Create a Tab for the 24hour difference percentage
             string title = "24 uurs percentage";
             TabPage aTabPageFirst = new(title);
-            aTabPageFirst.Name = title;          
-            TabCtrl.TabPages.Add(aTabPageFirst);
+            aTabPageFirst.Name = title;
+            this.TabCtrl.TabPages.Add(aTabPageFirst);
 
-            //create a tab per coin
-            foreach (string value in CoinName)
+            // Create a tab per coin
+            foreach (string value in this.CoinName)
             {
                 title = value;
                 TabPage aTabPage = new(title);
                 aTabPage.Name = title;              // The name of the tabpage is the coin/market name. "BTC-EUR"
-                TabCtrl.TabPages.Add(aTabPage);
+                this.TabCtrl.TabPages.Add(aTabPage);
             }
         }
-        
+
         #endregion Create the tab pages
 
         private void PrepareTabPages()
         {
-            for (int Tabcount = 0; Tabcount <= TabCtrl.TabCount - 1; Tabcount++)
+            for (int tabcount = 0; tabcount <= this.TabCtrl.TabCount - 1; tabcount++)
             {
-                if (Tabcount == 0)
-                {                    
-                    CreateGroupBox(Tabcount, "Geselecteerde_munten");
-                    CreateGroupBox(Tabcount, "Overige_munten");
-                    CreateDgv24hourPercDiffCoins(Tabcount, "Dgv_DifPerc24hourSelected");
-                    CreateDgv24hourPercDiffCoins(Tabcount, "Dgv_DifPerc24hourNotSelected");
+                if (tabcount == 0)
+                {
+                    this.CreateGroupBox(tabcount, "Geselecteerde_munten");
+                    this.CreateGroupBox(tabcount, "Overige_munten");
+                    this.CreateDgv24hourPercDiffCoins(tabcount, "Dgv_DifPerc24hourSelected");
+                    this.CreateDgv24hourPercDiffCoins(tabcount, "Dgv_DifPerc24hourNotSelected");
                 }
                 else
                 {
-                    CreateSplitContainer(Tabcount);                                                 // Create the splitcontaineers
-                    CreateDatagridViewPriceData(Tabcount);                                          // Create DataGrid view
-                    CreateChartPanel(Tabcount);                                                     // Create the panel on which the chart will be placed. The control with dockstyle = filled must FIRST be placed on the paren control
-                    CreateBottomPanel(Tabcount);                                                    // Create the panel where checkboxes will be placed
-                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Start prijs aan/uit");      // Create a check box
+                    this.CreateSplitContainer(tabcount);                                                 // Create the splitcontaineers
+                    this.CreateDatagridViewPriceData(tabcount);                                          // Create DataGrid view
+                    this.CreateChartPanel(tabcount);                                                     // Create the panel on which the chart will be placed. The control with dockstyle = filled must FIRST be placed on the paren control
+                    this.CreateBottomPanel(tabcount);                                                    // Create the panel where checkboxes will be placed
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Start prijs aan/uit");      // Create a check box
 
-                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Open prijs aan/uit");       // Create a check box
-                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie hoogste aan/uit");   // Create a check box
-                    CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie laagste aan/uit");   // Create a check box
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Open prijs aan/uit");       // Create a check box
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Sessie hoogste aan/uit");   // Create a check box
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Sessie laagste aan/uit");   // Create a check box
 
-                    CreateDatagridViewPriceMonitorPrice(Tabcount);                                  // Create DataGrid view
-                    CreateChart(Tabcount);                                                          // Create the charts
-                    CreateLabels(Tabcount, TabCtrl.TabPages[Tabcount].Text); 
+                    this.CreateDatagridViewPriceMonitorPrice(tabcount);                                  // Create DataGrid view
+                    this.CreateChart(tabcount);                                                          // Create the charts
+                    this.CreateLabels(tabcount, this.TabCtrl.TabPages[tabcount].Text);
                 }
             }
         }
 
-        private void CreateSplitContainer(int Tabcount)
+        private void CreateSplitContainer(int tabcount)
         {
-            //Create the first splitcontainer
+            // Create the first splitcontainer
             SplitContainer spltcontainer = new();
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
 
             spltcontainer.Orientation = Orientation.Vertical;
             spltcontainer.SplitterDistance = 60;
@@ -129,7 +128,7 @@ namespace CM
             spltcontainer.BorderStyle = BorderStyle.FixedSingle;
             spltcontainer.SplitterDistance = 30;
 
-            tp.Controls.Add(spltcontainer);  //Add the splitcontainer  componentlist of the tabpage
+            tp.Controls.Add(spltcontainer);  // Add the splitcontainer  componentlist of the tabpage
 
             // Create the second splitcontainer and place in in panel1 of the first splitcontainer.
             SplitContainer spltcontainer1 = new()
@@ -139,18 +138,19 @@ namespace CM
                 Dock = DockStyle.Fill,
                 SplitterWidth = 10,
                 BackColor = Color.White,
-                BorderStyle = BorderStyle.FixedSingle
+                BorderStyle = BorderStyle.FixedSingle,
             };
 
             spltcontainer.Panel1.Controls.Add(spltcontainer1);
         }
-        private void CreateDatagridViewPriceData(int Tabcount)
+
+        private void CreateDatagridViewPriceData(int tabcount)
         {
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
             DataGridView dgv = new();
             dgv.Name = "Dgv_1_" + tp.Name;
-            dgv.Columns.Add("Onderdeel", "Onderdeel");  //= dgv.Columns[0]
-            dgv.Columns.Add("Waarde", "Waarde");        //= dgv.Columns[1]
+            dgv.Columns.Add("Onderdeel", "Onderdeel");  // = dgv.Columns[0]
+            dgv.Columns.Add("Waarde", "Waarde");        // = dgv.Columns[1]
             dgv.Location = new Point(3, 3);
             dgv.Height = 150;
             dgv.TabIndex = 0;
@@ -160,49 +160,47 @@ namespace CM
             dgv.AllowUserToAddRows = false;
             dgv.AllowUserToOrderColumns = false;
             dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
-            
+
             foreach (DataGridViewColumn column in dgv.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            
 
-
-            DgvNames.Add(dgv);
+            this.DgvNames.Add(dgv);
 
             dgv.Columns[0].Width = 130;
             dgv.Columns[1].Width = 70;
 
-            //align header(s)
-            //dgv.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            // align header(s)
+            // dgv.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-            //align cell(s)
+            // align cell(s)
             dgv.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-            //Add the rows
-            dgv.Rows.Add("Start prijs", "0");               //0
-            dgv.Rows.Add("", "");                           //1
-            dgv.Rows.Add("Huidige prijs", "0");             //2
-            dgv.Rows.Add("Verschil [€]", "0");              //3
-            dgv.Rows.Add("Verschil [%]", "0");              //4
-            dgv.Rows.Add("", "");                           //5
-            dgv.Rows.Add(string.Format("Koers bij {0}% winst", WarnPercentage.ToString()), "0");           //6
-            dgv.Rows.Add(string.Format("Koers bij {0}% verlies", WarnPercentage.ToString()), "0");         //7
-            dgv.Rows.Add("", "");                           //8
+            // Add the rows
+            dgv.Rows.Add("Start prijs", "0");               // 0
+            dgv.Rows.Add(string.Empty, string.Empty);       // 1
+            dgv.Rows.Add("Huidige prijs", "0");             // 2
+            dgv.Rows.Add("Verschil [€]", "0");              // 3
+            dgv.Rows.Add("Verschil [%]", "0");              // 4
+            dgv.Rows.Add(string.Empty, string.Empty);       // 5
+            dgv.Rows.Add(string.Format("Koers bij {0}% winst", this.WarnPercentage.ToString()), "0");           // 6
+            dgv.Rows.Add(string.Format("Koers bij {0}% verlies", this.WarnPercentage.ToString()), "0");         // 7
+            dgv.Rows.Add(string.Empty, string.Empty);       // 8
 
-            dgv.Rows.Add("Hoogste (sessie)", "0");          //9
-            dgv.Rows.Add("Laagste (sessie)", "0");          //10
-            dgv.Rows.Add("", "");                           //11
+            dgv.Rows.Add("Hoogste (sessie)", "0");          // 9
+            dgv.Rows.Add("Laagste (sessie)", "0");          // 10
+            dgv.Rows.Add(string.Empty, string.Empty);       // 11
 
-            dgv.Rows.Add("Open (24 uur geleden)", "0");     //12
-            dgv.Rows.Add("Hoogste", "0");                   //13
-            dgv.Rows.Add("Laagste", "0");                   //14
-            dgv.Rows.Add("Volume", "0");                    //15
-            dgv.Rows.Add("Volume quote", "0");              //16
-            dgv.Rows.Add("Bieden", "0");                    //17
-            dgv.Rows.Add("Vraag", "0");                     //18
-            dgv.Rows.Add("Bied grootte", "0");              //19
-            dgv.Rows.Add("Vraag grootte", "0");             //20
+            dgv.Rows.Add("Open (24 uur geleden)", "0");     // 12
+            dgv.Rows.Add("Hoogste", "0");                   // 13
+            dgv.Rows.Add("Laagste", "0");                   // 14
+            dgv.Rows.Add("Volume", "0");                    // 15
+            dgv.Rows.Add("Volume quote", "0");              // 16
+            dgv.Rows.Add("Bieden", "0");                    // 17
+            dgv.Rows.Add("Vraag", "0");                     // 18
+            dgv.Rows.Add("Bied grootte", "0");              // 19
+            dgv.Rows.Add("Vraag grootte", "0");             // 20
 
             dgv.Rows[1].Height = 7;
             dgv.Rows[5].Height = 7;
@@ -239,10 +237,11 @@ namespace CM
                 }
             }
         }
-        private void CreateDatagridViewPriceMonitorPrice(int Tabcount)
+
+        private void CreateDatagridViewPriceMonitorPrice(int tabcount)
         {
             DataGridView dgv = new();
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
             dgv.Name = "Dgv_2_" + tp.Name;
             dgv.Columns.Add("Prijs", "Prijs");
             dgv.Columns.Add("Empty_1", "    ");
@@ -266,10 +265,10 @@ namespace CM
             dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgv.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgv.RowHeadersVisible = false;
-            
-            DgvNames.Add(dgv);
 
-           //add the datagrid view to the splitcontainer (left panel);
+            this.DgvNames.Add(dgv);
+
+           // add the datagrid view to the splitcontainer (left panel);
             foreach (Control c in tp.Controls)
             {
                 if (c.GetType() == typeof(SplitContainer))
@@ -286,16 +285,17 @@ namespace CM
                 }
             }
         }
-        private void CreateDgv24hourPercDiffCoins(int Tabcount, string Dgvname)
+
+        private void CreateDgv24hourPercDiffCoins(int tabcount, string Dgvname)
         {
             DataGridView dgv = new();
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
             dgv.Name = Dgvname;;
             dgv.Columns.Add("Coin", "Coin");
             dgv.Columns.Add("Percentage", "Percentage");
 
             dgv.Columns[0].Width = 70;
-            dgv.Columns[1].Width = 80;            
+            dgv.Columns[1].Width = 80;
 
             dgv.Location = new Point(3, 3);
             dgv.Height = tp.Height;
@@ -310,16 +310,16 @@ namespace CM
             dgv.RowHeadersVisible = false;
             dgv.Dock = DockStyle.Fill;
 
-            DgvNames.Add(dgv);
-            PlaceControlOnGroupBox(dgv, Tabcount, Dgvname);
+            this.DgvNames.Add(dgv);
+            this.PlaceControlOnGroupBox(dgv, tabcount, Dgvname);
         }
 
-        private void CreateChart(int Tabcount)
+        private void CreateChart(int tabcount)
         {
-            //source: https://timbar.blogspot.com/2012/04/creating-chart-programmatically-in-c.html
-            //source: https://hirenkhirsaria.blogspot.com/2012/06/dynamically-creating-piebar-chart-in-c.html
+            // source: https://timbar.blogspot.com/2012/04/creating-chart-programmatically-in-c.html
+            // source: https://hirenkhirsaria.blogspot.com/2012/06/dynamically-creating-piebar-chart-in-c.html
 
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
             string CoinName = tp.Name;
 
             // Chart does not exists in .net 5 !?!? used a nuget download
@@ -330,8 +330,7 @@ namespace CM
             aChart.Location = new Point(3, 3);
             aChart.Cursor = Cursors.Cross;
 
-
-            System.Windows.Forms.DataVisualization.Charting.ChartArea ChrtArea = new("ChartArea_"+ CoinName);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea ChrtArea = new("ChartArea_" + CoinName);
             ChrtArea.Area3DStyle.Enable3D = false;
             aChart.ChartAreas.Add(ChrtArea);
             ChrtArea.AxisX.Title = "Tijd";
@@ -340,56 +339,53 @@ namespace CM
             aChart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
             aChart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
 
-
             aChart.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.LightGray;
             aChart.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
 
-            //The current coin price
+            // The current coin price
             System.Windows.Forms.DataVisualization.Charting.Series series = new("Series_" + CoinName)
             {
                 Name = "Series_" + CoinName,
-                ChartArea = "ChartArea_" + CoinName
+                ChartArea = "ChartArea_" + CoinName,
             };
-            aChart.Series.Add(CoinName);            
+            aChart.Series.Add(CoinName);
             aChart.Series[CoinName].Enabled = true;
 
             aChart.Series[CoinName].MarkerColor = Color.Red;
             aChart.Series[CoinName].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             aChart.Series[CoinName].MarkerSize = 5;
 
-            
-
-            //Start_Prijs
+            // Start_Prijs
             System.Windows.Forms.DataVisualization.Charting.Series SeriesStartPrice = new("Start_Prijs_" + CoinName);
             SeriesStartPrice.Name = "Start_Prijs_" + CoinName;
             SeriesStartPrice.LegendText = "Start_Prijs";
             aChart.Series.Add(SeriesStartPrice);
             aChart.Series["Start_Prijs_" + CoinName].Enabled = true;
 
-            //aChart.Series["Start_Prijs_" + CoinName].ToolTip = "hello world from: € #VAL,   #VALX";
+            // aChart.Series["Start_Prijs_" + CoinName].ToolTip = "hello world from: € #VAL,   #VALX";
 
-            //Open_Prijs
+            // Open_Prijs
             System.Windows.Forms.DataVisualization.Charting.Series SeriesOpenPrice = new("Open_Prijs_" + CoinName);
             SeriesOpenPrice.Name = "Open_Prijs_" + CoinName;
             SeriesOpenPrice.LegendText = "Open_Prijs";
             aChart.Series.Add(SeriesOpenPrice);
             aChart.Series["Open_Prijs_" + CoinName].Enabled = true;
 
-            //Sessie_Hoogste_Prijs
+            // Sessie_Hoogste_Prijs
             System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionHighestPrice = new("Sessie_Hoogste_Prijs_" + CoinName);
             SeriesSessionHighestPrice.Name = "Sessie_Hoogste_Prijs_" + CoinName;
             SeriesSessionHighestPrice.LegendText = "Sessie_Hoogste";
             aChart.Series.Add(SeriesSessionHighestPrice);
             aChart.Series["Sessie_Hoogste_Prijs_" + CoinName].Enabled = true;
 
-            //Sessie_Laagste_Prijs
+            // Sessie_Laagste_Prijs
             System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionLowestPrice = new("Sessie_Laagste_Prijs_" + CoinName);
             SeriesSessionLowestPrice.Name = "Sessie_Laagste_Prijs_" + CoinName;
             SeriesSessionLowestPrice.LegendText = "Sessie_Laagste";
             aChart.Series.Add(SeriesSessionLowestPrice);
             aChart.Series["Sessie_Laagste_Prijs_" + CoinName].Enabled = true;
 
-            //create the legend           
+            // Create the legend
             aChart.Legends.Add(new System.Windows.Forms.DataVisualization.Charting.Legend("Price"));
             aChart.Legends[0].TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Auto;
             aChart.Legends[0].Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
@@ -397,12 +393,12 @@ namespace CM
             aChart.Series[0].Legend = "Price";
 
             aChart.ChartAreas[0].AxisX.IsStartedFromZero = false;
-            aChart.ChartAreas[0].AxisY.IsStartedFromZero = false;         
+            aChart.ChartAreas[0].AxisY.IsStartedFromZero = false;
 
             aChart.Visible = true;
             aChart.Invalidate();
 
-            ChartNames.Add(aChart);
+            this.ChartNames.Add(aChart);
 
             foreach (Control c in tp.Controls)
             {
@@ -424,17 +420,17 @@ namespace CM
                             } 
                         }
                     }
-                    //splt1.Panel2.Controls.Add(aChart);
+
+                    // splt1.Panel2.Controls.Add(aChart);
                 }
             }
         }
-        
 
         #region Textbox warning precentage
 
         private void tb_KeyPress(object sender, KeyPressEventArgs e)
         {
-            KeyPresstextBox(sender, e);
+            this.KeyPresstextBox(sender, e);
         }
 
         private void KeyPresstextBox(object sender, KeyPressEventArgs e)
@@ -455,23 +451,23 @@ namespace CM
         }
 
         #endregion Textbox warning precentage
-        
 
-        private void PlaceControleOnSpltcontainerOne(Control NewCntrl, int Tabcount)
+        private void PlaceControleOnSpltcontainerOne(Control newCntrl, int tabCount)
         {
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabCount];
             foreach (Control c in tp.Controls)
             {
                 if (c.GetType() == typeof(SplitContainer))
                 {
                     SplitContainer splt2 = (SplitContainer)c;
-                    splt2.Panel2.Controls.Add(NewCntrl);
+                    splt2.Panel2.Controls.Add(newCntrl);
                 }
             }
         }
-        private void PlaceControlOnSpltcontainerOnePanel(Control NewCntrl, int Tabcount)
+
+        private void PlaceControlOnSpltcontainerOnePanel(Control newCntrl, int tabCount)
         {
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabCount];
             foreach (Control c in tp.Controls)
             {
                 if (c.GetType() == typeof(SplitContainer))
@@ -484,18 +480,18 @@ namespace CM
                             Panel aPanel = (Panel)c1;
                             if (aPanel.Name == "BottomPanel")
                             {
-                                aPanel.Controls.Add(NewCntrl);
+                                aPanel.Controls.Add(newCntrl);
                             }
                         }
                     }
                 }
             }
         }
-        private void PlaceControlOnChart(Control NewCntrl, int Tabcount)
-        {
-            //System.Windows.Forms.DataVisualization.Charting.Chart
 
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+        private void PlaceControlOnChart(Control newCntrl, int tabCount)
+        {
+            // System.Windows.Forms.DataVisualization.Charting.Chart
+            TabPage tp = this.TabCtrl.TabPages[tabCount];
             foreach (Control c in tp.Controls)
             {
                 if (c.GetType() == typeof(SplitContainer))
@@ -511,7 +507,7 @@ namespace CM
                                 if (c2.GetType() == typeof(System.Windows.Forms.DataVisualization.Charting.Chart))
                                 {
                                     System.Windows.Forms.DataVisualization.Charting.Chart aChart = (System.Windows.Forms.DataVisualization.Charting.Chart)c2;
-                                    aChart.Controls.Add(NewCntrl);
+                                    aChart.Controls.Add(newCntrl);
                                 }
                             }
                         }
@@ -520,7 +516,7 @@ namespace CM
             }
         }
 
-        private void CreateBottomPanel(int Tabcount)
+        private void CreateBottomPanel(int tabcount)
         {
             Panel BottomPanel = new();
             BottomPanel.Name = "BottomPanel";
@@ -530,9 +526,10 @@ namespace CM
             BottomPanel.BackColor = Color.LightSteelBlue;
             BottomPanel.Dock = DockStyle.Bottom;
 
-            PlaceControleOnSpltcontainerOne(BottomPanel, Tabcount);
+            this.PlaceControleOnSpltcontainerOne(BottomPanel, tabcount);
         }
-        private void CreateChartPanel(int Tabcount)
+
+        private void CreateChartPanel(int tabcount)
 
         {
             Panel ChartPanel = new();
@@ -543,15 +540,15 @@ namespace CM
             ChartPanel.BackColor = Color.LightGray;
             ChartPanel.Dock = DockStyle.Fill;
 
-            PlaceControleOnSpltcontainerOne(ChartPanel, Tabcount);
+            this.PlaceControleOnSpltcontainerOne(ChartPanel, tabcount);
         }
 
-        private void CreateCheckBox(int Tabcount, string Name, string Text)
+        private void CreateCheckBox(int tabcount, string Name, string Text)
         {
-            if (Tabcount != CheckTabCount)  // Next tab page, reset Y
+            if (tabcount != this.CheckTabCount) // Next tab page, reset Y
             {
-                CheckTabCount = Tabcount;
-                CntrlPointX = 3;
+                this.CheckTabCount = tabcount;
+                this.CntrlPointX = 3;
             }
 
             CheckBox Cb = new();
@@ -559,27 +556,28 @@ namespace CM
             Cb.Text = Text;
             Cb.Checked = true;
             Cb.AutoSize = true;
-            if (CntrlPointX == 0)
+            if (this.CntrlPointX == 0)
             {
-                Cb.Location = new Point(CntrlPointX, CbPointY);
+                Cb.Location = new Point(this.CntrlPointX, this.CbPointY);
             }
             else
             {
-                Cb.Location = new Point(CntrlPointX, CbPointY);
+                Cb.Location = new Point(this.CntrlPointX, this.CbPointY);
             }
-            CntrlPointX += 150;
+
+            this.CntrlPointX += 150;
 
             Cb.Size = new Size(82, 19);
             Cb.Anchor = (AnchorStyles.Left);
 
-            CheckBoxNames.Add(Cb);
-            PlaceControlOnSpltcontainerOnePanel(Cb, Tabcount);
+            this.CheckBoxNames.Add(Cb);
+            this.PlaceControlOnSpltcontainerOnePanel(Cb, tabcount);
         }
 
-        private void CreateLabels(int Tabcount, string Name)
+        private void CreateLabels(int tabcount, string name)
         {
             Label Lb = new();
-            Lb.Name = "Lb_" + Name; 
+            Lb.Name = "Lb_" + name;
             Lb.Text = "LabelYaxisCur";
             Lb.AutoSize = true;
             Lb.Location = new Point(50, 50);
@@ -591,58 +589,56 @@ namespace CM
             Lb.Font = new Font("Calibri", 10);
             Lb.ForeColor = Color.DarkBlue;
 
-
-            LabelNames.Add(Lb);
-            PlaceControlOnChart(Lb, Tabcount);
+            this.LabelNames.Add(Lb);
+            this.PlaceControlOnChart(Lb, tabcount);
         }
 
-        private void CreateGroupBox(int Tabcount, string Name)
+        private void CreateGroupBox(int tabcount, string name)
         {
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
 
             GroupBox Gb = new();
-            Gb.Name = "Gb_" + Name;
-            Gb.Text = Name.Replace("_", " ");
+            Gb.Name = "Gb_" + name;
+            Gb.Text = name.Replace("_", " ");
 
-            if (CntrlPointX == 3)
+            if (this.CntrlPointX == 3)
             {
-                Gb.Location = new Point(CntrlPointX+2, 5);
-                CntrlPointX += 200+2;
+                Gb.Location = new Point(this.CntrlPointX + 2, 5);
+                this.CntrlPointX += 200 + 2;
             }
             else
             {
-                Gb.Location = new Point(CntrlPointX, 5);
+                Gb.Location = new Point(this.CntrlPointX, 5);
             }
 
-            int GbHeight = tp.Height-15;
+            int GbHeight = tp.Height - 15;
 
             Gb.Size = new Size(175, GbHeight);
             Gb.Anchor = (AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom);
 
-            GroupBoxNames.Add(Gb);
-            
+            this.GroupBoxNames.Add(Gb);
+
             tp.Controls.Add(Gb);
         }
 
-        private void PlaceControlOnGroupBox(Control NewCntrl, int Tabcount, string DgvName)
+        private void PlaceControlOnGroupBox(Control newCntrl, int tabCount, string dgvName)
         {
-            TabPage tp = TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabCount];
             foreach (Control c in tp.Controls)
             {
                 if (c.GetType() == typeof(GroupBox))
                 {
-                    GroupBox Grpb = (GroupBox)c;
-                    if (Grpb.Name.Contains("Gb_Geselecteerde") && DgvName == "Dgv_DifPerc24hourSelected")
+                    GroupBox grpb = (GroupBox)c;
+                    if (grpb.Name.Contains("Gb_Geselecteerde") && dgvName == "Dgv_DifPerc24hourSelected")
                     {
-                        Grpb.Controls.Add(NewCntrl);
-                    }                    
-                    else if (Grpb.Name.Contains("Overige_munten") && DgvName == "Dgv_DifPerc24hourNotSelected")
+                        grpb.Controls.Add(newCntrl);
+                    }
+                    else if (grpb.Name.Contains("Overige_munten") && dgvName == "Dgv_DifPerc24hourNotSelected")
                     {
-                        Grpb.Controls.Add(NewCntrl);
+                        grpb.Controls.Add(newCntrl);
                     }
                 }
             }
         }
     }
 }
-

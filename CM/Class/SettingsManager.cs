@@ -1,55 +1,70 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Windows.Forms;
-using System.Text.Json;
-using Microsoft.Win32.SafeHandles;
-using System.Runtime.InteropServices;
-
-namespace CM
+﻿namespace CM
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Windows.Forms;
+    using System.Text.Json;
+    using Microsoft.Win32.SafeHandles;
+    using System.Runtime.InteropServices;
+
     class SettingsManager : IDisposable
     {
 
         public static SettingsManager TDSettings { get; set; }
+
         public AppSettingsMeta JsonObjSettings { get; set; }
 
         private string SettingsFile { get; set; }
+
         public static bool DebugMode { get; set; }
 
         public SettingsManager()
         {
-            SettingsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder, AppSettingsDefault.ConfigFile);    //...\appdata\roaming\<application>\settings\...  
+            this.SettingsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder, AppSettingsDefault.ConfigFile);    //...\appdata\roaming\<application>\settings\...  
         }
 
         public class AppSettingsMeta
         {
             public List<AppParams> AppParam { get; set; }
+
             public List<FormMainParams> FormMain { get; set; }
-            public List<FormConfigureParams> FormConfig { get; set; }            
+
+            public List<FormConfigureParams> FormConfig { get; set; }
         }
 
         public class AppParams
         {
             public bool ActivateLogging { get; set; }
+
             public bool AppendLogFile { get; set; }
 
             public string ApplicationName { get; set; }
+
             public string ApplicationVersion { get; set; }
+
             public string ApplicationBuildDate { get; set; }
 
             public string SettingsFileLocation { get; set; }
+
             public string LogFileLocation { get; set; }
+
             public string DatabaseLocation { get; set; }
 
             public int CopyAppDataBaseAfterEveryXStartups { get; set; }
+
             public int CopyAppDataBaseAfterEveryXStartupsCounter { get; set; }
 
             public string Url1 { get; set; }
+
             public string Url2 { get; set; }
+
             public double WarnPercentage { get; set; }
+
             public double RateLimit { get; set; }
+
             public int TrvFoundSearchColor { get; set; }
+
             public bool HideFromTaskbar { get; set; }
         }
 
@@ -57,48 +72,59 @@ namespace CM
         {
             //system.drawing.rectangle = 10; 10; 700; 500 ==> x, y, width, height
             public int FrmX { get; set; }
+
             public int FrmY { get; set; }
+
             public int FrmHeight { get; set; }
+
             public int FrmWidth { get; set; }
+
             public FormWindowState FrmWindowState { get; set; }
         }
+
         public class FormConfigureParams
         {
             public int FrmX { get; set; } = 20;
+
             public int FrmY { get; set; } = 20;
+
             public int FrmHeight { get; set; }
+
             public int FrmWidth { get; set; }
+
             public FormWindowState FrmWindowState { get; set; }
         }
+
         public void LoadSettings()
         {
-            if (File.Exists(SettingsFile))
+            if (File.Exists(this.SettingsFile))
             {
                 if (DebugMode) { Logging.WriteToLogInformation("Ophalen settings."); }
-                string Json = File.ReadAllText(SettingsFile);
-                JsonObjSettings = JsonSerializer.Deserialize<AppSettingsMeta>(Json);
+                string Json = File.ReadAllText(this.SettingsFile);
+                this.JsonObjSettings = JsonSerializer.Deserialize<AppSettingsMeta>(Json);
             }
             else
             {   //Default values
-                if (JsonObjSettings != null)  //the first time when there is no settings file jsonObjSettings = null
+                if (this.JsonObjSettings != null)  //the first time when there is no settings file jsonObjSettings = null
                 {
-                    JsonObjSettings.AppParam[0].ActivateLogging = false;
-                    JsonObjSettings.AppParam[0].AppendLogFile = false;
-                    JsonObjSettings.AppParam[0].SettingsFileLocation = SettingsFile;
-                    JsonObjSettings.AppParam[0].LogFileLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder);
+                    this.JsonObjSettings.AppParam[0].ActivateLogging = false;
+                    this.JsonObjSettings.AppParam[0].AppendLogFile = false;
+                    this.JsonObjSettings.AppParam[0].SettingsFileLocation = this.SettingsFile;
+                    this.JsonObjSettings.AppParam[0].LogFileLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder);
                 }
             }
         }
+
         public static void SaveSettings(dynamic JsonObjSettings)
         {
             if (JsonObjSettings != null)
             {
-                //get settings location
+                // Get settings location
                 string fileLocation = JsonObjSettings.AppParam[0].SettingsFileLocation;
 
                 if (string.IsNullOrEmpty(fileLocation))
                 {
-                    //defaul location
+                    // Defaul location
                     fileLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder, AppSettingsDefault.ConfigFile);
                 }
 
@@ -107,7 +133,7 @@ namespace CM
                     if (DebugMode) { Logging.WriteToLogInformation("Opslaan settings."); }
                     var options = new JsonSerializerOptions
                     {
-                        WriteIndented = true
+                        WriteIndented = true,
                     };
 
                     string jsonString = JsonSerializer.Serialize(JsonObjSettings, options);
@@ -121,7 +147,8 @@ namespace CM
                 {
                     Logging.WriteToLogError("Fout bij het opslaan van de settings.");
                     Logging.WriteToLogError(ex.Message);
-                    //TODO debug mode and messagebox
+
+                    // TODO debug mode and messagebox
                 }
             }
         }
@@ -130,7 +157,7 @@ namespace CM
         {
             var options = new JsonSerializerOptions
             {
-                WriteIndented = true
+                WriteIndented = true,
             };
 
             string SettingsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder, AppSettingsDefault.ConfigFile);
@@ -206,25 +233,25 @@ namespace CM
         // Public implementation of Dispose pattern callable by consumers.
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
         // Protected implementation of Dispose pattern.
         protected virtual void Dispose(bool disposing)
         {
-            if (disposed)
+            if (this.disposed)
                 return;
 
             if (disposing)
             {
-                handle.Dispose();
+                this.handle.Dispose();
                 // Free any other managed objects here.
                 //
                 //this.frm = null;
             }
 
-            disposed = true;
+            this.disposed = true;
         }
         #endregion Dispose
 

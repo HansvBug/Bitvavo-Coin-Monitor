@@ -1,23 +1,26 @@
-﻿using System.Linq;
-using System.Net;
-using System.Windows.Forms;
-using static System.Windows.Forms.Control;
-
-namespace CM
+﻿namespace CM
 {
+    using System.Linq;
+    using System.Net;
+    using System.Windows.Forms;
+    using static System.Windows.Forms.Control;
+
     public class StartSession
     {
-        //reset all textboxes except the timer interval and the percentage
+        // Reset all textboxes except the timer interval and the percentage
         public void ClearTextBoxes(ControlCollection controls)
         {
             foreach (TextBox tb in controls.OfType<TextBox>())
             {
                 if (tb.Name != "TextBoxTimeInterval" && tb.Name != "TextBoxWarnPercentage")
+                {
                     tb.Text = "0";
+                }
             }
+
             foreach (Control c in controls)
             {
-                ClearTextBoxes(c.Controls);
+                this.ClearTextBoxes(c.Controls);
             }
         }
 

@@ -18,53 +18,55 @@ namespace CM
         #region constructor
         public ProcessArguments()
         {
-            GetArguments();
+            this.GetArguments();
         }
         #endregion constructor
 
         private void GetArguments()
         {
-            string[] args = Environment.GetCommandLineArgs();   //store command line arguments
+            string[] args = Environment.GetCommandLineArgs();   // Store command line arguments
 
             foreach (string arg in args)
             {
                 string argument = Convert.ToString(arg, CultureInfo.InvariantCulture);
-                cmdLineArg.Add(argument);  //0 = program name
+                this.cmdLineArg.Add(argument);  // 0 = program name
                 switch (argument)
                 {
                     case "Install":
-                        ArgIntall = "Install";
-                        break;                   
+                        this.ArgIntall = "Install";
+                        break;
+
                     case "DebugMode=On":
-                        ArgDebug = "DebugMode=On";
+                        this.ArgDebug = "DebugMode=On";
                         break;
                 }
             }
         }
 
-        #region Dispose 
+        #region Dispose
         private bool disposed;
 
         //Implement IDisposable.
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposed)
+            if (!this.disposed)
             {
                 if (disposing)
                 {
                     // Free other state (managed objects).
-                    cmdLineArg = null;
+                    this.cmdLineArg = null;
                 }
+
                 // Free your own state (unmanaged objects).
                 // Set large fields to null.
 
-                disposed = true;
+                this.disposed = true;
             }
         }
         #endregion Dispose

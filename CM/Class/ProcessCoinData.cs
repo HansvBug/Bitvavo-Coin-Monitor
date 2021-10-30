@@ -29,24 +29,24 @@ namespace CM
         // Public implementation of Dispose pattern callable by consumers.
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
         // Protected implementation of Dispose pattern.
         protected virtual void Dispose(bool disposing)
         {
-            if (disposed)
+            if (this.disposed)
                 return;
 
             if (disposing)
             {
-                handle.Dispose();
+                this.handle.Dispose();
+                
                 // Free any other managed objects here.
-                //                
             }
 
-            disposed = true;
+            this.disposed = true;
         }
         #endregion Dispose
     }

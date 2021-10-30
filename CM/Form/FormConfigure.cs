@@ -14,83 +14,87 @@ namespace CM
     {
         #region Properties
 
-        public bool DebugMode { get; set; }
         public dynamic JsonObjSettings { get; set; }
+
         private int CopyAppDataBaseAfterEveryXStartups { get; set; }
+
         private string DecimalSeperator { get; set; }
-        private int CheckedTrvNodes { get; set; }  //The number of checked treeview nodes
+
+        private int CheckedTrvNodes { get; set; } // The number of checked treeview nodes
 
         private readonly List<string> SelectedCoinNames = new();
         #endregion Properties
 
         public FormConfigure()
         {
-            InitializeComponent();
-            DecimalSeperator = CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator;
-            TextBoxSearchCoinName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            this.InitializeComponent();
+            this.DecimalSeperator = CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator;
+            this.TextBoxSearchCoinName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
         }
 
         #region load form
         private void FormConfigure_Load(object sender, EventArgs e)
         {
-            LoadSettings();
-            ApplySettings();
-            LoadFormPosition();
-            GetCoinNames();            
+            this.LoadSettings();
+            this.ApplySettings();
+            this.LoadFormPosition();
+            this.GetCoinNames();
         }
+
         private void SetAutoComplete()
         {
             using AutoComplete aCompleteSource = new();
             AutoCompleteStringCollection DataCollection;
-            DataCollection = aCompleteSource.CreAutoCompleteListFromTrv(TreeViewCoinNames);  //Create the autocomplete list for the search box
+            DataCollection = aCompleteSource.CreAutoCompleteListFromTrv(this.TreeViewCoinNames);  // Create the autocomplete list for the search box
 
-            TextBoxSearchCoinName.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            TextBoxSearchCoinName.AutoCompleteCustomSource = DataCollection;
+            this.TextBoxSearchCoinName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            this.TextBoxSearchCoinName.AutoCompleteCustomSource = DataCollection;
         }
+
         private void LoadSettings()
         {
             using SettingsManager Set = new();
             Set.LoadSettings();
-            JsonObjSettings = Set.JsonObjSettings;
+            this.JsonObjSettings = Set.JsonObjSettings;
         }
+
         private void ApplySettings()
         {
-            if (JsonObjSettings.AppParam[0].AppendLogFile)
+            if (this.JsonObjSettings.AppParam[0].AppendLogFile)
             {
-                CheckBoxAppenLogFile.Checked = true;
+                this.CheckBoxAppenLogFile.Checked = true;
             }
             else
             {
-                CheckBoxAppenLogFile.Checked = false;
+                this.CheckBoxAppenLogFile.Checked = false;
             }
 
-            if (JsonObjSettings.AppParam[0].ActivateLogging)
+            if (this.JsonObjSettings.AppParam[0].ActivateLogging)
             {
-                CheckBoxActivateLogging.Checked = true;
+                this.CheckBoxActivateLogging.Checked = true;
             }
             else
             {
-                CheckBoxActivateLogging.Checked = false;
+                this.CheckBoxActivateLogging.Checked = false;
             }
 
-            TextBoxLocationSettingsFile.Text = JsonObjSettings.AppParam[0].SettingsFileLocation;
-            TextBoxLocationLogFile.Text = JsonObjSettings.AppParam[0].LogFileLocation + AppSettingsDefault.LogFileName;
-            TextBoxLocationDatabaseFile.Text = JsonObjSettings.AppParam[0].DatabaseLocation + AppSettingsDefault.SqlLiteDatabaseName;
+            this.TextBoxLocationSettingsFile.Text = this.JsonObjSettings.AppParam[0].SettingsFileLocation;
+            this.TextBoxLocationLogFile.Text = this.JsonObjSettings.AppParam[0].LogFileLocation + AppSettingsDefault.LogFileName;
+            this.TextBoxLocationDatabaseFile.Text = this.JsonObjSettings.AppParam[0].DatabaseLocation + AppSettingsDefault.SqlLiteDatabaseName;
 
-            LabelVersion.Text = "Versie : " + JsonObjSettings.AppParam[0].ApplicationVersion;
-            LabelBuildDate.Text = "Build datum : " + JsonObjSettings.AppParam[0].ApplicationBuildDate;
+            this.LabelVersion.Text = "Versie : " + this.JsonObjSettings.AppParam[0].ApplicationVersion;
+            this.LabelBuildDate.Text = "Build datum : " + this.JsonObjSettings.AppParam[0].ApplicationBuildDate;
 
-            
-            int CopyAppDataBaseAfterEveryXStartups = JsonObjSettings.AppParam[0].CopyAppDataBaseAfterEveryXStartups;
-            CopyDatabaseIntervalTextBox.Text = CopyAppDataBaseAfterEveryXStartups.ToString();
+            int CopyAppDataBaseAfterEveryXStartups = this.JsonObjSettings.AppParam[0].CopyAppDataBaseAfterEveryXStartups;
+            this.CopyDatabaseIntervalTextBox.Text = CopyAppDataBaseAfterEveryXStartups.ToString();
 
-            TextBoxUrl1.Text = JsonObjSettings.AppParam[0].Url1;
-            TextBoxUrl2.Text = JsonObjSettings.AppParam[0].Url2;
+            this.TextBoxUrl1.Text = this.JsonObjSettings.AppParam[0].Url1;
+            this.TextBoxUrl2.Text = this.JsonObjSettings.AppParam[0].Url2;
 
-            TextBoxRateLimit.Text = JsonObjSettings.AppParam[0].RateLimit.ToString();
-            TextBoxWarnPercentage.Text = JsonObjSettings.AppParam[0].WarnPercentage.ToString();
-
+            this.TextBoxRateLimit.Text = this.JsonObjSettings.AppParam[0].RateLimit.ToString();
+            this.TextBoxWarnPercentage.Text = this.JsonObjSettings.AppParam[0].WarnPercentage.ToString();
         }
+
         private void LoadFormPosition()
         {
             using FormPosition FormPosition = new(this);
@@ -100,87 +104,88 @@ namespace CM
 
         private void CheckBoxEnableUrl_Click(object sender, EventArgs e)
         {
-            if (CheckBoxEnableUrl.Checked)
+            if (this.CheckBoxEnableUrl.Checked)
             {
-                TextBoxUrl1.Enabled = true;
-                TextBoxUrl2.Enabled = true;
+                this.TextBoxUrl1.Enabled = true;
+                this.TextBoxUrl2.Enabled = true;
             }
             else
             {
-                TextBoxUrl1.Enabled = false;
-                TextBoxUrl2.Enabled = false;
+                this.TextBoxUrl1.Enabled = false;
+                this.TextBoxUrl2.Enabled = false;
             }
         }
 
         #region Form closing
         private void FormConfigure_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //TODO coins opslaanin SQLlite
+            // TODO coins opslaanin SQLlite
             Logging.WriteToLogInformation("Sluiten configuratie scherm.");
-            SaveFormPosition();
-            SaveSettings();
-            SaveCheckedCoins();
-            CreateTables();
+            this.SaveFormPosition();
+            this.SaveSettings();
+            this.SaveCheckedCoins();
+            this.CreateTables();
         }
+
         private void SaveFormPosition()
         {
-            using FormPosition FormPosition = new(this)
-            {
-                DebugMode = this.DebugMode
-            };
+            using FormPosition FormPosition = new(this);
             FormPosition.SaveConfigureFormPosition();
         }
+
         private void SaveSettings()
         {
-            SettingsManager.SaveSettings(JsonObjSettings);
+            SettingsManager.SaveSettings(this.JsonObjSettings);
         }
+
         private void SaveCheckedCoins()
         {
             List<string> CoinNames = new();
             ApplicationDatabase addCoin = new();
-            foreach (TreeNode aNode in TreeViewCoinNames.Nodes) //first create a list withe the coin names
+            foreach (TreeNode aNode in this.TreeViewCoinNames.Nodes) // First create a list withe the coin names
             {
-                if (aNode.Checked == true)  //at least one node must checked to start the filter
+                if (aNode.Checked == true) // At least one node must checked to start the filter
                 {
                     CoinNames.Add(aNode.Name);
                 }
             }
-            if (CoinNames.Count > 0)  //if any coin name is checked then save it
+
+            if (CoinNames.Count > 0)  // If any coin name is checked then save it
             {
                 addCoin.SaveCoinNames(CoinNames);
             }
         }
+
         private void CreateTables()
         {
             List<string> CoinNames = new();
             ApplicationDatabase addCoin = new();
-            
-            foreach (TreeNode aNode in TreeViewCoinNames.Nodes) //first create a list withe the coin names
+
+            foreach (TreeNode aNode in this.TreeViewCoinNames.Nodes) // first create a list withe the coin names
             {
-                if (aNode.Checked == true)  //at least one node must checked to start the filter
+                if (aNode.Checked == true) // At least one node must checked to start the filter
                 {
                     CoinNames.Add(aNode.Name);
                 }
             }
-            if (CoinNames.Count > 0)  //if any coin name is checked then save it
+
+            if (CoinNames.Count > 0) // If any coin name is checked then save it
             {
                 foreach (string tbl in CoinNames)
                 {
                     addCoin.CreateCoinTable(tbl);
                 }
-                
             }
-
         }
         #endregion Form closing
 
         private void CheckBoxActivateLogging_Click(object sender, EventArgs e)
         {
-            if (CheckBoxActivateLogging.Checked)
+            if (this.CheckBoxActivateLogging.Checked)
             {
-                CheckBoxAppenLogFile.Enabled = true;
+                this.CheckBoxAppenLogFile.Enabled = true;
 
-                JsonObjSettings.AppParam[0].ActivateLogging = true;
+                this.JsonObjSettings.AppParam[0].ActivateLogging = true;
 
                 Logging.ActivateLogging = true;
                 Logging.StartLogging();
@@ -188,11 +193,11 @@ namespace CM
             }
             else
             {
-                CheckBoxAppenLogFile.Checked = false;
-                CheckBoxAppenLogFile.Enabled = false;
+                this.CheckBoxAppenLogFile.Checked = false;
+                this.CheckBoxAppenLogFile.Enabled = false;
 
-                JsonObjSettings.AppParam[0].ActivateLogging = false;
-                JsonObjSettings.AppParam[0].AppendLogFile = false;
+                this.JsonObjSettings.AppParam[0].ActivateLogging = false;
+                this.JsonObjSettings.AppParam[0].AppendLogFile = false;
 
                 Logging.WriteToLogInformation("Logging uitgezet.");
                 Logging.StopLogging();
@@ -202,14 +207,14 @@ namespace CM
 
         private void CheckBoxAppenLogFile_Click(object sender, EventArgs e)
         {
-            if (CheckBoxAppenLogFile.Checked)
+            if (this.CheckBoxAppenLogFile.Checked)
             {
-                JsonObjSettings.AppParam[0].AppendLogFile = true;
+                this.JsonObjSettings.AppParam[0].AppendLogFile = true;
                 Logging.WriteToLogInformation("Logging aanvullen is aangezet.");
             }
             else
             {
-                JsonObjSettings.AppParam[0].AppendLogFile = false;
+                this.JsonObjSettings.AppParam[0].AppendLogFile = false;
                 Logging.WriteToLogInformation("Logging aanvullen is uitgezet.");
             }
         }
@@ -218,35 +223,36 @@ namespace CM
         {
             try
             {
-                CopyAppDataBaseAfterEveryXStartups = Int32.Parse(CopyDatabaseIntervalTextBox.Text, CultureInfo.InvariantCulture);
-                if (CopyAppDataBaseAfterEveryXStartups > 200)
+                this.CopyAppDataBaseAfterEveryXStartups = Int32.Parse(this.CopyDatabaseIntervalTextBox.Text, CultureInfo.InvariantCulture);
+                if (this.CopyAppDataBaseAfterEveryXStartups > 200)
                 {
-                    CopyAppDataBaseAfterEveryXStartups = 200;
-                    CopyDatabaseIntervalTextBox.Text = "200";
+                    this.CopyAppDataBaseAfterEveryXStartups = 200;
+                    this.CopyDatabaseIntervalTextBox.Text = "200";
                     MessageBox.Show("De maximale waarde is 200", "Informatie", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                JsonObjSettings.AppParam[0].CopyAppDataBaseAfterEveryXStartups = CopyAppDataBaseAfterEveryXStartups;
+
+                this.JsonObjSettings.AppParam[0].CopyAppDataBaseAfterEveryXStartups = this.CopyAppDataBaseAfterEveryXStartups;
             }
             catch (FormatException ex)
             {
                 Logging.WriteToLogError("Fout opgetreden bij het omzetten van een string naar een integer.");
                 Logging.WriteToLogError("Melding:");
                 Logging.WriteToLogError(ex.Message);
-                CopyDatabaseIntervalTextBox.Text = "0";
+                this.CopyDatabaseIntervalTextBox.Text = "0";
             }
         }
 
         private void ButtonSelectAll_Click(object sender, EventArgs e)
         {
-            foreach (TreeNode node in TreeViewCoinNames.Nodes)  //29-12-2017; hvb checklistbox replaced by  treeview
+            foreach (TreeNode node in this.TreeViewCoinNames.Nodes)  //29-12-2017; hvb checklistbox replaced by  treeview
             {
                 node.Checked = true;
-            }            
+            }
         }
 
         private void ButtonDeselectAll_Click(object sender, EventArgs e)
         {
-            foreach (TreeNode node in TreeViewCoinNames.Nodes)
+            foreach (TreeNode node in this.TreeViewCoinNames.Nodes)
             {
                 node.Checked = false;
             }
@@ -254,9 +260,9 @@ namespace CM
 
         private void ButtonInvertSelection_Click(object sender, EventArgs e)
         {
-            if (TreeViewCoinNames.Nodes.Count > 0)
+            if (this.TreeViewCoinNames.Nodes.Count > 0)
             {
-                foreach (TreeNode aNode in TreeViewCoinNames.Nodes)
+                foreach (TreeNode aNode in this.TreeViewCoinNames.Nodes)
                 {
                     if (aNode.Checked == true)
                     {
@@ -267,27 +273,26 @@ namespace CM
                         aNode.Checked = true;
                     }
                 }
-                TreeViewCoinNames.SelectedNode = TreeViewCoinNames.Nodes[0];   //  Force the ListBox to scroll back to the top of the list.
+
+                this.TreeViewCoinNames.SelectedNode = this.TreeViewCoinNames.Nodes[0];   // Force the ListBox to scroll back to the top of the list.
             }
         }
 
         private void ButtonGetCoinNames_Click(object sender, EventArgs e)
         {
-            StoreSelectedItems(TreeViewCoinNames);   // First make a list of the checked coin names
-            GetCoinNames();                          // Load all coins
-            //re-check 
-
-            GetCoinNames();
+            this.StoreSelectedItems(this.TreeViewCoinNames);   // First make a list of the checked coin names.
+            this.GetCoinNames();                          // Load all coins.
         }
+
         private void StoreSelectedItems(TreeView Trv)
         {
-            SelectedCoinNames.Clear();
+            this.SelectedCoinNames.Clear();
 
             foreach (TreeNode aNode in Trv.Nodes)
             {
                 if (aNode.Checked == true)  // At least one node is checked to start the filter
                 {
-                    SelectedCoinNames.Add(aNode.Text);
+                    this.SelectedCoinNames.Add(aNode.Text);
                 }
             }
         }
@@ -297,39 +302,42 @@ namespace CM
             if (StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
             {
 
-                MarketPrice AllCoinNames = new();    //create the coindata objectlist
+                MarketPrice AllCoinNames = new();    // create the coindata objectlist
                 AllCoinNames.GetAllCoinNames();                 // Get the all the available coin names (read the API result)
-                LoadCoinNames(AllCoinNames);                    // Load all the available coin names intot the treeview
-                CheckCoinNames();
-                SetAutoComplete();
-                
-                TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
-                CountCheckedNodes(nodes);   // Count the checked nodes
+                this.LoadCoinNames(AllCoinNames);                    // Load all the available coin names intot the treeview
+                this.CheckCoinNames();
+                this.SetAutoComplete();
+
+                TreeNodeCollection nodes = this.TreeViewCoinNames.Nodes;
+                this.CountCheckedNodes(nodes);   // Count the checked nodes
             }
         }
+
         private void LoadCoinNames(MarketPrice mp)
         {
-            TreeViewCoinNames.Nodes.Clear();           //Remove all nodes            
-            TreeViewCoinNames.BeginUpdate();           //Suppress repainting the TreeView until all the objects have been created.
-            foreach (object item in mp.CoinNames)     //Fill it again with only the filtered items
+            this.TreeViewCoinNames.Nodes.Clear();           // Remove all nodes
+            this.TreeViewCoinNames.BeginUpdate();           // Suppress repainting the TreeView until all the objects have been created.
+            foreach (object item in mp.CoinNames)     // Fill it again with only the filtered items
             {
                 TreeNode aNode = new(item.ToString()) { Name = item.ToString() };
-                TreeViewCoinNames.Nodes.Add(aNode);
+                this.TreeViewCoinNames.Nodes.Add(aNode);
             }
-            TreeViewCoinNames.EndUpdate();
+
+            this.TreeViewCoinNames.EndUpdate();
         }
+
         private void CheckCoinNames()
         {
-            TreeViewCoinNames.BeginUpdate();
+            this.TreeViewCoinNames.BeginUpdate();
 
-            //Get the coin names from the app database
+            // Get the coin names from the app database
             ApplicationDatabase CoinNames = new();
             List<string> AllCoinNames = CoinNames.GetSelectedCoinNames();
 
             if (AllCoinNames != null)
             {
-                //Check the found coin names n the treeview
-                TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
+                // Check the found coin names n the treeview
+                TreeNodeCollection nodes = this.TreeViewCoinNames.Nodes;
 
                 foreach (string Coin in AllCoinNames)
                 {
@@ -337,7 +345,7 @@ namespace CM
 
                     foreach (TreeNode n in nodes)
                     {
-                        //CheckTrvNode(n, Coin);
+                        // CheckTrvNode(n, Coin);
                         if (n.Text == Coin)
                         {
                             n.Checked = true;
@@ -345,12 +353,9 @@ namespace CM
                     }
                 }
             }
-            TreeViewCoinNames.EndUpdate();
-            
+
+            this.TreeViewCoinNames.EndUpdate();
         }
-        
-
-
 
         private void ButtonCompressAppDatabase_Click(object sender, EventArgs e)
         {
@@ -359,19 +364,18 @@ namespace CM
             try
             {
                 string argument = string.Empty;
-                string DbLocation = JsonObjSettings.AppParam[0].DatabaseLocation;
-                ApplicationDatabase compress = new()
-                {
-                    DebugMode = this.DesignMode
-                };
+                string DbLocation = this.JsonObjSettings.AppParam[0].DatabaseLocation;
+                ApplicationDatabase compress = new();
 
-                if (compress.CopyDatabaseFile(string.Empty))    //Copy the database file before compress takes place
+                // Copy the database file before compress takes place
+                if (compress.CopyDatabaseFile(string.Empty))
                 {
                     compress.CompressDatabase();
                     Logging.WriteToLogInformation("Het bestand " + AppSettingsDefault.SqlLiteDatabaseName + " is succesvol gecomprimeerd.");
 
                     MessageBox.Show("De applicatie database is succesvol gecomprimeerd.", "Informatie.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
                 Cursor.Current = Cursors.Default;
             }
             catch (Exception ex)
@@ -379,20 +383,30 @@ namespace CM
                 Logging.WriteToLogInformation("Onverwachte fout opgetreden bij het comprimeren van '" + AppSettingsDefault.SqlLiteDatabaseName + "'.");
                 Logging.WriteToLogInformation("Melding:");
                 Logging.WriteToLogInformation(ex.Message);
-                if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+
+                if (CmDebugMode.DebugMode)
+                {
+                    Logging.WriteToLogDebug(ex.ToString());
+                }
+
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("Fout opgetreden bij het comprimeren van " + AppSettingsDefault.SqlLiteDatabaseName + "." + Environment.NewLine +
-                                Environment.NewLine + "Raadpleeg het log bestand."
-                                , "Fout bij comprimeren bestand.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "Fout opgetreden bij het comprimeren van " + AppSettingsDefault.SqlLiteDatabaseName + "." + Environment.NewLine +
+                    Environment.NewLine + "Raadpleeg het log bestand.",
+                    "Fout bij comprimeren bestand.",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 
         private void TextBoxRateLimit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            KeyPresstextBox(sender, e);
+            this.KeyPresstextBox(sender, e);
         }
+
         private void KeyPresstextBox(object sender, KeyPressEventArgs e)
-        {   //TODO: this is double code with main form
+        {
+            // TODO: this is double code with main form
             char seperator = this.DecimalSeperator[0];
 
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
@@ -410,68 +424,75 @@ namespace CM
 
         private void TextBoxRateLimit_Leave(object sender, EventArgs e)
         {
-            JsonObjSettings.AppParam[0].RateLimit = Convert.ToDouble(TextBoxRateLimit.Text);
+            this.JsonObjSettings.AppParam[0].RateLimit = Convert.ToDouble(this.TextBoxRateLimit.Text);
         }
 
         private void TextBoxRateLimit_TextChanged(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(TextBoxRateLimit.Text))
+            if (!string.IsNullOrEmpty(this.TextBoxRateLimit.Text))
                     {
-                if (Convert.ToDouble(TextBoxRateLimit.Text) > (double)0)
+                if (Convert.ToDouble(this.TextBoxRateLimit.Text) > (double)0)
                 {
-                    if (Convert.ToDouble(TextBoxRateLimit.Text) < ((double)1 / (double)1000))  //Bitvavo excepts 1000 requests per minute
+                    if (Convert.ToDouble(this.TextBoxRateLimit.Text) < ((double)1 / (double)1000))  // Bitvavo excepts 1000 requests per minute
                     {
-                        MessageBox.Show("0,001 is de laagste toegestane waarde." + Environment.NewLine +
-                            "Dit zijn 1000 request per minuut. Dat is het maximum wat is toegestaan."
-                            , "Let op", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(
+                            "0,001 is de laagste toegestane waarde." + Environment.NewLine +
+                            "Dit zijn 1000 request per minuut. Dat is het maximum wat is toegestaan.",
+                            "Let op",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
 
-                        TextBoxRateLimit.Text = "0" + DecimalSeperator + "001";
+                        this.TextBoxRateLimit.Text = "0" + this.DecimalSeperator + "001";
                     }
-                }                
+                }
             }
-            JsonObjSettings.AppParam[0].RateLimit = Convert.ToDouble(TextBoxRateLimit.Text);
+
+            this.JsonObjSettings.AppParam[0].RateLimit = Convert.ToDouble(this.TextBoxRateLimit.Text);
         }
 
         private void TextBoxUrl1_Leave(object sender, EventArgs e)
         {
-            JsonObjSettings.AppParam[0].Url1 = TextBoxUrl1.Text;            
+            this.JsonObjSettings.AppParam[0].Url1 = this.TextBoxUrl1.Text;
         }
 
         private void TextBoxUrl2_Leave(object sender, EventArgs e)
         {
-            JsonObjSettings.AppParam[0].Url2 = TextBoxUrl2.Text;
+            this.JsonObjSettings.AppParam[0].Url2 = this.TextBoxUrl2.Text;
         }
 
         private void TextBoxWarnPercentage_KeyPress(object sender, KeyPressEventArgs e)
         {
-            KeyPresstextBox(sender, e);
+            this.KeyPresstextBox(sender, e);
         }
 
         private void TextBoxWarnPercentage_TextChanged(object sender, EventArgs e)
         {
-            JsonObjSettings.AppParam[0].WarnPercentage = Convert.ToDouble(TextBoxWarnPercentage.Text);
+            this.JsonObjSettings.AppParam[0].WarnPercentage = Convert.ToDouble(this.TextBoxWarnPercentage.Text);
         }
 
         private int FoundTrvCoinsTextSearch;
+
         private void TextBoxSearchCoinName_TextChanged(object sender, EventArgs e)
         {
-            if (TextBoxSearchCoinName.Text.Length > 0)
+            if (this.TextBoxSearchCoinName.Text.Length > 0)
             {
-                ButtonSearchCoinName.Enabled = true;
+                this.ButtonSearchCoinName.Enabled = true;
             }
             else
             {
-                ButtonSearchCoinName.Enabled = false;
+                this.ButtonSearchCoinName.Enabled = false;
             }
 
-            FoundTrvCoinsTextSearch = 0;
-            TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
+            this.FoundTrvCoinsTextSearch = 0;
+            TreeNodeCollection nodes = this.TreeViewCoinNames.Nodes;
             foreach (TreeNode n in nodes)
             {
-                ColorTrvSearchNode(n, TextBoxSearchCoinName);
+                this.ColorTrvSearchNode(n, this.TextBoxSearchCoinName);
             }
-            LabelCoinFound.Text = FoundTrvCoinsTextSearch.ToString(CultureInfo.InvariantCulture) + " st";
+
+            this.LabelCoinFound.Text = this.FoundTrvCoinsTextSearch.ToString(CultureInfo.InvariantCulture) + " st";
         }
+
         private void ColorTrvSearchNode(TreeNode treeNode, TextBox Tb)
         {
             if (treeNode == null)
@@ -479,18 +500,17 @@ namespace CM
                 return;
             }
 
-            if (!String.IsNullOrEmpty(Tb.Text))
+            if (!string.IsNullOrEmpty(Tb.Text))
             {
                 if (treeNode.Text.ToUpperInvariant().Contains(Tb.Text.ToUpperInvariant()))
                 {
-                    //string TrvFoundSearchColorString = JsonObjSettings.AppParam[0].TrvFoundSearchColor;
-                    //int TrvFoundQuerySearchClr = int.Parse(TrvFoundSearchColorString, CultureInfo.InvariantCulture);
-
-                    int TrvFoundSearchClr = JsonObjSettings.AppParam[0].TrvFoundSearchColor;
+                    // string TrvFoundSearchColorString = JsonObjSettings.AppParam[0].TrvFoundSearchColor;
+                    // int TrvFoundQuerySearchClr = int.Parse(TrvFoundSearchColorString, CultureInfo.InvariantCulture);
+                    int TrvFoundSearchClr = this.JsonObjSettings.AppParam[0].TrvFoundSearchColor;
                     Color SelectColor = Color.FromArgb(TrvFoundSearchClr);
 
                     treeNode.BackColor = SelectColor;
-                    FoundTrvCoinsTextSearch++;                    
+                    this.FoundTrvCoinsTextSearch++;
                 }
                 else
                 {
@@ -499,67 +519,70 @@ namespace CM
 
                 foreach (TreeNode tn in treeNode.Nodes)
                 {
-                    ColorTrvSearchNode(tn, Tb);
+                    this.ColorTrvSearchNode(tn, Tb);
                 }
             }
             else
             {
                 treeNode.BackColor = Color.White;
-                FoundTrvCoinsTextSearch = 0;
+                this.FoundTrvCoinsTextSearch = 0;
 
                 foreach (TreeNode tn in treeNode.Nodes)
                 {
-                    ColorTrvSearchNode(tn, Tb);
+                    this.ColorTrvSearchNode(tn, Tb);
                 }
             }
         }
 
-        readonly TreeViewSearch tvSearch = new();  //refence to TreeViewSearch, outside a function otherwise find next does not work
+        readonly TreeViewSearch tvSearch = new();  // Refence to TreeViewSearch, outside a function otherwise find next does not work
+
         private void ButtonSearchCoinName_Click(object sender, EventArgs e)
         {
-            tvSearch.SearchInTreeViewNodes(TreeViewCoinNames, TextBoxSearchCoinName.Text);            
+            this.tvSearch.SearchInTreeViewNodes(this.TreeViewCoinNames, this.TextBoxSearchCoinName.Text);
         }
 
         private void TreeViewCoinNames_Click(object sender, EventArgs e)
         {
-            TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
-            CountCheckedNodes(nodes);
+            TreeNodeCollection nodes = this.TreeViewCoinNames.Nodes;
+            this.CountCheckedNodes(nodes);
         }
+
         private void  CountCheckedNodes(TreeNodeCollection nodes)
         {
-            CheckedTrvNodes = 0;
+            this.CheckedTrvNodes = 0;
 
             foreach (TreeNode n in nodes)
             {
                 if (n.Checked)
                 {
-                    CheckedTrvNodes++;
+                    this.CheckedTrvNodes++;
                 }
             }
 
-            if (CheckedTrvNodes > 0)
+            if (this.CheckedTrvNodes > 0)
             {
-                LabelCountCheckedTrvNodes.Text = "Aantal geselecteerd : " + this.CheckedTrvNodes.ToString();
+                this.LabelCountCheckedTrvNodes.Text = "Aantal geselecteerd : " + this.CheckedTrvNodes.ToString();
             }
             else
             {
-                LabelCountCheckedTrvNodes.Text = "Aantal geselecteerd : 0";
+                this.LabelCountCheckedTrvNodes.Text = "Aantal geselecteerd : 0";
             }
-            Refresh();
+
+            this.Refresh();
         }
 
         private void TreeViewCoinNames_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            TreeNodeCollection nodes = TreeViewCoinNames.Nodes;
-            CountCheckedNodes(nodes);
+            TreeNodeCollection nodes = this.TreeViewCoinNames.Nodes;
+            this.CountCheckedNodes(nodes);
         }
 
         private void ButtonSelectedOnly_Click(object sender, EventArgs e)
         {
-            //Show only the selected items in the treeview
-            for (int i = 0; i < TreeViewCoinNames.Nodes.Count; i++)
+            // Show only the selected items in the treeview
+            for (int i = 0; i < this.TreeViewCoinNames.Nodes.Count; i++)
             {
-                RemoveUncheckedNodes(TreeViewCoinNames);
+                RemoveUncheckedNodes(this.TreeViewCoinNames);
             }
 
             Cursor.Current = Cursors.Default;
@@ -594,7 +617,7 @@ namespace CM
 
         private void ButtonClose_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }

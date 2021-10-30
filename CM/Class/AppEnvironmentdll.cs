@@ -1,65 +1,102 @@
-﻿using System;
-using System.IO;            //used by Path.
-using System.Reflection;    //used by Assembly.
-using System.Management;    //add reference System.Management
-using System.Windows.Forms;
-using Microsoft.Win32;
-using System.Globalization;
-using System.Collections.Generic;
-
-namespace CM
+﻿namespace CM
 {
+    using System;
+    using System.IO;            // Used by Path.
+    using System.Reflection;    // Used by Assembly.
+    using System.Management;    // Add reference System.Management
+    using System.Windows.Forms;
+    using Microsoft.Win32;
+    using System.Globalization;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// Application environment.
+    /// </summary>
     public class AppEnvironment : IDisposable
     {
-        /// <summary>
-        /// Class which gathers environment and machine information
-        /// 
-        /// Version 1.0.0.0 :   05-10-2019
-        /// Version 1.0.0.1 :   22-02-2020  ;   Omgezet naar .NET Core 3.1
-        /// Version 1.0.0.2 :   02-10-2020  ;   Omgezet naar .NET 5
-
-        /// </summary>
-        /// 
         #region Properties
+
+        /// <summary>
+        /// Gets or sets the application path.
+        /// </summary>
         public string ApplicationPath { get; set; }
+
+        /// <summary>
+        /// geets or sets the user name.
+        /// </summary>
         public string UserName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the machine name.
+        /// </summary>
         public string MachineName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the windows version.
+        /// </summary>
         public string WindowsVersion { get; set; }
+
+        /// <summary>
+        /// Gets or sets the nummer of processors.
+        /// </summary>
         public string ProcessorCount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the processor id.
+        /// </summary>
         public string ProcessorId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the BIOS id.
+        /// </summary>
         public string BiosId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the total maount of RAM.
+        /// </summary>
         public string TotalRam { get; set; }
+
+        /// <summary>
+        /// Gets or sets the monitor width.
+        /// </summary>
         public int MonitorWidth { get; set; }
+
+        /// <summary>
+        /// Gets or sets the number of monitors.
+        /// </summary>
         public int MonitorCount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the .net framework version.
+        /// </summary>
         public List<string> DotNetFrameWorkVersion { get; set; }
         #endregion Properties
 
         #region Constructor
         public AppEnvironment()
         {
-            SetProperties();
+            this.SetProperties();
         }
         #endregion Constructor
 
         #region Methods
 
-
         /// <summary>
-        /// Create a folder
+        /// Create a new foldeer.
         /// </summary>
-        /// <param name="FolderName"></param>   
-        ///     This will be the name of the new folder
-        /// <param name="ApplicationDataFolder"></param>
-        ///     if Yes then the folder will be created: ...\appdata\roaming\<FolderName>
-        ///     if No then the folder will be created in de application directory
-        public bool CreateFolder(string FolderName, bool ApplicationDataFolder)
+        /// <param name="folderName">The name of the new folder.</param>
+        /// <param name="applicationDataFolder">the application data folder.</param>
+        /// <returns>True if succeeded.</returns>
+        public bool CreateFolder(string folderName, bool applicationDataFolder)
         {
-            if (string.IsNullOrEmpty(FolderName))
-                return false;
-
-            if (ApplicationDataFolder)
+            if (string.IsNullOrEmpty(folderName))
             {
-                string pathString = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), FolderName);
+                return false;
+            }
+
+            if (applicationDataFolder)
+            {
+                string pathString = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), folderName);
 
                 if (!Directory.Exists(pathString))
                 {
@@ -81,12 +118,12 @@ namespace CM
             }
             else
             {
-                string AppDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FolderName);
-                if (!Directory.Exists(AppDir))
+                string appDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, folderName);
+                if (!Directory.Exists(appDir))
                 {
                     try
                     {
-                        Directory.CreateDirectory(AppDir);
+                        Directory.CreateDirectory(appDir);
                         return true;
                     }
                     catch (AccessViolationException)
@@ -116,14 +153,14 @@ namespace CM
             this.DotNetFrameWorkVersion = GetAllDotNetVersions();
         }
 
-        private static string Get_Applicatiepad()  //get the application path
+        private static string Get_Applicatiepad()  // get the application path
         {
             try
             {
                 string appPath;
                 appPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
                 appPath += "\\";                                        // add \to the path
-                return appPath.Replace("file:\\", "");  //remove the text "file:\\" from the path
+                return appPath.Replace("file:\\", string.Empty);  // remove the text "file:\\" from the path
             }
             catch (ArgumentException aex)
             {
@@ -214,7 +251,7 @@ namespace CM
                 string result = "";
                 try
                 {
-                    ManagementObjectSearcher mbs = new("Select ProcessorID From Win32_processor");  //Add reference assemblies: system.management
+                    ManagementObjectSearcher mbs = new("Select ProcessorID From Win32_processor");  // Add reference assemblies: system.management
                     ManagementObjectCollection mbsList = mbs.Get();
 
                     foreach (ManagementObject mo in mbsList)
@@ -224,7 +261,7 @@ namespace CM
                     mbs.Dispose();
 
                     return result;
-                    //More (all) options: https://msdn.microsoft.com/en-us/library/aa394373(v=vs.85).aspx
+                    // More (all) options: https://msdn.microsoft.com/en-us/library/aa394373(v=vs.85).aspx
                 }
                 catch (Exception)
                 {
@@ -243,7 +280,7 @@ namespace CM
                 {
                     foreach (ManagementObject mObject in searcher.Get())
                     {
-                        bios = mObject["SerialNumber"].ToString();  //Manufacturer
+                        bios = mObject["SerialNumber"].ToString();  // Manufacturer
                         break;
                     }
                 }
@@ -318,20 +355,20 @@ namespace CM
 
 
         #region IDisposable
-        //Bron : https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.100).aspx
+        // Bron : https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.100).aspx
 
         private bool disposed = false;
 
-        //Implement IDisposable.
+        // Implement IDisposable.
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposed)
+            if (!this.disposed)
             {
                 if (disposing)
                 {
@@ -347,33 +384,30 @@ namespace CM
                     this.MonitorWidth = -1;
                     this.MonitorCount = -1;
                     this.DotNetFrameWorkVersion.Clear();
-
                 }
+
                 // Free your own state (unmanaged objects).
                 // Set large fields to null.
-                disposed = true;
+                this.disposed = true;
             }
         }
         #endregion IDisposable
-
-
     }
 
     public class GetDotNetVersion
     {
-        //bron: https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
-
-        private readonly List<String> netVersions = new();
+        // bron: https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
+        private readonly List<string> netVersions = new();
 
         public GetDotNetVersion()
         {
-            Get45PlusFromRegistry();
-            GetVersionFromRegistry();
+            this.Get45PlusFromRegistry();
+            this.GetVersionFromRegistry();
         }
 
         public List<string> DotNetVersions()
         {
-            return netVersions;
+            return this.netVersions;
         }
 
         private void Get45PlusFromRegistry()
@@ -384,39 +418,67 @@ namespace CM
             {
                 if (ndpKey != null && ndpKey.GetValue("Release") != null)
                 {
-                    netVersions.Add($".NET Framework Version: {CheckFor45PlusVersion((int)ndpKey.GetValue("Release"))}");
-
+                    this.netVersions.Add($".NET Framework Version: {CheckFor45PlusVersion((int)ndpKey.GetValue("Release"))}");
                 }
                 else
                 {
-                    netVersions.Add(".NET Framework Version 4.5 of nieuwer is niet gevonden.");
+                    this.netVersions.Add(".NET Framework Version 4.5 of nieuwer is niet gevonden.");
                 }
             }
-
 
             // Checking the version using >= enables forward compatibility.
             static string CheckFor45PlusVersion(int releaseKey)
             {
                 if (releaseKey >= 528040)
+                {
                     return "4.8 of nieuwer";
+                }
+
                 if (releaseKey >= 461808)
+                {
                     return "4.7.2";
+                }
+
                 if (releaseKey >= 461308)
+                {
                     return "4.7.1";
+                }
+
                 if (releaseKey >= 460798)
+                {
                     return "4.7";
+                }
+
                 if (releaseKey >= 394802)
+                {
                     return "4.6.2";
+                }
+
                 if (releaseKey >= 394254)
+                {
                     return "4.6.1";
+                }
+
                 if (releaseKey >= 393295)
+                {
                     return "4.6";
+                }
+
                 if (releaseKey >= 379893)
+                {
                     return "4.5.2";
+                }
+
                 if (releaseKey >= 378675)
+                {
                     return "4.5.1";
+                }
+
                 if (releaseKey >= 378389)
+                {
                     return "4.5";
+                }
+
                 // This code should never execute. A non-null release key should mean
                 // that 4.5 or later is installed.
                 return "Geen versie 4.5 of nieuwere versie aangetroffen.";
@@ -450,37 +512,43 @@ namespace CM
                     // Get the installation flag, or an empty string if there is none.
                     var install = versionKey.GetValue("Install", "").ToString();
                     if (string.IsNullOrEmpty(install)) // No install info; it must be in a child subkey.
-                        netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name);
+                    {
+                        this.netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name);
+                    }
                     else
                     {
-                        if (!(string.IsNullOrEmpty(sp)) && install == "1")
+                        if (!string.IsNullOrEmpty(sp) && install == "1")
                         {
-                            netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name + " " + "SP" + sp);
+                            this.netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name + " " + "SP" + sp);
                         }
                     }
+
                     if (!string.IsNullOrEmpty(name))
                     {
                         continue;
                     }
+
                     foreach (var subKeyName in versionKey.GetSubKeyNames())
                     {
                         RegistryKey subKey = versionKey.OpenSubKey(subKeyName);
-                        name = (string)subKey.GetValue("Version", "");
+                        name = (string)subKey.GetValue("Version", string.Empty);
                         if (!string.IsNullOrEmpty(name))
                             sp = subKey.GetValue(".NET Framework Version: " + "SP", "").ToString();
 
-                        install = subKey.GetValue("Install", "").ToString();
-                        if (string.IsNullOrEmpty(install)) //No install info; it must be later.
-                            netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name);
+                        install = subKey.GetValue("Install", string.Empty).ToString();
+                        if (string.IsNullOrEmpty(install)) // No install info; it must be later.
+                        {
+                            this.netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name);
+                        }
                         else
                         {
-                            if (!(string.IsNullOrEmpty(sp)) && install == "1")
+                            if (!string.IsNullOrEmpty(sp) && install == "1")
                             {
-                                netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name + " " + "SP" + sp);
+                                this.netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name + " " + "SP" + sp);
                             }
                             else if (install == "1")
                             {
-                                netVersions.Add(subKeyName + " " + name);
+                                this.netVersions.Add(subKeyName + " " + name);
                             }
                         }
                     }
@@ -494,11 +562,13 @@ namespace CM
     public class InvalidOperationException : System.Exception
     {
         public InvalidOperationException() : base() { }
+
         public InvalidOperationException(string message) : base(message) { }
+
         public InvalidOperationException(string message, System.Exception inner) : base(message, inner) { }
 
         // A constructor is needed for serialization when an
-        // exception propagates from a remoting server to the client. 
+        // exception propagates from a remoting server to the client.
         protected InvalidOperationException(System.Runtime.Serialization.SerializationInfo info,
             System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
