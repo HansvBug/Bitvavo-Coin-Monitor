@@ -53,9 +53,9 @@
             }
         }
 
-        public void CreateTheTabs(TabControl Tctrl)
+        public void CreateTheTabs(TabControl tCtrl)
         {
-            this.TabCtrl = Tctrl;
+            this.TabCtrl = tCtrl;
 
             this.CreateTabPages();
             this.PrepareTabPages();
@@ -286,11 +286,11 @@
             }
         }
 
-        private void CreateDgv24hourPercDiffCoins(int tabcount, string Dgvname)
+        private void CreateDgv24hourPercDiffCoins(int tabcount, string dgvName)
         {
             DataGridView dgv = new();
             TabPage tp = this.TabCtrl.TabPages[tabcount];
-            dgv.Name = Dgvname;;
+            dgv.Name = dgvName;
             dgv.Columns.Add("Coin", "Coin");
             dgv.Columns.Add("Percentage", "Percentage");
 
@@ -311,14 +311,13 @@
             dgv.Dock = DockStyle.Fill;
 
             this.DgvNames.Add(dgv);
-            this.PlaceControlOnGroupBox(dgv, tabcount, Dgvname);
+            this.PlaceControlOnGroupBox(dgv, tabcount, dgvName);
         }
 
         private void CreateChart(int tabcount)
         {
             // source: https://timbar.blogspot.com/2012/04/creating-chart-programmatically-in-c.html
             // source: https://hirenkhirsaria.blogspot.com/2012/06/dynamically-creating-piebar-chart-in-c.html
-
             TabPage tp = this.TabCtrl.TabPages[tabcount];
             string CoinName = tp.Name;
 
