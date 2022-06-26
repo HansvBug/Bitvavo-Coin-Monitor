@@ -78,7 +78,7 @@ namespace CM
             this.GetSettings();         // Get the settings a user saved
             this.StartLogging();        // Start the logging
             this.ApplySettings();
-            this.CheckAppDatabase();    // Check if the databse file exists and/or it is up to date with the last version.
+            this.CheckAppDatabase();    // Check if the database file exists and/or it is up to date with the last version.
             this.BackColor = SystemColors.Window;
             this.Text = AppSettingsDefault.ApplicationName;
             this.DoubleBuffered = true;
