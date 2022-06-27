@@ -11,7 +11,7 @@ namespace CM
             if (Trv != null)
             {
                 AutoCompleteStringCollection DataCollection = new();
-                AddItems(DataCollection, Trv);
+                this.AddItems(DataCollection, Trv);
 
                 return DataCollection;
             }
@@ -20,20 +20,22 @@ namespace CM
                 return null;
             }
         }
+
         private void AddItems(AutoCompleteStringCollection col, TreeView Trv)
         {
             TreeNodeCollection nodes = Trv.Nodes;
             foreach (TreeNode n in nodes)
             {
-                GetTrvNodeName(n, col);
+                this.GetTrvNodeName(n, col);
             }
         }
+
         private void GetTrvNodeName(TreeNode treeNode, AutoCompleteStringCollection col)
         {
             col.Add(treeNode.Name);
             foreach (TreeNode tn in treeNode.Nodes)
             {
-                GetTrvNodeName(tn, col);
+                this.GetTrvNodeName(tn, col);
             }
         }
 
@@ -44,13 +46,13 @@ namespace CM
         //Implement IDisposable.
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
         protected virtual void Dispose(bool disposing)
         {
-            if (!disposed)
+            if (!this.disposed)
             {
                 if (disposing)
                 {
@@ -60,7 +62,7 @@ namespace CM
                 // Free your own state (unmanaged objects).
                 // Set large fields to null.
 
-                disposed = true;
+                this.disposed = true;
             }
         }
         #endregion Dispose

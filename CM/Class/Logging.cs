@@ -1,54 +1,13 @@
-﻿using System;
-using System.IO;
-using System.Windows.Forms;
-using System.Globalization;
-using System.Reflection;
-using System.Management;
-
-namespace CM
+﻿namespace CM
 {
-    /// <summary>
-    /// Class for logging information, warnings or errors
-    /// .net version.8 
-    /// 
-    /// Version 1.0.0.0 :   05-10-2019
-    /// Version 1.0.0.1 :   22-02-2020  ;   converted to .NET Core 3.1
-    /// Version 1.0.0.2 :   28-03-2020  ;   Full path to logfile is expected (instead of just the last folder)
-    /// 
-    /// public property: NameLogFile        :   The name of the log file
-    /// public property: LogFolder          :   The path in which the file will be placed
-    /// public property: AppendLogFile      :   If yes the the file will be append, if no the logging starts new each time the application get started
-    /// public property: ActivateLogging    :   Active the logging function
-    /// 
-    /// public property: WriteToFile        :   If logging not works then WriteToFile must be set to false
-    /// 
-    /// public property: ApplicationName    : set the application name
-    /// public property: Customer                   : set the name of the client/compagny/etc
-    /// public property: ApplicationVersion      :   the version of the application
-    /// public property: ApplicationBuildDate    :   When was the application builed
-    /// 
-    /// To start in an application  :
-    /// 
-    /// private void StartLogging()
-    ///    {
-    ///        Logging.NameLogFile = "My_log_file.log";         
-    ///        Logging.AppendLogFile = true;                   
-    ///        Logging.LogFolder = "C:\Users\[user_name]\AppData\Roaming\\[programname>]\Settings\";            
-    ///        Logging.ActivateLogging = true;                 
-    ///
-    ///        Logging.ApplicationName = "My Application";      
-    ///        Logging.ApplicationVersion = "1.0.0.0";          
-    ///        Logging.ApplicationBuildDate = "05-09-2019";     
-    ///        Logging.Customer = "Client name";
-    ///        Logging.Parent = this;
-    ///        
-    ///        if (!Logging.StartLogging())
-    ///            {
-    ///                 Logging.WriteToFile = false;  //Stop the logging
-    ///            }
-    ///    }
-    /// </summary>
-    /// 
+    using System;
+    using System.IO;
+    using System.Windows.Forms;
+    using System.Globalization;
+    using System.Reflection;
+    using System.Management;
+
+
     public static class Logging
     {
         #region Properties
@@ -257,6 +216,7 @@ namespace CM
                 WriteToLog("INFORMATIE", logMessage);
             }
         }
+
         public static void WriteToLogError(string logMessage)
         {
             if (ActivateLogging)
@@ -264,6 +224,7 @@ namespace CM
                 WriteToLog("FOUT", logMessage);
             }
         }
+
         public static void WriteToLogWarning(string logMessage)
         {
             if (ActivateLogging)
@@ -271,6 +232,7 @@ namespace CM
                 WriteToLog("WAARSCHUWING", logMessage);
             }
         }
+
         public static void WriteToLogDebug(string logMessage)  //Nog niet in gebruik
         {
             if (ActivateLogging)
@@ -289,10 +251,10 @@ namespace CM
                 {
                     SetDefaultSettings();
                     GetAppEnvironmentSettings();
-                    CheckSettingsFolder();  //Is there a folder for the log file 
+                    CheckSettingsFolder();  // Is there a folder for the log file 
 
-                    DoesLogFileExists();    //If there is no log file then it will be created
-                    ClearLogfile();  //If AppendLogFile = no then clear the (current) log file                   
+                    DoesLogFileExists();    // If there is no log file then it will be created
+                    ClearLogfile();         // If AppendLogFile = no then clear the (current) log file
 
                     if (string.IsNullOrEmpty(UserName) || string.IsNullOrWhiteSpace(UserName))
                     {
@@ -304,6 +266,7 @@ namespace CM
                         using StreamWriter w = File.AppendText(LogFolder + UserName + "_" + NameLogFile);
                         LogStart(w);
                     }
+
                     if (!AbortLogging)
                     {
                         return true;
@@ -323,6 +286,7 @@ namespace CM
                 return false;
             }
         }
+
         public static void StopLogging()
         {
             if (ActivateLogging)
@@ -339,7 +303,8 @@ namespace CM
                 }
             }
         }
-        private static void WriteToLog(string ErrorType, string logMessage)
+
+        private static void WriteToLog(string errorType, string logMessage)
         {
             if (WriteToFile)
             {
@@ -354,27 +319,30 @@ namespace CM
                 }
 
                 using StreamWriter w = File.AppendText(LogFile);
-                if (!CheckBestandsgrootte()) //if the logfile gets to big then a new log fil will be made
+
+                // If the logfile gets to big then a new log fil will be made
+                if (!CheckBestandsgrootte())
                 {
-                    LogRegulier(ErrorType, logMessage, w);
+                    LogRegulier(errorType, logMessage, w);
                 }
                 else
                 {
-                    LogRegulier("INFORMATIE", "", w);
+                    LogRegulier("INFORMATIE", string.Empty, w);
                     LogRegulier("INFORMATIE", "Logbestand wordt groter dan 10 Mb.", w);
                     LogRegulier("INFORMATIE", "Een nieuw log bestand wordt aangemaakt.", w);
-                    LogRegulier("INFORMATIE", "", w);
+                    LogRegulier("INFORMATIE", string.Empty, w);
                     LogStop(w);
 
-                    CopyLogFile();    //make a copy off the logfile
-                    EmptyLogFile();         //Clear the current logfile
+                    CopyLogFile();    // Make a copy off the logfile
+                    EmptyLogFile();   // Clear the current logfile
                 }
             }
             else
             {
-                //hier kan een eventlog worden gezet.
+                // hier kan een eventlog worden gezet.
             }
         }
+
         private static bool CheckBestandsgrootte()
         {
             try
@@ -389,26 +357,31 @@ namespace CM
                     lengthFile = new FileInfo(LogFolder + UserName + "_" + NameLogFile).Length;
                 }
 
-                if (lengthFile > (10 * 1024 * 1024))  //(10mB)  //TODO add tot the configfform
+                // (10mB)  //TODO add tot the configfform
+                if (lengthFile > (10 * 1024 * 1024))
                 {
                     return true;
                 }
+
                 return false;
             }
             catch (Exception ex)
             {
                 AbortLogging = true;
 
-                MessageBox.Show("Bepalen grootte log bestand is mislukt." + Environment.NewLine +
-                               "" + Environment.NewLine +
-                               "Fout" + ex.Message + Environment.NewLine +
-                               "Logging wordt uitgeschakelt.",
-                               "Informatie.", 
-                               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(
+                    "Bepalen grootte log bestand is mislukt." + Environment.NewLine +
+                    Environment.NewLine +
+                    "Fout" + ex.Message + Environment.NewLine +
+                    "Logging wordt uitgeschakelt.",
+                    "Informatie.", 
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
 
                 throw;
             }
         }
+
         private static void CopyLogFile()
         {
             string currentDateTime = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss", CultureInfo.InvariantCulture);
@@ -427,16 +400,18 @@ namespace CM
                 File.Copy(LogFolder + UserName + "_" + NameLogFile, newFile);
             }
         }
+
         private static void EmptyLogFile()
         {
-            //Check if the log file does exists.
+            // Check if the log file does exists.
             if (File.Exists(LogFolder + UserName + "_" + NameLogFile))
             {
-                File.Delete(LogFolder + UserName + "_" + NameLogFile); //remove the file (and create an empty new file)
+                File.Delete(LogFolder + UserName + "_" + NameLogFile); // Remove the file (and create an empty new file)
 
                 StartLogging();
             }
         }
+
         private static void LogStart(TextWriter w)
         {
             try
@@ -461,64 +436,75 @@ namespace CM
                 }
 
                 w.WriteLine("===================================================================================================");
-                w.WriteLine("");
+                w.WriteLine(string.Empty);
 
 
-                //regel in Gebeurtenissen logboek wegschrijven
-                //AddMessageToEventLog("De Applicatie is succesvol gestart", "INFORMATIE", 1000);
+                // regel in Gebeurtenissen logboek wegschrijven
+                // AddMessageToEventLog("De Applicatie is succesvol gestart", "INFORMATIE", 1000);
             }
             catch (IOException ioex)
             {
                 AbortLogging = true;
-                MessageBox.Show("Het starten van de logging is niet mogelijk." + Environment.NewLine + Environment.NewLine +
-                                "Fout : " + ioex.Message,
-                                "Fout.",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "Het starten van de logging is niet mogelijk." + Environment.NewLine + Environment.NewLine +
+                    "Fout : " + ioex.Message,
+                    "Fout.",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
 
                 WriteToFile = false; // stop the logging when start logging failed
-                //string foutmelding = e.ToString();
-                //TODO melden in event logbook
+
+                // string foutmelding = e.ToString();
+                // TODO melden in event logbook
             }
             catch (Exception ex)
             {
                 AbortLogging = true;
-                MessageBox.Show("Het starten van de logging is niet mogelijk." + Environment.NewLine + Environment.NewLine +
-                                "Fout : " + ex.Message,
-                                "Fout.",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "Het starten van de logging is niet mogelijk." + Environment.NewLine + Environment.NewLine +
+                    "Fout : " + ex.Message,
+                    "Fout.",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
 
                 WriteToFile = false; // stop the logging when start logging failed
                 throw;
             }
         }
-        private static void LogRegulier(string ErrorType, string logMessage, TextWriter w)
+
+        private static void LogRegulier(string errorType, string logMessage, TextWriter w)
         {
             try
             {
-                switch (ErrorType)
+                switch (errorType)
                 {
                     case "INFORMATIE":
                         {
                             w.WriteLine(DateTime.Now + " | INFORMATIE   | " + logMessage);
                             break;
                         }
+
                     case "WAARSCHUWING":
                         {
                             w.WriteLine(DateTime.Now + " | WAARSCHUWING | " + logMessage);
                             break;
                         }
+
                     case "FOUT":
                         {
                             w.WriteLine(DateTime.Now + " | FOUT         | " + logMessage);
-                            //TODO: hier moet de eventlogging komen
-                            //AddMessageToEventLog("De Applicatie is succesvol gestart", "INFORMATIE", 1000);
+
+                            // TODO: hier moet de eventlogging komen
+                            // AddMessageToEventLog("De Applicatie is succesvol gestart", "INFORMATIE", 1000);
                             break;
                         }
+
                     case "DEBUG":
                         {
                             w.WriteLine(DateTime.Now + " | DEBUG        | " + logMessage);
                             break;
                         }
+
                     default:
                         {
                             w.WriteLine(DateTime.Now + " | ONBEKEND     | " + logMessage);
@@ -540,12 +526,14 @@ namespace CM
                 throw new InvalidOperationException("Onverwachte fout opgetreden bij het aanmaken van de log regel.");
             }
         }
+
         private static void StoppenLogging()
         {
             if (LoggingEfforts == 5)
             {
                 WriteToFile = false; // stop the writting to the logfile
-                //AddMessageToEventLog("De logging van '" + Form_Main.Applicatienaam + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.", "INFORMATIE", 1000);
+                
+                // AddMessageToEventLog("De logging van '" + Form_Main.Applicatienaam + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.", "INFORMATIE", 1000);
                 WriteToLogError("De logging van '" + ApplicationName + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.");
 
                 MessageBox.Show("Schrijven naar het logbestand is mislukt." + Environment.NewLine +
@@ -555,6 +543,7 @@ namespace CM
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
         private static void LogStop(TextWriter w)
         {
             string CloseLogString;
@@ -659,7 +648,7 @@ namespace CM
             #region Constructor
             public AppEnvironment()
             {
-                SetProperties();
+                this.SetProperties();
             }
             #endregion Constructor
 
@@ -672,14 +661,15 @@ namespace CM
                 this.ProcessorCount = GetProcessorCount();
                 this.TotalRam = GetTotalRam();
             }
-            private static string Get_Applicatiepad()  //get the application path
+
+            private static string Get_Applicatiepad() // Get the application path
             {
                 try
                 {
                     string appPath;
                     appPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
-                    appPath += "\\";                                        // add \to the path
-                    return appPath.Replace("file:\\", "");  //remove the text "file:\\" from the path
+                    appPath += "\\";                                  // Add \to the path
+                    return appPath.Replace("file:\\", string.Empty);  // Remove the text "file:\\" from the path
                 }
                 catch (ArgumentException aex)
                 {
@@ -690,6 +680,7 @@ namespace CM
                     throw new InvalidOperationException("Ophalen locatie applicatie is mislukt.");
                 }
             }
+
             private static string GetUserName()
             {
                 try
@@ -712,11 +703,12 @@ namespace CM
                     throw new InvalidOperationException("Ophalen naam machine is mislukt.");
                 }
             }
+
             private static string GetWindowsVersion(short type)
             {
                 try
                 {
-                    string osVersion = "";
+                    string osVersion = string.Empty;
 
                     switch (type)
                     {
@@ -725,17 +717,20 @@ namespace CM
                                 osVersion = Environment.OSVersion.ToString();
                                 break;
                             }
+
                         case 2:
                             {
                                 osVersion = Convert.ToString(Environment.OSVersion.Version, CultureInfo.InvariantCulture);
                                 break;
                             }
+
                         default:
                             {
                                 osVersion = Convert.ToString(Environment.OSVersion.Version, CultureInfo.InvariantCulture);
                                 break;
                             }
                     }
+
                     return osVersion;
                 }
                 catch (ArgumentException)
@@ -747,6 +742,7 @@ namespace CM
                     throw new InvalidOperationException("Onverwachte fout opgetreden bij het bepalen van de Windowsversie.");
                 }
             }  //Test de verschillen !!!!
+
             private static string GetProcessorCount()
             {
                 try
@@ -758,6 +754,7 @@ namespace CM
                     throw new InvalidOperationException("Ophalen aantal processors is mislukt.");
                 }
             }
+
             private static string GetTotalRam()
             {
                 try
@@ -770,23 +767,24 @@ namespace CM
                     ManagementObjectCollection results = searcher.Get();
 
                     string TotalVisibleMemorySize = "Geen Totaal telling Ram gevonden.";
-                    //string FreePhysicalMemory;
-                    //string TotalVirtualMemorySize;
-                    //string FreeVirtualMemory;
 
+                    // string FreePhysicalMemory;
+                    // string TotalVirtualMemorySize;
+                    // string FreeVirtualMemory;
                     foreach (ManagementObject result in results)
                     {
                         TotalVisibleMemorySize = Convert.ToString(Math.Round(Convert.ToDouble(result["TotalVisibleMemorySize"], CultureInfo.InvariantCulture) / 1000000, 2), CultureInfo.InvariantCulture) + " GB";
-                        //FreePhysicalMemory = result["FreePhysicalMemory"].ToString();
-                        //TotalVirtualMemorySize = result["TotalVirtualMemorySize"].ToString();
-                        //FreeVirtualMemory = result["FreeVirtualMemory"].ToString();
+
+                        // FreePhysicalMemory = result["FreePhysicalMemory"].ToString();
+                        // TotalVirtualMemorySize = result["TotalVirtualMemorySize"].ToString();
+                        // FreeVirtualMemory = result["FreeVirtualMemory"].ToString();
                     }
 
                     return TotalVisibleMemorySize;
                 }
                 catch (Exception)
                 {
-                    //throw new InvalidOperationException(ResourceEx.Get_TotalRam);
+                    // throw new InvalidOperationException(ResourceEx.Get_TotalRam);
                     return "Geen Totaal telling Ram gevonden.";
                 }
 
@@ -811,20 +809,20 @@ namespace CM
                 }*/
             }
 
-            #region IDisposable            
+            #region IDisposable
 
             private bool disposed = false;
 
             //Implement IDisposable.
             public void Dispose()
             {
-                Dispose(true);
+                this.Dispose(true);
                 GC.SuppressFinalize(this);
             }
 
             protected virtual void Dispose(bool disposing)
             {
-                if (!disposed)
+                if (!this.disposed)
                 {
                     if (disposing)
                     {
@@ -836,9 +834,10 @@ namespace CM
                         this.ProcessorCount = string.Empty;
                         this.TotalRam = string.Empty;
                     }
+
                     // Free your own state (unmanaged objects).
                     // Set large fields to null.
-                    disposed = true;
+                    this.disposed = true;
                 }
             }
             #endregion IDisposable

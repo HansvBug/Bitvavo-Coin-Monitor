@@ -1,64 +1,77 @@
-﻿using System;
-using System.IO;
-using System.Windows.Forms;
-using System.Globalization;
-using System.Data.SQLite;
-using Microsoft.Win32.SafeHandles;
-using System.Runtime.InteropServices;
-using System.Collections.Generic;
-using System.Data;
-
-namespace CM
+﻿namespace CM
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Globalization;
+    using System.IO;
+    using System.Runtime.InteropServices;
+    using System.Windows.Forms;
+    using CM.Class;
+    using Microsoft.Win32.SafeHandles;
+
+    /// <summary>
+    /// Create and maint the application database.
+    /// </summary>
     public class ApplicationDatabase : SQliteDatabaseConnection, IDisposable
     {
-        #region Properties
-        public bool DebugMode { get; set; }
+        #region fields
+        private readonly int latestDbVersion;
 
-        private bool Error { get; set; }
-        private readonly int LatestDbVersion;
+        #endregion fields
 
-        private string DbFileName { get; set; }
-
-        #endregion Properties
-
-        #region Query strings
-        private readonly string CreMetaTbl = "CREATE TABLE IF NOT EXISTS " + TableName.SETTINGS_META + "(" +
+        #region Query strings (fields)
+        private readonly string creMetaTbl = "CREATE TABLE IF NOT EXISTS " + TableName.SETTINGS_META + "(" +
                                 "KEY                VARCHAR(50)  UNIQUE  ," +
                                 "VALUE              VARCHAR(255))";
 
-        private readonly string CreCoinNames = "CREATE TABLE IF NOT EXISTS " + TableName.COIN_NAMES + "(" +
+        private readonly string creCoinNames = "CREATE TABLE IF NOT EXISTS " + TableName.COIN_NAMES + "(" +
                                 "ID                  INTEGER         NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
                                 "GUID                VARCHAR(50)  UNIQUE                                      ," +
                                 "NAME                VARCHAR(25)                                              ," +
-                                "DEFAULT_NAME        BOOL                                                     ," + 
+                                "DEFAULT_NAME        BOOL                                                     ," +
                                 "DATE_CREATED        DATE                                                     ," +
                                 "DATE_ALTERED        DATE                                                     ," +
                                 "CREATED_BY          VARCHAR(100)                                             ," +
                                 "ALTERED_BY          VARCHAR(100))";
 
+        #endregion Query strings (fields)
 
-        #endregion Query strings
+        #region Properties
+
+        private bool Error { get; set; }
+
+        private string DbFileName { get; set; }
+
+        #endregion Properties
 
         #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ApplicationDatabase"/> class.
+        /// </summary>
         public ApplicationDatabase()
         {
-            Error = false;
-            LatestDbVersion = AppSettingsDefault.UpdateVersion;
-            DbFileName = AppSettingsDefault.SqlLiteDatabaseName;
+            this.Error = false;
+            this.latestDbVersion = AppSettingsDefault.UpdateVersion;
+            this.DbFileName = AppSettingsDefault.SqlLiteDatabaseName;
         }
         #endregion Constructor
 
-
         #region Create SQLite Database file
 
+        /// <summary>
+        /// Create a new database file and the tables.
+        /// </summary>
+        /// <returns>True if succeeded.</returns>
         public bool CreateNewDatabase()
         {
-            CreateDbFile();
-            if (!Error)
+            this.CreateDbFile();
+            if (!this.Error)
             {
-                CreateTable(CreMetaTbl, TableName.SETTINGS_META, "0");
-                InsertMeta("0");
+                this.CreateTable(this.creMetaTbl, TableName.SETTINGS_META, "0");
+                this.InsertMeta("0");
                 return true;
             }
             else
@@ -66,16 +79,18 @@ namespace CM
                 return false;
             }
         }
+
         private void CreateDbFile()
         {
-            if (!string.IsNullOrEmpty(DatabaseFileName))
+            if (!string.IsNullOrEmpty(this.DatabaseFileName))
             {
                 try
                 {
-                    if (!File.Exists(DatabaseFileName))  //Only with a first install. (unless a user removed the database file)
+                    // Only with a first install. (Unless a user removed the database file).
+                    if (!File.Exists(this.DatabaseFileName))
                     {
-                        SQLiteConnection.CreateFile(DatabaseFileName);  //the ceation of the new empty database file
-                        Logging.WriteToLogInformation("De database '" + DatabaseFileName + "' is aangemaakt.");
+                        SQLiteConnection.CreateFile(this.DatabaseFileName);  // The ceation of the new empty database file
+                        Logging.WriteToLogInformation("De database '" + this.DatabaseFileName + "' is aangemaakt.");
                     }
                     else
                     {
@@ -84,110 +99,139 @@ namespace CM
                 }
                 catch (IOException ex)
                 {
-                    Error = true;
-                    Logging.WriteToLogError("De database '" + DbFileName + "' is niet aangemaakt.");
+                    this.Error = true;
+                    Logging.WriteToLogError("De database '" + this.DbFileName + "' is niet aangemaakt.");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
+
                     Cursor.Current = Cursors.Default;
-                    MessageBox.Show("Aanmaken leeg database bestand is mislukt."
-                                    , "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "Aanmaken leeg database bestand is mislukt.",
+                        "Fout",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {
-                    Error = true;
-                    Logging.WriteToLogError("De database '" + DbFileName + "' is niet aangemaakt.");
+                    this.Error = true;
+                    Logging.WriteToLogError("De database '" + this.DbFileName + "' is niet aangemaakt.");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
+
                     Cursor.Current = Cursors.Default;
-                    MessageBox.Show("Aanmaken leeg database bestand is mislukt."
-                                    , "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "Aanmaken leeg database bestand is mislukt.",
+                        "Fout",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
             else
             {
                 Logging.WriteToLogError("De SQlite database is niet aangemaakt omdat er geen locatie of database naam is opgegeven.");
                 Cursor.Current = Cursors.Default;
-                MessageBox.Show("De Applicatie database is niet aangemaakt omdat er geen locatie en of database naam is opgegeven."
-                                , "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "De Applicatie database is niet aangemaakt omdat er geen locatie en of database naam is opgegeven.",
+                    "Fout",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
-
         }
-        private void InsertMeta(string Version)
-        {
-            if (!Error)
-            {
-                dbConnection.Open();
-                string insertSQL = "INSERT INTO SETTINGS_META VALUES('VERSION', @VERSION)";
 
-                SQLiteCommand command = new(insertSQL, dbConnection);
+        private void InsertMeta(string version)
+        {
+            if (!this.Error)
+            {
+                this.dbConnection.Open();
+                string insertSQL = string.Format("INSERT INTO {0} VALUES('VERSION', @VERSION)", TableName.SETTINGS_META);
+
+                SQLiteCommand command = new (insertSQL, this.dbConnection);
                 try
                 {
-                    command.Parameters.Add(new SQLiteParameter("@VERSION", Version));
+                    command.Parameters.Add(new SQLiteParameter("@VERSION", version));
 
                     command.ExecuteNonQuery();
-                    Logging.WriteToLogInformation("De tabel SETTINGS_META is gewijzigd. (Versie " + Version + ").");
+                    Logging.WriteToLogInformation(string.Format("De tabel {0} is gewijzigd. (Versie ", TableName.SETTINGS_META) + version + ").");
                 }
                 catch (SQLiteException ex)
                 {
-                    Logging.WriteToLogError("Het invoeren van het database versienummer in de tabel SETTINGS_META is misukt. (Versie " + Convert.ToString(LatestDbVersion, CultureInfo.InvariantCulture) + ").");
+                    Logging.WriteToLogError(string.Format("Het invoeren van het database versienummer in de tabel {0} is misukt. (Versie ", TableName.SETTINGS_META) + Convert.ToString(this.latestDbVersion, CultureInfo.InvariantCulture) + ").");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
+
                     this.Error = true;
                 }
                 finally
                 {
                     command.Dispose();
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                 }
             }
             else
             {
-                Logging.WriteToLogError("Het invoeren van het database versienummer in de tabel SETTINGS_META is mislukt.");
+                Logging.WriteToLogError(string.Format("Het invoeren van het database versienummer in de tabel {0} is mislukt.", TableName.SETTINGS_META));
             }
         }
         #endregion Create SQLite Database file
 
         #region create all the tables
-        private void CreateTable(string SqlCreateString, string TableName, string Version)
+        private void CreateTable(string sqlCreate, string tableName, string version)
         {
-            if (!Error)
+            if (!this.Error)
             {
-                dbConnection.Open();
+                this.dbConnection.Open();
 
-                SQLiteCommand command = new(SqlCreateString, dbConnection);
+                SQLiteCommand command = new (sqlCreate, this.dbConnection);
                 try
                 {
                     command.ExecuteNonQuery();
-                    Logging.WriteToLogInformation(string.Format("De tabel {0} is aangemaakt. (Versie {1}).", TableName, Version));
+                    Logging.WriteToLogInformation(string.Format("De tabel {0} is aangemaakt. (Versie {1}).", tableName, version));
                 }
                 catch (SQLiteException ex)
                 {
-                    Logging.WriteToLogError(string.Format("Aanmaken van de tabel {0} is misukt. (Versie {1}).", TableName, Version));
+                    Logging.WriteToLogError(string.Format("Aanmaken van de tabel {0} is misukt. (Versie {1}).", tableName, version));
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
+
                     this.Error = true;
                 }
                 finally
                 {
                     command.Dispose();
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                 }
             }
             else
             {
-                Logging.WriteToLogError(string.Format("Het aanmaken van de tabel {0} is niet uitgevoerd.", TableName));
+                Logging.WriteToLogError(string.Format("Het aanmaken van de tabel {0} is niet uitgevoerd.", tableName));
             }
         }
 
-        public void CreateCoinTable(string TableName)
+        /// <summary>
+        /// Create the table which holds the coin data.
+        /// </summary>
+        /// <param name="tableName">The name of the coin is the table name.</param>
+        public void CreateCoinTable(string tableName)
         {
-            if (!Error)
+            if (!this.Error)
             {
-                string SqlCreateString = "CREATE TABLE IF NOT EXISTS EC_" + TableName.Replace("-","_") + "(" +
+                string sqlCreate = "CREATE TABLE IF NOT EXISTS EC_" + tableName.Replace("-", "_") + "(" +
                                 "ID                         INTEGER         NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
                                 "GUID                       VARCHAR(50)  UNIQUE                                      ," +
                                 "NAME                       VARCHAR(25)                                              ," +
@@ -209,157 +253,179 @@ namespace CM
                                 "CREATED_BY          VARCHAR(100)                                             ," +
                                 "ALTERED_BY          VARCHAR(100))";
 
-                dbConnection.Open();
+                this.dbConnection.Open();
 
-                SQLiteCommand command = new(SqlCreateString, dbConnection);
+                SQLiteCommand command = new (sqlCreate, this.dbConnection);
                 try
                 {
                     command.ExecuteNonQuery();
-                    Logging.WriteToLogInformation(string.Format("De tabel {0} is aangemaakt.", TableName));
+                    Logging.WriteToLogInformation(string.Format("De tabel {0} is aangemaakt.", tableName));
                 }
                 catch (SQLiteException ex)
                 {
-                    Logging.WriteToLogError(string.Format("Aanmaken van de tabel {0} is misukt", TableName));
+                    Logging.WriteToLogError(string.Format("Aanmaken van de tabel {0} is misukt", tableName));
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
+
                     this.Error = true;
                 }
                 finally
                 {
                     command.Dispose();
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                 }
             }
             else
             {
-                Logging.WriteToLogError(string.Format("Het aanmaken van de tabel {0} is niet uitgevoerd.", TableName));
+                Logging.WriteToLogError(string.Format("Het aanmaken van de tabel {0} is niet uitgevoerd.", tableName));
             }
         }
 
+        /// <summary>
+        /// Update the application database when the version is updated to a higher version number.
+        /// </summary>
+        /// <returns>True if update has succeeded.</returns>
         public bool UpdateDatabase()
         {
-            bool Succes = false;
-            string Version;
-            if (LatestDbVersion >= 1 && SelectMeta() == 0)
+            bool succes = false;
+            string version;
+            if (this.latestDbVersion >= 1 && this.SelectMeta() == 0)
             {
-                Version = "1";
-                CreateTable(CreCoinNames, TableName.COIN_NAMES, Version);
-                
-
-                UpdateMeta(Version);  //Set the version 1
+                version = "1";
+                this.CreateTable(this.creCoinNames, TableName.COIN_NAMES, version);
+                this.UpdateMeta(version);  // Set the version 1
             }
 
-
-
-            if (!Error)
+            if (!this.Error)
             {
-                Succes = true;
+                succes = true;
             }
-            return Succes;
+
+            return succes;
         }
 
-
-        private void UpdateMeta(string Version)
+        private void UpdateMeta(string version)
         {
-            dbConnection.Open();
+            this.dbConnection.Open();
 
-            using var tr = dbConnection.BeginTransaction();
-            string insertSQL = "UPDATE " + TableName.SETTINGS_META + " SET VALUE  = @VERSION WHERE KEY = @KEY";
+            using var tr = this.dbConnection.BeginTransaction();
+            string insertSQL = string.Format("UPDATE {0} SET VALUE  = @VERSION WHERE KEY = @KEY", TableName.SETTINGS_META);
 
-            SQLiteCommand command = new(insertSQL, dbConnection);
+            SQLiteCommand command = new (insertSQL, this.dbConnection);
             try
             {
-                command.Parameters.Add(new SQLiteParameter("@VERSION", Version));
+                command.Parameters.Add(new SQLiteParameter("@VERSION", version));
                 command.Parameters.Add(new SQLiteParameter("@KEY", "VERSION"));
 
                 command.ExecuteNonQuery();
-                Logging.WriteToLogInformation("De tabel " + TableName.SETTINGS_META + " is gewijzigd. (Versie " + Version + ").");
+                Logging.WriteToLogInformation("De tabel " + TableName.SETTINGS_META + " is gewijzigd. (Versie " + version + ").");
                 command.Dispose();
                 tr.Commit();
             }
             catch (SQLiteException ex)
             {
-                Logging.WriteToLogError("Wijzigen tabel " + TableName.SETTINGS_META + " versie is misukt. (Versie " + Version + ").");
+                Logging.WriteToLogError("Wijzigen tabel " + TableName.SETTINGS_META + " versie is misukt. (Versie " + version + ").");
                 Logging.WriteToLogError("Melding :");
                 Logging.WriteToLogError(ex.Message);
-                if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                if (CmDebugMode.DebugMode)
+                {
+                    Logging.WriteToLogDebug(ex.ToString());
+                }
+
                 command.Dispose();
                 tr.Rollback();
             }
             finally
             {
-                dbConnection.Close();
+                this.dbConnection.Close();
             }
         }
-        public int SelectMeta()  //made public so you can check the version on every application start
+
+        /// <summary>
+        /// Check the application database version.
+        /// </summary>
+        /// <returns>the application database version.</returns>
+        public int SelectMeta()
         {
-            int SQLLiteMetaVersion = 0;
+            int sqlLiteMetaVersion = 0;
 
-            string SQL = "SELECT VALUE FROM " + TableName.SETTINGS_META + " WHERE KEY = 'VERSION'";
+            string sqlSelect = "SELECT VALUE FROM " + TableName.SETTINGS_META + " WHERE KEY = 'VERSION'";
 
-            dbConnection.Open();
+            this.dbConnection.Open();
             Logging.WriteToLogInformation("Controle op versie van de query database.");
 
-            SQLiteCommand command = new(SQL, dbConnection);
+            SQLiteCommand command = new (sqlSelect, this.dbConnection);
             try
             {
                 SQLiteDataReader dr = command.ExecuteReader();
                 dr.Read();
                 if (dr.HasRows)
                 {
-                    SQLLiteMetaVersion = Int32.Parse(dr[0].ToString(), CultureInfo.InvariantCulture);
+                    sqlLiteMetaVersion = int.Parse(dr[0].ToString(), CultureInfo.InvariantCulture);
                 }
+
                 dr.Close();
             }
             catch (SQLiteException ex)
             {
-                Logging.WriteToLogError("Opvragen meta versie is misukt. (Versie " + Convert.ToString(LatestDbVersion, CultureInfo.InvariantCulture) + ").");
+                Logging.WriteToLogError("Opvragen meta versie is misukt. (Versie " + Convert.ToString(this.latestDbVersion, CultureInfo.InvariantCulture) + ").");
                 Logging.WriteToLogError("Melding :");
                 Logging.WriteToLogError(ex.Message);
-                if (DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                if (CmDebugMode.DebugMode)
+                {
+                    Logging.WriteToLogDebug(ex.ToString());
+                }
 
-                Error = true;
-                SQLLiteMetaVersion = 9999;
+                this.Error = true;
+                sqlLiteMetaVersion = 9999;
             }
             finally
             {
                 command.Dispose();
-                dbConnection.Close();
+                this.dbConnection.Close();
             }
-            return SQLLiteMetaVersion;
+
+            return sqlLiteMetaVersion;
         }
         #endregion create all the tables
 
         #region Insert
-        public void SaveCoinNames(List<string> CoinNames)
+
+        /// <summary>
+        /// Save the selected coin names in the table COIN_NAMES.
+        /// </summary>
+        /// <param name="coinNames">A list with the coin names.</param>
+        public void SaveCoinNames(List<string> coinNames)
         {
-            DeleteCoinNames();  //First delete the existing coin names.
+            this.DeleteCoinNames();  // First delete the existing coin names.
 
-            dbConnection.Open();
+            this.dbConnection.Open();
 
-            using (var tr = dbConnection.BeginTransaction())
+            using (var tr = this.dbConnection.BeginTransaction())
             {
                 try
                 {
-                    foreach (string CoinName in CoinNames)
+                    foreach (string coinName in coinNames)
                     {
+                        string insertSql = string.Format("insert into {0}(GUID, NAME, DATE_CREATED, CREATED_BY) ", TableName.COIN_NAMES);
+                        insertSql += "values(@GUID, @NAME, @DATE_CREATED, @CREATED_BY)";
 
-                        string InsertSql = string.Format("insert into {0}(GUID, NAME, DATE_CREATED, CREATED_BY) ", TableName.COIN_NAMES);
-                        InsertSql += "values(@GUID, @NAME, @DATE_CREATED, @CREATED_BY)";
-
-                        SQLiteCommand command = new(InsertSql, dbConnection);
+                        SQLiteCommand command = new (insertSql, this.dbConnection);
 
                         command.Prepare();
                         command.Parameters.Add(new SQLiteParameter("@GUID", Guid.NewGuid().ToString()));
-                        command.Parameters.Add(new SQLiteParameter("NAME", CoinName));
-                        //command.Parameters.Add(new SQLiteParameter("QUERY_ID", Id));
+                        command.Parameters.Add(new SQLiteParameter("NAME", coinName));
                         command.Parameters.Add(new SQLiteParameter("@DATE_CREATED", DateTime.Now));
-                        command.Parameters.Add(new SQLiteParameter("@CREATED_BY", ""));  //Later when orders etc are added. Then some restrictions are needed
+                        command.Parameters.Add(new SQLiteParameter("@CREATED_BY", string.Empty));  // Later when orders etc are added. Then some restrictions are needed
 
                         command.ExecuteNonQuery();
-                        command.Dispose();                        
+                        command.Dispose();
                     }
+
                     tr.Commit();
                 }
                 catch (SQLiteException ex)
@@ -368,61 +434,71 @@ namespace CM
                     Logging.WriteToLogError("Het invoeren van de Coin namen is mislukt.");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
                 }
                 finally
                 {
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                 }
             }
         }
+
         private void DeleteCoinNames()
         {
-            dbConnection.Open();
+            this.dbConnection.Open();
 
-            using (var tr = dbConnection.BeginTransaction())
+            using var tr = this.dbConnection.BeginTransaction();
+            try
             {
-                try
-                {
-                    string DeleteSql = string.Format("delete from {0}", TableName.COIN_NAMES);
+                string deleteSql = string.Format("delete from {0}", TableName.COIN_NAMES);
 
-                    SQLiteCommand command = new(DeleteSql, dbConnection);
+                SQLiteCommand command = new (deleteSql, this.dbConnection);
 
-                    command.ExecuteNonQuery();
-                    command.Dispose();
-                    tr.Commit();
-                }
-                catch (SQLiteException ex)
+                command.ExecuteNonQuery();
+                command.Dispose();
+                tr.Commit();
+            }
+            catch (SQLiteException ex)
+            {
+                Logging.WriteToLogError("Het verwijderen van de Coin namen is mislukt.");
+                Logging.WriteToLogError("Melding :");
+                Logging.WriteToLogError(ex.Message);
+                if (CmDebugMode.DebugMode)
                 {
-                    Logging.WriteToLogError("Het verwijderen van de Coin namen is mislukt.");
-                    Logging.WriteToLogError("Melding :");
-                    Logging.WriteToLogError(ex.Message);
-                    if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
-                    tr.Rollback();
+                    Logging.WriteToLogDebug(ex.ToString());
                 }
-                finally
-                {
-                    dbConnection.Close();
-                }
+
+                tr.Rollback();
+            }
+            finally
+            {
+                this.dbConnection.Close();
             }
         }
 
-        public void SaveCoinData(CoinDataAll AllCoinData)
+        /// <summary>
+        /// Save the data of the coins.
+        /// </summary>
+        /// <param name="allCoinData">object with all the coin data.</param>
+        public void SaveCoinData(CoinDataAll allCoinData)
         {
-            dbConnection.Open();
+            this.dbConnection.Open();
 
-            using (var tr = dbConnection.BeginTransaction())
+            using (var tr = this.dbConnection.BeginTransaction())
             {
                 try
                 {
-                    foreach (CoinData aCoin in AllCoinData.Items)
+                    foreach (CoinData aCoin in allCoinData.Items)
                     {
-                        string InsertSql = "insert into EC_" + aCoin.Name.Replace("-", "_") + "(GUID, NAME, CURRENT_PRICE, PREVIOUS_PRICE, DIFFERENCE_PRICE, DIFFERENCE_PERCENTAGE, ";
-                        InsertSql += "DIFFERENCE, SESSION_OPENPRICE, SESSION_HIGH, SESSION_LOW, OPEN, LOW, HIGH, VOLUME, DATE_CREATED) ";
-                        InsertSql += "values(@GUID, @NAME, @CURRENT_PRICE, @PREVIOUS_PRICE, @DIFFERENCE_PRICE, @DIFFERENCE_PERCENTAGE, ";
-                        InsertSql += "@DIFFERENCE, @SESSION_OPENPRICE, @SESSION_HIGH, @SESSION_LOW, @OPEN, @LOW, @HIGH, @VOLUME, @DATE_CREATED)";
+                        string insertSql = "insert into EC_" + aCoin.Name.Replace("-", "_") + "(GUID, NAME, CURRENT_PRICE, PREVIOUS_PRICE, DIFFERENCE_PRICE, DIFFERENCE_PERCENTAGE, ";
+                        insertSql += "DIFFERENCE, SESSION_OPENPRICE, SESSION_HIGH, SESSION_LOW, OPEN, LOW, HIGH, VOLUME, DATE_CREATED) ";
+                        insertSql += "values(@GUID, @NAME, @CURRENT_PRICE, @PREVIOUS_PRICE, @DIFFERENCE_PRICE, @DIFFERENCE_PERCENTAGE, ";
+                        insertSql += "@DIFFERENCE, @SESSION_OPENPRICE, @SESSION_HIGH, @SESSION_LOW, @OPEN, @LOW, @HIGH, @VOLUME, @DATE_CREATED)";
 
-                        SQLiteCommand command = new(InsertSql, dbConnection);
+                        SQLiteCommand command = new (insertSql, this.dbConnection);
 
                         command.Prepare();
                         command.Parameters.Add(new SQLiteParameter("@GUID", Guid.NewGuid().ToString()));
@@ -443,8 +519,9 @@ namespace CM
                         command.Parameters.Add(new SQLiteParameter("@DATE_CREATED", DateTime.Now));
 
                         command.ExecuteNonQuery();
-                        command.Dispose();                        
+                        command.Dispose();
                     }
+
                     tr.Commit();
                 }
                 catch (SQLiteException ex)
@@ -454,31 +531,39 @@ namespace CM
                     Logging.WriteToLogError("Het invoeren van de Coin data is mislukt.");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
                 }
                 finally
                 {
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                 }
-            } 
+            }
         }
 
         #endregion Insert
 
         #region Get
+
+        /// <summary>
+        /// Get the selected coin names.
+        /// </summary>
+        /// <returns>A list with the coin names.</returns>
         public List<string> GetSelectedCoinNames()
         {
-            List<string> CoinNames = new();
+            List<string> coinNames = new();
 
-            dbConnection.Open();
+            this.dbConnection.Open();
 
-            using (var tr = dbConnection.BeginTransaction())
+            using (var tr = this.dbConnection.BeginTransaction())
             {
                 try
                 {
-                    string SelectSql = string.Format("select NAME from {0}", TableName.COIN_NAMES);
+                    string selectSql = string.Format("select NAME from {0}", TableName.COIN_NAMES);
 
-                    SQLiteCommand command = new(SelectSql, dbConnection);
+                    SQLiteCommand command = new (selectSql, this.dbConnection);
 
                     SQLiteDataReader dr = command.ExecuteReader();
                     DataTable dt = new();
@@ -489,15 +574,16 @@ namespace CM
 
                     if (dt.IsInitialized == true)
                     {
-                        foreach (DataRow _row in dt.Rows)
+                        foreach (DataRow row in dt.Rows)
                         {
-                            CoinNames.Add(_row["NAME"].ToString());                            
-                        }                        
+                            coinNames.Add(row["NAME"].ToString());
+                        }
                     }
                     else
                     {
-                        Logging.WriteToLogInformation("Er zijn geen Coin namen gevonden in de tabel COIN_NAMES.");                        
+                        Logging.WriteToLogInformation("Er zijn geen Coin namen gevonden in de tabel COIN_NAMES.");
                     }
+
                     dt.Dispose();
                     tr.Commit();
                 }
@@ -506,72 +592,89 @@ namespace CM
                     Logging.WriteToLogError("Het verwijderen van de Coin namen is mislukt.");
                     Logging.WriteToLogError("Melding :");
                     Logging.WriteToLogError(ex.Message);
-                    if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                    if (CmDebugMode.DebugMode)
+                    {
+                        Logging.WriteToLogDebug(ex.ToString());
+                    }
+
                     tr.Rollback();
                     return null;
                 }
                 finally
                 {
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                 }
             }
-            if (CoinNames.Count > 0)
+
+            if (coinNames.Count > 0)
             {
-                return CoinNames;
+                return coinNames;
             }
             else
             {
                 return null;
             }
-        }        
+        }
 
+        /// <summary>
+        /// Get the SQLite version.
+        /// </summary>
+        /// <returns>The Sqllite version.</returns>
         public string GetSQliteVersion()
         {
-            dbConnection.Open();
+            this.dbConnection.Open();
 
             try
             {
-                string SelectSql = "select sqlite_version()";
+                string selectSql = "select sqlite_version()";
 
-                SQLiteCommand command = new(SelectSql, dbConnection);
+                SQLiteCommand command = new (selectSql, this.dbConnection);
 
-                
                 string version = command.ExecuteScalar().ToString();
 
                 if (!string.IsNullOrEmpty(version))
                 {
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                     return version;
                 }
                 else
                 {
-                    dbConnection.Close();
+                    this.dbConnection.Close();
                     return null;
                 }
             }
             catch (SQLiteException ex)
             {
                 Logging.WriteToLogError("Het opvragen van de SQLite versie is mislukt.");
-                Logging.WriteToLogError("Melding :");
+                Logging.WriteToLogError("Melding:");
                 Logging.WriteToLogError(ex.Message);
-                if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
-                dbConnection.Close();
+                if (CmDebugMode.DebugMode)
+                {
+                    Logging.WriteToLogDebug(ex.ToString());
+                }
+
+                this.dbConnection.Close();
                 return null;
             }
         }
 
-
         #endregion Get
 
         #region Maintenance
+
+        /// <summary>
+        /// Make a copy of the database file.
+        /// </summary>
+        /// <param name="type">Type means copy automatic whithin the startup of te application or copy when choosen the copy function.</param>
+        /// <returns>True if succeeded.</returns>
         public bool CopyDatabaseFile(string type)
         {
-            string fileToCopy = DatabaseFileName;
+            string fileToCopy = this.DatabaseFileName;
 
             DateTime dateTime = DateTime.UtcNow.Date;
-            string CurrentDate = dateTime.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture);
+            string currentDate = dateTime.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture);
 
-            string newLocation = Path.Combine(this.DbLocation, AppSettingsDefault.BackUpFolder) + CurrentDate + "_" + AppSettingsDefault.SqlLiteDatabaseName;
+            string newLocation = Path.Combine(this.DbLocation, AppSettingsDefault.BackUpFolder) + currentDate + "_" + AppSettingsDefault.SqlLiteDatabaseName;
 
             bool result = false;
 
@@ -581,8 +684,8 @@ namespace CM
                 {
                     if (type == "StartUp")
                     {
-                        File.Copy(fileToCopy, newLocation, true);  //overwrite file = true
-                        Logging.WriteToLogInformation("Het kopiëren van het bestand '" + AppSettingsDefault.SqlLiteDatabaseName + "' is gereed.");
+                        File.Copy(fileToCopy, newLocation, true);  // Overwrite file = true
+                        Logging.WriteToLogInformation(string.Format("Het kopiëren van het bestand '{0}' is gereed.", AppSettingsDefault.SqlLiteDatabaseName));
                         result = true;
                     }
                     else
@@ -592,21 +695,21 @@ namespace CM
                             DialogResult dialogResult = MessageBox.Show("Het bestand bestaat al. Wilt u het bestand overschrijven?", "Kopiëren bestand.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (dialogResult == DialogResult.Yes)
                             {
-                                File.Copy(fileToCopy, newLocation, true);  //overwrite file = true
-                                Logging.WriteToLogInformation("Het kopiëren van het bestand '" + AppSettingsDefault.SqlLiteDatabaseName + "' is gereed.");
+                                File.Copy(fileToCopy, newLocation, true);  // Overwrite file = true
+                                Logging.WriteToLogInformation(string.Format("Het kopiëren van het bestand '{0}' is gereed.", AppSettingsDefault.SqlLiteDatabaseName));
                                 result = true;
                             }
                             else if (dialogResult == DialogResult.No)
                             {
-                                Logging.WriteToLogInformation("Het kopiëren van het bestand '" + AppSettingsDefault.SqlLiteDatabaseName + "' is afgebroken.");
+                                Logging.WriteToLogInformation(string.Format("Het kopiëren van het bestand '{0}' is afgebroken.", AppSettingsDefault.SqlLiteDatabaseName));
                                 Logging.WriteToLogInformation("Het bestand komt reeds voor.");
                                 result = false;
                             }
                         }
                         else
                         {
-                            File.Copy(fileToCopy, newLocation, false);  //overwrite file = false
-                            Logging.WriteToLogInformation("Het kopiëren van het bestand '" + AppSettingsDefault.SqlLiteDatabaseName + "' is gereed.");
+                            File.Copy(fileToCopy, newLocation, false);  // Overwrite file = false
+                            Logging.WriteToLogInformation(string.Format("Het kopiëren van het bestand '{0}' is gereed.", AppSettingsDefault.SqlLiteDatabaseName));
                             result = true;
                         }
                     }
@@ -614,23 +717,34 @@ namespace CM
                 else
                 {
                     Logging.WriteToLogInformation("Het te kopiëren bestand '" + AppSettingsDefault.SqlLiteDatabaseName + "' is niet aanwezig.");
-                    MessageBox.Show("Het bestand '" + AppSettingsDefault.SqlLiteDatabaseName + "' is niet aanwezig."
-                               , "Fout bij kopiëren bestand.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "Het bestand '" + AppSettingsDefault.SqlLiteDatabaseName + "' is niet aanwezig.",
+                        "Fout bij kopiëren bestand.",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                     result = false;
                 }
             }
             else
             {
-                MessageBox.Show("De map '" + AppSettingsDefault.BackUpFolder + "' is niet aanwezig."
-                               , "Fout bij kopiëren bestand.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "De map '" + AppSettingsDefault.BackUpFolder + "' is niet aanwezig.",
+                    "Fout bij kopiëren bestand.",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 result = false;
             }
+
             return result;
         }
+
+        /// <summary>
+        /// Compress the database.
+        /// </summary>
         public void CompressDatabase()
         {
-            dbConnection.Open();
-            SQLiteCommand command = new(dbConnection);
+            this.dbConnection.Open();
+            SQLiteCommand command = new (this.dbConnection);
             command.Prepare();
             command.CommandText = "vacuum;";
             try
@@ -642,52 +756,70 @@ namespace CM
                 Logging.WriteToLogError("Het comprimeren van de applicatie database is mislukt.");
                 Logging.WriteToLogError("Melding :");
                 Logging.WriteToLogError(ex.Message);
-                if (this.DebugMode) { Logging.WriteToLogDebug(ex.ToString()); }
+                if (CmDebugMode.DebugMode)
+                {
+                    Logging.WriteToLogDebug(ex.ToString());
+                }
             }
             finally
             {
                 command.Dispose();
-                dbConnection.Close();
+                this.dbConnection.Close();
             }
         }
         #endregion Maintenance
 
-
         #region Dispose
-        // Flag: Has Dispose already been called?
-        bool disposed;
 
-        // Instantiate a SafeHandle instance.
-        readonly SafeHandle handle = new SafeFileHandle(IntPtr.Zero, true);
+        private readonly SafeHandle safeHandle = new SafeFileHandle(IntPtr.Zero, true);
 
-        // Public implementation of Dispose pattern callable by consumers.
+        private bool disposed;
+
+        /// <summary>
+        /// Implement IDisposable.
+        /// </summary>
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
-        // Protected implementation of Dispose pattern.
+        /// <summary>
+        /// Protected implementation of Dispose pattern.
+        /// </summary>
+        /// <param name="disposing">Has Dispose already been called.</param>
         protected virtual void Dispose(bool disposing)
         {
-            if (disposed)
+            if (this.disposed)
+            {
                 return;
+            }
 
             if (disposing)
             {
-                handle.Dispose();
+                this.safeHandle?.Dispose();
+
                 // Free any other managed objects here.
-                //
             }
 
-            disposed = true;
+            this.disposed = true;
         }
         #endregion Dispose
     }
 
+    /// <summary>
+    /// Holds the table names.
+    /// </summary>
     public static class TableName
     {
-        public static String SETTINGS_META { get { return "SETTINGS_META"; } }
-        public static String COIN_NAMES { get { return "COIN_NAMES"; } }        
+        /// <summary>
+        /// Gets the tablename: SETTINGS_META.
+        /// </summary>
+        public static string SETTINGS_META { get { return "SETTINGS_META"; } }
+
+        /// <summary>
+        /// Gets the tablename: COIN_NAMES.
+        /// </summary>
+        public static string COIN_NAMES { get { return "COIN_NAMES"; } }
     }
 }

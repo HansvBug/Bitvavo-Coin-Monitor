@@ -5,27 +5,29 @@ using System.IO;
 using System.Globalization;
 using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices;
+using CM.Class;
 
 namespace CM
 {
     public class FormPosition : IDisposable
     {
         private readonly FormMain MainForm;
+
         private readonly FormConfigure ConfigureForm;
 
-        public bool DebugMode { get; set; }
         private dynamic JsonObjSettings { get; set; }
 
         #region Constructor
         public FormPosition(FormMain MainForm)
         {
             this.MainForm = MainForm;
-            JsonObjSettings = MainForm.JsonObjSettings;
+            this.JsonObjSettings = MainForm.JsonObjSettings;
         }
+
         public FormPosition(FormConfigure ConfigureForm)
         {
             this.ConfigureForm = ConfigureForm;
-            JsonObjSettings = ConfigureForm.JsonObjSettings;
+            this.JsonObjSettings = ConfigureForm.JsonObjSettings;
         }
         #endregion Constructor
 
@@ -43,80 +45,90 @@ namespace CM
         }
         #endregion Helper
 
-        #region FormMain        
+        #region FormMain
         public void LoadMainFormPosition()
         {
-            if (DebugMode) { Logging.WriteToLogInformation("Ophalen scherm positie hoofdscherm."); }
-            // default
-            MainForm.WindowState = FormWindowState.Normal;
-            MainForm.StartPosition = FormStartPosition.WindowsDefaultBounds;
-
-            if (JsonObjSettings != null && JsonObjSettings.FormMain != null)
+            if (CmDebugMode.DebugMode)
             {
-                Rectangle FrmRect = new()
+                Logging.WriteToLogInformation("Ophalen scherm positie hoofdscherm.");
+            }
+
+            // default
+            this.MainForm.WindowState = FormWindowState.Normal;
+            this.MainForm.StartPosition = FormStartPosition.WindowsDefaultBounds;
+
+            if (this.JsonObjSettings != null && this.JsonObjSettings.FormMain != null)
+            {
+                Rectangle FrmRect = new ()
                 {
-                    X = JsonObjSettings.FormMain[0].FrmX,
-                    Y = JsonObjSettings.FormMain[0].FrmY,
-                    Width = JsonObjSettings.FormMain[0].FrmWidth,
-                    Height = JsonObjSettings.FormMain[0].FrmHeight
+                    X = this.JsonObjSettings.FormMain[0].FrmX,
+                    Y = this.JsonObjSettings.FormMain[0].FrmY,
+                    Width = this.JsonObjSettings.FormMain[0].FrmWidth,
+                    Height = this.JsonObjSettings.FormMain[0].FrmHeight,
                 };
 
                 // check if the saved bounds are nonzero and visible on any screen
                 if (FrmRect != Rectangle.Empty && IsVisibleOnAnyScreen(FrmRect))
                 {   // first set the bounds
-                    MainForm.StartPosition = FormStartPosition.Manual;
-                    MainForm.DesktopBounds = FrmRect;
+                    this.MainForm.StartPosition = FormStartPosition.Manual;
+                    this.MainForm.DesktopBounds = FrmRect;
 
                     // afterwards set the window state to the saved value (which could be Maximized)
-                    MainForm.WindowState = JsonObjSettings.FormMain[0].FrmWindowState;
+                    this.MainForm.WindowState = this.JsonObjSettings.FormMain[0].FrmWindowState;
                 }
                 else
                 {
                     // this resets the upper left corner of the window to windows standards
-                    MainForm.StartPosition = FormStartPosition.WindowsDefaultLocation;
+                    this.MainForm.StartPosition = FormStartPosition.WindowsDefaultLocation;
 
                     // we can still apply the saved size
                     if (FrmRect != Rectangle.Empty)
                     {
-                        MainForm.Size = FrmRect.Size;
+                        this.MainForm.Size = FrmRect.Size;
                     }
                 }
             }
         }
+
         public void SaveMainFormPosition()
         {
-            if (DebugMode) { Logging.WriteToLogInformation("Opslaan scherm positie hoofdscherm."); }
-            string SettingsFile = JsonObjSettings.AppParam[0].SettingsFileLocation;
+            if (CmDebugMode.DebugMode)
+            {
+                Logging.WriteToLogInformation("Opslaan scherm positie hoofdscherm.");
+            }
+
+            string SettingsFile = this.JsonObjSettings.AppParam[0].SettingsFileLocation;
 
             if (File.Exists(SettingsFile))
             {
-                if (MainForm.WindowState == FormWindowState.Normal)
+                if (this.MainForm.WindowState == FormWindowState.Normal)
                 {
-                    JsonObjSettings.FormMain[0].FrmWindowState = FormWindowState.Normal;
+                    this.JsonObjSettings.FormMain[0].FrmWindowState = FormWindowState.Normal;
 
-                    if (MainForm.Location.X >= 0)
+                    if (this.MainForm.Location.X >= 0)
                     {
-                        JsonObjSettings.FormMain[0].FrmX = MainForm.Location.X;
+                        this.JsonObjSettings.FormMain[0].FrmX = this.MainForm.Location.X;
                     }
                     else
                     {
-                        JsonObjSettings.FormMain[0].FrmX = 0;
+                        this.JsonObjSettings.FormMain[0].FrmX = 0;
                     }
 
-                    if (MainForm.Location.Y >= 0)
+                    if (this.MainForm.Location.Y >= 0)
                     {
-                        JsonObjSettings.FormMain[0].FrmY = MainForm.Location.Y;
+                        this.JsonObjSettings.FormMain[0].FrmY = this.MainForm.Location.Y;
                     }
                     else
                     {
-                        JsonObjSettings.FormMain[0].FrmY = 0;
+                        this.JsonObjSettings.FormMain[0].FrmY = 0;
                     }
-                    JsonObjSettings.FormMain[0].FrmHeight = MainForm.Height;
-                    JsonObjSettings.FormMain[0].FrmWidth = MainForm.Width;
+
+                    this.JsonObjSettings.FormMain[0].FrmHeight = this.MainForm.Height;
+                    this.JsonObjSettings.FormMain[0].FrmWidth = this.MainForm.Width;
                 }
                 else
                 {
-                    JsonObjSettings.FormMain[0].FrmWindowState = MainForm.WindowState;
+                    this.JsonObjSettings.FormMain[0].FrmWindowState = this.MainForm.WindowState;
                 }
             }
         }
@@ -126,77 +138,86 @@ namespace CM
         #region Form Configure
         public void LoadConfigureFormPosition()
         {
-            if (DebugMode) { Logging.WriteToLogInformation("Ophalen scherm positie configuratie scherm."); }
-            // this is the default
-            ConfigureForm.WindowState = FormWindowState.Normal;
-            ConfigureForm.StartPosition = FormStartPosition.WindowsDefaultBounds;
-
-
-            if (JsonObjSettings != null && JsonObjSettings.FormMain != null)
+            if (CmDebugMode.DebugMode)
             {
-                Rectangle FrmRect = new()
+                Logging.WriteToLogInformation("Ophalen scherm positie configuratie scherm.");
+            }
+
+            // this is the default
+            this.ConfigureForm.WindowState = FormWindowState.Normal;
+            this.ConfigureForm.StartPosition = FormStartPosition.WindowsDefaultBounds;
+
+
+            if (this.JsonObjSettings != null && this.JsonObjSettings.FormMain != null)
+            {
+                Rectangle FrmRect = new ()
                 {
-                    X = JsonObjSettings.FormConfig[0].FrmX,
-                    Y = JsonObjSettings.FormConfig[0].FrmY,
-                    Width = JsonObjSettings.FormConfig[0].FrmWidth,
-                    Height = JsonObjSettings.FormConfig[0].FrmHeight
+                    X = this.JsonObjSettings.FormConfig[0].FrmX,
+                    Y = this.JsonObjSettings.FormConfig[0].FrmY,
+                    Width = this.JsonObjSettings.FormConfig[0].FrmWidth,
+                    Height = this.JsonObjSettings.FormConfig[0].FrmHeight,
                 };
 
                 if (FrmRect != Rectangle.Empty && IsVisibleOnAnyScreen(FrmRect))
                 {
-                    ConfigureForm.StartPosition = FormStartPosition.Manual;
-                    ConfigureForm.DesktopBounds = FrmRect;
+                    this.ConfigureForm.StartPosition = FormStartPosition.Manual;
+                    this.ConfigureForm.DesktopBounds = FrmRect;
 
-                    ConfigureForm.WindowState = JsonObjSettings.FormConfig[0].FrmWindowState; ;
+                    this.ConfigureForm.WindowState = this.JsonObjSettings.FormConfig[0].FrmWindowState;
                 }
                 else
                 {
-                    ConfigureForm.StartPosition = FormStartPosition.WindowsDefaultLocation;
+                    this.ConfigureForm.StartPosition = FormStartPosition.WindowsDefaultLocation;
 
                     if (FrmRect != Rectangle.Empty)
                     {
-                        ConfigureForm.Size = FrmRect.Size;
+                        this.ConfigureForm.Size = FrmRect.Size;
                     }
                 }
             }
         }
+
         public void SaveConfigureFormPosition()
         {
-            if (DebugMode) { Logging.WriteToLogInformation("Opslaan scherm positie configuratie scherm."); }
-            string SettingsFile = JsonObjSettings.AppParam[0].SettingsFileLocation;
+            if (CmDebugMode.DebugMode)
+            {
+                Logging.WriteToLogInformation("Opslaan scherm positie configuratie scherm.");
+            }
+
+            string SettingsFile = this.JsonObjSettings.AppParam[0].SettingsFileLocation;
 
             if (File.Exists(SettingsFile))
             {
 
-                if (ConfigureForm.WindowState == FormWindowState.Normal)
+                if (this.ConfigureForm.WindowState == FormWindowState.Normal)
                 {
 
-                    JsonObjSettings.FormConfig[0].FrmWindowState = FormWindowState.Normal;
+                    this.JsonObjSettings.FormConfig[0].FrmWindowState = FormWindowState.Normal;
 
-                    if (ConfigureForm.Location.X >= 0)
+                    if (this.ConfigureForm.Location.X >= 0)
                     {
-                        JsonObjSettings.FormConfig[0].FrmX = ConfigureForm.Location.X;
+                        this.JsonObjSettings.FormConfig[0].FrmX = this.ConfigureForm.Location.X;
                     }
                     else
                     {
-                        JsonObjSettings.FormConfig[0].FrmX = 0;
+                        this.JsonObjSettings.FormConfig[0].FrmX = 0;
                     }
 
-                    if (ConfigureForm.Location.Y >= 0)
+                    if (this.ConfigureForm.Location.Y >= 0)
                     {
-                        JsonObjSettings.FormConfig[0].FrmY = ConfigureForm.Location.Y;
+                        this.JsonObjSettings.FormConfig[0].FrmY = this.ConfigureForm.Location.Y;
                     }
                     else
                     {
-                        JsonObjSettings.FormConfig[0].FrmY = 0;
+                        this.JsonObjSettings.FormConfig[0].FrmY = 0;
                     }
-                    JsonObjSettings.FormConfig[0].FrmHeight = ConfigureForm.Height;
-                    JsonObjSettings.FormConfig[0].FrmWidth = ConfigureForm.Width;
 
+                    this.JsonObjSettings.FormConfig[0].FrmHeight = this.ConfigureForm.Height;
+                    this.JsonObjSettings.FormConfig[0].FrmWidth = this.ConfigureForm.Width;
                 }
                 else
                 {
-                    JsonObjSettings.FormConfig[0].FrmWindowState = MainForm.WindowState;
+                    this.JsonObjSettings.FormConfig[0].FrmWindowState = this.ConfigureForm.WindowState;
                 }
             }
         }
@@ -212,25 +233,27 @@ namespace CM
         // Public implementation of Dispose pattern callable by consumers.
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
         // Protected implementation of Dispose pattern.
         protected virtual void Dispose(bool disposing)
         {
-            if (disposed)
+            if (this.disposed)
+            {
                 return;
+            }
 
             if (disposing)
             {
-                handle.Dispose();
+                this.handle.Dispose();
                 // Free any other managed objects here.
                 //
                 //this.frm = null;
             }
 
-            disposed = true;
+            this.disposed = true;
         }
         #endregion Dispose
     }
