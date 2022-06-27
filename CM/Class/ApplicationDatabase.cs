@@ -8,7 +8,6 @@
     using System.IO;
     using System.Runtime.InteropServices;
     using System.Windows.Forms;
-    using CM.Class;
     using Microsoft.Win32.SafeHandles;
 
     /// <summary>
@@ -153,7 +152,7 @@
                 this.dbConnection.Open();
                 string insertSQL = string.Format("INSERT INTO {0} VALUES('VERSION', @VERSION)", TableName.SETTINGS_META);
 
-                SQLiteCommand command = new (insertSQL, this.dbConnection);
+                SQLiteCommand command = new(insertSQL, this.dbConnection);
                 try
                 {
                     command.Parameters.Add(new SQLiteParameter("@VERSION", version));
@@ -193,7 +192,7 @@
             {
                 this.dbConnection.Open();
 
-                SQLiteCommand command = new (sqlCreate, this.dbConnection);
+                SQLiteCommand command = new(sqlCreate, this.dbConnection);
                 try
                 {
                     command.ExecuteNonQuery();
@@ -255,7 +254,7 @@
 
                 this.dbConnection.Open();
 
-                SQLiteCommand command = new (sqlCreate, this.dbConnection);
+                SQLiteCommand command = new(sqlCreate, this.dbConnection);
                 try
                 {
                     command.ExecuteNonQuery();
@@ -315,7 +314,7 @@
             using var tr = this.dbConnection.BeginTransaction();
             string insertSQL = string.Format("UPDATE {0} SET VALUE  = @VERSION WHERE KEY = @KEY", TableName.SETTINGS_META);
 
-            SQLiteCommand command = new (insertSQL, this.dbConnection);
+            SQLiteCommand command = new(insertSQL, this.dbConnection);
             try
             {
                 command.Parameters.Add(new SQLiteParameter("@VERSION", version));
@@ -358,7 +357,7 @@
             this.dbConnection.Open();
             Logging.WriteToLogInformation("Controle op versie van de query database.");
 
-            SQLiteCommand command = new (sqlSelect, this.dbConnection);
+            SQLiteCommand command = new(sqlSelect, this.dbConnection);
             try
             {
                 SQLiteDataReader dr = command.ExecuteReader();
@@ -414,7 +413,7 @@
                         string insertSql = string.Format("insert into {0}(GUID, NAME, DATE_CREATED, CREATED_BY) ", TableName.COIN_NAMES);
                         insertSql += "values(@GUID, @NAME, @DATE_CREATED, @CREATED_BY)";
 
-                        SQLiteCommand command = new (insertSql, this.dbConnection);
+                        SQLiteCommand command = new(insertSql, this.dbConnection);
 
                         command.Prepare();
                         command.Parameters.Add(new SQLiteParameter("@GUID", Guid.NewGuid().ToString()));
@@ -455,7 +454,7 @@
             {
                 string deleteSql = string.Format("delete from {0}", TableName.COIN_NAMES);
 
-                SQLiteCommand command = new (deleteSql, this.dbConnection);
+                SQLiteCommand command = new(deleteSql, this.dbConnection);
 
                 command.ExecuteNonQuery();
                 command.Dispose();
@@ -498,7 +497,7 @@
                         insertSql += "values(@GUID, @NAME, @CURRENT_PRICE, @PREVIOUS_PRICE, @DIFFERENCE_PRICE, @DIFFERENCE_PERCENTAGE, ";
                         insertSql += "@DIFFERENCE, @SESSION_OPENPRICE, @SESSION_HIGH, @SESSION_LOW, @OPEN, @LOW, @HIGH, @VOLUME, @DATE_CREATED)";
 
-                        SQLiteCommand command = new (insertSql, this.dbConnection);
+                        SQLiteCommand command = new(insertSql, this.dbConnection);
 
                         command.Prepare();
                         command.Parameters.Add(new SQLiteParameter("@GUID", Guid.NewGuid().ToString()));
@@ -563,7 +562,7 @@
                 {
                     string selectSql = string.Format("select NAME from {0}", TableName.COIN_NAMES);
 
-                    SQLiteCommand command = new (selectSql, this.dbConnection);
+                    SQLiteCommand command = new(selectSql, this.dbConnection);
 
                     SQLiteDataReader dr = command.ExecuteReader();
                     DataTable dt = new();
@@ -628,7 +627,7 @@
             {
                 string selectSql = "select sqlite_version()";
 
-                SQLiteCommand command = new (selectSql, this.dbConnection);
+                SQLiteCommand command = new(selectSql, this.dbConnection);
 
                 string version = command.ExecuteScalar().ToString();
 
@@ -744,7 +743,7 @@
         public void CompressDatabase()
         {
             this.dbConnection.Open();
-            SQLiteCommand command = new (this.dbConnection);
+            SQLiteCommand command = new(this.dbConnection);
             command.Prepare();
             command.CommandText = "vacuum;";
             try

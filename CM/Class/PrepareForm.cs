@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Globalization;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-
-namespace CM
+﻿namespace CM
 {
+    using System.Collections.Generic;
+    using System.Drawing;
+    using System.Globalization;
+    using System.Windows.Forms;
+
     public class PrepareForm
     {
         #region Properties etc.
@@ -40,14 +36,16 @@ namespace CM
 
         private void GetCoins()
         {
-            if (StartSession.CheckForInternetConnection())  // First check if there is an active internet connection
+            // First check if there is an active internet connection
+            if (StartSession.CheckForInternetConnection())
             {
-                ApplicationDatabase CoinNames = new();
-                List<string> AllCoinNames = CoinNames.GetSelectedCoinNames();
+                ApplicationDatabase coinNames = new();
+                List<string> allCoinNames = coinNames.GetSelectedCoinNames();
 
-                if (AllCoinNames != null)  // The first time the application runs and the database is created this is null
+                // The first time the application runs and the database is created this is null
+                if (allCoinNames != null)
                 {
-                    foreach (string aCoin in AllCoinNames)
+                    foreach (string aCoin in allCoinNames)
                     {
                         this.CoinName.Add(aCoin);
                     }
@@ -55,9 +53,9 @@ namespace CM
             }
         }
 
-        public void CreateTheTabs(TabControl Tctrl)
+        public void CreateTheTabs(TabControl tCtrl)
         {
-            this.TabCtrl = Tctrl;
+            this.TabCtrl = tCtrl;
 
             this.CreateTabPages();
             this.PrepareTabPages();
@@ -70,7 +68,7 @@ namespace CM
 
             // Create a Tab for the 24hour difference percentage
             string title = "24 uurs percentage";
-            TabPage aTabPageFirst = new (title);
+            TabPage aTabPageFirst = new(title);
             aTabPageFirst.Name = title;
             this.TabCtrl.TabPages.Add(aTabPageFirst);
 
@@ -88,30 +86,30 @@ namespace CM
 
         private void PrepareTabPages()
         {
-            for (int Tabcount = 0; Tabcount <= this.TabCtrl.TabCount - 1; Tabcount++)
+            for (int tabcount = 0; tabcount <= this.TabCtrl.TabCount - 1; tabcount++)
             {
-                if (Tabcount == 0)
+                if (tabcount == 0)
                 {
-                    this.CreateGroupBox(Tabcount, "Geselecteerde_munten");
-                    this.CreateGroupBox(Tabcount, "Overige_munten");
-                    this.CreateDgv24hourPercDiffCoins(Tabcount, "Dgv_DifPerc24hourSelected");
-                    this.CreateDgv24hourPercDiffCoins(Tabcount, "Dgv_DifPerc24hourNotSelected");
+                    this.CreateGroupBox(tabcount, "Geselecteerde_munten");
+                    this.CreateGroupBox(tabcount, "Overige_munten");
+                    this.CreateDgv24hourPercDiffCoins(tabcount, "Dgv_DifPerc24hourSelected");
+                    this.CreateDgv24hourPercDiffCoins(tabcount, "Dgv_DifPerc24hourNotSelected");
                 }
                 else
                 {
-                    this.CreateSplitContainer(Tabcount);                                                 // Create the splitcontaineers
-                    this.CreateDatagridViewPriceData(Tabcount);                                          // Create DataGrid view
-                    this.CreateChartPanel(Tabcount);                                                     // Create the panel on which the chart will be placed. The control with dockstyle = filled must FIRST be placed on the paren control
-                    this.CreateBottomPanel(Tabcount);                                                    // Create the panel where checkboxes will be placed
-                    this.CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Start prijs aan/uit");      // Create a check box
+                    this.CreateSplitContainer(tabcount);                                                 // Create the splitcontaineers
+                    this.CreateDatagridViewPriceData(tabcount);                                          // Create DataGrid view
+                    this.CreateChartPanel(tabcount);                                                     // Create the panel on which the chart will be placed. The control with dockstyle = filled must FIRST be placed on the paren control
+                    this.CreateBottomPanel(tabcount);                                                    // Create the panel where checkboxes will be placed
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Start prijs aan/uit");      // Create a check box
 
-                    this.CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Open prijs aan/uit");       // Create a check box
-                    this.CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie hoogste aan/uit");   // Create a check box
-                    this.CreateCheckBox(Tabcount, "CheckBoxShowStartPrice", "Sessie laagste aan/uit");   // Create a check box
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Open prijs aan/uit");       // Create a check box
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Sessie hoogste aan/uit");   // Create a check box
+                    this.CreateCheckBox(tabcount, "CheckBoxShowStartPrice", "Sessie laagste aan/uit");   // Create a check box
 
-                    this.CreateDatagridViewPriceMonitorPrice(Tabcount);                                  // Create DataGrid view
-                    this.CreateChart(Tabcount);                                                          // Create the charts
-                    this.CreateLabels(Tabcount, this.TabCtrl.TabPages[Tabcount].Text);
+                    this.CreateDatagridViewPriceMonitorPrice(tabcount);                                  // Create DataGrid view
+                    this.CreateChart(tabcount);                                                          // Create the charts
+                    this.CreateLabels(tabcount, this.TabCtrl.TabPages[tabcount].Text);
                 }
             }
         }
@@ -242,10 +240,10 @@ namespace CM
             }
         }
 
-        private void CreateDatagridViewPriceMonitorPrice(int Tabcount)
+        private void CreateDatagridViewPriceMonitorPrice(int tabcount)
         {
             DataGridView dgv = new();
-            TabPage tp = this.TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
             dgv.Name = "Dgv_2_" + tp.Name;
             dgv.Columns.Add("Prijs", "Prijs");
             dgv.Columns.Add("Empty_1", "    ");
@@ -323,12 +321,11 @@ namespace CM
             this.PlaceControlOnGroupBox(dgv, tabcount, dgvName);
         }
 
-        private void CreateChart(int Tabcount)
+        private void CreateChart(int tabcount)
         {
             // source: https://timbar.blogspot.com/2012/04/creating-chart-programmatically-in-c.html
             // source: https://hirenkhirsaria.blogspot.com/2012/06/dynamically-creating-piebar-chart-in-c.html
-
-            TabPage tp = this.TabCtrl.TabPages[Tabcount];
+            TabPage tp = this.TabCtrl.TabPages[tabcount];
             string CoinName = tp.Name;
 
             // Chart does not exists in .net 5 !?!? used a nuget download
@@ -339,8 +336,7 @@ namespace CM
             aChart.Location = new Point(3, 3);
             aChart.Cursor = Cursors.Cross;
 
-
-            System.Windows.Forms.DataVisualization.Charting.ChartArea ChrtArea = new ("ChartArea_"+ CoinName);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea ChrtArea = new("ChartArea_" + CoinName);
             ChrtArea.Area3DStyle.Enable3D = false;
             aChart.ChartAreas.Add(ChrtArea);
             ChrtArea.AxisX.Title = "Tijd";
@@ -352,44 +348,44 @@ namespace CM
             aChart.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.LightGray;
             aChart.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
 
-            //The current coin price
-            System.Windows.Forms.DataVisualization.Charting.Series series = new ("Series_" + CoinName)
+            // The current coin price
+            System.Windows.Forms.DataVisualization.Charting.Series series = new("Series_" + CoinName)
             {
                 Name = "Series_" + CoinName,
-                ChartArea = "ChartArea_" + CoinName
+                ChartArea = "ChartArea_" + CoinName,
             };
-            aChart.Series.Add(CoinName);            
+            aChart.Series.Add(CoinName);
             aChart.Series[CoinName].Enabled = true;
 
             aChart.Series[CoinName].MarkerColor = Color.Red;
             aChart.Series[CoinName].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             aChart.Series[CoinName].MarkerSize = 5;            
 
-            //Start_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesStartPrice = new ("Start_Prijs_" + CoinName);
+            // Start_Prijs
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesStartPrice = new("Start_Prijs_" + CoinName);
             SeriesStartPrice.Name = "Start_Prijs_" + CoinName;
             SeriesStartPrice.LegendText = "Start_Prijs";
             aChart.Series.Add(SeriesStartPrice);
             aChart.Series["Start_Prijs_" + CoinName].Enabled = true;
 
-            //aChart.Series["Start_Prijs_" + CoinName].ToolTip = "hello world from: € #VAL,   #VALX";
+            // aChart.Series["Start_Prijs_" + CoinName].ToolTip = "hello world from: € #VAL,   #VALX";
 
-            //Open_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesOpenPrice = new ("Open_Prijs_" + CoinName);
+            // Open_Prijs
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesOpenPrice = new("Open_Prijs_" + CoinName);
             SeriesOpenPrice.Name = "Open_Prijs_" + CoinName;
             SeriesOpenPrice.LegendText = "Open_Prijs";
             aChart.Series.Add(SeriesOpenPrice);
             aChart.Series["Open_Prijs_" + CoinName].Enabled = true;
 
-            //Sessie_Hoogste_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionHighestPrice = new ("Sessie_Hoogste_Prijs_" + CoinName);
+            // Sessie_Hoogste_Prijs
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionHighestPrice = new("Sessie_Hoogste_Prijs_" + CoinName);
             SeriesSessionHighestPrice.Name = "Sessie_Hoogste_Prijs_" + CoinName;
             SeriesSessionHighestPrice.LegendText = "Sessie_Hoogste";
             aChart.Series.Add(SeriesSessionHighestPrice);
             aChart.Series["Sessie_Hoogste_Prijs_" + CoinName].Enabled = true;
 
-            //Sessie_Laagste_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionLowestPrice = new ("Sessie_Laagste_Prijs_" + CoinName);
+            // Sessie_Laagste_Prijs
+            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionLowestPrice = new("Sessie_Laagste_Prijs_" + CoinName);
             SeriesSessionLowestPrice.Name = "Sessie_Laagste_Prijs_" + CoinName;
             SeriesSessionLowestPrice.LegendText = "Sessie_Laagste";
             aChart.Series.Add(SeriesSessionLowestPrice);
@@ -584,10 +580,10 @@ namespace CM
             this.PlaceControlOnSpltcontainerOnePanel(Cb, tabcount);
         }
 
-        private void CreateLabels(int Tabcount, string Name)
+        private void CreateLabels(int tabcount, string name)
         {
             Label Lb = new();
-            Lb.Name = "Lb_" + Name; 
+            Lb.Name = "Lb_" + name;
             Lb.Text = "LabelYaxisCur";
             Lb.AutoSize = true;
             Lb.Location = new Point(50, 50);
@@ -599,9 +595,8 @@ namespace CM
             Lb.Font = new Font("Calibri", 10);
             Lb.ForeColor = Color.DarkBlue;
 
-
             this.LabelNames.Add(Lb);
-            this.PlaceControlOnChart(Lb, Tabcount);
+            this.PlaceControlOnChart(Lb, tabcount);
         }
 
         private void CreateGroupBox(int tabcount, string name)

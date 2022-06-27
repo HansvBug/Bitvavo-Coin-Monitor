@@ -130,7 +130,7 @@ namespace CM
 
         private void SaveFormPosition()
         {
-            using FormPosition FormPosition = new (this);
+            using FormPosition FormPosition = new(this);
             FormPosition.SaveConfigureFormPosition();
         }
 
@@ -145,13 +145,13 @@ namespace CM
             ApplicationDatabase addCoin = new();
             foreach (TreeNode aNode in this.TreeViewCoinNames.Nodes) // First create a list withe the coin names
             {
-                if (aNode.Checked == true)  //at least one node must checked to start the filter
+                if (aNode.Checked == true) // At least one node must checked to start the filter
                 {
                     CoinNames.Add(aNode.Name);
                 }
             }
 
-            if (CoinNames.Count > 0)  //if any coin name is checked then save it
+            if (CoinNames.Count > 0)  // If any coin name is checked then save it
             {
                 addCoin.SaveCoinNames(CoinNames);
             }
@@ -162,15 +162,15 @@ namespace CM
             List<string> CoinNames = new();
             ApplicationDatabase addCoin = new();
 
-            foreach (TreeNode aNode in this.TreeViewCoinNames.Nodes) //first create a list withe the coin names
+            foreach (TreeNode aNode in this.TreeViewCoinNames.Nodes) // first create a list withe the coin names
             {
-                if (aNode.Checked == true)  //at least one node must checked to start the filter
+                if (aNode.Checked == true) // At least one node must checked to start the filter
                 {
                     CoinNames.Add(aNode.Name);
                 }
             }
 
-            if (CoinNames.Count > 0)  //if any coin name is checked then save it
+            if (CoinNames.Count > 0) // If any coin name is checked then save it
             {
                 foreach (string tbl in CoinNames)
                 {
@@ -320,7 +320,7 @@ namespace CM
             this.TreeViewCoinNames.BeginUpdate();           // Suppress repainting the TreeView until all the objects have been created.
             foreach (object item in mp.CoinNames)     // Fill it again with only the filtered items
             {
-                TreeNode aNode = new (item.ToString()) { Name = item.ToString() };
+                TreeNode aNode = new(item.ToString()) { Name = item.ToString() };
                 this.TreeViewCoinNames.Nodes.Add(aNode);
             }
 

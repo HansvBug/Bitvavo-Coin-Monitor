@@ -89,9 +89,15 @@
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>Column1</value>
+  </data>
   <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="Column2.HeaderText" xml:space="preserve">
+    <value>Column2</value>
+  </data>
   <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -185,6 +191,21 @@
   </data>
   <data name="&gt;&gt;panel3.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 10</value>
+  </data>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 19</value>
+  </data>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>checkBox1</value>
   </data>
   <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
     <value>checkBox1</value>
@@ -299,271 +320,6 @@
   </data>
   <data name="TabControlMain.Alignment" type="System.Windows.Forms.TabAlignment, System.Windows.Forms">
     <value>Left</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Name" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Name" xml:space="preserve">
-    <value>TabPageCharts</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="TabControlMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="TabControlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>799, 436</value>
-  </data>
-  <data name="TabControlMain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Name" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;TabControlMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Name" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Parent" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TabPageConfigure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 4</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TabPageConfigure.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="TabPageConfigure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>768, 428</value>
-  </data>
-  <data name="TabPageConfigure.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="TabPageConfigure.Text" xml:space="preserve">
-    <value>Sessie Opties</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Name" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;TabPageConfigure.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxSoundCoin.Name" xml:space="preserve">
-    <value>ComboBoxSoundCoin</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxSoundCoin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxSoundCoin.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;ComboBoxSoundCoin.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundNegative.Name" xml:space="preserve">
-    <value>ButtonTestSoundNegative</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundNegative.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundNegative.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundNegative.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundPositive.Name" xml:space="preserve">
-    <value>ButtonTestSoundPositive</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundPositive.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundPositive.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;ButtonTestSoundPositive.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundNegative.Name" xml:space="preserve">
-    <value>CheckBoxSoundNegative</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundNegative.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundNegative.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundNegative.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundPositive.Name" xml:space="preserve">
-    <value>CheckBoxSoundPositive</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundPositive.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundPositive.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxSoundPositive.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Name" xml:space="preserve">
-    <value>LabelWarnPercentage</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Name" xml:space="preserve">
-    <value>TextBoxWarnPercentage</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Name" xml:space="preserve">
-    <value>ButtonStop</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;ButtonStop.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Name" xml:space="preserve">
-    <value>ButtonPause</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;ButtonPause.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Name" xml:space="preserve">
-    <value>ButtonStart</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;ButtonStart.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Name" xml:space="preserve">
-    <value>TextBoxTimeInterval</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;TextBoxTimeInterval.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="GroupBoxSessionSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 14</value>
-  </data>
-  <data name="GroupBoxSessionSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 238</value>
-  </data>
-  <data name="GroupBoxSessionSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Name" xml:space="preserve">
-    <value>GroupBoxSessionSettings</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.Parent" xml:space="preserve">
-    <value>TabPageConfigure</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxSessionSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -910,11 +666,20 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="&gt;&gt;TabControlCharts.Name" xml:space="preserve">
-    <value>TabControlCharts</value>
+  <data name="GroupBoxSessionSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 14</value>
   </data>
-  <data name="&gt;&gt;TabControlCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="GroupBoxSessionSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 238</value>
+  </data>
+  <data name="GroupBoxSessionSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Name" xml:space="preserve">
+    <value>GroupBoxSessionSettings</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxSessionSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TabControlCharts.Parent" xml:space="preserve">
     <value>TabPageCharts</value>
@@ -922,43 +687,17 @@
   <data name="&gt;&gt;TabControlCharts.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="TabPageCharts.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="TabPageConfigure.Location" type="System.Drawing.Point, System.Drawing">
     <value>27, 4</value>
   </data>
-  <data name="TabPageCharts.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TabPageConfigure.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="TabPageCharts.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="TabPageConfigure.Size" type="System.Drawing.Size, System.Drawing">
     <value>768, 428</value>
   </data>
-  <data name="TabPageCharts.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabPageCharts.Text" xml:space="preserve">
-    <value>Grafieken</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Name" xml:space="preserve">
-    <value>TabPageCharts</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.Parent" xml:space="preserve">
-    <value>TabControlMain</value>
-  </data>
-  <data name="&gt;&gt;TabPageCharts.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>TabControlCharts</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+  <data name="TabPageConfigure.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
@@ -988,8 +727,8 @@
   <data name="&gt;&gt;TabControlCharts.Name" xml:space="preserve">
     <value>TabControlCharts</value>
   </data>
-  <data name="&gt;&gt;TabControlCharts.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TabPageConfigure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TabControlCharts.Parent" xml:space="preserve">
     <value>TabPageCharts</value>
@@ -1022,6 +761,15 @@
     <value>TabControlCharts</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 12</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 100</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
@@ -1063,8 +811,23 @@
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 12</value>
+  <data name="TabControlCharts.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControlCharts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="TabControlCharts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>762, 422</value>
+  </data>
+  <data name="TabControlCharts.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Name" xml:space="preserve">
+    <value>TabControlCharts</value>
+  </data>
+  <data name="&gt;&gt;TabControlCharts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 100</value>
@@ -1072,14 +835,17 @@
   <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="GroupBox1.Text" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="TabPageCharts.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 4</value>
   </data>
-  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
-    <value>GroupBox1</value>
+  <data name="TabPageCharts.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TabPageCharts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>768, 428</value>
+  </data>
+  <data name="TabPageCharts.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
     <value>tabPage2</value>
@@ -1087,11 +853,8 @@
   <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 520</value>
+  <data name="&gt;&gt;TabPageCharts.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>799, 22</value>
@@ -1099,14 +862,23 @@
   <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="statusStrip1.Text" xml:space="preserve">
-    <value>statusStrip1</value>
+  <data name="TabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControlMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TabControlMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 436</value>
+  </data>
+  <data name="TabControlMain.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
-  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TabControlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1114,6 +886,9 @@
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="ToolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 17</value>
   </data>
@@ -1129,9 +904,114 @@
   <data name="ToolStripStatusLabel2.Text" xml:space="preserve">
     <value>               </value>
   </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 520</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 22</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="MenuStrip1.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
+    <value>MenuStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ToolStripMenuItem_Program.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Program.Text" xml:space="preserve">
+    <value>Programma</value>
+  </data>
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>133, 17</value>
   </metadata>
+  <data name="ToolStripMenuItem_Program_Close.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Program_Close.Text" xml:space="preserve">
+    <value>Afsluiten</value>
+  </data>
+  <data name="ToolStripMenuItem_Program.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Session.Text" xml:space="preserve">
+    <value>Sessie</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Start.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Start.Text" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Pause.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Pause.Text" xml:space="preserve">
+    <value>Pauze</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Stop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Session_Stop.Text" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="ToolStripMenuItem_Session.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="ToolStripMenuItem_Options_Configure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Options_Configure.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="ToolStripMenuItemHideFromTaskbar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="ToolStripMenuItemHideFromTaskbar.Text" xml:space="preserve">
+    <value>Toon niet in taakbalk</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 6</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Text" xml:space="preserve">
+    <value>Alle in gebruik zijnde tabellen</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Text" xml:space="preserve">
+    <value>Alle tabellen</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="ToolStripMenuItem_Option_Export.Text" xml:space="preserve">
+    <value>Exporteer</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 20</value>
+  </data>
+  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1155,81 +1035,6 @@
   </data>
   <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <data name="ToolStripMenuItem_Program.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_Program.Text" xml:space="preserve">
-    <value>Programma</value>
-  </data>
-  <data name="ToolStripMenuItem_Program_Close.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Program_Close.Text" xml:space="preserve">
-    <value>Afsluiten</value>
-  </data>
-  <data name="ToolStripMenuItem_Session.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_Session.Text" xml:space="preserve">
-    <value>Sessie</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Start.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Start.Text" xml:space="preserve">
-    <value>Start</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Pause.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Pause.Text" xml:space="preserve">
-    <value>Pauze</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Stop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Session_Stop.Text" xml:space="preserve">
-    <value>Stop</value>
-  </data>
-  <data name="ToolStripMenuItem_Options.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 20</value>
-  </data>
-  <data name="ToolStripMenuItem_Options.Text" xml:space="preserve">
-    <value>Opties</value>
-  </data>
-  <data name="ToolStripMenuItem_Options_Configure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Options_Configure.Text" xml:space="preserve">
-    <value>Opties</value>
-  </data>
-  <data name="ToolStripMenuItemHideFromTaskbar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="ToolStripMenuItemHideFromTaskbar.Text" xml:space="preserve">
-    <value>Toon niet in taakbalk</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 6</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export.Text" xml:space="preserve">
-    <value>Exporteer</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export_AllUsedCoinTables.Text" xml:space="preserve">
-    <value>Alle in gebruik zijnde tabellen</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 22</value>
-  </data>
-  <data name="ToolStripMenuItem_Option_Export_AllCoinTables.Text" xml:space="preserve">
-    <value>Alle tabellen</value>
   </data>
   <data name="PanelBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
@@ -1261,27 +1066,6 @@
   <metadata name="ToolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>337, 17</value>
   </metadata>
-  <data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>799, 25</value>
-  </data>
-  <data name="ToolStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
-    <value>ToolStrip1</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="ToolStripButton_SessionStart.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -2155,6 +1939,27 @@
   </data>
   <data name="ToolStripComboBoxCoinNames.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 25</value>
+  </data>
+  <data name="ToolStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 24</value>
+  </data>
+  <data name="ToolStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>799, 25</value>
+  </data>
+  <data name="ToolStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Name" xml:space="preserve">
+    <value>ToolStrip1</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolStrip1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

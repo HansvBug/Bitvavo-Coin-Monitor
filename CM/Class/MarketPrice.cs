@@ -92,7 +92,7 @@ namespace CM
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(this.UrlCurrentTickerPrice);
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-                StreamReader sr = new (response.GetResponseStream());
+                StreamReader sr = new(response.GetResponseStream());
                 string MarketPriceData = sr.ReadToEnd();    // Get the current price of all the coins
                 sr.Close();
 
@@ -344,7 +344,7 @@ namespace CM
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(this.UrlCurrentTickerPrice);
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-                StreamReader sr = new (response.GetResponseStream());
+                StreamReader sr = new(response.GetResponseStream());
                 string MarketPriceData = sr.ReadToEnd();    // Get the current price of all the coins
                 sr.Close();
 

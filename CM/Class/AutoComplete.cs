@@ -2,10 +2,9 @@
 using System.Windows.Forms;
 
 namespace CM
-{    
+{
     public class AutoComplete : IDisposable
     {
-
         public AutoCompleteStringCollection CreAutoCompleteListFromTrv(TreeView Trv)
         {
             if (Trv != null)
@@ -40,10 +39,10 @@ namespace CM
         }
 
 
-        #region Dispose 
+        #region Dispose
         private bool disposed = false;
 
-        //Implement IDisposable.
+        // Implement IDisposable.
         public void Dispose()
         {
             this.Dispose(true);

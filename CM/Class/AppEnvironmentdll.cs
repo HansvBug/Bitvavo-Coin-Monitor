@@ -153,14 +153,14 @@
             this.DotNetFrameWorkVersion = GetAllDotNetVersions();
         }
 
-        private static string Get_Applicatiepad()  //get the application path
+        private static string Get_Applicatiepad()  // get the application path
         {
             try
             {
                 string appPath;
                 appPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
                 appPath += "\\";                                        // add \to the path
-                return appPath.Replace("file:\\", "");  //remove the text "file:\\" from the path
+                return appPath.Replace("file:\\", string.Empty);  // remove the text "file:\\" from the path
             }
             catch (ArgumentException aex)
             {
@@ -251,7 +251,7 @@
                 string result = "";
                 try
                 {
-                    ManagementObjectSearcher mbs = new ("Select ProcessorID From Win32_processor");  // Add reference assemblies: system.management
+                    ManagementObjectSearcher mbs = new("Select ProcessorID From Win32_processor");  // Add reference assemblies: system.management
                     ManagementObjectCollection mbsList = mbs.Get();
 
                     foreach (ManagementObject mo in mbsList)
@@ -261,7 +261,7 @@
                     mbs.Dispose();
 
                     return result;
-                    //More (all) options: https://msdn.microsoft.com/en-us/library/aa394373(v=vs.85).aspx
+                    // More (all) options: https://msdn.microsoft.com/en-us/library/aa394373(v=vs.85).aspx
                 }
                 catch (Exception)
                 {
@@ -355,11 +355,11 @@
 
 
         #region IDisposable
-        //Bron : https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.100).aspx
+        // Bron : https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.100).aspx
 
         private bool disposed = false;
 
-        //Implement IDisposable.
+        // Implement IDisposable.
         public void Dispose()
         {
             this.Dispose(true);
@@ -397,7 +397,7 @@
     public class GetDotNetVersion
     {
         // bron: https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
-        private readonly List<string> netVersions = new ();
+        private readonly List<string> netVersions = new();
 
         public GetDotNetVersion()
         {
@@ -536,7 +536,7 @@
                             sp = subKey.GetValue(".NET Framework Version: " + "SP", "").ToString();
 
                         install = subKey.GetValue("Install", string.Empty).ToString();
-                        if (string.IsNullOrEmpty(install)) //No install info; it must be later.
+                        if (string.IsNullOrEmpty(install)) // No install info; it must be later.
                         {
                             this.netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name);
                         }
@@ -562,11 +562,13 @@
     public class InvalidOperationException : System.Exception
     {
         public InvalidOperationException() : base() { }
+
         public InvalidOperationException(string message) : base(message) { }
+
         public InvalidOperationException(string message, System.Exception inner) : base(message, inner) { }
 
         // A constructor is needed for serialization when an
-        // exception propagates from a remoting server to the client. 
+        // exception propagates from a remoting server to the client.
         protected InvalidOperationException(System.Runtime.Serialization.SerializationInfo info,
             System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }

@@ -79,7 +79,7 @@ namespace CM
             this.GetSettings();         // Get the settings a user saved
             this.StartLogging();        // Start the logging
             this.ApplySettings();
-            this.CheckAppDatabase();    // Check if the databse file exists and/or it is up to date with the last version.
+            this.CheckAppDatabase();    // Check if the database file exists and/or it is up to date with the last version.
             this.BackColor = SystemColors.Window;
             this.Text = AppSettingsDefault.ApplicationName;
             this.DoubleBuffered = true;
@@ -408,7 +408,7 @@ namespace CM
 
         private void LoadFormPosition()
         {
-            using FormPosition frmPosition = new (this);
+            using FormPosition frmPosition = new(this);
             frmPosition.LoadMainFormPosition();
         }
         #endregion Form load
@@ -961,7 +961,7 @@ namespace CM
                 var points = aChart.Series["Sessie_Hoogste_Prijs_" + aCoin].Points;
                 for (var i = 0; i < points.Count; ++i)
                 {
-                    points[i].YValues[0] = aValue; 
+                    points[i].YValues[0] = aValue;
                 }
             }
 
@@ -1259,7 +1259,7 @@ namespace CM
 
         private void SaveFormPosition()
         {
-            using FormPosition frmPosition = new (this);
+            using FormPosition frmPosition = new(this);
             frmPosition.SaveMainFormPosition();
         }
 
@@ -1325,7 +1325,7 @@ namespace CM
             this.ToolStripStatusLabel1.Text = "Bezig met exporteren...";
             Cursor.Current = Cursors.WaitCursor;
 
-            SQliteExport exportToCsv = new (fileLocation);
+            SQliteExport exportToCsv = new(fileLocation);
             if (currentCoins)
             {
                 exportToCsv.ExportToCsv(true);  // Export only the selected coin tables (in options)

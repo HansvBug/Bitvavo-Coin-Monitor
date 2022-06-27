@@ -6,7 +6,6 @@
     using System.Data;
     using System.IO;
     using System.Windows.Forms;
-    using CM.Class;
 
     /// <summary>
     /// Export data.
@@ -61,7 +60,7 @@
 
             this.dbConnection.Open();
 
-            SQLiteCommand command = new (selectSql, this.dbConnection);
+            SQLiteCommand command = new(selectSql, this.dbConnection);
             try
             {
                 SQLiteDataReader dr = command.ExecuteReader();
@@ -181,7 +180,7 @@
         {
             try
             {
-                using StreamWriter sw = new (new FileStream(fileName, FileMode.Create));
+                using StreamWriter sw = new(new FileStream(fileName, FileMode.Create));
                 string aLine = string.Empty;
 
                 foreach (string columnName in tblInfo.ColumnNames)
@@ -246,7 +245,7 @@
                 DataTable dt = new();
                 string selectSql = "select * from EC_" + tableName.Replace("-","_");
 
-                SQLiteCommand command = new (selectSql, this.dbConnection);
+                SQLiteCommand command = new(selectSql, this.dbConnection);
                 dt.Load(command.ExecuteReader());
 
                 if (dt != null)
