@@ -1394,21 +1394,21 @@ namespace CM
 
         private void AddEventHandlerToPriceCheckBox()
         {
-            foreach (CheckBox Cb in this.Prepare.CheckBoxNames)
+            foreach (CheckBox cb in this.Prepare.CheckBoxNames)
             {
-                switch (Cb.Text)
+                switch (cb.Text)
                 {
                     case "Start prijs aan/uit":
-                        Cb.Click += new EventHandler(this.CheckBoxStartPrice_Click);
+                        cb.Click += new EventHandler(this.CheckBoxStartPrice_Click);
                         break;
                     case "Open prijs aan/uit":
-                        Cb.Click += new EventHandler(this.CheckBoxOpenPrice_Click);
+                        cb.Click += new EventHandler(this.CheckBoxOpenPrice_Click);
                         break;
                     case "Sessie hoogste aan/uit":
-                        Cb.Click += new EventHandler(this.CheckBoxSessionHighPrice_Click);
+                        cb.Click += new EventHandler(this.CheckBoxSessionHighPrice_Click);
                         break;
                     case "Sessie laagste aan/uit":
-                        Cb.Click += new EventHandler(this.CheckBoxSessionLowPrice_Click);
+                        cb.Click += new EventHandler(this.CheckBoxSessionLowPrice_Click);
                         break;
                     default:
                         // code block
