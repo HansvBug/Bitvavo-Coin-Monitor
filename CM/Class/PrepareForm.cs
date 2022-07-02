@@ -293,13 +293,15 @@
             TabPage tp = this.TabCtrl.TabPages[tabcount];
             DataGridView dgv = new()
             {
-                Name = dgvName
+                Name = dgvName,
             };
             dgv.Columns.Add("Coin", "Coin");
             dgv.Columns.Add("Percentage", "Percentage");
 
-            dgv.Columns[0].Width = 90;
-            dgv.Columns[1].Width = 90;
+            dgv.Columns[0].Width = 100;
+            dgv.Columns[1].Width = 100;
+
+            dgv.Columns[0].CellTemplate.ValueType = typeof(int);  //TODO; sorting.... this line should improve sorting but is does not. Negative an positive numers are not sorted correct. 
 
             dgv.Location = new Point(3, 3);
             dgv.Height = tp.Height;
@@ -312,7 +314,8 @@
             dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgv.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-            dgv.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;  // HIER
+
+            dgv.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             dgv.RowHeadersVisible = false;
             dgv.Dock = DockStyle.Fill;
@@ -601,6 +604,7 @@
 
         private void CreateGroupBox(int tabcount, string name)
         {
+            const int groupboxwith = 210;
             TabPage tp = this.TabCtrl.TabPages[tabcount];
 
             GroupBox gb = new()
@@ -612,7 +616,7 @@
             if (this.CntrlPointX == 3)
             {
                 gb.Location = new Point(this.CntrlPointX + 2, 5);
-                this.CntrlPointX += 200 + 2;
+                this.CntrlPointX += (groupboxwith + 5) + 2; 
             }
             else
             {
@@ -621,7 +625,7 @@
 
             int gbHeight = tp.Height - 15;
 
-            gb.Size = new Size(200, gbHeight);
+            gb.Size = new Size(groupboxwith, gbHeight);
             gb.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
 
             this.GroupBoxNames.Add(gb);

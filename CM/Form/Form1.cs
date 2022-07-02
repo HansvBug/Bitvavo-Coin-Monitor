@@ -1595,13 +1595,13 @@ namespace CM
             int x = aChart.ClientSize.Width;
             int y = aChart.ClientSize.Height;
 
-            Label LabelYaxisCur = new Label();
+            Label labelYaxisCur = new();
 
             foreach (Label aLabel in this.Prepare.LabelNames)
             {
                 if (aLabel.Name == aChart.Name.Replace("Chart_", "Lb_"))
                 {
-                    LabelYaxisCur = aLabel;
+                    labelYaxisCur = aLabel;
                 }
             }
 
@@ -1609,7 +1609,7 @@ namespace CM
             //  left                          || bottom        ||top        ||right
             if (e.X <= aChart.Location.X + 75 || e.Y >= y - 85 || e.Y <= 35 || e.X >= aChart.Location.X + x - 50)
             {
-                LabelYaxisCur.Visible = false;
+                labelYaxisCur.Visible = false;
             }
             else
             {
@@ -1619,30 +1619,30 @@ namespace CM
 
                 if (HasValue(yValue))
                 {
-                    LabelYaxisCur.Visible = true;
+                    labelYaxisCur.Visible = true;
 
                     if (yValue > 0 && yValue < 50)
                     {
-                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 4).ToString();
+                        labelYaxisCur.Text = "€" + Math.Round(yValue, 4).ToString();
                     }
                     else if (yValue >= 50 && yValue < 100)
                     {
-                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 2).ToString();
+                        labelYaxisCur.Text = "€" + Math.Round(yValue, 2).ToString();
                     }
                     else if (yValue >= 100 && yValue < 1000)
                     {
-                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 1).ToString();
+                        labelYaxisCur.Text = "€" + Math.Round(yValue, 1).ToString();
                     }
                     else if (yValue >= 1000)
                     {
-                        LabelYaxisCur.Text = "€" + Math.Round(yValue, 0).ToString();
+                        labelYaxisCur.Text = "€" + Math.Round(yValue, 0).ToString();
                     }
 
-                    LabelYaxisCur.Location = new Point(aChart.Right - 80, e.Y - 5);
+                    labelYaxisCur.Location = new Point(aChart.Right - 80, e.Y - 5);
                 }
                 else
                 {
-                    LabelYaxisCur.Visible = false;
+                    labelYaxisCur.Visible = false;
                 }
             }
         }
@@ -1671,12 +1671,12 @@ namespace CM
             {
                 if (PlayPositiveSound)
                 {
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Path.GetDirectoryName(Application.ExecutablePath) + @"\Sound" + "\\CASHREG.WAV");
+                    System.Media.SoundPlayer player = new(Path.GetDirectoryName(Application.ExecutablePath) + @"\Sound" + "\\CASHREG.WAV");
                     player.Play();
                 }
                 else
                 {
-                    System.Media.SoundPlayer player = new System.Media.SoundPlayer(Path.GetDirectoryName(Application.ExecutablePath) + @"\Sound" + "\\Ambulance.WAV");
+                    System.Media.SoundPlayer player = new(Path.GetDirectoryName(Application.ExecutablePath) + @"\Sound" + "\\Ambulance.WAV");
                     player.Play();
                 }
             }
