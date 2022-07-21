@@ -22,13 +22,13 @@ namespace CM
 
         private StartSession startSession;
 
-        private PrepareForm Prepare;
+        private PrepareForm prepareFrm;
 
         public CoinDataAll AllCoinDataSelectedCoins;
 
         private MarketPrice CoinMarketPrice;
 
-        private readonly string DoubleFormatString = "#.############";  // TODO make optional
+        private readonly string doubleFormatString = "#.############";  // TODO make optional
 
         double timmerTime;
 
@@ -150,12 +150,12 @@ namespace CM
         {
             this.WarnPercentage = Convert.ToDouble(this.TextBoxWarnPercentage.Text);
 
-            this.Prepare = new PrepareForm
+            this.prepareFrm = new PrepareForm
             {
                 WarnPercentage = this.WarnPercentage,
             };
 
-            this.Prepare.CreateTheTabs(this.TabControlCharts);
+            this.prepareFrm.CreateTheTabs(this.TabControlCharts);
 
             this.HandleControlsState(SessionAction.Stop.ToString()); // Set buttons on/off
             this.TabControlMain.SelectedIndex = 0;
@@ -178,7 +178,7 @@ namespace CM
                 this.CheckAppDbaseVersion(); // Check the version of the application database (and update it if needed)
             }
 
-            this.GetSQliteVersion();     // Set de SQlite version in the log file
+            GetSQliteVersion();     // Set de SQlite version in the log file
         }
 
         private void CheckAppDbaseVersion()
@@ -265,7 +265,7 @@ namespace CM
             Cursor.Current = Cursors.Default;
         }
 
-        private void GetSQliteVersion()
+        private static void GetSQliteVersion()
         {
             using ApplicationDatabase AppDb = new();
             Logging.WriteToLogInformation("SQLite versie: " + AppDb.GetSQliteVersion());
@@ -397,7 +397,6 @@ namespace CM
             // When returning from options form
             // string DbLocation = this.JsonObjSettings.AppParam[0].DatabaseLocation;
             // string AppDb = Path.Combine(DbLocation, AppSettingsDefault.SqlLiteDatabaseName);
-
             this.TextBoxTimeInterval.Text = this.JsonObjSettings.AppParam[0].RateLimit.ToString();
             this.TextBoxWarnPercentage.Text = this.JsonObjSettings.AppParam[0].WarnPercentage.ToString();
             this.WarnPercentage = this.JsonObjSettings.AppParam[0].WarnPercentage;
@@ -561,7 +560,7 @@ namespace CM
                 {
                     string MarketNames = keyValue.Key;
 
-                    foreach (DataGridView DgvName in this.Prepare.DgvNames)
+                    foreach (DataGridView DgvName in this.prepareFrm.DgvNames)
                     {
                         if (this.Controls.Find(DgvName.Name, true).FirstOrDefault() is DataGridView cntrl)
                         {
@@ -580,7 +579,7 @@ namespace CM
                 foreach (CoinData aCoin in this.AllCoinDataSelectedCoins.Items)
                 {
                     string CoinName = aCoin.Name;
-                    foreach (DataGridView DgvName in this.Prepare.DgvNames)
+                    foreach (DataGridView DgvName in this.prepareFrm.DgvNames)
                     {
                         // see PrepareForm, create datagridview. this is the second dgv
                         if (DgvName.Name.Contains(CoinName) && DgvName.Name.Contains("Dgv_1_"))
@@ -639,7 +638,7 @@ namespace CM
 
         private void ClearAllCharts()
         {
-            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in this.Prepare.ChartNames)
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in this.prepareFrm.ChartNames)
             {
                 foreach (var series in aChart.Series)
                 {
@@ -655,7 +654,7 @@ namespace CM
                 foreach (CoinData aCoin in this.AllCoinDataSelectedCoins.Items)
                 {
                     string CoinName = aCoin.Name;
-                    foreach (DataGridView DgvName in this.Prepare.DgvNames)
+                    foreach (DataGridView DgvName in this.prepareFrm.DgvNames)
                     {
                         if (DgvName.Name.Contains(CoinName) && DgvName.Name.Contains("Dgv_1_"))
                         {
@@ -717,7 +716,7 @@ namespace CM
             else
             {
                 // Used when the precentage is changed before start is pressed
-                foreach (DataGridView dgvName in this.Prepare.DgvNames)
+                foreach (DataGridView dgvName in this.prepareFrm.DgvNames)
                 {
                     if (dgvName.Name.Contains("Dgv_1_"))
                     {
@@ -740,7 +739,7 @@ namespace CM
                 {
                     string coinName = aCoin.Name;
 
-                    foreach (DataGridView DgvName in this.Prepare.DgvNames)
+                    foreach (DataGridView DgvName in this.prepareFrm.DgvNames)
                     {
                         if (DgvName.Name.Contains(coinName) && DgvName.Name.Contains("Dgv_2_"))
                         {
@@ -857,7 +856,7 @@ namespace CM
         #region Charting
         private void PrepareChart()
         {
-            foreach (System.Windows.Forms.DataVisualization.Charting.Chart chartName in this.Prepare.ChartNames)
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart chartName in this.prepareFrm.ChartNames)
             {
                 string coinName = chartName.Name.Replace("Chart_", string.Empty);
                 if (this.Controls.Find(chartName.Name, true).FirstOrDefault() is System.Windows.Forms.DataVisualization.Charting.Chart cntrl)
@@ -898,7 +897,7 @@ namespace CM
 
         private void Charting()
         {
-            foreach (System.Windows.Forms.DataVisualization.Charting.Chart ChartName in this.Prepare.ChartNames)
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart ChartName in this.prepareFrm.ChartNames)
             {
                 string CoinName = ChartName.Name.Replace("Chart_", string.Empty);
                 if (this.Controls.Find(ChartName.Name, true).FirstOrDefault() is System.Windows.Forms.DataVisualization.Charting.Chart cntrl)
@@ -1054,7 +1053,7 @@ namespace CM
         {
             try
             {
-                string formattedPrice = d.ToString(this.DoubleFormatString);
+                string formattedPrice = d.ToString(this.doubleFormatString);
 
                 if (formattedPrice.Length > 0 && formattedPrice != "0")
                 {
@@ -1179,9 +1178,9 @@ namespace CM
                 this.CheckBoxSoundNegative.Text = "Geluid bij een daling van ... %";
             }
 
-            if (this.Prepare != null)
+            if (this.prepareFrm != null)
             {
-                this.Prepare.WarnPercentage = this.WarnPercentage;
+                this.prepareFrm.WarnPercentage = this.WarnPercentage;
                 this.SetCoinDataInDataGridView();
             }
         }
@@ -1394,7 +1393,7 @@ namespace CM
 
         private void AddEventHandlerToPriceCheckBox()
         {
-            foreach (CheckBox cb in this.Prepare.CheckBoxNames)
+            foreach (CheckBox cb in this.prepareFrm.CheckBoxNames)
             {
                 switch (cb.Text)
                 {
@@ -1561,12 +1560,12 @@ namespace CM
                 if (result.ChartElementType == System.Windows.Forms.DataVisualization.Charting.ChartElementType.DataPoint)
                 {
                     var yVal = result.ChartArea.AxisY.PixelPositionToValue(pos.Y);
-                    var Prop = result.Object as System.Windows.Forms.DataVisualization.Charting.DataPoint;
+                    var prop = result.Object as System.Windows.Forms.DataVisualization.Charting.DataPoint;
 
-                    double Value = Math.Round(yVal, 2); // Coin value
-                    var Yvalue = Prop.AxisLabel;        // Time
+                    double value = Math.Round(yVal, 2); // Coin value
+                    var yValue = prop.AxisLabel;        // Time
 
-                    this.tooltip.Show("€ " + Value.ToString() + " - " + Yvalue.ToString(), aChart, pos.X, pos.Y - 15);
+                    this.tooltip.Show("€ " + value.ToString() + " - " + yValue.ToString(), aChart, pos.X, pos.Y - 15);
                 }
             }
         }
@@ -1575,7 +1574,7 @@ namespace CM
         {
             var c1 = this.GetAll(this, typeof(System.Windows.Forms.DataVisualization.Charting.Chart));
 
-            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in this.Prepare.ChartNames)
+            foreach (System.Windows.Forms.DataVisualization.Charting.Chart aChart in this.prepareFrm.ChartNames)
             {
                 aChart.MouseMove += new MouseEventHandler(this.Chart_MouseMove);     // Used for showing label with coin value
                 aChart.MouseWheel += new MouseEventHandler(this.Chart_MouseWheel);   // Used for zoomable chart
@@ -1597,7 +1596,7 @@ namespace CM
 
             Label labelYaxisCur = new();
 
-            foreach (Label aLabel in this.Prepare.LabelNames)
+            foreach (Label aLabel in this.prepareFrm.LabelNames)
             {
                 if (aLabel.Name == aChart.Name.Replace("Chart_", "Lb_"))
                 {

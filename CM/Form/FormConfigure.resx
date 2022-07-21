@@ -57,1166 +57,1175 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;TextBoxLocationLogFile.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;CheckBoxEnableUrl.Name" xml:space="preserve">
+    <value>CheckBoxEnableUrl</value>
   </data>
-  <data name="&gt;&gt;CheckBoxAppenLogFile.Name" xml:space="preserve">
-    <value>CheckBoxAppenLogFile</value>
-  </data>
-  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
-  <data name="LabelCoinFound.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>30</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxLogFile.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="button2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>35</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationLogFile.Name" xml:space="preserve">
-    <value>TextBoxLocationLogFile</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TextBoxLocationDatabaseFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>169, 81</value>
-  </data>
-  <data name="GroupBoxDbmaintenance.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>8, 168</value>
-  </data>
-  <data name="&gt;&gt;ButtonSearchCoinName.Name" xml:space="preserve">
-    <value>ButtonSearchCoinName</value>
-  </data>
-  <data name="GroupBoxUrl.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>8, 17</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="CheckBoxAppenLogFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUrl.Parent" xml:space="preserve">
-    <value>TabPageAPI</value>
-  </data>
-  <data name="ButtonSelectedOnly.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>83, 23</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationSettingsFile.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ButtonInvertSelection.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>193, 75</value>
-  </data>
-  <data name="&gt;&gt;LabelVersion.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="TreeViewCoinNames.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 17</value>
-  </data>
-  <data name="TabPageAPI.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Parent" xml:space="preserve">
-    <value>TabPageAPI</value>
-  </data>
-  <data name="TextBoxUrl1.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;TabPageAPI.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="LabelVersion.Text" xml:space="preserve">
-    <value>Versie : -</value>
-  </data>
-  <data name="ButtonClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="ButtonDeselectAll.Text" xml:space="preserve">
-    <value>Geen</value>
-  </data>
-  <data name="GroupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="GroupBoxLogFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>665, 154</value>
-  </data>
-  <data name="ButtonSearchCoinName.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ButtonGetCoinNames.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="CheckBoxActivateLogging.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>113, 19</value>
-  </data>
-  <data name="&gt;&gt;ButtonDeselectAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxLocationLogFile.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TextBoxWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>49, 23</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUrl.Name" xml:space="preserve">
-    <value>GroupBoxUrl</value>
-  </data>
-  <data name="ButtonSelectedOnly.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxDbmaintenance.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxDbmaintenance.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBoxRateLimit.Name" xml:space="preserve">
-    <value>TextBoxRateLimit</value>
-  </data>
-  <data name="CheckBoxAppenLogFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 47</value>
-  </data>
-  <data name="ButtonInvertSelection.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>83, 23</value>
-  </data>
-  <data name="TabPageCoins.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>4, 24</value>
-  </data>
-  <data name="&gt;&gt;LabelCountCheckedTrvNodes.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="LabelLocationAppDatabaseFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>155, 15</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TabPageCoins.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="TextBoxLocationSettingsFile.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Url 1 :</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationLogFile.Name" xml:space="preserve">
-    <value>LabelLocationLogFile</value>
+  <data name="&gt;&gt;TextBoxLocationLogFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ButtonDeselectAll.Name" xml:space="preserve">
     <value>ButtonDeselectAll</value>
   </data>
-  <data name="TextBoxLocationDatabaseFile.Enabled" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxActivateLogging.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormConfigure</value>
-  </data>
-  <data name="&gt;&gt;ButtonCompressAppDatabase.Parent" xml:space="preserve">
-    <value>GroupBoxDbmaintenance</value>
-  </data>
-  <data name="LabelLocationSettingsFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 87</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>GroupBoxUrl</value>
-  </data>
-  <data name="&gt;&gt;ButtonClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonDeselectAll.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>615, 344</value>
-  </data>
-  <data name="GroupBoxLogFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>13</value>
-  </data>
-  <data name="CheckBoxAppenLogFile.Text" xml:space="preserve">
-    <value>Vul het log bestand aan</value>
-  </data>
-  <data name="&gt;&gt;ButtonSelectAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelVersion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>696, 374</value>
-  </data>
-  <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="CheckBoxActivateLogging.Text" xml:space="preserve">
-    <value>Activeer logging</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 82</value>
-  </data>
-  <data name="TextBoxLocationSettingsFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>482, 23</value>
-  </data>
-  <data name="GroupBoxLogFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>8, 8</value>
-  </data>
-  <data name="&gt;&gt;LabelCopyAppDb.Parent" xml:space="preserve">
-    <value>GroupBoxDbmaintenance</value>
-  </data>
-  <data name="LabelWarnPercentage.AutoSize" type="System.Boolean, System.Private.CoreLib">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="LabelCopyAppDb.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="LabelCountCheckedTrvNodes.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;TextBoxUrl2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonGetCoinNames.Text" xml:space="preserve">
-    <value>Vernieuw</value>
-  </data>
-  <data name="LabelLocationSettingsFile.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TextBoxUrl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ButtonCompressAppDatabase.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>TabPageAPI</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationDatabaseFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;LabelBuildDate.Parent" xml:space="preserve">
-    <value>TabPageAppSettings</value>
-  </data>
-  <data name="CopyDatabaseIntervalTextBox.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>233, 52</value>
-  </data>
-  <data name="CopyDatabaseIntervalTextBox.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>3</value>
-  </data>
-  <data name="LabelLocationLogFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>119, 15</value>
-  </data>
-  <data name="ButtonClose.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>34</value>
   </data>
   <data name="&gt;&gt;TextBoxWarnPercentage.Parent" xml:space="preserve">
     <value>TabPageAPI</value>
   </data>
-  <data name="LabelLocationAppDatabaseFile.Text" xml:space="preserve">
-    <value>Locatie applicatie database :</value>
-  </data>
-  <data name="TextBoxUrl1.Text" xml:space="preserve">
-    <value>https://api.bitvavo.com/v2/ticker/price</value>
-  </data>
-  <data name="&gt;&gt;ButtonSelectedOnly.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>GroupBoxUrl</value>
-  </data>
-  <data name="&gt;&gt;ButtonCompressAppDatabase.Name" xml:space="preserve">
-    <value>ButtonCompressAppDatabase</value>
-  </data>
-  <data name="TreeViewCoinNames.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>24</value>
-  </data>
-  <data name="TextBoxRateLimit.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="GroupBoxUrl.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>29</value>
-  </data>
-  <data name="TabControl1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>28</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="GroupBoxLogFile.Text" xml:space="preserve">
-    <value>Log bestand</value>
-  </data>
-  <data name="LabelBuildDate.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>20</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
-    <value>7, 15</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationDatabaseFile.Name" xml:space="preserve">
-    <value>TextBoxLocationDatabaseFile</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
-    <value>TabPageCoins</value>
-  </data>
-  <data name="Label2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>2</value>
-  </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationDatabaseFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelCopyAppDb.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 55</value>
-  </data>
-  <data name="ButtonDeselectAll.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>83, 23</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CheckBoxEnableUrl.Text" xml:space="preserve">
-    <value>Pas Url aan</value>
-  </data>
-  <data name="LabelBuildDate.Text" xml:space="preserve">
-    <value>Build datum : -</value>
-  </data>
-  <data name="&gt;&gt;ButtonClose.Name" xml:space="preserve">
-    <value>ButtonClose</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationSettingsFile.Parent" xml:space="preserve">
-    <value>GroupBoxLogFile</value>
-  </data>
-  <data name="&gt;&gt;LabelRateLimit.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ButtonSelectAll.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>25</value>
-  </data>
-  <data name="LabelVersion.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>52, 15</value>
-  </data>
-  <data name="LabelBuildDate.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GroupBoxUrl.Text" xml:space="preserve">
-    <value>Connectie Url(s)</value>
-  </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="LabelCoinFound.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>25, 15</value>
-  </data>
-  <data name="&gt;&gt;ButtonSelectedOnly.Name" xml:space="preserve">
-    <value>ButtonSelectedOnly</value>
-  </data>
-  <data name="&gt;&gt;ButtonInvertSelection.Name" xml:space="preserve">
-    <value>ButtonInvertSelection</value>
-  </data>
-  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TabPageAppSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationAppDatabaseFile.Name" xml:space="preserve">
-    <value>LabelLocationAppDatabaseFile</value>
-  </data>
-  <data name="TabPageCoins.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="CopyDatabaseIntervalTextBox.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>43, 23</value>
-  </data>
-  <data name="LabelWarnPercentage.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>211, 15</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>37, 15</value>
-  </data>
-  <data name="TabPageCoins.Text" xml:space="preserve">
-    <value>Munt namen</value>
-  </data>
-  <data name="ButtonSearchCoinName.Text" xml:space="preserve">
-    <value>Zoek</value>
-  </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Sluiten</value>
-  </data>
-  <data name="TextBoxUrl2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>285, 23</value>
-  </data>
-  <data name="TabPageAPI.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="ButtonCompressAppDatabase.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 22</value>
-  </data>
-  <data name="LabelLocationSettingsFile.Text" xml:space="preserve">
-    <value>Locatie settings bestand :</value>
-  </data>
-  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>710, 408</value>
-  </data>
-  <data name="GroupBoxUrl.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>369, 115</value>
-  </data>
-  <data name="TextBoxLocationLogFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>169, 114</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxAppenLogFile.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="TextBoxLocationSettingsFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>169, 84</value>
-  </data>
-  <data name="LabelRateLimit.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="LabelCountCheckedTrvNodes.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>125, 15</value>
-  </data>
   <data name="ButtonClose.Text" xml:space="preserve">
     <value>Sluiten</value>
-  </data>
-  <data name="TextBoxLocationDatabaseFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>22</value>
-  </data>
-  <data name="TextBoxRateLimit.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>246, 138</value>
-  </data>
-  <data name="ButtonInvertSelection.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>27</value>
-  </data>
-  <data name="TextBoxUrl2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>69, 79</value>
-  </data>
-  <data name="&gt;&gt;ButtonClose.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelCopyAppDb.Text" xml:space="preserve">
-    <value>Kopieer de app database na x keer starten</value>
-  </data>
-  <data name="LabelLocationAppDatabaseFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 84</value>
-  </data>
-  <data name="&gt;&gt;TreeViewCoinNames.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxDbmaintenance.Parent" xml:space="preserve">
-    <value>TabPageAppSettings</value>
-  </data>
-  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>0, 0</value>
-  </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>615, 344</value>
-  </data>
-  <data name="&gt;&gt;ButtonCompressAppDatabase.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>710, 408</value>
-  </data>
-  <data name="CheckBoxActivateLogging.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>33</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxActivateLogging.Parent" xml:space="preserve">
-    <value>GroupBoxLogFile</value>
-  </data>
-  <data name="&gt;&gt;LabelCountCheckedTrvNodes.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;ButtonInvertSelection.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;LabelBuildDate.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="TextBoxLocationSettingsFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationSettingsFile.Parent" xml:space="preserve">
-    <value>GroupBoxLogFile</value>
-  </data>
-  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CheckBoxAppenLogFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>150, 19</value>
-  </data>
-  <data name="&gt;&gt;ButtonSearchCoinName.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="TextBoxUrl2.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>4</value>
-  </data>
-  <data name="LabelLocationLogFile.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 117</value>
-  </data>
-  <data name="&gt;&gt;TabPageAppSettings.Name" xml:space="preserve">
-    <value>TabPageAppSettings</value>
-  </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUrl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxAppenLogFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>18, 170</value>
-  </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonSearchCoinName.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;LabelRateLimit.Name" xml:space="preserve">
-    <value>LabelRateLimit</value>
-  </data>
-  <data name="&gt;&gt;TextBoxSearchCoinName.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelCopyAppDb.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxActivateLogging.Name" xml:space="preserve">
-    <value>CheckBoxActivateLogging</value>
-  </data>
-  <data name="TextBoxWarnPercentage.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>246, 167</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>35</value>
-  </data>
-  <data name="ButtonGetCoinNames.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>193, 158</value>
-  </data>
-  <data name="&gt;&gt;ButtonDeselectAll.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;LabelCopyAppDb.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelCountCheckedTrvNodes.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>193, 325</value>
-  </data>
-  <data name="&gt;&gt;TreeViewCoinNames.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxRateLimit.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ButtonInvertSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelLocationSettingsFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>10</value>
-  </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Sluiten</value>
-  </data>
-  <data name="TextBoxLocationLogFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>482, 23</value>
-  </data>
-  <data name="ButtonGetCoinNames.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>83, 23</value>
-  </data>
-  <data name="TextBoxRateLimit.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>32</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationLogFile.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="TextBoxLocationDatabaseFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>482, 23</value>
-  </data>
-  <data name="Label2.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationAppDatabaseFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;ButtonSelectedOnly.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="LabelCopyAppDb.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>224, 15</value>
-  </data>
-  <data name="LabelCoinFound.Text" xml:space="preserve">
-    <value>0 st</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxDbmaintenance.Name" xml:space="preserve">
-    <value>GroupBoxDbmaintenance</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxEnableUrl.Parent" xml:space="preserve">
-    <value>GroupBoxUrl</value>
-  </data>
-  <data name="ButtonSelectedOnly.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>193, 129</value>
-  </data>
-  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.Name" xml:space="preserve">
-    <value>CopyDatabaseIntervalTextBox</value>
-  </data>
-  <data name="CheckBoxEnableUrl.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 22</value>
-  </data>
-  <data name="&gt;&gt;TextBoxUrl2.Parent" xml:space="preserve">
-    <value>GroupBoxUrl</value>
-  </data>
-  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.Parent" xml:space="preserve">
-    <value>GroupBoxDbmaintenance</value>
-  </data>
-  <data name="TextBoxWarnPercentage.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="ButtonCompressAppDatabase.Text" xml:space="preserve">
-    <value>Comprimeer de app. database</value>
-  </data>
-  <data name="LabelRateLimit.Text" xml:space="preserve">
-    <value>Aantal verzoeken per minuut :</value>
-  </data>
-  <data name="&gt;&gt;TextBoxUrl1.Parent" xml:space="preserve">
-    <value>GroupBoxUrl</value>
-  </data>
-  <data name="LabelRateLimit.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>18, 141</value>
-  </data>
-  <data name="CheckBoxActivateLogging.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>6</value>
-  </data>
-  <data name="ButtonGetCoinNames.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>23</value>
-  </data>
-  <data name="CopyDatabaseIntervalTextBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="&gt;&gt;ButtonGetCoinNames.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxEnableUrl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelRateLimit.Parent" xml:space="preserve">
-    <value>TabPageAPI</value>
-  </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LabelBuildDate.Name" xml:space="preserve">
-    <value>LabelBuildDate</value>
-  </data>
-  <data name="GroupBox1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;TabPageCoins.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="TextBoxUrl1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>69, 50</value>
-  </data>
-  <data name="ButtonInvertSelection.Text" xml:space="preserve">
-    <value>Invert</value>
-  </data>
-  <data name="TextBoxLocationLogFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;LabelCoinFound.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;ButtonSelectedOnly.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="TreeViewCoinNames.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>181, 323</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationSettingsFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonInvertSelection.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxLogFile.Name" xml:space="preserve">
-    <value>GroupBoxLogFile</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxEnableUrl.Name" xml:space="preserve">
-    <value>CheckBoxEnableUrl</value>
-  </data>
-  <data name="&gt;&gt;LabelWarnPercentage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;TabPageAppSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
-  </data>
-  <data name="LabelLocationLogFile.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="LabelCopyAppDb.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TabPageAppSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationSettingsFile.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;TabPageAPI.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxSearchCoinName.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="LabelBuildDate.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>86, 15</value>
-  </data>
-  <data name="LabelLocationSettingsFile.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>140, 15</value>
-  </data>
-  <data name="ButtonDeselectAll.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxLogFile.Parent" xml:space="preserve">
-    <value>TabPageAppSettings</value>
-  </data>
-  <data name="ButtonCompressAppDatabase.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;TabPageCoins.Name" xml:space="preserve">
-    <value>TabPageCoins</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="LabelVersion.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>14, 327</value>
-  </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
-    <value>TabPageAPI</value>
-  </data>
-  <data name="ButtonSearchCoinName.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>31</value>
-  </data>
-  <data name="TabPageAPI.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>702, 380</value>
-  </data>
-  <data name="ButtonCompressAppDatabase.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>191, 23</value>
-  </data>
-  <data name="TabPageAppSettings.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
-  </data>
-  <data name="LabelRateLimit.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>31</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationDatabaseFile.Parent" xml:space="preserve">
-    <value>GroupBoxDbmaintenance</value>
-  </data>
-  <data name="ButtonSelectAll.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>193, 17</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationLogFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonSelectAll.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="TabPageAPI.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>4, 24</value>
-  </data>
-  <data name="&gt;&gt;TreeViewCoinNames.Name" xml:space="preserve">
-    <value>TreeViewCoinNames</value>
-  </data>
-  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
-    <value>backgroundWorker1</value>
-  </data>
-  <data name="&gt;&gt;TextBoxRateLimit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TextBoxUrl2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;LabelBuildDate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="LabelCoinFound.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;LabelCopyAppDb.Name" xml:space="preserve">
-    <value>LabelCopyAppDb</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationLogFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelVersion.Parent" xml:space="preserve">
-    <value>TabPageAppSettings</value>
-  </data>
-  <data name="LabelLocationLogFile.Text" xml:space="preserve">
-    <value>Locatie Log bestand :</value>
-  </data>
-  <data name="TextBoxWarnPercentage.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>34</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationLogFile.Parent" xml:space="preserve">
-    <value>GroupBoxLogFile</value>
-  </data>
-  <data name="TabPageAppSettings.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>702, 380</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationSettingsFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GroupBoxDbmaintenance.Text" xml:space="preserve">
-    <value>Database onderhoud</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>37, 15</value>
-  </data>
-  <data name="LabelCoinFound.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>193, 350</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>TabPageAppSettings</value>
-  </data>
-  <data name="TabPageAPI.Text" xml:space="preserve">
-    <value>API</value>
-  </data>
-  <data name="&gt;&gt;TreeViewCoinNames.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationLogFile.Parent" xml:space="preserve">
-    <value>GroupBoxLogFile</value>
-  </data>
-  <data name="CheckBoxAppenLogFile.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Url 2 :</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxActivateLogging.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LabelVersion.Name" xml:space="preserve">
-    <value>LabelVersion</value>
-  </data>
-  <data name="CheckBoxEnableUrl.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ButtonSearchCoinName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelCoinFound.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>10, 53</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxLogFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LabelCountCheckedTrvNodes.Text" xml:space="preserve">
-    <value>Aantal geselecteerd : 0</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationAppDatabaseFile.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ButtonSelectAll.Text" xml:space="preserve">
-    <value>Alle</value>
-  </data>
-  <data name="&gt;&gt;TabPageAppSettings.Parent" xml:space="preserve">
-    <value>TabControl1</value>
-  </data>
-  <data name="&gt;&gt;LabelCoinFound.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;CheckBoxEnableUrl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ButtonGetCoinNames.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;TextBoxUrl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LabelLocationSettingsFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="CheckBoxEnableUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 19</value>
+  </data>
+  <data name="ButtonSearchCoinName.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GroupBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;ButtonInvertSelection.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="ButtonSelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 17</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationDatabaseFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="LabelWarnPercentage.Text" xml:space="preserve">
     <value>Waarschuwen bij een verschil van x % :</value>
   </data>
-  <data name="&gt;&gt;TextBoxSearchCoinName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 15</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Opties</value>
+  <data name="&gt;&gt;GroupBoxDbmaintenance.Name" xml:space="preserve">
+    <value>GroupBoxDbmaintenance</value>
   </data>
-  <data name="LabelLocationAppDatabaseFile.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
+  <data name="CheckBoxActivateLogging.Text" xml:space="preserve">
+    <value>Activeer logging</value>
   </data>
-  <data name="LabelVersion.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>19</value>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>GroupBoxUrl</value>
   </data>
-  <data name="&gt;&gt;TabPageAPI.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;TextBoxWarnPercentage.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>TabPageAPI</value>
+  </data>
+  <data name="TextBoxLocationDatabaseFile.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.Text" xml:space="preserve">
+    <value>Vul het log bestand aan</value>
+  </data>
+  <data name="LabelWarnPercentage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 170</value>
+  </data>
+  <data name="TabPageCoins.Text" xml:space="preserve">
+    <value>Munt namen</value>
+  </data>
+  <data name="CheckBoxActivateLogging.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="CheckBoxEnableUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 22</value>
+  </data>
+  <data name="LabelCopyAppDb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 15</value>
+  </data>
+  <data name="&gt;&gt;TextBoxUrl2.Name" xml:space="preserve">
+    <value>TextBoxUrl2</value>
+  </data>
+  <data name="TextBoxSearchCoinName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 345</value>
+  </data>
+  <data name="&gt;&gt;LabelCopyAppDb.Name" xml:space="preserve">
+    <value>LabelCopyAppDb</value>
+  </data>
+  <data name="LabelVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 15</value>
+  </data>
+  <data name="&gt;&gt;LabelCopyAppDb.Parent" xml:space="preserve">
+    <value>GroupBoxDbmaintenance</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 84</value>
   </data>
   <data name="&gt;&gt;TextBoxSearchCoinName.Name" xml:space="preserve">
     <value>TextBoxSearchCoinName</value>
   </data>
-  <data name="&gt;&gt;LabelCountCheckedTrvNodes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TextBoxSearchCoinName.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
-  <data name="TabPageAppSettings.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>4, 24</value>
+  <data name="TabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
   </data>
-  <data name="ButtonDeselectAll.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>193, 46</value>
+  <data name="GroupBoxDbmaintenance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 168</value>
   </data>
-  <data name="TabPageAppSettings.Text" xml:space="preserve">
-    <value>Instellingen</value>
+  <data name="ButtonClose.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
   </data>
-  <data name="&gt;&gt;LabelWarnPercentage.Name" xml:space="preserve">
-    <value>LabelWarnPercentage</value>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
   </data>
-  <data name="&gt;&gt;TabPageCoins.Parent" xml:space="preserve">
-    <value>TabControl1</value>
+  <data name="&gt;&gt;TextBoxLocationLogFile.Parent" xml:space="preserve">
+    <value>GroupBoxLogFile</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>38, 15</value>
+  <data name="&gt;&gt;TabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="TextBoxSearchCoinName.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>100, 23</value>
-  </data>
-  <data name="&gt;&gt;TextBoxLocationSettingsFile.Name" xml:space="preserve">
-    <value>TextBoxLocationSettingsFile</value>
-  </data>
-  <data name="LabelCountCheckedTrvNodes.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="ButtonSearchCoinName.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <data name="TextBoxUrl1.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="GroupBoxDbmaintenance.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>18</value>
-  </data>
-  <data name="ButtonSelectAll.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>83, 23</value>
-  </data>
-  <data name="&gt;&gt;LabelRateLimit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonClose.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>75, 23</value>
-  </data>
-  <data name="LabelCopyAppDb.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;GroupBoxUrl.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="CheckBoxEnableUrl.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
-  </data>
-  <data name="TabPageCoins.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>702, 380</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationAppDatabaseFile.Parent" xml:space="preserve">
-    <value>GroupBoxDbmaintenance</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Name" xml:space="preserve">
-    <value>TextBoxWarnPercentage</value>
-  </data>
-  <data name="GroupBoxDbmaintenance.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>665, 115</value>
-  </data>
-  <data name="&gt;&gt;TextBoxRateLimit.Parent" xml:space="preserve">
-    <value>TabPageAPI</value>
-  </data>
-  <data name="LabelLocationAppDatabaseFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>21</value>
-  </data>
-  <data name="LabelBuildDate.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>14, 355</value>
-  </data>
-  <data name="ButtonSelectedOnly.Text" xml:space="preserve">
-    <value>Geselecteerd</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelLocationSettingsFile.Name" xml:space="preserve">
-    <value>LabelLocationSettingsFile</value>
-  </data>
-  <data name="&gt;&gt;ButtonClose.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;TextBoxUrl1.Name" xml:space="preserve">
     <value>TextBoxUrl1</value>
   </data>
-  <data name="CheckBoxEnableUrl.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>84, 19</value>
+  <data name="LabelBuildDate.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;TextBoxUrl2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;TabPageAPI.Name" xml:space="preserve">
+    <value>TabPageAPI</value>
+  </data>
+  <data name="&gt;&gt;TabPageAPI.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPageCoins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="&gt;&gt;LabelCoinFound.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="LabelLocationSettingsFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextBoxLocationLogFile.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="TextBoxLocationSettingsFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 23</value>
+  </data>
+  <data name="TextBoxLocationLogFile.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationLogFile.Parent" xml:space="preserve">
+    <value>GroupBoxLogFile</value>
+  </data>
+  <data name="TextBoxLocationSettingsFile.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxLogFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPageAppSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="&gt;&gt;LabelCountCheckedTrvNodes.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationSettingsFile.Parent" xml:space="preserve">
+    <value>GroupBoxLogFile</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationDatabaseFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LabelCoinFound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonDeselectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GroupBoxLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>665, 154</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>TabPageAPI</value>
+  </data>
+  <data name="TabPageAppSettings.Text" xml:space="preserve">
+    <value>Instellingen</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxLogFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectAll.Name" xml:space="preserve">
+    <value>ButtonSelectAll</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TabPageAppSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="CheckBoxEnableUrl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ButtonSearchCoinName.Text" xml:space="preserve">
+    <value>Zoek</value>
+  </data>
+  <data name="&gt;&gt;ButtonSearchCoinName.Name" xml:space="preserve">
+    <value>ButtonSearchCoinName</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAppenLogFile.Parent" xml:space="preserve">
+    <value>GroupBoxLogFile</value>
+  </data>
+  <data name="LabelWarnPercentage.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelBuildDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 355</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxEnableUrl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="CheckBoxActivateLogging.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 19</value>
+  </data>
+  <data name="GroupBoxLogFile.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 167</value>
+  </data>
+  <data name="&gt;&gt;TextBoxUrl1.Parent" xml:space="preserve">
+    <value>GroupBoxUrl</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LabelRateLimit.Text" xml:space="preserve">
+    <value>Aantal verzoeken per minuut :</value>
+  </data>
+  <data name="&gt;&gt;TextBoxRateLimit.Name" xml:space="preserve">
+    <value>TextBoxRateLimit</value>
+  </data>
+  <data name="CheckBoxActivateLogging.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonSelectedOnly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 129</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxDbmaintenance.Parent" xml:space="preserve">
+    <value>TabPageAppSettings</value>
+  </data>
+  <data name="ButtonSelectAll.Text" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="&gt;&gt;ButtonInvertSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 15</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormConfigure</value>
+  </data>
+  <data name="TabPageAPI.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;ButtonSearchCoinName.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="ButtonDeselectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 46</value>
+  </data>
+  <data name="&gt;&gt;LabelCoinFound.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;TextBoxUrl2.Parent" xml:space="preserve">
+    <value>GroupBoxUrl</value>
+  </data>
+  <data name="GroupBoxLogFile.Text" xml:space="preserve">
+    <value>Log bestand</value>
+  </data>
+  <data name="GroupBoxUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>369, 115</value>
+  </data>
+  <data name="TextBoxWarnPercentage.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAppenLogFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonInvertSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <data name="CopyDatabaseIntervalTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 23</value>
+  </data>
+  <data name="LabelVersion.Text" xml:space="preserve">
+    <value>Versie : -</value>
+  </data>
+  <data name="&gt;&gt;LabelCoinFound.Name" xml:space="preserve">
+    <value>LabelCoinFound</value>
+  </data>
+  <data name="&gt;&gt;TreeViewCoinNames.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;LabelCountCheckedTrvNodes.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="ButtonDeselectAll.Text" xml:space="preserve">
+    <value>Geen</value>
+  </data>
+  <data name="TextBoxUrl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 23</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>TabPageAppSettings</value>
+  </data>
+  <data name="LabelRateLimit.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;ButtonClose.Name" xml:space="preserve">
+    <value>ButtonClose</value>
+  </data>
+  <data name="TextBoxUrl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>285, 23</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LabelRateLimit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 15</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectAll.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUrl.Name" xml:space="preserve">
+    <value>GroupBoxUrl</value>
+  </data>
+  <data name="GroupBoxUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 17</value>
+  </data>
+  <data name="LabelLocationLogFile.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;LabelVersion.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="TextBoxUrl2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextBoxUrl2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelRateLimit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ButtonSelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="LabelRateLimit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ButtonInvertSelection.Text" xml:space="preserve">
+    <value>Invert</value>
+  </data>
+  <data name="TabPageCoins.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CheckBoxEnableUrl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="LabelBuildDate.Text" xml:space="preserve">
+    <value>Build datum : -</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationSettingsFile.Parent" xml:space="preserve">
+    <value>GroupBoxLogFile</value>
+  </data>
+  <data name="TextBoxLocationLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 23</value>
+  </data>
+  <data name="&gt;&gt;TabPageAppSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonCompressAppDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 23</value>
+  </data>
+  <data name="&gt;&gt;LabelRateLimit.Parent" xml:space="preserve">
+    <value>TabPageAPI</value>
+  </data>
+  <data name="&gt;&gt;TextBoxRateLimit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextBoxUrl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 50</value>
+  </data>
+  <data name="&gt;&gt;ButtonInvertSelection.Name" xml:space="preserve">
+    <value>ButtonInvertSelection</value>
+  </data>
+  <data name="&gt;&gt;ButtonCompressAppDatabase.Parent" xml:space="preserve">
+    <value>GroupBoxDbmaintenance</value>
+  </data>
+  <data name="&gt;&gt;TreeViewCoinNames.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TabPageAppSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>702, 380</value>
+  </data>
+  <data name="&gt;&gt;LabelBuildDate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="CopyDatabaseIntervalTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationAppDatabaseFile.Name" xml:space="preserve">
+    <value>LabelLocationAppDatabaseFile</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Name" xml:space="preserve">
+    <value>LabelWarnPercentage</value>
+  </data>
+  <data name="button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ButtonSearchCoinName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ButtonSearchCoinName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;TabPageAppSettings.Name" xml:space="preserve">
+    <value>TabPageAppSettings</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="TextBoxLocationDatabaseFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 81</value>
+  </data>
+  <data name="TextBoxUrl2.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="TabPageAPI.Text" xml:space="preserve">
+    <value>API</value>
+  </data>
+  <data name="&gt;&gt;LabelCopyAppDb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 15</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 19</value>
+  </data>
+  <data name="&gt;&gt;LabelCountCheckedTrvNodes.Name" xml:space="preserve">
+    <value>LabelCountCheckedTrvNodes</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 325</value>
+  </data>
+  <data name="CheckBoxEnableUrl.Text" xml:space="preserve">
+    <value>Pas Url aan</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="ButtonSearchCoinName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;TabPageAPI.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ButtonCompressAppDatabase.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 23</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationSettingsFile.Name" xml:space="preserve">
+    <value>TextBoxLocationSettingsFile</value>
+  </data>
+  <data name="&gt;&gt;ButtonClose.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="LabelWarnPercentage.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;LabelVersion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelBuildDate.Parent" xml:space="preserve">
+    <value>TabPageAppSettings</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationAppDatabaseFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxRateLimit.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="LabelBuildDate.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LabelCountCheckedTrvNodes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxLogFile.Name" xml:space="preserve">
+    <value>GroupBoxLogFile</value>
+  </data>
+  <data name="&gt;&gt;LabelCopyAppDb.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelCoinFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 350</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
+    <value>TabPageCoins</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationSettingsFile.Name" xml:space="preserve">
+    <value>LabelLocationSettingsFile</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Name" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="TabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;LabelBuildDate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAppenLogFile.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxActivateLogging.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ButtonCompressAppDatabase.Text" xml:space="preserve">
+    <value>Comprimeer de app. database</value>
+  </data>
+  <data name="ButtonCompressAppDatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="LabelCoinFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 15</value>
+  </data>
+  <data name="TreeViewCoinNames.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 323</value>
+  </data>
+  <data name="&gt;&gt;LabelCoinFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelLocationLogFile.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ButtonGetCoinNames.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;LabelWarnPercentage.Parent" xml:space="preserve">
+    <value>TabPageAPI</value>
+  </data>
+  <data name="&gt;&gt;ButtonClose.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;LabelVersion.Parent" xml:space="preserve">
+    <value>TabPageAppSettings</value>
+  </data>
+  <data name="TabPageAPI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
+    <value>backgroundWorker1</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="LabelLocationSettingsFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 15</value>
+  </data>
+  <data name="ButtonInvertSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 75</value>
+  </data>
+  <data name="&gt;&gt;LabelBuildDate.Name" xml:space="preserve">
+    <value>LabelBuildDate</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Url 2 :</value>
+  </data>
+  <data name="GroupBoxDbmaintenance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>665, 115</value>
+  </data>
+  <data name="TextBoxRateLimit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 23</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System.ComponentModel.EventBasedAsync, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;TreeViewCoinNames.Name" xml:space="preserve">
+    <value>TreeViewCoinNames</value>
+  </data>
+  <data name="&gt;&gt;LabelRateLimit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="CheckBoxActivateLogging.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 22</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>710, 408</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.Name" xml:space="preserve">
+    <value>CopyDatabaseIntervalTextBox</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationSettingsFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="LabelCoinFound.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.Text" xml:space="preserve">
+    <value>Locatie applicatie database :</value>
+  </data>
+  <data name="TabPageCoins.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;ButtonGetCoinNames.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelBuildDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 15</value>
+  </data>
+  <data name="&gt;&gt;ButtonGetCoinNames.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="TextBoxLocationSettingsFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 84</value>
+  </data>
+  <data name="&gt;&gt;TabPageCoins.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="LabelLocationLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 15</value>
+  </data>
+  <data name="TextBoxUrl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>69, 79</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationAppDatabaseFile.Parent" xml:space="preserve">
+    <value>GroupBoxDbmaintenance</value>
+  </data>
+  <data name="&gt;&gt;TextBoxUrl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ButtonCompressAppDatabase.Name" xml:space="preserve">
+    <value>ButtonCompressAppDatabase</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 15</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;ButtonCompressAppDatabase.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="&gt;&gt;ButtonGetCoinNames.Name" xml:space="preserve">
     <value>ButtonGetCoinNames</value>
   </data>
-  <data name="TextBoxUrl2.Enabled" type="System.Boolean, System.Private.CoreLib">
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 344</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationLogFile.Name" xml:space="preserve">
+    <value>LabelLocationLogFile</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxActivateLogging.Name" xml:space="preserve">
+    <value>CheckBoxActivateLogging</value>
+  </data>
+  <data name="TabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TreeViewCoinNames.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxWarnPercentage.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="LabelLocationLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 117</value>
+  </data>
+  <data name="TextBoxRateLimit.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationLogFile.Name" xml:space="preserve">
+    <value>TextBoxLocationLogFile</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>Sluiten</value>
+  </data>
+  <data name="ButtonClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 344</value>
+  </data>
+  <data name="TextBoxRateLimit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>246, 138</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="GroupBoxLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 8</value>
+  </data>
+  <data name="&gt;&gt;ButtonCompressAppDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonDeselectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxActivateLogging.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextBoxSearchCoinName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="LabelVersion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationLogFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GroupBoxDbmaintenance.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 15</value>
+  </data>
+  <data name="&gt;&gt;LabelRateLimit.Name" xml:space="preserve">
+    <value>LabelRateLimit</value>
+  </data>
+  <data name="ButtonSearchCoinName.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;TreeViewCoinNames.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TextBoxLocationDatabaseFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>482, 23</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationSettingsFile.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CopyDatabaseIntervalTextBox.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CopyDatabaseIntervalTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 52</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="LabelLocationSettingsFile.Text" xml:space="preserve">
+    <value>Locatie settings bestand :</value>
+  </data>
+  <data name="GroupBoxUrl.Text" xml:space="preserve">
+    <value>Connectie Url(s)</value>
+  </data>
+  <data name="ButtonSelectedOnly.Text" xml:space="preserve">
+    <value>Geselecteerd</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;TabPageAppSettings.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="TabPageCoins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>702, 380</value>
+  </data>
+  <data name="LabelCoinFound.Text" xml:space="preserve">
+    <value>0 st</value>
+  </data>
+  <data name="&gt;&gt;ButtonInvertSelection.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ButtonDeselectAll.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ButtonSearchCoinName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 346</value>
+  </data>
+  <data name="&gt;&gt;TabPageAppSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 53</value>
+  </data>
+  <data name="TreeViewCoinNames.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 17</value>
+  </data>
+  <data name="&gt;&gt;TextBoxSearchCoinName.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;TabPageAPI.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <data name="LabelVersion.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationAppDatabaseFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUrl.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LabelCopyAppDb.Text" xml:space="preserve">
+    <value>Kopieer de app database na x keer starten</value>
+  </data>
+  <data name="&gt;&gt;ButtonDeselectAll.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
+  <data name="TextBoxLocationSettingsFile.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationDatabaseFile.Name" xml:space="preserve">
+    <value>TextBoxLocationDatabaseFile</value>
+  </data>
+  <data name="&gt;&gt;TextBoxSearchCoinName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TextBoxUrl1.Text" xml:space="preserve">
+    <value>https://api.bitvavo.com/v2/ticker/price</value>
+  </data>
+  <data name="TabPageAPI.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;TextBoxSearchCoinName.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationSettingsFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>615, 344</value>
+  </data>
+  <data name="&gt;&gt;TabPageCoins.Parent" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="LabelLocationLogFile.Text" xml:space="preserve">
+    <value>Locatie Log bestand :</value>
+  </data>
+  <data name="TextBoxLocationLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 114</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Url 1 :</value>
+  </data>
+  <data name="ButtonInvertSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="GroupBoxUrl.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 82</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxLogFile.Parent" xml:space="preserve">
+    <value>TabPageAppSettings</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 47</value>
+  </data>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonDeselectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <data name="LabelWarnPercentage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 15</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectedOnly.Name" xml:space="preserve">
+    <value>ButtonSelectedOnly</value>
+  </data>
+  <data name="ButtonSelectedOnly.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;TabControl1.Name" xml:space="preserve">
+    <value>TabControl1</value>
+  </data>
+  <data name="TextBoxUrl1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonGetCoinNames.Text" xml:space="preserve">
+    <value>Vernieuw</value>
+  </data>
+  <data name="TextBoxUrl2.Text" xml:space="preserve">
+    <value>https://api.bitvavo.com/v2/ticker/24h</value>
+  </data>
+  <data name="ButtonSelectedOnly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <data name="LabelCopyAppDb.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectedOnly.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxDbmaintenance.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPageCoins.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>710, 408</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationLogFile.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelCopyAppDb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 55</value>
+  </data>
+  <data name="LabelRateLimit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 141</value>
+  </data>
+  <data name="&gt;&gt;TextBoxRateLimit.Parent" xml:space="preserve">
+    <value>TabPageAPI</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxAppenLogFile.Name" xml:space="preserve">
+    <value>CheckBoxAppenLogFile</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Name" xml:space="preserve">
+    <value>TextBoxWarnPercentage</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>GroupBoxUrl</value>
+  </data>
+  <data name="ButtonClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="TabPageAppSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxEnableUrl.Parent" xml:space="preserve">
+    <value>GroupBoxUrl</value>
+  </data>
+  <data name="&gt;&gt;LabelVersion.Name" xml:space="preserve">
+    <value>LabelVersion</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationDatabaseFile.Parent" xml:space="preserve">
+    <value>GroupBoxDbmaintenance</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUrl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBoxLocationSettingsFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;LabelLocationLogFile.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="LabelLocationSettingsFile.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ButtonSelectedOnly.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.Text" xml:space="preserve">
+    <value>Aantal geselecteerd : 0</value>
+  </data>
+  <data name="&gt;&gt;CheckBoxActivateLogging.Parent" xml:space="preserve">
+    <value>GroupBoxLogFile</value>
+  </data>
+  <data name="ButtonGetCoinNames.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>696, 374</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxUrl.Parent" xml:space="preserve">
+    <value>TabPageAPI</value>
+  </data>
+  <data name="&gt;&gt;TabPageCoins.Name" xml:space="preserve">
+    <value>TabPageCoins</value>
+  </data>
+  <data name="ButtonGetCoinNames.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 158</value>
+  </data>
+  <data name="&gt;&gt;TextBoxWarnPercentage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CopyDatabaseIntervalTextBox.Parent" xml:space="preserve">
+    <value>GroupBoxDbmaintenance</value>
+  </data>
+  <data name="&gt;&gt;ButtonClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="LabelVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 327</value>
+  </data>
+  <data name="&gt;&gt;GroupBoxDbmaintenance.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupBoxDbmaintenance.Text" xml:space="preserve">
+    <value>Database onderhoud</value>
+  </data>
+  <data name="TextBoxLocationDatabaseFile.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="&gt;&gt;ButtonSelectAll.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
-  <data name="&gt;&gt;LabelCoinFound.Name" xml:space="preserve">
-    <value>LabelCoinFound</value>
+  <data name="&gt;&gt;ButtonSelectedOnly.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
   </data>
-  <data name="LabelLocationLogFile.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>1</value>
+  <data name="&gt;&gt;TabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="TextBoxSearchCoinName.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>29</value>
+  <data name="ButtonClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="LabelRateLimit.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>165, 15</value>
+  <data name="TabPageAPI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>702, 380</value>
   </data>
-  <data name="LabelVersion.AutoSize" type="System.Boolean, System.Private.CoreLib">
-    <value>True</value>
+  <data name="TextBoxRateLimit.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
   </data>
-  <data name="TextBoxUrl1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>285, 23</value>
-  </data>
-  <data name="&gt;&gt;ButtonGetCoinNames.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabPageAPI.Name" xml:space="preserve">
-    <value>TabPageAPI</value>
-  </data>
-  <data name="TextBoxRateLimit.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>49, 23</value>
-  </data>
-  <data name="ButtonSearchCoinName.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>112, 346</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;TextBoxWarnPercentage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonClose.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>615, 344</value>
-  </data>
-  <data name="CheckBoxActivateLogging.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 22</value>
-  </data>
-  <data name="&gt;&gt;TextBoxUrl2.Name" xml:space="preserve">
-    <value>TextBoxUrl2</value>
-  </data>
-  <data name="&gt;&gt;TextBoxUrl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonSelectAll.Name" xml:space="preserve">
-    <value>ButtonSelectAll</value>
-  </data>
-  <data name="&gt;&gt;TabPageCoins.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="TextBoxUrl1.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>3</value>
-  </data>
-  <data name="TextBoxUrl2.Text" xml:space="preserve">
-    <value>https://api.bitvavo.com/v2/ticker/24h</value>
-  </data>
-  <data name="&gt;&gt;CheckBoxAppenLogFile.Parent" xml:space="preserve">
-    <value>GroupBoxLogFile</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, System.Private.CoreLib">
-    <value>30</value>
-  </data>
-  <data name="TextBoxSearchCoinName.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>6, 345</value>
-  </data>
-  <data name="&gt;&gt;backgroundWorker1.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System.ComponentModel.EventBasedAsync, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="&gt;&gt;LabelCountCheckedTrvNodes.Name" xml:space="preserve">
-    <value>LabelCountCheckedTrvNodes</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>nl-NL</value>
+  </metadata>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>63</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

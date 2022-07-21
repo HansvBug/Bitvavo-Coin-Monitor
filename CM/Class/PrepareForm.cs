@@ -8,7 +8,7 @@
     public class PrepareForm
     {
         #region Properties etc.
-        private List<string> CoinName = new();                                                  //List with coin names
+        private List<string> coinName = new();                                                  // List with coin names
         public List<DataGridView> DgvNames = new();                                             // List with created datgagridview objects 
         public List<System.Windows.Forms.DataVisualization.Charting.Chart> ChartNames = new();  // List with created Chart objects
         public List<Label> LabelNames = new();                                                  // List with created Label obects
@@ -18,11 +18,17 @@
         private TabControl TabCtrl { get; set; }
 
         private string DecimalSeperator { get; set; }
+
+        /// <summary>
+        /// Gets or sets the warn percentage.
+        /// Notify the user when the price has risen or fallen a certain percentage.
+        /// </summary>
         public double WarnPercentage { get; set; }
 
-        private int CntrlPointX = 3;
+        private int controlPointX = 3;
 
-        private readonly int CbPointY = 10;
+        private readonly int chkbPointY = 3;  // TODO; make a setting
+
         private int CheckTabCount { get; set; }
         #endregion Properties etc.
 
@@ -47,12 +53,16 @@
                 {
                     foreach (string aCoin in allCoinNames)
                     {
-                        this.CoinName.Add(aCoin);
+                        this.coinName.Add(aCoin);
                     }
                 }
             }
         }
 
+        /// <summary>
+        /// Create the tabpages.
+        /// </summary>
+        /// <param name="tCtrl">TabControl which gets the new pages.</param>
         public void CreateTheTabs(TabControl tCtrl)
         {
             this.TabCtrl = tCtrl;
@@ -68,16 +78,20 @@
 
             // Create a Tab for the 24hour difference percentage
             string title = "24 uurs percentage";
-            TabPage aTabPageFirst = new(title);
-            aTabPageFirst.Name = title;
+            TabPage aTabPageFirst = new(title)
+            {
+                Name = title,
+            };
             this.TabCtrl.TabPages.Add(aTabPageFirst);
 
             // Create a tab per coin
-            foreach (string value in this.CoinName)
+            foreach (string value in this.coinName)
             {
                 title = value;
-                TabPage aTabPage = new (title);
-                aTabPage.Name = title;              // The name of the tabpage is the coin/market name. "BTC-EUR"
+                TabPage aTabPage = new(title)
+                {
+                    Name = title,              // The name of the tabpage is the coin/market name. "BTC-EUR"
+                };
                 this.TabCtrl.TabPages.Add(aTabPage);
             }
         }
@@ -147,21 +161,24 @@
         private void CreateDatagridViewPriceData(int tabcount)
         {
             TabPage tp = this.TabCtrl.TabPages[tabcount];
-            DataGridView dgv = new();
-            dgv.Name = "Dgv_1_" + tp.Name;
+
+            DataGridView dgv = new()
+            {
+                Name = "Dgv_1_" + tp.Name,
+                Location = new Point(3, 3),
+                Height = 150,
+                TabIndex = 0,
+                Dock = DockStyle.Fill,
+                AllowUserToDeleteRows = false,
+                AllowUserToAddRows = false,
+                AllowUserToOrderColumns = false,
+                AllowUserToResizeRows = false,
+                EditMode = DataGridViewEditMode.EditProgrammatically,
+            };
+
             dgv.Columns.Add("Onderdeel", "Onderdeel");  // = dgv.Columns[0]
             dgv.Columns.Add("Waarde", "Waarde");        // = dgv.Columns[1]
             dgv.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgv.Location = new Point(3, 3);
-            dgv.Height = 150;
-            dgv.TabIndex = 0;
-            dgv.Dock = DockStyle.Fill;
-
-            dgv.AllowUserToDeleteRows = false;
-            dgv.AllowUserToAddRows = false;
-            dgv.AllowUserToOrderColumns = false;
-            dgv.AllowUserToResizeRows = false;
-            dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
 
             foreach (DataGridViewColumn column in dgv.Columns)
             {
@@ -294,31 +311,27 @@
             DataGridView dgv = new()
             {
                 Name = dgvName,
+                Location = new Point(3, 3),
+                Height = tp.Height,
+                Width = 193,
+                TabIndex = 0,
+                AllowUserToDeleteRows = false,
+                AllowUserToAddRows = false,
+                AllowUserToOrderColumns = true,
+                EditMode = DataGridViewEditMode.EditProgrammatically,
+                RowHeadersVisible = false,
+                Dock = DockStyle.Fill,
             };
+
             dgv.Columns.Add("Coin", "Coin");
             dgv.Columns.Add("Percentage", "Percentage");
 
-            dgv.Columns[0].Width = 100;
-            dgv.Columns[1].Width = 100;
-
-            dgv.Columns[0].CellTemplate.ValueType = typeof(int);  //TODO; sorting.... this line should improve sorting but is does not. Negative an positive numers are not sorted correct. 
-
-            dgv.Location = new Point(3, 3);
-            dgv.Height = tp.Height;
-            dgv.Width = 193;
-            dgv.TabIndex = 0;
-
-            dgv.AllowUserToDeleteRows = false;
-            dgv.AllowUserToAddRows = false;
-            dgv.AllowUserToOrderColumns = true;
-            dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgv.Columns[0].Width = 170; //TODO make 170 a setting
+            dgv.Columns[1].Width = 100; //TODO make 100 a setting
+            dgv.Columns[0].CellTemplate.ValueType = typeof(int);  // TODO; sorting.... this line should improve sorting but is does not. Negative an positive numers are not sorted correct. 
             dgv.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-
             dgv.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dgv.RowHeadersVisible = false;
-            dgv.Dock = DockStyle.Fill;
 
             this.DgvNames.Add(dgv);
             this.PlaceControlOnGroupBox(dgv, tabcount, dgvName);
@@ -329,21 +342,23 @@
             // source: https://timbar.blogspot.com/2012/04/creating-chart-programmatically-in-c.html
             // source: https://hirenkhirsaria.blogspot.com/2012/06/dynamically-creating-piebar-chart-in-c.html
             TabPage tp = this.TabCtrl.TabPages[tabcount];
-            string CoinName = tp.Name;
+            string coinName = tp.Name;
 
             // Chart does not exists in .net 5 !?!? used a nuget download
-            System.Windows.Forms.DataVisualization.Charting.Chart aChart = new();
-            aChart.Size = new Size(100, 100);
-            aChart.Name = "Chart_" + tp.Name;
-            aChart.Titles.Add(CoinName);
-            aChart.Location = new Point(3, 3);
-            aChart.Cursor = Cursors.Cross;
+            System.Windows.Forms.DataVisualization.Charting.Chart aChart = new()
+            {
+                Size = new Size(100, 100),
+                Name = "Chart_" + tp.Name,
+                Location = new Point(3, 3),
+                Cursor = Cursors.Cross,
+            };
+            aChart.Titles.Add(coinName);
 
-            System.Windows.Forms.DataVisualization.Charting.ChartArea ChrtArea = new("ChartArea_" + CoinName);
-            ChrtArea.Area3DStyle.Enable3D = false;
-            aChart.ChartAreas.Add(ChrtArea);
-            ChrtArea.AxisX.Title = "Tijd";
-            ChrtArea.AxisY.Title = "Koers";
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chrtArea = new("ChartArea_" + coinName);
+            chrtArea.Area3DStyle.Enable3D = false;
+            aChart.ChartAreas.Add(chrtArea);
+            chrtArea.AxisX.Title = "Tijd";
+            chrtArea.AxisY.Title = "Koers";
 
             aChart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
             aChart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
@@ -352,47 +367,55 @@
             aChart.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.LightGray;
 
             // The current coin price
-            System.Windows.Forms.DataVisualization.Charting.Series series = new("Series_" + CoinName)
+            System.Windows.Forms.DataVisualization.Charting.Series series = new("Series_" + coinName)
             {
-                Name = "Series_" + CoinName,
-                ChartArea = "ChartArea_" + CoinName,
+                Name = "Series_" + coinName,
+                ChartArea = "ChartArea_" + coinName,
             };
-            aChart.Series.Add(CoinName);
-            aChart.Series[CoinName].Enabled = true;
+            aChart.Series.Add(coinName);
+            aChart.Series[coinName].Enabled = true;
 
-            aChart.Series[CoinName].MarkerColor = Color.Red;
-            aChart.Series[CoinName].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            aChart.Series[CoinName].MarkerSize = 5;            
+            aChart.Series[coinName].MarkerColor = Color.Red;
+            aChart.Series[coinName].MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            aChart.Series[coinName].MarkerSize = 5;
 
             // Start_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesStartPrice = new("Start_Prijs_" + CoinName);
-            SeriesStartPrice.Name = "Start_Prijs_" + CoinName;
-            SeriesStartPrice.LegendText = "Start_Prijs";
-            aChart.Series.Add(SeriesStartPrice);
-            aChart.Series["Start_Prijs_" + CoinName].Enabled = true;
+            System.Windows.Forms.DataVisualization.Charting.Series seriesStartPrice = new("Start_Prijs_" + coinName)
+            {
+                Name = "Start_Prijs_" + coinName,
+                LegendText = "Start_Prijs",
+            };
+            aChart.Series.Add(seriesStartPrice);
+            aChart.Series["Start_Prijs_" + coinName].Enabled = true;
 
             // aChart.Series["Start_Prijs_" + CoinName].ToolTip = "hello world from: € #VAL,   #VALX";
 
             // Open_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesOpenPrice = new("Open_Prijs_" + CoinName);
-            SeriesOpenPrice.Name = "Open_Prijs_" + CoinName;
-            SeriesOpenPrice.LegendText = "Open_Prijs";
-            aChart.Series.Add(SeriesOpenPrice);
-            aChart.Series["Open_Prijs_" + CoinName].Enabled = true;
+            System.Windows.Forms.DataVisualization.Charting.Series seriesOpenPrice = new("Open_Prijs_" + coinName)
+            {
+                Name = "Open_Prijs_" + coinName,
+                LegendText = "Open_Prijs",
+            };
+            aChart.Series.Add(seriesOpenPrice);
+            aChart.Series["Open_Prijs_" + coinName].Enabled = true;
 
             // Sessie_Hoogste_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionHighestPrice = new("Sessie_Hoogste_Prijs_" + CoinName);
-            SeriesSessionHighestPrice.Name = "Sessie_Hoogste_Prijs_" + CoinName;
-            SeriesSessionHighestPrice.LegendText = "Sessie_Hoogste";
-            aChart.Series.Add(SeriesSessionHighestPrice);
-            aChart.Series["Sessie_Hoogste_Prijs_" + CoinName].Enabled = true;
+            System.Windows.Forms.DataVisualization.Charting.Series seriesSessionHighestPrice = new("Sessie_Hoogste_Prijs_" + coinName)
+            {
+                Name = "Sessie_Hoogste_Prijs_" + coinName,
+                LegendText = "Sessie_Hoogste",
+            };
+            aChart.Series.Add(seriesSessionHighestPrice);
+            aChart.Series["Sessie_Hoogste_Prijs_" + coinName].Enabled = true;
 
             // Sessie_Laagste_Prijs
-            System.Windows.Forms.DataVisualization.Charting.Series SeriesSessionLowestPrice = new("Sessie_Laagste_Prijs_" + CoinName);
-            SeriesSessionLowestPrice.Name = "Sessie_Laagste_Prijs_" + CoinName;
-            SeriesSessionLowestPrice.LegendText = "Sessie_Laagste";
-            aChart.Series.Add(SeriesSessionLowestPrice);
-            aChart.Series["Sessie_Laagste_Prijs_" + CoinName].Enabled = true;
+            System.Windows.Forms.DataVisualization.Charting.Series seriesSessionLowestPrice = new("Sessie_Laagste_Prijs_" + coinName)
+            {
+                Name = "Sessie_Laagste_Prijs_" + coinName,
+                LegendText = "Sessie_Laagste",
+            };
+            aChart.Series.Add(seriesSessionLowestPrice);
+            aChart.Series["Sessie_Laagste_Prijs_" + coinName].Enabled = true;
 
             // Create the legend
             aChart.Legends.Add(new System.Windows.Forms.DataVisualization.Charting.Legend("Price"));
@@ -426,7 +449,7 @@
                                 aPanel.Controls.Add(aChart);
 
                                 aChart.Dock = DockStyle.Fill;
-                            } 
+                            }
                         }
                     }
 
@@ -436,11 +459,6 @@
         }
 
         #region Textbox warning precentage
-
-        private void tb_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            this.KeyPresstextBox(sender, e);
-        }
 
         private void KeyPresstextBox(object sender, KeyPressEventArgs e)
         {
@@ -527,100 +545,106 @@
 
         private void CreateBottomPanel(int tabcount)
         {
-            Panel BottomPanel = new();
-            BottomPanel.Name = "BottomPanel";
-            BottomPanel.Text = string.Empty;
-            BottomPanel.Location = new Point(3, 50);
-            BottomPanel.Size = new Size(50, 32);
-            BottomPanel.BackColor = Color.LightSteelBlue;
-            BottomPanel.Dock = DockStyle.Bottom;
+            Panel bottomPanel = new()
+            {
+                Name = "BottomPanel",
+                Text = string.Empty,
+                Location = new Point(3, 50),
+                Size = new Size(50, 40),  // ToDo; make 40  a setting
+                BackColor = Color.LightSteelBlue,
+                Dock = DockStyle.Bottom,
+            };
 
-            this.PlaceControleOnSpltcontainerOne(BottomPanel, tabcount);
+            this.PlaceControleOnSpltcontainerOne(bottomPanel, tabcount);
         }
 
         private void CreateChartPanel(int tabcount)
-
         {
-            Panel ChartPanel = new();
-            ChartPanel.Name = "ChartPanel";
-            ChartPanel.Text = string.Empty;
-            ChartPanel.Location = new Point(3, 50);
-            ChartPanel.Size = new Size(50, 32);
-            ChartPanel.BackColor = Color.LightGray;
-            ChartPanel.Dock = DockStyle.Fill;
+            Panel chartPanel = new()
+            {
+                Name = "ChartPanel",
+                Text = string.Empty,
+                Location = new Point(3, 50),
+                Size = new Size(50, 32),
+                BackColor = Color.LightGray,
+                Dock = DockStyle.Fill,
+            };
 
-            this.PlaceControleOnSpltcontainerOne(ChartPanel, tabcount);
+            this.PlaceControleOnSpltcontainerOne(chartPanel, tabcount);
         }
 
         private void CreateCheckBox(int tabcount, string name, string text)
         {
-            if (tabcount != this.CheckTabCount) // Next tab page, reset Y
+            if (tabcount != this.CheckTabCount)
             {
                 this.CheckTabCount = tabcount;
-                this.CntrlPointX = 3;
+                this.controlPointX = 3;
             }
 
-            CheckBox Cb = new();
-            Cb.Name = name;
-            Cb.Text = text;
-            Cb.Checked = true;
-            Cb.AutoSize = true;
-            if (this.CntrlPointX == 0)
+            CheckBox cb = new()
             {
-                Cb.Location = new Point(this.CntrlPointX, this.CbPointY);
+                Name = name,
+                Text = text,
+                Checked = true,
+                AutoSize = true,
+                Size = new Size(82, 19),
+                Anchor = AnchorStyles.Left,
+            };
+
+            if (this.controlPointX == 0)
+            {
+                cb.Location = new Point(this.controlPointX, this.chkbPointY);
             }
             else
             {
-                Cb.Location = new Point(this.CntrlPointX, this.CbPointY);
+                cb.Location = new Point(this.controlPointX, this.chkbPointY);
             }
 
-            this.CntrlPointX += 150;
+            this.controlPointX += 275;  // TODO make 250 a setting
 
-            Cb.Size = new Size(82, 19);
-            Cb.Anchor = (AnchorStyles.Left);
-
-            this.CheckBoxNames.Add(Cb);
-            this.PlaceControlOnSpltcontainerOnePanel(Cb, tabcount);
+            this.CheckBoxNames.Add(cb);
+            this.PlaceControlOnSpltcontainerOnePanel(cb, tabcount);
         }
 
         private void CreateLabels(int tabcount, string name)
         {
-            Label Lb = new();
-            Lb.Name = "Lb_" + name;
-            Lb.Text = "LabelYaxisCur";
-            Lb.AutoSize = true;
-            Lb.Location = new Point(50, 50);
-            Lb.Size = new Size(38, 15);
-            Lb.Visible = false;
+            Label lb = new()
+            {
+                Name = "Lb_" + name,
+                Text = "LabelYaxisCur",
+                AutoSize = true,
+                Location = new Point(50, 50),
+                Size = new Size(38, 15),
+                Visible = false,
+                BorderStyle = BorderStyle.FixedSingle,
+                BackColor = Color.LightBlue,
+                Font = new Font("Calibri", 10),
+                ForeColor = Color.DarkBlue,
+            };
 
-            Lb.BorderStyle = BorderStyle.FixedSingle;
-            Lb.BackColor = Color.LightBlue;
-            Lb.Font = new Font("Calibri", 10);
-            Lb.ForeColor = Color.DarkBlue;
-
-            this.LabelNames.Add(Lb);
-            this.PlaceControlOnChart(Lb, tabcount);
+            this.LabelNames.Add(lb);
+            this.PlaceControlOnChart(lb, tabcount);
         }
 
         private void CreateGroupBox(int tabcount, string name)
         {
-            const int groupboxwith = 210;
+            const int groupboxwith = 330; //TODO make 330a setting
             TabPage tp = this.TabCtrl.TabPages[tabcount];
 
             GroupBox gb = new()
             {
                 Name = "Gb_" + name,
-                Text = name.Replace("_", " ")
+                Text = name.Replace("_", " "),
             };
 
-            if (this.CntrlPointX == 3)
+            if (this.controlPointX == 3)
             {
-                gb.Location = new Point(this.CntrlPointX + 2, 5);
-                this.CntrlPointX += (groupboxwith + 5) + 2; 
+                gb.Location = new Point(this.controlPointX + 5, 5); //TODO make the first 5 a setting
+                this.controlPointX += (groupboxwith + 5) + 2;
             }
             else
             {
-                gb.Location = new Point(this.CntrlPointX, 5);
+                gb.Location = new Point(this.controlPointX + 10, 5);
             }
 
             int gbHeight = tp.Height - 15;

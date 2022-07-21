@@ -84,28 +84,47 @@
 
         public class FormConfigureParams
         {
+            /// <summary>
+            /// Gets or sets the X (left position) of the form.
+            /// </summary>
             public int FrmX { get; set; } = 20;
 
+            /// <summary>
+            /// Gets or sets the Y (top position) of the form.
+            /// </summary>
             public int FrmY { get; set; } = 20;
 
+            /// <summary>
+            /// Gets or sets the height of the form.
+            /// </summary>
             public int FrmHeight { get; set; }
 
+            /// <summary>
+            /// Gets or sets the width of the form.
+            /// </summary>
             public int FrmWidth { get; set; }
 
+            /// <summary>
+            /// Gets or sets the windowstate of the form.
+            /// </summary>
             public FormWindowState FrmWindowState { get; set; }
         }
 
+        /// <summary>
+        /// Load the application settings.
+        /// </summary>
         public void LoadSettings()
         {
             if (File.Exists(this.SettingsFile))
             {
                 if (DebugMode) { Logging.WriteToLogInformation("Ophalen settings."); }
-                string Json = File.ReadAllText(this.SettingsFile);
-                this.JsonObjSettings = JsonSerializer.Deserialize<AppSettingsMeta>(Json);
+                string json = File.ReadAllText(this.SettingsFile);
+                this.JsonObjSettings = JsonSerializer.Deserialize<AppSettingsMeta>(json);
             }
             else
-            {   //Default values
-                if (this.JsonObjSettings != null)  //the first time when there is no settings file jsonObjSettings = null
+            {
+                // Default values, the first time when there is no settings file jsonObjSettings = null
+                if (this.JsonObjSettings != null)
                 {
                     this.JsonObjSettings.AppParam[0].ActivateLogging = false;
                     this.JsonObjSettings.AppParam[0].AppendLogFile = false;
@@ -115,12 +134,16 @@
             }
         }
 
-        public static void SaveSettings(dynamic JsonObjSettings)
+        /// <summary>
+        /// Save settings file.
+        /// </summary>
+        /// <param name="jsonObjSettings">Object with the current settings.</param>
+        public static void SaveSettings(dynamic jsonObjSettings)
         {
-            if (JsonObjSettings != null)
+            if (jsonObjSettings != null)
             {
                 // Get settings location
-                string fileLocation = JsonObjSettings.AppParam[0].SettingsFileLocation;
+                string fileLocation = jsonObjSettings.AppParam[0].SettingsFileLocation;
 
                 if (string.IsNullOrEmpty(fileLocation))
                 {
@@ -130,13 +153,17 @@
 
                 try
                 {
-                    if (DebugMode) { Logging.WriteToLogInformation("Opslaan settings."); }
+                    if (DebugMode)
+                    {
+                        Logging.WriteToLogInformation("Opslaan settings.");
+                    }
+
                     var options = new JsonSerializerOptions
                     {
                         WriteIndented = true,
                     };
 
-                    string jsonString = JsonSerializer.Serialize(JsonObjSettings, options);
+                    string jsonString = JsonSerializer.Serialize(jsonObjSettings, options);
 
                     if (!string.IsNullOrEmpty(fileLocation) && !string.IsNullOrEmpty(jsonString))
                     {
@@ -153,6 +180,9 @@
             }
         }
 
+        /// <summary>
+        /// Create the application settting file.
+        /// </summary>
         public static void CreateSettingsFile()
         {
             var options = new JsonSerializerOptions
@@ -160,14 +190,14 @@
                 WriteIndented = true,
             };
 
-            string SettingsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder, AppSettingsDefault.ConfigFile);
+            string settingsFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder, AppSettingsDefault.ConfigFile);
 
-            if (!File.Exists(SettingsFile))
+            if (!File.Exists(settingsFile))
             {
                 Logging.WriteToLogInformation("Aanmaken settings bestand.");
-                Logging.WriteToLogInformation("Locatie settings bestand : " + SettingsFile);
+                Logging.WriteToLogInformation("Locatie settings bestand : " + settingsFile);
 
-                var AppSettings = new AppSettingsMeta()
+                var appSettings = new AppSettingsMeta()
                 {
                     AppParam = new List<AppParams>()
                     {
@@ -181,27 +211,27 @@
                             SettingsFileLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder, AppSettingsDefault.ConfigFile),
                             LogFileLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.SettingsFolder),
                             DatabaseLocation = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppSettingsDefault.ApplicationName, AppSettingsDefault.DatabaseFolder),
-                            
+
                             CopyAppDataBaseAfterEveryXStartups = 25,
                             CopyAppDataBaseAfterEveryXStartupsCounter = 0,
                             Url1 = "https://api.bitvavo.com/v2/ticker/price",
                             Url2 = "https://api.bitvavo.com/v2/ticker/24h",
                             WarnPercentage = 1,
-                            RateLimit = 1 ,
+                            RateLimit = 1,
                             TrvFoundSearchColor = -10768897,
-                            HideFromTaskbar = false
-                        }
+                            HideFromTaskbar = false,
+                        },
                     },
                     FormMain = new List<FormMainParams>()
                     {
                         new FormMainParams()
                         {
-                            FrmX = 200,  //default = 200
+                            FrmX = 200,  // Default = 200
                             FrmY = 100,
-                            FrmHeight = 580,
-                            FrmWidth = 815,
-                            FrmWindowState = FormWindowState.Normal
-                        }
+                            FrmHeight = 1150,
+                            FrmWidth = 1750,
+                            FrmWindowState = FormWindowState.Normal,
+                        },
                     },
                     FormConfig = new List<FormConfigureParams>()
                     {
@@ -209,17 +239,17 @@
                         {
                             FrmX = 20,
                             FrmY = 20,
-                            FrmHeight = 485,
-                            FrmWidth = 800,
-                            FrmWindowState = FormWindowState.Normal
-                        }
-                    }                    
+                            FrmHeight = 880,
+                            FrmWidth = 1240,
+                            FrmWindowState = FormWindowState.Normal,
+                        },
+                    },
                 };
 
                 string jsonString;
-                jsonString = JsonSerializer.Serialize(AppSettings, options);
+                jsonString = JsonSerializer.Serialize(appSettings, options);
 
-                File.WriteAllText(SettingsFile, jsonString); //, Encoding.Unicode
+                File.WriteAllText(settingsFile, jsonString); // , Encoding.Unicode
             }
         }
 
@@ -254,7 +284,6 @@
             this.disposed = true;
         }
         #endregion Dispose
-
 
     }
 }

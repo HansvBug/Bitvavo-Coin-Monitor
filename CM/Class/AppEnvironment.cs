@@ -14,7 +14,7 @@
     /// </summary>
     public class AppEnvironment : IDisposable
     {
-        #region Properties
+       #region Properties
 
         /// <summary>
         /// Gets or sets the application path.
@@ -22,7 +22,7 @@
         public string ApplicationPath { get; set; }
 
         /// <summary>
-        /// geets or sets the user name.
+        /// gets or sets the user name.
         /// </summary>
         public string UserName { get; set; }
 
@@ -73,6 +73,10 @@
         #endregion Properties
 
         #region Constructor
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppEnvironment"/> class.
+        /// </summary>
         public AppEnvironment()
         {
             this.SetProperties();
@@ -153,14 +157,14 @@
             this.DotNetFrameWorkVersion = GetAllDotNetVersions();
         }
 
-        private static string Get_Applicatiepad()  // get the application path
+        private static string Get_Applicatiepad() // Get the application path
         {
             try
             {
                 string appPath;
                 appPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase);
-                appPath += "\\";                                        // add \to the path
-                return appPath.Replace("file:\\", string.Empty);  // remove the text "file:\\" from the path
+                appPath += "\\";                                  // Add \to the path
+                return appPath.Replace("file:\\", string.Empty);  // Remove the text "file:\\" from the path
             }
             catch (ArgumentException aex)
             {
@@ -168,7 +172,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -180,7 +184,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -192,7 +196,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -200,26 +204,21 @@
         {
             try
             {
-                string osVersion = "";
+                string osVersion = string.Empty;
 
                 switch (type)
                 {
                     case 1:
-                        {
-                            osVersion = Environment.OSVersion.ToString();
-                            break;
-                        }
+                        osVersion = Environment.OSVersion.ToString();
+                        break;
                     case 2:
-                        {
-                            osVersion = Convert.ToString(Environment.OSVersion.Version, CultureInfo.InvariantCulture);
-                            break;
-                        }
+                        osVersion = Convert.ToString(Environment.OSVersion.Version, CultureInfo.InvariantCulture);
+                        break;
                     default:
-                        {
-                            osVersion = Convert.ToString(Environment.OSVersion.Version, CultureInfo.InvariantCulture);
-                            break;
-                        }
+                        osVersion = Convert.ToString(Environment.OSVersion.Version, CultureInfo.InvariantCulture);
+                        break;
                 }
+
                 return osVersion;
             }
             catch (ArgumentException aex)
@@ -228,7 +227,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -240,7 +239,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -248,7 +247,7 @@
         {
             try
             {
-                string result = "";
+                string result = string.Empty;
                 try
                 {
                     ManagementObjectSearcher mbs = new("Select ProcessorID From Win32_processor");  // Add reference assemblies: system.management
@@ -258,25 +257,30 @@
                     {
                         result = mo["ProcessorID"].ToString();
                     }
+
                     mbs.Dispose();
 
                     return result;
+
                     // More (all) options: https://msdn.microsoft.com/en-us/library/aa394373(v=vs.85).aspx
                 }
                 catch (Exception)
                 {
-                    throw new InvalidOperationException("");
+                    throw new InvalidOperationException(string.Empty);
                 }
             }
-            catch (Exception) { throw; }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         private static string GetBiosId()
         {
             try
             {
-                string bios = "";
-                using (ManagementObjectSearcher searcher = new ("SELECT SerialNumber FROM Win32_BIOS"))
+                string bios = string.Empty;
+                using (ManagementObjectSearcher searcher = new("SELECT SerialNumber FROM Win32_BIOS"))
                 {
                     foreach (ManagementObject mObject in searcher.Get())
                     {
@@ -296,7 +300,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -304,7 +308,7 @@
         {
             try
             {
-                using ManagementClass mc = new ("Win32_ComputerSystem");
+                using ManagementClass mc = new("Win32_ComputerSystem");
                 ManagementObjectCollection moc = mc.GetInstances();
 
                 foreach (ManagementObject item in moc)
@@ -316,7 +320,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -329,7 +333,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -341,31 +345,40 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException(string.Empty);
             }
         }
 
+        /// <summary>
+        /// Get the installed .net versions.
+        /// </summary>
+        /// <returns>List with .net versions.</returns>
         public static List<string> GetAllDotNetVersions()
         {
-            GetDotNetVersion netVersion = new ();
+            GetDotNetVersion netVersion = new();
             return netVersion.DotNetVersions();
         }
 
         #endregion Methods
 
-
         #region IDisposable
-        // Bron : https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.100).aspx
+        /* Bron : https://msdn.microsoft.com/en-us/library/b1yfkh5e(v=vs.100).aspx */
 
         private bool disposed = false;
 
-        // Implement IDisposable.
+        /// <summary>
+        /// Implement IDisposable.
+        /// </summary>
         public void Dispose()
         {
             this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Dispose fields etc.
+        /// </summary>
+        /// <param name="disposing">dispose true or false.</param>
         protected virtual void Dispose(bool disposing)
         {
             if (!this.disposed)
@@ -394,17 +407,27 @@
         #endregion IDisposable
     }
 
+    /// <summary>
+    /// Class GetDotNetVersion.
+    /// </summary>
     public class GetDotNetVersion
     {
         // bron: https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
         private readonly List<string> netVersions = new();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetDotNetVersion"/> class.
+        /// </summary>
         public GetDotNetVersion()
         {
             this.Get45PlusFromRegistry();
             this.GetVersionFromRegistry();
         }
 
+        /// <summary>
+        /// Get the .net versions.
+        /// </summary>
+        /// <returns>List of installed .net versions.</returns>
         public List<string> DotNetVersions()
         {
             return this.netVersions;
@@ -502,16 +525,19 @@
 
                 if (versionKeyName.StartsWith("v"))
                 {
-
                     RegistryKey versionKey = ndpKey.OpenSubKey(versionKeyName);
+
                     // Get the .NET Framework version value.
-                    var name = (string)versionKey.GetValue("Version", "");
+                    var name = (string)versionKey.GetValue("Version", string.Empty);
+
                     // Get the service pack (SP) number.
-                    var sp = versionKey.GetValue("SP", "").ToString();
+                    var sp = versionKey.GetValue("SP", string.Empty).ToString();
 
                     // Get the installation flag, or an empty string if there is none.
-                    var install = versionKey.GetValue("Install", "").ToString();
-                    if (string.IsNullOrEmpty(install)) // No install info; it must be in a child subkey.
+                    var install = versionKey.GetValue("Install", string.Empty).ToString();
+
+                    // No install info; it must be in a child subkey.
+                    if (string.IsNullOrEmpty(install))
                     {
                         this.netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name);
                     }
@@ -533,10 +559,14 @@
                         RegistryKey subKey = versionKey.OpenSubKey(subKeyName);
                         name = (string)subKey.GetValue("Version", string.Empty);
                         if (!string.IsNullOrEmpty(name))
-                            sp = subKey.GetValue(".NET Framework Version: " + "SP", "").ToString();
+                        {
+                            sp = subKey.GetValue(".NET Framework Version: " + "SP", string.Empty).ToString();
+                        }
 
                         install = subKey.GetValue("Install", string.Empty).ToString();
-                        if (string.IsNullOrEmpty(install)) // No install info; it must be later.
+
+                        // No install info; it must be later.
+                        if (string.IsNullOrEmpty(install))
                         {
                             this.netVersions.Add(".NET Framework Version: " + versionKeyName + " " + name);
                         }
@@ -558,19 +588,53 @@
     }
 
     #region Custum Exception
-    [Serializable()]
+
+    /// <summary>
+    /// custom exceptions.
+    /// </summary>
+    [Serializable]
     public class InvalidOperationException : System.Exception
     {
-        public InvalidOperationException() : base() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InvalidOperationException"/> class.
+        /// </summary>
+        public InvalidOperationException()
+            : base()
+        {
+        }
 
-        public InvalidOperationException(string message) : base(message) { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InvalidOperationException"/> class.
+        /// </summary>
+        /// <param name="message">The exception message.</param>
+        public InvalidOperationException(string message)
+            : base(message)
+        {
+        }
 
-        public InvalidOperationException(string message, System.Exception inner) : base(message, inner) { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InvalidOperationException"/> class.
+        /// </summary>
+        /// <param name="message">The exception message.</param>
+        /// /// <param name="inner">...</param>
+        public InvalidOperationException(string message, System.Exception inner)
+            : base(message, inner)
+        {
+        }
 
-        // A constructor is needed for serialization when an
-        // exception propagates from a remoting server to the client.
-        protected InvalidOperationException(System.Runtime.Serialization.SerializationInfo info,
-            System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InvalidOperationException"/> class.
+        /// A constructor is needed for serialization when an
+        /// exception propagates from a remoting server to the client.
+        /// </summary>
+        /// <param name="info">TheSerialization information.</param>
+        /// /// <param name="context">Streaming context.</param>
+        protected InvalidOperationException(
+            System.Runtime.Serialization.SerializationInfo info,
+            System.Runtime.Serialization.StreamingContext context)
+            : base(info, context)
+        {
+        }
     }
     #endregion Custum Exception
 }

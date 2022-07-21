@@ -335,6 +335,7 @@ namespace CM
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripStatusLabel1,
             this.ToolStripStatusLabel2});
@@ -355,6 +356,7 @@ namespace CM
             // 
             // MenuStrip1
             // 
+            this.MenuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.MenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem_Program,
             this.ToolStripMenuItem_Session,
@@ -456,6 +458,7 @@ namespace CM
             // 
             // ToolStrip1
             // 
+            this.ToolStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.ToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripButton_SessionStart,
             this.ToolStripButton_SessionPause,

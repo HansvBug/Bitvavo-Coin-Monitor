@@ -1,64 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
+﻿<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -117,4 +57,420 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="CheckBoxActivateLogging.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 44</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CheckBoxActivateLogging.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="CheckBoxActivateLogging.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 34</value>
+  </data>
+  <data name="TextBoxLocationLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 228</value>
+  </data>
+  <data name="TextBoxLocationLogFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxLocationLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 35</value>
+  </data>
+  <data name="LabelLocationLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 234</value>
+  </data>
+  <data name="LabelLocationLogFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelLocationLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 30</value>
+  </data>
+  <data name="LabelLocationSettingsFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 174</value>
+  </data>
+  <data name="LabelLocationSettingsFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelLocationSettingsFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>248, 30</value>
+  </data>
+  <data name="TextBoxLocationSettingsFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 168</value>
+  </data>
+  <data name="TextBoxLocationSettingsFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxLocationSettingsFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 35</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 94</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="CheckBoxAppenLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 34</value>
+  </data>
+  <data name="GroupBoxLogFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 16</value>
+  </data>
+  <data name="GroupBoxLogFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBoxLogFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBoxLogFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1140, 308</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 168</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelLocationAppDatabaseFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 30</value>
+  </data>
+  <data name="CopyDatabaseIntervalTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 104</value>
+  </data>
+  <data name="CopyDatabaseIntervalTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="CopyDatabaseIntervalTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 35</value>
+  </data>
+  <data name="TextBoxLocationDatabaseFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 162</value>
+  </data>
+  <data name="TextBoxLocationDatabaseFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxLocationDatabaseFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>823, 35</value>
+  </data>
+  <data name="LabelCopyAppDb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 110</value>
+  </data>
+  <data name="LabelCopyAppDb.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelCopyAppDb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 30</value>
+  </data>
+  <data name="ButtonCompressAppDatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 44</value>
+  </data>
+  <data name="ButtonCompressAppDatabase.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonCompressAppDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>327, 46</value>
+  </data>
+  <data name="GroupBoxDbmaintenance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 336</value>
+  </data>
+  <data name="GroupBoxDbmaintenance.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBoxDbmaintenance.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBoxDbmaintenance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1140, 230</value>
+  </data>
+  <data name="LabelBuildDate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 710</value>
+  </data>
+  <data name="LabelBuildDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelBuildDate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 30</value>
+  </data>
+  <data name="LabelVersion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 654</value>
+  </data>
+  <data name="LabelVersion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelVersion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 30</value>
+  </data>
+  <data name="ButtonGetCoinNames.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 316</value>
+  </data>
+  <data name="ButtonGetCoinNames.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonGetCoinNames.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 46</value>
+  </data>
+  <data name="TreeViewCoinNames.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 34</value>
+  </data>
+  <data name="TreeViewCoinNames.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TreeViewCoinNames.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 642</value>
+  </data>
+  <data name="ButtonSelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 34</value>
+  </data>
+  <data name="ButtonSelectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 46</value>
+  </data>
+  <data name="ButtonDeselectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 92</value>
+  </data>
+  <data name="ButtonDeselectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonDeselectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 46</value>
+  </data>
+  <data name="ButtonInvertSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 150</value>
+  </data>
+  <data name="ButtonInvertSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonInvertSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 46</value>
+  </data>
+  <data name="ButtonClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1060, 701</value>
+  </data>
+  <data name="ButtonClose.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 46</value>
+  </data>
+  <data name="ButtonSelectedOnly.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 258</value>
+  </data>
+  <data name="ButtonSelectedOnly.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonSelectedOnly.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 46</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 650</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelCountCheckedTrvNodes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 30</value>
+  </data>
+  <data name="ButtonSearchCoinName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 692</value>
+  </data>
+  <data name="ButtonSearchCoinName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="ButtonSearchCoinName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 46</value>
+  </data>
+  <data name="LabelCoinFound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 700</value>
+  </data>
+  <data name="LabelCoinFound.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelCoinFound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 30</value>
+  </data>
+  <data name="TextBoxSearchCoinName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 690</value>
+  </data>
+  <data name="TextBoxSearchCoinName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxSearchCoinName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 35</value>
+  </data>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 6</value>
+  </data>
+  <data name="GroupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1199, 761</value>
+  </data>
+  <data name="TabPageCoins.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 39</value>
+  </data>
+  <data name="TabPageCoins.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TabPageCoins.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TabPageCoins.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1209, 773</value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1054, 688</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 46</value>
+  </data>
+  <data name="TabPageAppSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 39</value>
+  </data>
+  <data name="TabPageAppSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TabPageAppSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TabPageAppSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1209, 773</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1054, 688</value>
+  </data>
+  <data name="button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 46</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 334</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxWarnPercentage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 35</value>
+  </data>
+  <data name="LabelWarnPercentage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 340</value>
+  </data>
+  <data name="LabelWarnPercentage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelWarnPercentage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>374, 30</value>
+  </data>
+  <data name="TextBoxRateLimit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 276</value>
+  </data>
+  <data name="TextBoxRateLimit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxRateLimit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 35</value>
+  </data>
+  <data name="LabelRateLimit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 282</value>
+  </data>
+  <data name="LabelRateLimit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="LabelRateLimit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>292, 30</value>
+  </data>
+  <data name="CheckBoxEnableUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 44</value>
+  </data>
+  <data name="CheckBoxEnableUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="CheckBoxEnableUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>142, 34</value>
+  </data>
+  <data name="TextBoxUrl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 100</value>
+  </data>
+  <data name="TextBoxUrl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxUrl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>486, 35</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 106</value>
+  </data>
+  <data name="Label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 30</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 164</value>
+  </data>
+  <data name="Label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 30</value>
+  </data>
+  <data name="TextBoxUrl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 158</value>
+  </data>
+  <data name="TextBoxUrl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TextBoxUrl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>486, 35</value>
+  </data>
+  <data name="GroupBoxUrl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 34</value>
+  </data>
+  <data name="GroupBoxUrl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBoxUrl.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="GroupBoxUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>633, 230</value>
+  </data>
+  <data name="TabPageAPI.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 39</value>
+  </data>
+  <data name="TabPageAPI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TabPageAPI.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TabPageAPI.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1209, 773</value>
+  </data>
+  <data name="TabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
+  <data name="TabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 816</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>12, 30</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1217, 816</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 6, 5, 6</value>
+  </data>
 </root>
