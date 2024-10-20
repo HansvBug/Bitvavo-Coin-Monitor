@@ -39,7 +39,7 @@ namespace CM
             this.LoadSettings();
             this.ApplySettings();
             this.LoadFormPosition();
-            this.GetCoinNames();
+            this.GetCoinNames();            
         }
 
         private void SetAutoComplete()
@@ -619,6 +619,11 @@ namespace CM
         private void ButtonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -266,7 +266,8 @@
                 }
                 catch (Exception)
                 {
-                    throw new InvalidOperationException(string.Empty);
+                    return string.Empty;
+                    //throw new InvalidOperationException(string.Empty);
                 }
             }
             catch (Exception)
@@ -300,7 +301,8 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException(string.Empty);
+                return string.Empty;
+                // throw new InvalidOperationException(string.Empty);
             }
         }
 
@@ -320,7 +322,7 @@
             }
             catch (Exception)
             {
-                throw new InvalidOperationException(string.Empty);
+                return string.Empty;
             }
         }
 

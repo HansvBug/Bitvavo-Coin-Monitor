@@ -13,8 +13,10 @@ namespace CM
     class MarketPrice
     {
         private dynamic JsonObjSettings { get; set; }
-        private string UrlCurrentTickerPrice { get; set; }  //"https://api.bitvavo.com/v2/ticker/price"
-        private string Url24hTickerPrice { get; set; }      //"https://api.bitvavo.com/v2/ticker/24h"
+
+        private string UrlCurrentTickerPrice { get; set; } // "https://api.bitvavo.com/v2/ticker/price"
+
+        private string Url24hTickerPrice { get; set; } // "https://api.bitvavo.com/v2/ticker/24h"
 
         public Dictionary<string, string> CurrentTickerPrice = new();  // The CURRENT price of all the coins
         public List<string> CoinNames = new(); //Used in configform
@@ -128,34 +130,37 @@ namespace CM
             {
                 if (!this.AllCoinData.IsUsed)  //First run
                 {
-                    CoinData aCoin = new();
-                    this.CurrentTickerPrice.Add(tickerMarket.Market, tickerMarket.Price);  //A dictionary with market(coin) name + curent price
-                                                                                      //
-                    aCoin.Name = tickerMarket.Market;
-                    aCoin.CurrentPrice = Convert.ToDouble(tickerMarket.Price.Replace(".", this.DecimalSeperator));
-
-                    aCoin.SessionStartPrice = aCoin.CurrentPrice;
-                    aCoin.Trend = CoinTrend.Equal.ToString();
-                    aCoin.WarnPercentage = this.WarnPercentage;
-                    aCoin.DiffValuta = DiffInValuta(aCoin.SessionStartPrice, aCoin.CurrentPrice);
-                    aCoin.DiffPercent = DiffInPerc(aCoin.SessionStartPrice, aCoin.CurrentPrice);
-                    aCoin.RateWhenProfit = RateWhenProfit(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
-                    aCoin.RateWhenLost = RateWhenLost(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
-                    aCoin.SessionHighPrice = aCoin.CurrentPrice;
-                    aCoin.SessionLowPrice = aCoin.CurrentPrice;
-                    aCoin.PreviousPrice = aCoin.CurrentPrice;
-                    aCoin.DiffPercentOpen24 = 0;
-
-                    aCoin.IsSelected = false;
-                    foreach (string MarketName in this.SelectedCoinName)  // Is it a selected coin or not?
+                    if (tickerMarket.Price != null)
                     {
-                        if (tickerMarket.Market == MarketName)
-                        {
-                            aCoin.IsSelected = true;
-                        }
-                    }
+                        CoinData aCoin = new();
+                        this.CurrentTickerPrice.Add(tickerMarket.Market, tickerMarket.Price);  //A dictionary with market(coin) name + curent price
+                                                                                               //
+                        aCoin.Name = tickerMarket.Market;
+                        aCoin.CurrentPrice = Convert.ToDouble(tickerMarket.Price.Replace(".", this.DecimalSeperator));
 
-                    this.AllCoinData.Items.Add(aCoin);
+                        aCoin.SessionStartPrice = aCoin.CurrentPrice;
+                        aCoin.Trend = CoinTrend.Equal.ToString();
+                        aCoin.WarnPercentage = this.WarnPercentage;
+                        aCoin.DiffValuta = DiffInValuta(aCoin.SessionStartPrice, aCoin.CurrentPrice);
+                        aCoin.DiffPercent = DiffInPerc(aCoin.SessionStartPrice, aCoin.CurrentPrice);
+                        aCoin.RateWhenProfit = RateWhenProfit(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
+                        aCoin.RateWhenLost = RateWhenLost(aCoin.SessionStartPrice, aCoin.CurrentPrice, aCoin.WarnPercentage);
+                        aCoin.SessionHighPrice = aCoin.CurrentPrice;
+                        aCoin.SessionLowPrice = aCoin.CurrentPrice;
+                        aCoin.PreviousPrice = aCoin.CurrentPrice;
+                        aCoin.DiffPercentOpen24 = 0;
+
+                        aCoin.IsSelected = false;
+                        foreach (string MarketName in this.SelectedCoinName)  // Is it a selected coin or not?
+                        {
+                            if (tickerMarket.Market == MarketName)
+                            {
+                                aCoin.IsSelected = true;
+                            }
+                        }
+
+                        this.AllCoinData.Items.Add(aCoin);
+                    }
                 }
                 else  // AllCoinData excist, the data will only be replaced
                 {
