@@ -39,7 +39,5 @@
                 return false;
             }
         }
-
-        
     }
 }

@@ -14,10 +14,10 @@
 
         public static Form Parent { get; set; }
         public static string NameLogFile { get; set; }
-        public static bool AppendLogFile { get; set; } = true;      //append the logfile true is the default
+        public static bool AppendLogFile { get; set; } = true;      // Append the logfile true is the default.
         public static string LogFolder { get; set; }
-        public static bool ActivateLogging { get; set; } = true;    //activate logging
-        public static bool WriteToFile { get; set; }                //If logging fails then this can be set to false and de application will work without logging
+        public static bool ActivateLogging { get; set; } = true;    // Activate logging.
+        public static bool WriteToFile { get; set; }                // If logging fails then this can be set to false and de application will work without logging.
         public static string Customer { get; set; }
         public static string ApplicationName { get; set; }
         public static string ApplicationVersion { get; set; }
@@ -27,6 +27,7 @@
         private static string UserName { get; set; }
         private static string MachineName { get; set; }
         private static string TotalRam { get; set; }
+
         private static string WindowsVersion { get; set; }
         private static string ProcessorCount { get; set; }
 
@@ -35,11 +36,11 @@
         private static bool AbortLogging { get; set; }
         #endregion Properties
 
-        #region constructor        
+        #region constructor
 
         static Logging()
         {
-            //default       
+            // Default
         }
         #endregion constructor
 
@@ -97,18 +98,18 @@
         {
             if (CheckExistsSettingsFolder())
             {
-                MessageBox.Show("De map 'Settings' is aangemaakt.", "Informatie.",                                
+                MessageBox.Show("De map 'Settings' is aangemaakt.", "Informatie.",
                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private static bool CheckExistsSettingsFolder() //Check if the Settings folder does exists, if no then create the folder
+        private static bool CheckExistsSettingsFolder() // Check if the Settings folder does exists, if no then create the folder.
         {
             try
             {
                 if (!Directory.Exists(LogFolder))
                 {
-                    Directory.CreateDirectory(LogFolder);  //create the settings folder 
+                    Directory.CreateDirectory(LogFolder);  // Create the settings folder.
                     return true;
                 }
                 else
@@ -251,10 +252,10 @@
                 {
                     SetDefaultSettings();
                     GetAppEnvironmentSettings();
-                    CheckSettingsFolder();  // Is there a folder for the log file 
+                    CheckSettingsFolder();  // Is there a folder for the log file.
 
-                    DoesLogFileExists();    // If there is no log file then it will be created
-                    ClearLogfile();         // If AppendLogFile = no then clear the (current) log file
+                    DoesLogFileExists();    // If there is no log file then it will be created.
+                    ClearLogfile();         // If AppendLogFile = no then clear the (current) log file.
 
                     if (string.IsNullOrEmpty(UserName) || string.IsNullOrWhiteSpace(UserName))
                     {
@@ -423,7 +424,7 @@
                 w.WriteLine("Versie            : " + ApplicationVersion);
                 w.WriteLine("Datum Applicatie  : " + ApplicationBuildDate);
                 w.WriteLine("Organisatie       : " + Customer);
-                w.WriteLine("");
+                w.WriteLine(string.Empty);
                 w.WriteLine("Datum             : " + date);
                 w.WriteLine("Naam gebruiker    : " + UserName);
                 w.WriteLine("Naam machine      : " + MachineName);
@@ -532,7 +533,7 @@
             if (LoggingEfforts == 5)
             {
                 WriteToFile = false; // stop the writting to the logfile
-                
+
                 // AddMessageToEventLog("De logging van '" + Form_Main.Applicatienaam + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.", "INFORMATIE", 1000);
                 WriteToLogError("De logging van '" + ApplicationName + "' is gestopt omdat er reeds 5 pogingen zijn mislukt.");
 
@@ -561,7 +562,7 @@
                 w.WriteLine("===================================================================================================");
                 w.WriteLine(CloseLogString);
                 w.WriteLine("===================================================================================================");
-                w.WriteLine("");
+                w.WriteLine(string.Empty);
                 w.Flush();
                 w.Close();
             }

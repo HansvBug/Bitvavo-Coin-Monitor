@@ -328,7 +328,7 @@
 
             dgv.Columns[0].Width = 170; //TODO make 170 a setting
             dgv.Columns[1].Width = 100; //TODO make 100 a setting
-            dgv.Columns[0].CellTemplate.ValueType = typeof(int);  // TODO; sorting.... this line should improve sorting but is does not. Negative an positive numers are not sorted correct. 
+            dgv.Columns[0].CellTemplate.ValueType = typeof(int);  // TODO; sorting.... this line should improve sorting but is does not. Negative an positive numers are not sorted correct.
             dgv.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             dgv.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;

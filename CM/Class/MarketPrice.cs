@@ -456,7 +456,7 @@ namespace CM
             //public string Timestamp { get; set; }
 
         }
-        
+
         #endregion 24 hour data
 
         private class CurrentTickerMarketPrice
@@ -467,7 +467,7 @@ namespace CM
             [JsonPropertyName("price")]
             public string Price { get; set; }
 
-            //why the: [JsonPropertyName("market")] before : public string Market { get; set; } 
+            //why the: [JsonPropertyName("market")] before : public string Market { get; set; }
             //This means the property in json is all lower case while when creating a property in a class the first character should be uppercase.
             //If we use Market as a property name the deserialization will fail as it's case sensitive so to keep with C# naming conventions the attribute is used.
         }
